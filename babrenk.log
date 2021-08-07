@@ -1,8 +1,8 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  5 AUG 2021 16:47
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  8 AUG 2021 01:12
  restricted system commands enabled.
  file:line:error style messages enabled.
-**Template_for_the_LaTeX_Class_uzl-thesis.tex
-(./Template_for_the_LaTeX_Class_uzl-thesis.tex
+**babrenk.tex
+(./babrenk.tex
 LaTeX2e <2018-12-01>
 Lua module: luaotfload-main 2019-02-14 2.96 luaotfload entry point
 Lua module: luaotfload-init 2019-02-14 2.96 luaotfload submodule / initializatio
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.062 seconds
+luaotfload | main : initialization completed in 0.053 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -2943,6 +2943,19 @@ FLT;"
 \CommentStream=\write5
 
 Excluding comment 'comment')
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\arrowsize=\dimen283
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -2959,43 +2972,42 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
-(./Template_for_the_LaTeX_Class_uzl-thesis.aux)
-\openout1 = Template_for_the_LaTeX_Class_uzl-thesis.aux
+(./babrenk.aux)
+\openout1 = babrenk.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 380.
-LaTeX Font Info:    ... okay on input line 380.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 383.
+LaTeX Font Info:    ... okay on input line 383.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 380.
-
-ABD: EveryShipout initializing macros
+(Font)              scaled to size 12.0pt on input line 383.
+ ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count441
-\scratchdimen=\dimen283
+\scratchdimen=\dimen284
 \scratchbox=\box81
 \nofMPsegments=\count442
 \nofMParguments=\count443
 \everyMPshowfont=\toks44
 \MPscratchCnt=\count444
-\MPscratchDim=\dimen284
+\MPscratchDim=\dimen285
 \MPnumerator=\count445
 \makeMPintoPDFobject=\count446
 \everyMPtoPDFconversion=\toks45
@@ -3051,7 +3063,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box82
-Package hyperref Info: Link coloring OFF on input line 380.
+Package hyperref Info: Link coloring OFF on input line 383.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -3061,16 +3073,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count447
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 380.
-LaTeX Info: Redefining \pageref on input line 380.
-LaTeX Info: Redefining \nameref on input line 380.
+LaTeX Info: Redefining \ref on input line 383.
+LaTeX Info: Redefining \pageref on input line 383.
+LaTeX Info: Redefining \nameref on input line 383.
 
-(./Template_for_the_LaTeX_Class_uzl-thesis.out)
-(./Template_for_the_LaTeX_Class_uzl-thesis.out)
+(./babrenk.out) (./babrenk.out)
 \@outlinefile=\write6
 
-\openout6 = Template_for_the_LaTeX_Class_uzl-thesis.out
-LaTeX Info: Redefining \Ref on input line 380.
+\openout6 = babrenk.out
+LaTeX Info: Redefining \Ref on input line 383.
 \c@lstlisting=\count448
 Package biblatex Info: LuaTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
@@ -3080,86 +3091,85 @@ Package biblatex Info: Input encoding 'utf8' specified.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
 
-\openout4 = Template_for_the_LaTeX_Class_uzl-thesis-blx.bib
+\openout4 = babrenk-blx.bib
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Template_for_the_LaTeX_Class_uzl-thesis.bbl' no
-t found.
+Package biblatex Info: ... file 'babrenk.bbl' not found.
 
-No file Template_for_the_LaTeX_Class_uzl-thesis.bbl.
-Package biblatex Info: Reference section=0 on input line 380.
-Package biblatex Info: Reference segment=0 on input line 380.
+No file babrenk.bbl.
+Package biblatex Info: Reference section=0 on input line 383.
+Package biblatex Info: Reference segment=0 on input line 383.
 <uzl-thesis-logo-itcs.pdf, id=67, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
-Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 380.
+Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 383.
 (luatex.def)             Requested size: 426.79045pt x 113.81091pt.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 380.
+(Font)              scaled to size 12.0pt on input line 383.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 15.4pt on input line 380.
-LaTeX Font Info:    Calculating math sizes for size <15.4> on input line 380.
+(Font)              scaled to size 15.4pt on input line 383.
+LaTeX Font Info:    Calculating math sizes for size <15.4> on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 15.40163pt on input line 380.
+(Font)              scaled to size 15.40163pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 10.78108pt on input line 380.
+(Font)              scaled to size 10.78108pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 7.7008pt on input line 380.
+(Font)              scaled to size 7.7008pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 15.39835pt on input line 380.
+(Font)              scaled to size 15.39835pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 10.77878pt on input line 380.
+(Font)              scaled to size 10.77878pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 7.69917pt on input line 380.
+(Font)              scaled to size 7.69917pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 16.94008pt on input line 380.
+(Font)              scaled to size 16.94008pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 11.85799pt on input line 380.
+(Font)              scaled to size 11.85799pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.47003pt on input line 380.
+(Font)              scaled to size 8.47003pt on input line 383.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 10.77994pt on input line 380.
+(Font)              scaled to size 10.77994pt on input line 383.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
-(Font)              scaled to size 15.4pt on input line 380.
+(Font)              scaled to size 15.4pt on input line 383.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
-(Font)              scaled to size 10.77994pt on input line 380.
+(Font)              scaled to size 10.77994pt on input line 383.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 380.
+(Font)              scaled to size 12.0pt on input line 383.
 <uzl-thesis-logo-slogan.pdf, id=68, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
-Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 380.
+Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 383.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./uzl-the
 sis-logo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 380.
+(Font)              scaled to size 12.0pt on input line 383.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 10.9pt on input line 380.
+(Font)              scaled to size 10.9pt on input line 383.
  [2
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 380.
+(Font)              scaled to size 12.00128pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 380.
+(Font)              scaled to size 8.00085pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 380.
+(Font)              scaled to size 6.00064pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 380.
+(Font)              scaled to size 11.99872pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 380.
+(Font)              scaled to size 7.99915pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 380.
+(Font)              scaled to size 5.99936pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 13.20007pt on input line 380.
+(Font)              scaled to size 13.20007pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 380.
+(Font)              scaled to size 8.80005pt on input line 383.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 6.60004pt on input line 380.
+(Font)              scaled to size 6.60004pt on input line 383.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 380.
+(Font)              scaled to size 8.0pt on input line 383.
  [3
 
 ]
@@ -3196,12 +3206,12 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 
 ]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 22.0pt on input line 380.
+(Font)              scaled to size 22.0pt on input line 383.
 
-(./Template_for_the_LaTeX_Class_uzl-thesis.toc)
+(./babrenk.toc)
 \tf@toc=\write7
 
-\openout7 = Template_for_the_LaTeX_Class_uzl-thesis.toc
+\openout7 = babrenk.toc
  [5
 
 
@@ -3210,8 +3220,8 @@ LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
 ]
 Kapitel 1.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 60.0pt on input line 388.
-Package Listings Info: Made | a short reference for \lstinline on input line 399
+(Font)              scaled to size 60.0pt on input line 391.
+Package Listings Info: Made | a short reference for \lstinline on input line 402
 .
 [1
 
@@ -3222,80 +3232,312 @@ Kapitel 2.
 
 ]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 427.
+(Font)              scaled to size 13.0pt on input line 430.
 
-Overfull \hbox (1.61119pt too wide) in paragraph at lines 428--430
+Overfull \hbox (1.61119pt too wide) in paragraph at lines 431--433
 \TU/Alegreya(0)/m/n/12 zwei Di-ri-ch-let Ver-tei-lun-gen maß-geb-lich be-ein-
 󰀎lus-sen: die Dokument-Themen Ver-tei-lung,
  []
 
 
-Overfull \hbox (38.30556pt too wide) in paragraph at lines 428--430
+Overfull \hbox (38.30556pt too wide) in paragraph at lines 431--433
 \TU/Alegreya(0)/m/n/12 Verteilungen ei-ne Op-ti-mie-rungs-pro-blem for-mu-liert
  wer-den, nach dem die Dirchlet-Verteilungen
  []
 
 
-Overfull \hbox (2.14958pt too wide) in paragraph at lines 432--433
+Overfull \hbox (2.14958pt too wide) in paragraph at lines 435--436
 \TU/Alegreya(0)/m/n/12 frequency und inverse-document-frequency ver-bes-sert we
 r-den, was sich auf das Ge-samt-
  []
 
 [3]
-<img1.png, id=136, 252.945pt x 125.46875pt>
-File: img1.png Graphic file (type png)
-<use img1.png>
-Package luatex.def Info: img1.png  used on input line 451.
-(luatex.def)             Requested size: 252.94438pt x 125.46843pt.
- [4]
-<daten1.png, id=145, 455.7025pt x 145.54375pt>
+Overfull \hbox (4.29675pt too wide) in paragraph at lines 442--443
+\TU/Alegreya(0)/m/n/12 men wer-den al-lein an der Vor-kom-mens-wahr-schein-lich
+-keit der Wör-ter oh-ne Reihenfolgen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
+
+ []
+
+
+./babrenk.tex:444: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.444 ...ss die Anzahl der gesuchten Themen \mathcal
+                                                  {K} vorgegeben werden muss...
+? R
+OK, entering \nonstopmode...
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+
+ []
+
+
+./babrenk.tex:449: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.449 	\draw
+           [very thick](6,3.5) rectangle (9,5.5)
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+./babrenk.tex:450: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.450 	\draw
+           [very thick](3,0.25) rectangle (8.75,2.75)
+(That was another \errmessage.)
+
+
+./babrenk.tex:451: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.451 	\draw
+           (1.5,1.5) circle [very thick, radius = 0.8]  node {$\theta$};
+(That was another \errmessage.)
+
+
+./babrenk.tex:459: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.459 	\draw
+           [->,ultra thick] (7.5,3.7) -- (7.5,2.3)
+(That was another \errmessage.)
+
+
+./babrenk.tex:460: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.460 	\draw
+           [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
+(That was another \errmessage.)
+
+
+./babrenk.tex:461: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 	\draw
+           [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
+(That was another \errmessage.)
+
+
+./babrenk.tex:462: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.462 	\draw
+           [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
+(That was another \errmessage.)
+
+
+./babrenk.tex:464: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.464 \end{tikzpicture}
+                     
+(That was another \errmessage.)
+
+./babrenk.tex:464: Undefined control sequence.
+<argument> \pgf@baseline 
+              
+l.464 \end{tikzpicture}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./babrenk.tex:466: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.466 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./babrenk.tex:467: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 Dabei beschreibt \mathcal
+                             {W} als einzige nicht verborgene Variable eines...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./babrenk.tex:467: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...icht verborgene Variable eines von \mathcal
+                                                  {N} Wörtern des Dokuments...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./babrenk.tex:467: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...as Wort ist semantisch einem Thema \mathcal
+                                                  {Z} zugeordnet. Das Thema ...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./babrenk.tex:467: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...m hängt von der Themen-Verteilung \mathcal
+                                                  {theta} des Dokuments ab, ...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./babrenk.tex:467: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...kuments ab, das als ein Elment der \mathcal
+                                                  {M} vorliegenden Dokumente...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./babrenk.tex:467: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...er jeweilgen Thema-Wort-Verteilung \mathcal
+                                                  {\phi} der \mathcal{K} The...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./babrenk.tex:467: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 ...Wort-Verteilung \mathcal{\phi} der \mathcal
+                                                  {K} Themen beeinflusst. Da...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4]
+<daten1.png, id=144, 455.7025pt x 145.54375pt>
 File: daten1.png Graphic file (type png)
 <use daten1.png>
-Package luatex.def Info: daten1.png  used on input line 459.
+Package luatex.def Info: daten1.png  used on input line 488.
 (luatex.def)             Requested size: 455.70137pt x 145.54338pt.
 
-Overfull \hbox (28.91002pt too wide) in paragraph at lines 459--460
+Overfull \hbox (28.91002pt too wide) in paragraph at lines 488--489
  [] 
  []
 
-<daten2.png, id=146, 455.7025pt x 50.1875pt>
+[5
+Missing character: There is no 𝜙 (U+1D719) in font [Alegreya-Regular.otf]:mod
+e=node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
+<./daten1.png>]
+<daten2.png, id=155, 455.7025pt x 50.1875pt>
 File: daten2.png Graphic file (type png)
 <use daten2.png>
-Package luatex.def Info: daten2.png  used on input line 465.
+Package luatex.def Info: daten2.png  used on input line 494.
 (luatex.def)             Requested size: 455.70137pt x 50.18736pt.
 
-Overfull \hbox (28.91002pt too wide) in paragraph at lines 465--466
+Overfull \hbox (28.91002pt too wide) in paragraph at lines 494--495
  [] 
  []
 
-<daten3.png, id=147, 455.7025pt x 57.21375pt>
+<daten3.png, id=156, 455.7025pt x 57.21375pt>
 File: daten3.png Graphic file (type png)
 <use daten3.png>
-Package luatex.def Info: daten3.png  used on input line 471.
+Package luatex.def Info: daten3.png  used on input line 500.
 (luatex.def)             Requested size: 455.70137pt x 57.2136pt.
 
-Overfull \hbox (28.91002pt too wide) in paragraph at lines 471--472
+Overfull \hbox (28.91002pt too wide) in paragraph at lines 500--501
  [] 
  []
 
-[5<./img1.png><./daten1.png><./daten2.png><./daten3.png>] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
+[6<./daten2.png><./daten3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
 
  []
 
-
-Overfull \hbox (14.10951pt too wide) in paragraph at lines 491--492
+[7]
+Overfull \hbox (14.10951pt too wide) in paragraph at lines 523--524
 []\TU/Alegreya(0)/m/n/12 Da-bei wer-den zu-erst al-le An-fra-ge-da-ten in ei-ne
 n String zu-sam-men-ge-fügt, der als Grund-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--494
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
@@ -3303,120 +3545,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--494
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 
-./Template_for_the_LaTeX_Class_uzl-thesis.tex:500: LaTeX Error: There's no line
- here to end.
+./babrenk.tex:532: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.500 E
+l.532 E
      ine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 o...
-? R
-OK, entering \nonstopmode...
-[7]
-<lda1_1.png, id=173, 711.65875pt x 150.5625pt>
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<lda1_1.png, id=174, 711.65875pt x 150.5625pt>
 File: lda1_1.png Graphic file (type png)
 <use lda1_1.png>
-Package luatex.def Info: lda1_1.png  used on input line 505.
+Package luatex.def Info: lda1_1.png  used on input line 537.
 (luatex.def)             Requested size: 355.8285pt x 75.28105pt.
-<lda1_2.png, id=174, 794.97pt x 120.45pt>
+[8<./lda1_1.png>]
+<lda1_2.png, id=183, 794.97pt x 120.45pt>
 File: lda1_2.png Graphic file (type png)
 <use lda1_2.png>
-Package luatex.def Info: lda1_2.png  used on input line 510.
+Package luatex.def Info: lda1_2.png  used on input line 542.
 (luatex.def)             Requested size: 397.48402pt x 60.22484pt.
  Excluding 'comment' comment.
-<lda1.png, id=175, 418.56375pt x 271.0125pt>
+<lda1.png, id=184, 418.56375pt x 271.0125pt>
 File: lda1.png Graphic file (type png)
 <use lda1.png>
-Package luatex.def Info: lda1.png  used on input line 536.
+Package luatex.def Info: lda1.png  used on input line 568.
 (luatex.def)             Requested size: 209.28136pt x 135.5059pt.
-<lda2.png, id=176, 317.185pt x 555.07375pt>
+<lda2.png, id=185, 317.185pt x 555.07375pt>
 File: lda2.png Graphic file (type png)
 <use lda2.png>
-Package luatex.def Info: lda2.png  used on input line 537.
+Package luatex.def Info: lda2.png  used on input line 569.
 (luatex.def)             Requested size: 158.5921pt x 277.53618pt.
- [8<./lda1_1.png><./lda1_2.png>]
-<lda3.png, id=185, 455.7025pt x 55.20625pt>
+ [9<./lda1_2.png><./lda1.png><./lda2.png>]
+<lda3.png, id=194, 455.7025pt x 55.20625pt>
 File: lda3.png Graphic file (type png)
 <use lda3.png>
-Package luatex.def Info: lda3.png  used on input line 541.
+Package luatex.def Info: lda3.png  used on input line 573.
 (luatex.def)             Requested size: 227.85068pt x 27.60304pt.
 
-Overfull \hbox (0.83833pt too wide) in paragraph at lines 543--544
+Overfull \hbox (0.83833pt too wide) in paragraph at lines 575--576
 []\TU/Alegreya(0)/m/n/12 Aus die-ser Aus-ga-be wird nun er-sicht-lich, wie wahr
 -schein-lich es ist, dass ein be-stimm-
  []
 
 
-Overfull \hbox (6.45352pt too wide) in paragraph at lines 545--546
+Overfull \hbox (6.45352pt too wide) in paragraph at lines 577--578
 []\TU/Alegreya(0)/m/n/12 Wenn man den glei-chen Quell-text mit ei-ner ge-rin-ge
 -ren The-men-an-zahl auf-ru󰀖t, kommt
  []
 
-<lda4.png, id=186, 455.7025pt x 565.11125pt>
+<lda4.png, id=195, 455.7025pt x 565.11125pt>
 File: lda4.png Graphic file (type png)
 <use lda4.png>
-Package luatex.def Info: lda4.png  used on input line 547.
+Package luatex.def Info: lda4.png  used on input line 579.
 (luatex.def)             Requested size: 227.85068pt x 282.55493pt.
-[9<./lda1.png><./lda2.png><./lda3.png>]
-<lda5.png, id=194, 455.7025pt x 224.84pt>
+<lda5.png, id=196, 455.7025pt x 224.84pt>
 File: lda5.png Graphic file (type png)
 <use lda5.png>
-Package luatex.def Info: lda5.png  used on input line 551.
+Package luatex.def Info: lda5.png  used on input line 583.
 (luatex.def)             Requested size: 227.85068pt x 112.41972pt.
- [10<./lda4.png><./lda5.png>]
+[10<./lda3.png><./lda4.png>] [11<./lda5.png>]
 Kapitel 3.
 
-LaTeX Warning: Overwriting file `./Template_for_the_LaTeX_Class_uzl-thesis-bibte
-x-entries.bib'.
+LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 
 
-\openout15 = Template_for_the_LaTeX_Class_uzl-thesis-bibtex-entries.bib
+\openout15 = babrenk-bibtex-entries.bib
 
 
-LaTeX Warning: Empty bibliography on input line 820.
+LaTeX Warning: Empty bibliography on input line 852.
 
-[11
+[12
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 820.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 820.
- (./Template_for_the_LaTeX_Class_uzl-thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 820.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 820.
-Package rerunfilecheck Info: File `Template_for_the_LaTeX_Class_uzl-thesis.out' 
-has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 852.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 852.
+ (./babrenk.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 852.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 852.
+Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 7681AF74ED18E38354D5B1C6DBA4C55A;2208.
-Package logreq Info: Writing requests to 'Template_for_the_LaTeX_Class_uzl-thesi
-s.run.xml'.
+Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
-\openout1 = Template_for_the_LaTeX_Class_uzl-thesis.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 820.
+\openout1 = babrenk.run.xml
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 852.
 )
 
 Here is how much of LuaTeX's memory you used:
- 52222 strings out of 494291
+ 52857 strings out of 494291
  125215,1977958 words of node,token memory allocated
  583 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 14 attribute, 64 gl
 ue_spec, 9 attribute_list, 2 write nodes
-   avail lists: 1:2,2:619,3:89,4:68,5:482,6:31,7:4253,8:18,9:500,10:22,11:513
- 53545 multiletter control sequences out of 65536+600000
- 207 fonts using 64526295 bytes
- 72i,8n,135p,1451b,3300s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmmonoprop10-regula
-r.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Alegrey
-a-Regular.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya
-/Alegreya-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/a
-legreya/AlegreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype
-/huerta/alegreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fon
-ts/opentype/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on Template_for_the_LaTeX_Class_uzl-thesis.pdf (17 pages, 136219
-7 bytes).
+   avail lists: 1:2,2:1115,3:239,4:66,5:463,6:31,7:3880,8:18,9:507,10:22,11:457
+ 54160 multiletter control sequences out of 65536+600000
+ 207 fonts using 64526175 bytes
+ 72i,8n,135p,1419b,3300s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Alegreya-Ital
+ic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyr
+echorus-mediumitalic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/publ
+ic/tex-gyre-math/texgyrepagella-math.otf></usr/local/texlive/2019/texmf-dist/fon
+ts/opentype/public/lm/lmmonoprop10-regular.otf></usr/local/texlive/2019/texmf-di
+st/fonts/opentype/huerta/alegreya/Alegreya-Regular.otf></usr/local/texlive/2019/
+texmf-dist/fonts/opentype/huerta/alegreya/Alegreya-Italic.otf></usr/local/texliv
+e/2019/texmf-dist/fonts/opentype/huerta/alegreya/AlegreyaSans-Bold.otf></usr/loc
+al/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/AlegreyaSans-Italic.ot
+f></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/AlegreyaSan
+s-Regular.otf>
+Output written on babrenk.pdf (18 pages, 1338048 bytes).
 
-PDF statistics: 253 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 53 named destinations out of 1000 (max. 131072)
+PDF statistics: 279 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 131072)
  136 words of extra memory for PDF output out of 10000 (max. 100000000)
 

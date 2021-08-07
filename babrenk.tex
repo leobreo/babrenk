@@ -375,6 +375,9 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{comment}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{arrows, automata, positioning}
 
 
 \begin{document}
@@ -436,7 +439,33 @@ Ein weiteres Verfahren, das auch mit Matrizen funktioniert, wird „Non-Negative
 
 
 \section{Grundlagen der Latent Dirichlet Allocation (LDA)}
-Das Prinzip der Themenmodellierung LDA ist erklärbar über die Abbildung. Der äußere Kasten beschreibt die Gesamtheit der |M| Dokumente, mit jeweils |N| Wörtern. Die beiden allein-stehenden Knoten sind die Dirichlet-Variablen, Alpha und Beta. Alpha definiert die Verteilungsstärke der Dokument-Themenverteilung, während Beta für die Wörter-Themenverteilung verantwortlich ist. W bezeichnet das Wort, das betrachtet wird, das hier als einziges Element dunkel eingefärbt ist. Das bedeutet, dass es die einzige Variable ist, die bekannt ist, nämlich als Element im „Bag of Words“ Modell. Z ist das Thema, dem das Wort zu einem bestimmten Anteil angehört. Z wird wiederum beeinflusst von Theta, das die Themenverteilung über das Dokument m definiert. Von oben wird das Wort w von Psi, das die Verteilung der Wörter über das gewählte Thema beschreibt beeinflusst. 
+Latent Dirichlet Allocation ist ein grundlegendes und bekanntes Verfahren aus der Natürlichen Sprachverarbeitung. Das Prinzip der Themenmodellierung basiert auf einer Menge an Dokumenten, die den Korpus darstellen. Dabei werden alle Dokumente als Menge von Wörtern angenommen, die als Bag of Words modelliert sind. Dabei hat weder die Reihenfolge, noch die Groß- und Kleinschreibung Einfluss auf das Ergebnis. Die Themen werden  allein an der Vorkommenswahrscheinlichkeit der Wörter ohne Reihenfolgen- oder Kontextinformationen erkannt. Durch die Reduktion der Dimension wird die Effizienz gesteigert. Somit wird also jedes Dokument durch eine Verteilung der enthaltenen Wörter repräsentiert.\\
+
+Eine Besonderheit bei der Themenerkennung mit LDA ist, dass die Anzahl der gesuchten Themen \mathcal{K} vorgegeben werden muss. Oft ist diese vorher jedoch nicht bekannt und muss über Hilfsverfahren, wie der Perplexitätsberechnung ermittelt werden. Die Funktionsweise von LDA ist über folgende graphische Abbildung beschrieben: \\
+
+\begin{center}
+\begin{tikzpicture}
+	\draw (0,0) [very thick] rectangle (9,3) 
+	\draw [very thick](6,3.5) rectangle (9,5.5)
+	\draw [very thick](3,0.25) rectangle (8.75,2.75)
+	\draw (1.5,1.5) circle [very thick, radius = 0.8]  node {$\theta$};
+	\draw (4.5,1.5)  circle [very thick, radius = 0.8] node {$\mathcal{Z}$};
+	\draw (7.5,1.5) circle [fill=black, ultra thick, radius = 0.8, accepting] node {$W$};
+	\draw (-1.5,1.5) circle [very thick, radius = 0.8] node {$\alpha$};
+	\draw (7.5,4.5) circle  [very thick, radius = 0.8] node {$\beta$};
+	\draw (4.5,4.5) circle  [very thick, radius = 0.8] node {$\phi$};
+	
+	\draw [->,ultra thick] (5.3,4.5) -- (6.7,4.5)
+	\draw [->,ultra thick] (7.5,3.7) -- (7.5,2.3)
+	\draw [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
+	\draw [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
+	\draw [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
+	
+\end{tikzpicture}   
+\end{center}\\
+
+Dabei beschreibt \mathcal{W} als einzige nicht verborgene Variable eines von \mathcal{N} Wörtern des Dokuments. Das Wort ist semantisch einem Thema \mathcal{Z} zugeordnet. Das Thema wiederum hängt von der Themen-Verteilung \mathcal{theta} des Dokuments ab, das als ein Elment der \mathcal{M} vorliegenden Dokumente betrachtet wird. Neben dem Thema, wird jedes Wort auch von der jeweilgen Thema-Wort-Verteilung \mathcal{\phi} der \mathcal{K} Themen beeinflusst. Das Modell und dessen Verteilungen kann durch die Parameter $\alpha$ und $\beta$ angepasst werden. $\alpha$ kann bestimmt die Intensität der Dokument-Themen-Verteilung, während $\beta$ die der Themen-Wort-Verteilung beeinflusst. Bei einem großen $\alpha$ ist die Verteilung der Themen in einem Dokument (eindeutig/unklar).
+
 
 
 \subsection{Der generative Prozess} 
@@ -447,9 +476,9 @@ Mit LDA kann ein Dokument generiert werden, wenn die beiden Verteilungen Alpha u
 \end{enumerate}
 Bei einem gegeben Dokument mit dem Ziel die Themenverteilung herauszufinden, wird angenommen, dass dieses Dokument wie oben beschrieben generiert wurde. Somit kann der Algorithmus nun neue Dokumente erstellen und das Ergebnis durch die Parameter, wie Alpha und Beta, anpassen, bis das Ergebnis ähnlich genug zu dem Anfangsdokument ist. Dann ist die Verteilung der Themen in diesem Dokument bekannt. Bei der Anwendung von LDA für praktische Problemstellungen, geht LDA das Prinzip rückwärts durch, d.h. für bestehende Gruppen an Dokumenten werden Verteilungen gesucht, durch die das Dokument generiert hätte werden können.
 
-\begin{center}
-\includegraphics{img1.png}
-\end{center}
+%\begin{center}
+%\includegraphics{img1.png}
+%\end{center}
 
 
 \section{Daten}

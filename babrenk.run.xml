@@ -44,11 +44,11 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Template_for_the_LaTeX_Class_uzl-thesis.aux</file>
-      <file>Template_for_the_LaTeX_Class_uzl-thesis-blx.bib</file>
+      <file>babrenk.aux</file>
+      <file>babrenk-blx.bib</file>
     </provides>
     <requires type="dynamic">
-      <file>Template_for_the_LaTeX_Class_uzl-thesis.bbl</file>
+      <file>babrenk.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -69,23 +69,23 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>Template_for_the_LaTeX_Class_uzl-thesis</infile>
+      <infile>babrenk</infile>
     </cmdline>
     <input>
-      <file>Template_for_the_LaTeX_Class_uzl-thesis.aux</file>
+      <file>babrenk.aux</file>
     </input>
     <output>
-      <file>Template_for_the_LaTeX_Class_uzl-thesis.bbl</file>
+      <file>babrenk.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Template_for_the_LaTeX_Class_uzl-thesis.bbl</file>
+      <file>babrenk.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Template_for_the_LaTeX_Class_uzl-thesis.aux</file>
-      <file>Template_for_the_LaTeX_Class_uzl-thesis-blx.bib</file>
+      <file>babrenk.aux</file>
+      <file>babrenk-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>Template_for_the_LaTeX_Class_uzl-thesis-bibtex-entries.bib</file>
+      <file>babrenk-bibtex-entries.bib</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
