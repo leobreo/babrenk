@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  8 AUG 2021 14:19
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  8 AUG 2021 17:41
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.052 seconds
+luaotfload | main : initialization completed in 0.070 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -3555,23 +3555,29 @@ Overfull \hbox (28.91002pt too wide) in paragraph at lines 526--527
  []
 
 [7<./daten1.png><./daten2.png><./daten3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 546--547
+Overfull \hbox (11.86562pt too wide) in paragraph at lines 542--544
+\TU/Alegreya(0)/m/n/12 zu wird ein neu-es Do-ku-ment in je-dem ein-zel-nen Kor-
+pus in-te-griert, um ei-ne Dokument-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
 [8]
-Overfull \hbox (14.10951pt too wide) in paragraph at lines 549--550
+Overfull \hbox (14.10951pt too wide) in paragraph at lines 553--554
 []\TU/Alegreya(0)/m/n/12 Da-bei wer-den zu-erst al-le An-fra-ge-da-ten in ei-ne
 n String zu-sam-men-ge-fügt, der als Grund-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
+Underfull \hbox (badness 10000) in paragraph at lines 553--554
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
 
  []
 
@@ -3579,68 +3585,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 551--552
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 
-./babrenk.tex:558: LaTeX Error: There's no line here to end.
+./babrenk.tex:562: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.558 E
+l.562 E
      ine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 o...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+
+Overfull \hbox (36.4015pt too wide) in paragraph at lines 565--566
+\TU/Alegreya(0)/m/n/12 ver-schie-de-ne Topic-Word-Verteilungen. Pro Kor-pus wir
+d für das neue Do-ku-ment die Dokument-
+ []
+
 [9]
-<lda1_1.png, id=188, 711.65875pt x 150.5625pt>
-File: lda1_1.png Graphic file (type png)
-<use lda1_1.png>
-Package luatex.def Info: lda1_1.png  used on input line 563.
-(luatex.def)             Requested size: 355.8285pt x 75.28105pt.
-<lda1_2.png, id=189, 794.97pt x 120.45pt>
-File: lda1_2.png Graphic file (type png)
-<use lda1_2.png>
-Package luatex.def Info: lda1_2.png  used on input line 568.
-(luatex.def)             Requested size: 397.48402pt x 60.22484pt.
- Excluding 'comment' comment.
-<lda1.png, id=190, 418.56375pt x 271.0125pt>
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+ []
+
+
+Overfull \hbox (17.78557pt too wide) in paragraph at lines 573--574
+\TU/Alegreya(0)/m/n/12 Die Un-ter-schei-dung die-ser Me-tho-de zu Mög-lich-kei
+t 󰋇 ist, dass sich die Topic-Wort-Verteilung
+ []
+
+<lda1.png, id=188, 418.56375pt x 271.0125pt>
 File: lda1.png Graphic file (type png)
 <use lda1.png>
-Package luatex.def Info: lda1.png  used on input line 594.
+Package luatex.def Info: lda1.png  used on input line 578.
 (luatex.def)             Requested size: 209.28136pt x 135.5059pt.
-<lda2.png, id=191, 317.185pt x 555.07375pt>
+<lda2.png, id=189, 317.185pt x 555.07375pt>
 File: lda2.png Graphic file (type png)
 <use lda2.png>
-Package luatex.def Info: lda2.png  used on input line 595.
+Package luatex.def Info: lda2.png  used on input line 579.
 (luatex.def)             Requested size: 158.5921pt x 277.53618pt.
- [10<./lda1_1.png><./lda1_2.png>]
-<lda3.png, id=199, 455.7025pt x 55.20625pt>
+[10]
+<lda3.png, id=196, 455.7025pt x 55.20625pt>
 File: lda3.png Graphic file (type png)
 <use lda3.png>
-Package luatex.def Info: lda3.png  used on input line 599.
+Package luatex.def Info: lda3.png  used on input line 583.
 (luatex.def)             Requested size: 227.85068pt x 27.60304pt.
 
-Overfull \hbox (0.83833pt too wide) in paragraph at lines 601--602
+Overfull \hbox (0.83833pt too wide) in paragraph at lines 585--586
 []\TU/Alegreya(0)/m/n/12 Aus die-ser Aus-ga-be wird nun er-sicht-lich, wie wahr
 -schein-lich es ist, dass ein be-stimm-
  []
 
 
-Overfull \hbox (6.45352pt too wide) in paragraph at lines 603--604
+Overfull \hbox (6.45352pt too wide) in paragraph at lines 587--588
 []\TU/Alegreya(0)/m/n/12 Wenn man den glei-chen Quell-text mit ei-ner ge-rin-ge
 -ren The-men-an-zahl auf-ru󰀖t, kommt
  []
 
-<lda4.png, id=200, 455.7025pt x 565.11125pt>
+<lda4.png, id=197, 455.7025pt x 565.11125pt>
 File: lda4.png Graphic file (type png)
 <use lda4.png>
-Package luatex.def Info: lda4.png  used on input line 605.
+Package luatex.def Info: lda4.png  used on input line 589.
 (luatex.def)             Requested size: 227.85068pt x 282.55493pt.
 [11<./lda1.png><./lda2.png><./lda3.png>]
-<lda5.png, id=208, 455.7025pt x 224.84pt>
+<lda5.png, id=205, 455.7025pt x 224.84pt>
 File: lda5.png Graphic file (type png)
 <use lda5.png>
-Package luatex.def Info: lda5.png  used on input line 609.
+Package luatex.def Info: lda5.png  used on input line 593.
 (luatex.def)             Requested size: 227.85068pt x 112.41972pt.
  [12<./lda4.png><./lda5.png>]
 Kapitel 3.
@@ -3651,33 +3662,33 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 \openout15 = babrenk-bibtex-entries.bib
 
 
-LaTeX Warning: Empty bibliography on input line 878.
+LaTeX Warning: Empty bibliography on input line 862.
 
 [13
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 878.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 878.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 862.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 862.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 878.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 878.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 862.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 862.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 2504506FFC8A8E1643AFA0026B44F32F;2065.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 878.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 862.
 )
 
 Here is how much of LuaTeX's memory you used:
- 52865 strings out of 494291
+ 52849 strings out of 494291
  125215,1977958 words of node,token memory allocated
  595 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 18 attribute, 64 gl
 ue_spec, 11 attribute_list, 2 write nodes
-   avail lists: 1:2,2:1141,3:235,4:68,5:515,6:29,7:4706,8:51,9:508,10:22,11:554
- 54160 multiletter control sequences out of 65536+600000
- 208 fonts using 64867495 bytes
+   avail lists: 1:2,2:1141,3:235,4:68,5:642,6:29,7:4977,8:51,9:518,10:22,11:559
+ 54151 multiletter control sequences out of 65536+600000
+ 208 fonts using 64867615 bytes
  72i,8n,135p,1838b,3300s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
 agella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegre
@@ -3693,10 +3704,10 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (19 pages, 1350441 bytes).
+Output written on babrenk.pdf (19 pages, 1249270 bytes).
 
-PDF statistics: 304 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 131072)
+PDF statistics: 301 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 131072)
  128 words of extra memory for PDF output out of 10000 (max. 100000000)
 

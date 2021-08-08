@@ -537,12 +537,16 @@ In diesem Abschnitt werden verschiedene Möglichkeiten implementiert und analysi
 
 Die Möglichkeiten, die sich für diesen Zweck ergeben sind folgende: 
 \begin{enumerate}
-\item Alle Dokumente ergeben ein Korpus. Das neue Dokument wird mit dem gesamten Korpus verglichen und auf thematische Kompatibilität geprüft. Ein Gesamtbild der thematischen Aufteilung aller Dokumente kann eine mögliche effektivere Neuverteilung der Kategorien schlussfolgern.
-\item Jede Abteilung stellt einen Korpus da, deren Verteilung mit der des neuen Dokuments verglichen wird. In diesem Fall hat jede der 18 Abteilungen eine Dokument-Themen Verteilung, die die Abteilung inhaltlich von den anderen unterscheidet. Die Wörter-Themen Verteilung ist für alle gleich, damit ein neues Dokument mit allen Abteilungsverteilungen verglichen werden kann. Dazu wird ein neues Dokument in jedem einzelnen Korpus integriert, um eine Dokument-Themen Verteilung für das neue Dokument auf Basis der gegebenen Wörter-Themen Verteilung zu inferieren. 
-\item Jede Abteilung stellt einen Korpus dar, deren Dokumente alle einzeln mit der Verteilung des neuen Dokuments verglichen werden, das dann quantitativ einer Abteilung zugeordnet wird. Die Wörter-Themen Verteilung ist gleich, während für jedes Dokument eine Dokument-Themen Verteilung errechnet wird. Wenn die Dokument-Themen Verteilung der bestehenden Dokumente und die des neuen Dokuments bereitstehen, können diese auf Ähnlichkeit überprüft werden. Da bereits bekannt ist, welcher Abteilung jedes Dokument angehört, stellen die Top X ähnlichsten Dokumente eine Verteilung der Abteilungen dar, denen das neue Dokument inhaltlich am ähnlichsten ist. 
+\item \textbf{Ein großer Korpus}\\
+Alle Dokumente ergeben ein Korpus. Das neue Dokument wird mit dem gesamten Korpus verglichen und auf thematische Kompatibilität geprüft. Ein Gesamtbild der thematischen Aufteilung aller Dokumente kann eine mögliche effektivere Neuverteilung der Kategorien schlussfolgern.
+\item \textbf{18 Korpora mit Durchschnitt}\\
+Jede Abteilung stellt einen Korpus da, deren Verteilung mit der des neuen Dokuments verglichen wird. In diesem Fall hat jede der 18 Abteilungen eine Dokument-Themen Verteilung, die die Abteilung inhaltlich von den anderen unterscheidet. Dazu wird ein neues Dokument in jedem einzelnen Korpus integriert, um eine Dokument-Themen Verteilung für das neue Dokument auf Basis der korpusabhängigen Wörter-Themen Verteilung zu inferieren. 
+
+\item \textbf{18 Korpora mit Mehrheitsentscheid}\\
+Jede Abteilung stellt einen Korpus dar, deren Dokumente alle einzeln mit der Verteilung des neuen Dokuments verglichen werden, das dann quantitativ einer Abteilung zugeordnet wird. Die Wörter-Themen Verteilung ist für alle dokumente eines Korpus gleich, während für jedes Dokument eine Dokument-Themen Verteilung errechnet wird. Wenn die Dokument-Themen Verteilung der bestehenden Dokumente und die des neuen Dokuments bereitstehen, können diese auf Ähnlichkeit überprüft werden. Da bereits bekannt ist, welcher Abteilung jedes Dokument angehört, stellen die Top X ähnlichsten Dokumente eine Verteilung der Abteilungen dar, denen das neue Dokument inhaltlich am ähnlichsten ist. 
 \end{enumerate}
 
-\subsection{Möglichkeit 1 \textcolor{red}{Groppe}}
+\subsection{Möglichkeit 1: Ein großer Korpus \textcolor{red}{Groppe}}
 Ziel dieser Untersuchung ist, der Vergleich der Themen, die sich durch ein LDA Modell ergeben mit den händisch eingeteilten Themen. Dafür wird ein Korpus auf allen Dokumenten generiert, der eine Themenverteilung erzeugt. Um herauszufinden, welches Dokument, zu welchem Thema gehört, werden die Themenverteilungen der einzelnen Dokumente inferiert. Die durch LDA erzeugte Themen werden mit den händisch geordneten Themen verglichen, indem Überschneidungen der enthaltenen Dokumente quantifiziert werden.  Da LDA die Themen nicht benennen kann ,sondern nur die Verteilung der Wörter auflistet, müssen die von LDA gefundenen Gruppen noch den händischen zugeordnet werden. Die Zuordnung, die in Summe die meisten Übereinstimmungen zwischen den Gruppen ergibt, stellt die realistischste Interpretation der LDA Themen dar. Das Ergebnis kann Aufschluss über die vorgegeben  Themen geben. Bei einem perfekten Modell und optimaler Themeneinteilung  müssten die Themen mit einer sehr hohen Überschneidungsrate eindeutig einteilbar sein.  \\
 
 
@@ -557,37 +561,17 @@ maxmatrix = [9, 10, 0, 9, 10, 10, 0, 10, 10, 0, 1, 2, 1, 9, 10, 9, 10, 9]
 \\
 Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau ein Thema der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. und 10. Thema der ZVO kompatibel wären. Somit ist zumindest keine optimale Zuordnung des Modellergebnisses möglich, was entweder auf die Aufteilung der Themen oder das Modell zurückzuführen ist.
 
-\subsection{Möglichkeit 2 \textcolor{red}{Felix}}
-Hier wird ein neues Dokument einer Abteilung zugeordnet. Dabei wird über den Ähnlichkeitsoperator zwischen der Verteilung des neuen Dokuments und der des Abteilungskorpus‘ entschieden, wie passend das Dokument und die jeweilige Abteilung sind. Die Ähnlichkeit kann entweder an der durchschnittlichen Dokument-Themenverteilung des ganzen Korpus‘ abgelesen werden oder jedes Dokument wird einzeln mit dem unbekannten Dokument verglichen. Bei letzterem werden dann die Dokumente pro Abteilung gezählt und abteilungsübergreifend verglichen. Dafür müssen zuerst alle Anfragen, die einer Abteilung zugeordnet wurden in einen Text vereinigt werden, aus dem dann der Korpus entstehen kann. Dies wird mit der folgenden Methode implementiert: 
+\subsection{Möglichkeit 2 : 18 Korpora mit Durchschnitt \textcolor{red}{Felix}}
+Als weitere Möglichkeit wird aus jeder der 18 vorgegebenen Abteilungen ein eigener Korpus generiert. Somit verfügt jeder Korpus über eine Dokument-Topic-Verteilung, die die Vorkommenswahrscheinlichkeit der 18 Themen in dem jeweiligen Korpus repräsentiert. Ziel der Untersuchung ist die Klassifikationsfähigkeit eines unbekannten Dokuments. Da jeder Korpus aus verschiedenen Dokumenten besteht, gibt es in 18 Korpora auch 18 verschiedene Topic-Word-Verteilungen. Pro Korpus wird für das neue Dokument die Dokument-Topic-Verteilung auf Basis der individuellen Topic-Word-Verteilung generiert. Dafür ist die Dokument-Topic-Verteilung der einzelnen Korpora relevant, die sich aus dem Durchschnitt aller Dokument-Topic-Verteilung der Dokumente eines jeweiligen Korpus ergibt. Aus dem Vergleich der Dokument-Topic-Verteilung des neuen Dokuments mit der des Korpus ergibt sich, wie gut das Dokument zu der Abteilung passt. Dieser Vergleich kann z.B. durch die Berechnung des Hellinger-Abstands der Verteilungen durchgeführt werden. Ist das Ergebnis klein, sind die Verteilungen ähnlich zu einander. Das neue Dokument wird dem Korpus zugeteilt, dessen Abstandsberechnung das minimale Ergebnis zeigt. Um zu analysieren, wie gut das Modell unbekannte Dokumente zuweist, kann nun die berechnetet Abteilung mit dem vorgelabelten Ergebnis verglichen werden. Bei einem Dokument ist das Ergebnis entweder richtig oder falsch, führt man den Vorgang jedoch mit mehreren Dokumenten aus, kann eine Quote errechnet werden. Diese sagt aus, wie gut die Dokumente klassifiziert wurden. 
 
-\includegraphics[scale=0.5]{lda1_1.png}
+Das Ergebnis kann sich durch Anpassung der Parameter im Modell verändern. Diese Änderungen werden wir untersuchen. 
 
-Aus dem „Wenn“-Statement ist zu erkennen, dass nur die subject-messages zum „result0“ hinzugefügt werden, die in der Tabelle bei Abteilung 0 eine 1 haben. Das Ergebnis wird dann direkt in einzelne Listenelemente unterteilt, damit ein Dictionary erstellt werden kann.
-Für jede Abteilung wird dann, wie oben bereits durchgeführt, ein Korpus generiert und dessen durchschnittliche Verteilung errechnet: 
-
-\includegraphics[scale=0.5]{lda1_2.png}
-
-Wenn die Verteilung der Themen des Korpus gegeben ist, kann nun ein neues Dokument in diesen Korpus integriert werden und auf Basis der Wort-Themenverteilung eine Dokument-Themenverteilung des unbekannten Dokuments errechnet werden. 
+\textcolor{red}{Aktuelles Problem: Durschnittsberechnung (hardgecoded) dauert für alle mehrere Tage}\\
 
 
-\textcolor{red}{Ein unbekanntes Dokument muss mit jeder Abteilung verglichen werden. Wie mache ich das?}
+\subsection{Möglichkeit 3: 18 Korpora mit Mehrheitsentscheid \textcolor{red}{Felix2}}
+Die Unterscheidung dieser Methode zu Möglichkeit 2 ist, dass sich die Topic-Wort-Verteilung eines Korpus nicht aus dem Durchschnitt aller ergibt, sondern das Dokument mit allen Verteilungen einzeln verglichen wird. Die Ähnlichkeit kann wieder durch die Hellinger-Distanz bestimmt werden. Dabei berechnet man die Distanz zwischen der Verteilung des neuen Dokuments und der jeden Dokuments enthalten im Korpus. Der Durchschnitt beschreibt die Ähnlichkeit zu dem Korpus. Bei 18 Korpora wird das neue Dokument dem zugeordnet, der die höchste Ähnlichkeit errechnet hat.  
 
-
-\begin{comment}
-\includegraphics[scale=0.5]{lda1_3.png} --der 80% Versuch
-
-Für diesen Korpus wird nun ein LDA Modell generiert, wie folgt: 
-
-\includegraphics[scale=0.5]{lda1_4.png}
-
-Aus den verbleibenden 20\% wird nun eine Anfrage gewählt, von der bekannt ist, dass sie der 1. Abteilung zugeordnet wurde. In diesem Fall ist das Zeile 133007. Diese wird in einen neuen Korpus verwandelt. \textcolor{red}{Muss für das Dokument wirklich ein neuer Korpus gemacht werden, um dann die Verteilungen vergleichen zu können oder kann man das Dokument auch anders in den Korpus inferieren?}
-
-\includegraphics[scale=0.5]{lda1_5.png}
-
-Für diesen neuen Korpus wird nun die Dokument-Themenverteilung errechnet, über der gleichen Wort-Themenverteilung. Die Ergebnisse werden dann ausgegeben und mit den des großen Korpus‘ verglichen. 
-
-\includegraphics[scale=0.5]{lda1_6.png}
-\end{comment}
 
 \subsection{Alternativ zu Möglichkeit 1 (Erster Versuch)} Das Ziel ist die Generierung einer Themenverteilung über alle Dokumente im Korpus. Diese könnte Aufschluss über die generelle Kategorien der Abteilungen geben. Dafür müssen zuerst alle Daten in einen großen Korpus vereinigt werden, das ist in der Methode „returnAll()“ implementiert. Danach wird diese in eine Liste aufgeteilt und in ein Dictionary verwandelt. Diese wird dann genutzt um mit der „gensim.models.LdaMulticore()“-Methode in einen LDA Modell verwandelt wird. Für dieses Modell wurde die Themenanzahl auf 18 gesetzt, da dies die aktuelle Anzahl der Themen bei dem ZVO ist. 
 
@@ -610,7 +594,7 @@ Wieder hat das meistvertrene Thema die Wörter „Zweckverband“, „sierksdorf
 
 \textcolor{red}{Was bringt mir das?}
 
-\subsection{\textcolor{red}{Möglichkeit 3 ??}}
+\subsection{\textcolor{red}{Möglichkeit 4 ??}}
 
 \section{Auswertung}
 	\subsection{Quellcode}
