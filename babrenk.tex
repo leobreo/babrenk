@@ -421,15 +421,19 @@ Diese Arbeit wird die Theorie der Themenmodellierung anhand des Beispiels des Zw
 
 \section{Notation}
 
-%TODO
-
-\section{Topic-Modelle}
+\begin{itemize}
+	\item $\mathcal{K}$ ist die Anzahl der Themen in einem Topic-Modell $\mathcal{M}$
+	\item Ein Model $\mathcal{M}$ repräsentiert den Korpus $\mathcal{D}$
+	\item Eine Menge von Dokumenten ist ein Korpus $\mathcal{D}$
+	\item Ein Dokument $\mathcal{d}$ eines Korpus ist eine Menge von $\mathcal{N}$-vielen 
+	Worten 
+\end{itemize}
 
 
 \section{Modellvergleich}
 \subsection{Latent Dirichlet Allocation}
 Themenmodellierung besteht aus vielen Methoden, die meist verbreitete ist die „Latent Dirichlet Allocation (LDA)“, was als Bag of Word modelliert ist, also keine Kontextinformationen beinhaltet. Dieses Verfahren ist eine Weiterentwicklung des ‚PLSI‘, das durch zwei Dirichlet-Priors ergänzt wurde. LDA liegt ein generierender Prozess zugrunde, den zwei Dirichlet Verteilungen maßgeblich beeinflussen: die Dokument-Themen Verteilung, die die Ausprägungen verschiedener Themen in einem Dokument beschreibt, und die Themen-Wörter Verteilung, die die Wahrscheinlichkeit beschreibt, dass ein bestimmtes Wort in einer gewissen Regularität in einem Themenbereich vorkommt. Dabei geht man davon aus, dass ein Dokument eine Verteilung von Themen ist, während ein Thema als eine Verteilung über Wörter betrachtet wird. 
-Die Wahrscheinlichkeit, dass ein bestimmtes Dokument generiert wird, ist das Produkt der Wahrscheinlichkeiten der beiden Verteilungen mit den Wahrscheinlichkeiten zweier multinomialen Verteilungen, die erst zufällig Topics, wie in der Dirichlet-Verteilung definiert, auswählen und aus diesen dann, mithilfe der zweiten Dirichlet-Verteilung, Wörter aus diesen Topics herleiten, wodurch das Enddokument entsteht. Das Enddokument wird höchstwahrscheinlich stark von dem gegebenen Dokument abweichen, jedoch kann durch anpassen der Dirichlet-Verteilungen eine Optimierungsproblem formuliert werden, nach dem die Dirchlet-Verteilungen gesucht werden, die ein möglichst ähnliches Dokument generieren.
+Die Wahrscheinlichkeit, dass ein bestimmtes Dokument generiert wird, ist das Produkt der Wahrscheinlichkeiten der beiden Verteilungen mit den Wahrscheinlichkeiten zweier multinomialen Verteilungen, die erst zufällig Topics, wie in der Dirichlet-Verteilung definiert, auswählen und aus diesen dann, mithilfe der zweiten Dirichlet-Verteilung, Wörter aus diesen Topics herleiten, wodurch das Enddokument entsteht. Das Enddokument wird höchstwahrscheinlich stark von dem gegebenen Dokument abweichen, jedoch kann durch anpassen der Dirichlet-Verteilungen ein Optimierungsproblem formuliert werden, nach dem die Dirchlet-Verteilungen gesucht werden, die ein möglichst ähnliches Dokument generieren.
 
 \subsection{Latent Semantic Analysis (LSA)}
 Ein anderes verbreitetes Verfahren ist das „Latent Semantic Analysis“ (LSA), welches auf das Finden von sogenannten Hauptkomponenten in Dokumenten abzielt. Dadurch können sowohl ähnliche Wörter gefunden, als auch Textbereiche, die inhaltliche Überschneidungen mit einem bestimmten Begriff haben, aber das Wort selber nicht enthalten, gefunden werden. Die Methode basiert auf dem Prinzip der Singulärwertzerlegung(SVD). Als Ausgangslage wird aus einer Textsammlung eine Term-Dokument-Matrix erstellt. Diese Matrix wird in der SVD als Produkt von drei Matrizen dargestellt, von denen die mittlere eine Diagonalmatrix darstellt. Die Werte auf der Diagonalen lassen daraus die Topics der Textmenge ablesen. Auf das SVD Verfahren selbst hat der Entwickler wenig Einfluss. Um Rauschen zu verhindern, kann jedoch die Anfangsmatrix mithilfe der term-frequency und inverse-document-frequency verbessert werden, was sich auf das Gesamtergebnis auswirkt. LSA stellt sich als ein attraktives Verfahren heraus, da es Synonyme besser erkennen kann, als LDA und wird heutzutage unter anderem intensiv in dem Bereich des Digital Marketings genutzt.
@@ -464,17 +468,39 @@ Eine Besonderheit bei der Themenerkennung mit LDA ist, dass die Anzahl der gesuc
 \end{tikzpicture}   
 \end{center}\\
 
-Dabei beschreibt \mathcal{W} als einzige nicht verborgene Variable eines von \mathcal{N} Wörtern des Dokuments. Das Wort ist semantisch einem Thema \mathcal{Z} zugeordnet. Das Thema wiederum hängt von der Themen-Verteilung \mathcal{theta} des Dokuments ab, das als ein Elment der \mathcal{M} vorliegenden Dokumente betrachtet wird. Neben dem Thema, wird jedes Wort auch von der jeweilgen Thema-Wort-Verteilung \mathcal{\phi} der \mathcal{K} Themen beeinflusst. Das Modell und dessen Verteilungen kann durch die Parameter $\alpha$ und $\beta$ angepasst werden. $\alpha$ kann bestimmt die Intensität der Dokument-Themen-Verteilung, während $\beta$ die der Themen-Wort-Verteilung beeinflusst. Bei einem großen $\alpha$ ist die Verteilung der Themen in einem Dokument (eindeutig/unklar).
+Dabei beschreibt \mathcal{W} als einzige nicht verborgene Variable eines von \mathcal{N} Wörtern des Dokuments. Das Wort ist semantisch einem Thema \mathcal{Z} zugeordnet. Das Thema wiederum hängt von der Themen-Verteilung \mathcal{theta} des Dokuments ab, das als ein Elment der \mathcal{M} vorliegenden Dokumente betrachtet wird. Neben dem Thema, wird jedes Wort auch von der jeweilgen Thema-Wort-Verteilung \mathcal{\phi} der \mathcal{K} Themen beeinflusst. Das Modell und dessen Verteilungen kann durch die Parameter $\alpha$ und $\beta$ angepasst werden. $\alpha$ kann bestimmt die Intensität der Dokument-Themen-Verteilung, während $\beta$ die der Themen-Wort-Verteilung beeinflusst. Bei einem großen $\alpha$ ist die Verteilung der Themen in einem Dokument ähnlicher. Zusätzlich werden bei LDA zwei Bedingungen verfolgt, die von den beiden Parametern beeinflusst werden können. Erstens strebt man für alle Wort eines bestimmten Dokuments so wenig zugeordnete Themen an, wie möglich. Zweitens soll ein Thema über so wenig relevante Wörter wie möglich verfügen. Die beiden Ziele stehen in einer Wechselbeziehung zueinander, da eine minimale Anzahl an vertretenen Themen in einem Dokument zu maximal vielen Wörtern in diesen Themen führt. Die minimale Anzahl an Themen wäre erreicht, wenn man alle Wörter eines Dokuments einem Thema zuweist. Dadurch verfügt das Thema jedoch über alle Wörter des Dokuments. $\alpha$ befindet sich in dem Bereicht $[0,1]$ mit sinnvollen Werten zwischen $[0.01, 0.1]$, während $\beta =0.01$ durchschnittlich die besten Ergebnisse liefert. Große Werte führen zu einer Gleichverteilung, die wiederum eine Verschlechterung der Perplexität bedeutet. Somit bietet die Perplexität ein Mittel, um $\alpha$ und $\beta$ optimal für die individuelle Anwendung zu finden. \\
 
+Bei LDA werden zwei Verteilungen aus den Dokumenten $d \in \mathcal{D}$ und $k \in \mathcal{K}$gelernt: die Dokument-Topic-Verteilung $\theta$ und die Topic-Wort-Verteilung $\phi$. Dabei gibt die Dokument-Topic-Verteilung an, mit welcher Wahrscheinlichkeit das Dokument zu jedem Themen gehört. Die Topic-Wort-Verteilung berechnet die Wahrscheinlichkeit, dass ein Wort einem Thema angehört. $\mathcal{M} = LDA(\mathcal{D})$ beschreibt ein LDA Modell, das auf der Dokumentenmenge/Korpus $\mathcal{D}$ trainiert wurde.
 
 
 \subsection{Der generative Prozess} 
-Mit LDA kann ein Dokument generiert werden, wenn die beiden Verteilungen Alpha und Beta bekannt sind. Zuerst wird eine Verteilung für die Themenausprägung in einem Dokument m ausgewählt. Folgend die Verteilung der Wörter auf die Themen. Wenn diese beiden Verteilungen festgelegt sind, kann für jede Position w im Dokument m die folgende Schleife durchlaufen werden: 
+Der Algorithmus hinter LDA generiert neue Dokumente mithilfe von Dirichletverteilungen $Dir(\gamma)$ und Multinomialverteilungen $Multinom(\delta)$. Die Verteilungen $\theta$ und $\phi$ werden errechnet, indem iterativ neue Dokumente über andere Verteilung generiert werden, bis das generierte Dokument die Anforderungen befriedigt, dann können die Verteilungen abgelesen werden, mit denen das Dokument erstellt wurde. Der Prozess verläuft folgendermaßen: 
 \begin{enumerate}
-	\item Wähle ein Thema aus Theta
-	\item Wähle ein Wort dieses Themas aus Phi
+	\item Wähle ein $\theta$ als $Dir(\alpha)$
+	\item Wähle ein $\phi$ als $Dir(\beta)$
+	\item Für jedes Wort $w$ and Stelle $i = 1,...,N$ im Dokument $d$: 
+	\begin{enumerate}
+		\item Wähle ein Thema $z_{d,i}$ als $Multinom(\theta_d)$
+		\item Wähle ein Wort $w_{d,i}$ als $Multinom(\phi_z_{d,i})$
+	\end{enumerate}
 \end{enumerate}
-Bei einem gegeben Dokument mit dem Ziel die Themenverteilung herauszufinden, wird angenommen, dass dieses Dokument wie oben beschrieben generiert wurde. Somit kann der Algorithmus nun neue Dokumente erstellen und das Ergebnis durch die Parameter, wie Alpha und Beta, anpassen, bis das Ergebnis ähnlich genug zu dem Anfangsdokument ist. Dann ist die Verteilung der Themen in diesem Dokument bekannt. Bei der Anwendung von LDA für praktische Problemstellungen, geht LDA das Prinzip rückwärts durch, d.h. für bestehende Gruppen an Dokumenten werden Verteilungen gesucht, durch die das Dokument generiert hätte werden können.
+
+Somit kann der Algorithmus nun neue Dokumente erstellen und das Ergebnis durch die Parameter, wie Alpha und Beta, anpassen, bis das Ergebnis ähnlich genug zu dem Anfangsdokument ist. Dann ist die Verteilung der Themen in diesem Dokument bekannt. Bei der Anwendung von LDA für praktische Problemstellungen, geht LDA das Prinzip rückwärts durch, d.h. für bestehende Gruppen an Dokumenten werden Verteilungen gesucht, durch die das Dokument generiert hätte werden können.
+
+\begin{equation}
+P(w,z,\theta, \phi, \alpha, \beta) = \bigg{\prod} P(\theta, \alpha) \cdot \prod P(\alpha, \beta) \cdot \prod P(z,\tehta) \cdot \prod P(w \mid \phi) 
+\end{equation}
+
+Die Formel beschreibt die totale Wahrscheinlichkeit des LDA Modells. Sie setzt sich zusammen aus den Produkten der Dirichlet Verteilung der Topics und der Wörter zusammen mit den multinomialen Verteilungen der Themen und Wörter. Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung der gegebenen Dokumente für latente Variablen. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken: 
+
+\begin{center}
+\begin{equation}
+P(\theta, z \mid w, \alpha, \beta) = \frac{P(\theta, z, w \mid \alpha, \beta)}{P(w \mid \alpha, \beta)}
+\end{equation}
+\end{center}
+
+Die Formel berechnet die Wahrscheinlichkeit der Verteilung unter einem bestimmten Thema gegeben der $\alpha$ und $\beta$ Parameter und dem bekannten Wort. Die Wahrscheinlichkeit kann nicht exakt bestimmt werden, weshalb Verfahren wie Gibbs Sampling diese approximieren.
+
 
 %\begin{center}
 %\includegraphics{img1.png}
