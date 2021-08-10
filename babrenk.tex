@@ -528,6 +528,13 @@ Um die Einträge in eine computer-lesbare Form zu verwandeln, muss ein Dictionar
 
 \subsection{Gibbs Sampling}
 \subsection{Hellinger Distanz}
+In der Wahrscheinlichkeitsrechnung kann die Hellinger Distanz als Maß genutzt werden, um die Ähnlichkeit zweier Verteilungen zu berechnen. Für diese Anwendung bietet sich die Hellinger Distanz an, da sie oft im Kontext von Modellen und Topics verwendet wird. Zusätzlich lässt sie sich gut in Gensim Implementationen einbauen. Neben der Verteilungsvergleich kann auch eine Hellingermatrix erstellt werden, die jedes Topic des einen Modells mit jedem Topic eines zweiten Modells vergleicht. Somit wird ist es möglich die Ähnlichkeit zwischen zwei Modellen festzustellen. Formal errechnet sich die Distanz zwischen zwei diskreten Verteilungen $X$ und $Y$ aus folgender Gleichung: 
+
+\begin{center}
+\begin{equation}
+	H(X,Y) = \frac{1}{\sqrt{2}} \sqrt{\sum^k_{i=1}(\sqrt{x_i}-\sqrt{y_i})^2}
+\end{equation}
+\end{center}
 
 \subsection{Datenreinigung}
 Bevor eine Themenmodellierung auf Daten durchgeführt werden kann, müssen die Daten einem Prozess unterzogen werden. Dieser beginnt mit der Datenaquise, also der Akquirierung bestimmter relevanter Daten. Im Falle der ZVO bedeutet dies, dass es genügend Kundenanfragen gibt, die verarbeitet werden können. Wenn diese Daten bestehen, werden sie auf die relevanten Wörter reduziert, aus denen eine bedeutsame Inferenz von Informationen möglich ist, sodass unter anderem die sogeneannten „Stop-Words“, also eine Menge von Verbindungswörtern entfernt werden. Ein anderer Schritt der Datenreinigung ist das Transponieren aller Wörter in kleine Buchstaben, um eine Einheitlichkeit zu erlangen, da das Bag of Words Modell keine Reihenfolge mehr beachtet und somit große Satzanfänge irrelevant werden. Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dies kann zum Beispiel in Form eines Bag-of-Words Modells, Dictionary oder TF-IDF, also einer relativen Vorkommensauflistung verschiedner Wörter über Dokumente umgesetzt werden. Nachdem die Daten in eine für den Computer kompatiblen Form gebracht wurden, kann das Themenmodell entwickelt werden. 
@@ -598,7 +605,13 @@ sim = [0.18631196155691188, 0.9805342692097637, 0.9596672538794954,  0.985326724
 \end{lstlisting}\\
 
 
-Diese Liste enthält die Stärke der Ähnlichkeit des neuen Dokuments zu den 18 Korpora. Die Hellinger Distanz ist klein, wenn die Argumente ähnlich sind und groß, wenn sie verschieden sind. In der Liste ist der erste Eintrag mit Abstand am geringsten, weshalb das Dokument dem ersten Korpus, also der Abteilung 0 zugeordnet werden würde. Im Algorithmus sieht man, dass das neue Dokument tatsächlich aus Abteilung 0 gewählt wurde. Somit war die Zuordnung erfolgreich.
+Diese Liste enthält die Stärke der Ähnlichkeit des neuen Dokuments zu den 18 Korpora. Die Hellinger Distanz ist klein, wenn die Argumente ähnlich sind und groß, wenn sie verschieden sind. In der Liste ist der erste Eintrag mit Abstand am geringsten, weshalb das Dokument dem ersten Korpus, also der Abteilung 0 zugeordnet werden würde. Im Algorithmus sieht man, dass das neue Dokument tatsächlich aus Abteilung 0 gewählt wurde. Somit war die Zuordnung erfolgreich. \\
+
+Um eine aussagekräftigere Quote zu erhalten wird dieser Algorithmus für ein unbekanntes Dokument jeden Korpus durchgeführt. Die jeweiligen Zuordnungen werden in einer Liste gespeichert. Der Index besagt aus welchem Korpus ein Dokument entnommen wurde und der Wert, den Korpus, dem es zugeordnet wurde. Das Ergebnis zeigt folgendes: \\
+
+\begin{lstlisting}
+assignment = [0, 14, ]
+\end{lstlisting}
 
 \subsection{Alternativ zu Möglichkeit 1 (Erster Versuch)} Das Ziel ist die Generierung einer Themenverteilung über alle Dokumente im Korpus. Diese könnte Aufschluss über die generelle Kategorien der Abteilungen geben. Dafür müssen zuerst alle Daten in einen großen Korpus vereinigt werden, das ist in der Methode „returnAll()“ implementiert. Danach wird diese in eine Liste aufgeteilt und in ein Dictionary verwandelt. Diese wird dann genutzt um mit der „gensim.models.LdaMulticore()“-Methode in einen LDA Modell verwandelt wird. Für dieses Modell wurde die Themenanzahl auf 18 gesetzt, da dies die aktuelle Anzahl der Themen bei dem ZVO ist. 
 
