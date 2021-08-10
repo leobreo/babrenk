@@ -570,8 +570,35 @@ Das Ergebnis kann sich durch Anpassung der Parameter im Modell verändern. Diese
 
 
 \subsection{Möglichkeit 3: 18 Korpora mit Mehrheitsentscheid \textcolor{red}{Felix2}}
-Die Unterscheidung dieser Methode zu Möglichkeit 2 ist, dass sich die Topic-Wort-Verteilung eines Korpus nicht aus dem Durchschnitt aller ergibt, sondern das Dokument mit allen Verteilungen einzeln verglichen wird. Die Ähnlichkeit kann wieder durch die Hellinger-Distanz bestimmt werden. Dabei berechnet man die Distanz zwischen der Verteilung des neuen Dokuments und der jeden Dokuments enthalten im Korpus. Der Durchschnitt beschreibt die Ähnlichkeit zu dem Korpus. Bei 18 Korpora wird das neue Dokument dem zugeordnet, der die höchste Ähnlichkeit errechnet hat.  
+Die Unterscheidung dieser Methode zu Möglichkeit 2 ist, dass sich die Topic-Wort-Verteilung eines Korpus nicht aus dem Durchschnitt aller ergibt, sondern das unbekannte Dokument mit allen Verteilungen einzeln verglichen wird. Die Ähnlichkeit wird dann durch die Hellinger-Distanz bestimmt. Dabei berechnet man die Distanz zwischen der Verteilung des neuen Dokuments und der jeden Dokuments enthalten im Korpus. Der Durchschnitt beschreibt die Ähnlichkeit zu dem Korpus und ergibt sich aus der Summe aller Distanzen geteilt durch die Anzahl der Vergleiche. Bei 18 Korpora wird das neue Dokument dem zugeordnet, der die höchste Ähnlichkeit errechnet hat. Als Code wird dies folgendermaßen abgebildet: \\
 
+\begin{lstlisting}
+
+sim = 0
+
+new_doc = df.at[unbekannt_docs_abt0[0], 'subject-message']
+bow = corpora.Dictionary([abt0]).doc2bow(new_doc.split())
+t_new_doc = lda0.get_document_topics(bow) 
+
+for a in range(18):
+    for n in range(len(globals()['index_abt%s' % a])):
+        doc = df.at[(globals()['index_abt%s' % a][n]),'subject-message']
+        bow = corpora.Dictionary([(globals()['abt%s' % a])]).doc2bow(doc.split())
+        t = globals()['lda%s' % a].get_document_topics(bow)
+        sim += hellinger(t_new_doc,t)
+    sim = sim/len((globals()['index_abt%s' % a]))
+
+\end{lstlisting}\\
+
+
+Für das in diesem Algorithmus genutztes unbekanntes Dokument wurde diese Ähnlichkeitsliste errechnet: \\
+
+\begin{lstlisting}
+sim = [0.18631196155691188, 0.9805342692097637, 0.9596672538794954,  0.9853267249062526, 0.9807896917303207, 0.9872277594688493, 0.9778663668837273,0.9733184898947137, 0.9816813043505935, 0.9712383191132694, 0.9609198366954252, 1.01269095883496, 0.9789156307013527, 0.947041755787613, 0.9751426522996282, 0.9768546403218383, 0.9745868410322677, 0.9810759260918432]
+\end{lstlisting}\\
+
+
+Diese Liste enthält die Stärke der Ähnlichkeit des neuen Dokuments zu den 18 Korpora. Die Hellinger Distanz ist klein, wenn die Argumente ähnlich sind und groß, wenn sie verschieden sind. In der Liste ist der erste Eintrag mit Abstand am geringsten, weshalb das Dokument dem ersten Korpus, also der Abteilung 0 zugeordnet werden würde. Im Algorithmus sieht man, dass das neue Dokument tatsächlich aus Abteilung 0 gewählt wurde. Somit war die Zuordnung erfolgreich.
 
 \subsection{Alternativ zu Möglichkeit 1 (Erster Versuch)} Das Ziel ist die Generierung einer Themenverteilung über alle Dokumente im Korpus. Diese könnte Aufschluss über die generelle Kategorien der Abteilungen geben. Dafür müssen zuerst alle Daten in einen großen Korpus vereinigt werden, das ist in der Methode „returnAll()“ implementiert. Danach wird diese in eine Liste aufgeteilt und in ein Dictionary verwandelt. Diese wird dann genutzt um mit der „gensim.models.LdaMulticore()“-Methode in einen LDA Modell verwandelt wird. Für dieses Modell wurde die Themenanzahl auf 18 gesetzt, da dies die aktuelle Anzahl der Themen bei dem ZVO ist. 
 
