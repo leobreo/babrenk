@@ -499,8 +499,23 @@ P(\theta, z \mid w, \alpha, \beta) = \frac{P(\theta, z, w \mid \alpha, \beta)}{P
 \end{equation}
 \end{center}
 
-Die Formel berechnet die Wahrscheinlichkeit der Verteilung unter einem bestimmten Thema gegeben der $\alpha$ und $\beta$ Parameter und dem bekannten Wort. Die Wahrscheinlichkeit kann nicht exakt bestimmt werden, weshalb Verfahren wie Gibbs Sampling diese approximieren.
+Die Formel berechnet die Wahrscheinlichkeit der Verteilung unter einem bestimmten Thema gegeben der $\alpha$ und $\beta$ Parameter und dem bekannten Wort. Die Wahrscheinlichkeit kann nicht exakt bestimmt werden, weshalb Verfahren wie Gibbs Sampling diese approximieren.\\
 
+\subsection{Alpha und Beta}
+Die Dirichlet Verteilungen werden durch die beiden Parameter $\alpha$ und $\beta$ bestimmt. Diese formulieren die mathematische Bedeutung der beiden Ziele von LDA:
+
+\begin{enumerate}
+	\item Ein Dokument wird so wenigen Themen wie möglich zugewiesen ($\alpha$)
+	\item Jedes Thema hat so wenig relevante Wörter wie möglich ($\beta$)
+\end{enumerate}
+
+Dabei kann 1) erreicht werden, wenn alle Worte eine Topic wären, was jedoch nicht mit 2) übereinstimmen würde. Für ein erfülltes 2) gibt es nicht die minimale Anzahl an Topics. Die Funktionsweise von verschiedenen $alpha$-Werten zeigen folgende Abbildungen: 
+\\
+\begin{center}
+\includegraphics[scale=0.3]{lda_alpha001.png}\\
+\includegraphics[scale=0.3]{lda_alpha1.png}\\
+\end{center}
+In der ersten Abbildung führt ein kleiner $\alpha = 0.01$ zu einer sehr eindeutigen Themenvertieilung. Bei der unteren Abbildung hingegen haben wir ein $\alpha = 1$, was eine gleichmäßigere Verteilung zur Folge hat.
 
 %\begin{center}
 %\includegraphics{img1.png}
@@ -557,12 +572,57 @@ Jede Abteilung stellt einen Korpus dar, deren Dokumente alle einzeln mit der Ver
 \end{enumerate}
 
 \subsection{Möglichkeit 1: Ein großer Korpus \textcolor{red}{Groppe}}
-Ziel dieser Untersuchung ist, der Vergleich der Themen, die sich durch ein LDA Modell ergeben mit den händisch eingeteilten Themen. Dafür wird ein Korpus auf allen Dokumenten generiert, der eine Themenverteilung erzeugt. Um herauszufinden, welches Dokument, zu welchem Thema gehört, werden die Themenverteilungen der einzelnen Dokumente inferiert. Die durch LDA erzeugte Themen werden mit den händisch geordneten Themen verglichen, indem Überschneidungen der enthaltenen Dokumente quantifiziert werden.  Da LDA die Themen nicht benennen kann ,sondern nur die Verteilung der Wörter auflistet, müssen die von LDA gefundenen Gruppen noch den händischen zugeordnet werden. Die Zuordnung, die in Summe die meisten Übereinstimmungen zwischen den Gruppen ergibt, stellt die realistischste Interpretation der LDA Themen dar. Das Ergebnis kann Aufschluss über die vorgegeben  Themen geben. Bei einem perfekten Modell und optimaler Themeneinteilung  müssten die Themen mit einer sehr hohen Überschneidungsrate eindeutig einteilbar sein.  \\
+Ziel dieser Untersuchung ist der Vergleich der Themen, die sich durch ein LDA Modell ergeben mit den händisch eingeteilten Themen. Dafür wird ein Korpus auf allen Dokumenten generiert, der eine Themenverteilung erzeugt. Um herauszufinden, welches Dokument, zu welchem Thema gehört, werden die Themenverteilungen der einzelnen Dokumente inferiert. Die durch LDA erzeugte Themen werden mit den händisch geordneten Themen verglichen, indem Überschneidungen der enthaltenen Dokumente quantifiziert werden.  Da LDA die Themen nicht benennen kann ,sondern nur die Verteilung der Wörter auflistet, müssen die von LDA gefundenen Gruppen noch den händischen zugeordnet werden. Die Zuordnung, die in Summe die meisten Übereinstimmungen zwischen den Gruppen ergibt, stellt die realistischste Interpretation der LDA Themen dar. Das Ergebnis kann Aufschluss über die vorgegeben  Themen geben. Bei einem perfekten Modell und optimaler Themeneinteilung  müssten die Themen mit einer sehr hohen Überschneidungsrate eindeutig einteilbar sein.  \\
 
 
 Dabei werden zuerst alle Anfragedaten in einen String zusammengefügt, der als Grundlage für das Wörterbuch und den Korpus dient. Durch den Aufruf des LDA Modells wird der String in eine vorgegebene Anzahl an Themen eingeteilt, basierend auf häufig zusammen auftretenden Wörtern des Wörterbuchs. \\
 
-Die Überschneidungen sind in einer Matrix aufgetragen, die für jedes Thema aus dem LDA Modell die Anzahl der Überschneidungen mit jedem manuell erzeugten Thema speichert. Mit einer Max-Funktion wird das maximale Element aus jeder Zeile gefunden und dessen Index in einer Liste gespeichert. Dieser Index repräsentiert die Abteilung, mit der das jeweilige Thema des LDA Modells am wahrscheinlichsten zugeordnet wäre. Der Liste lässt sich folgend interpretieren: \\
+Die Überschneidungen sind in einer Matrix aufgetragen, die für jedes Thema aus dem LDA Modell die Anzahl der Überschneidungen mit jedem manuell erzeugten Thema speichert. Mit einer Max-Funktion wird das maximale Element aus jeder Zeile gefunden und dessen Index in einer Liste gespeichert. Dieser Index repräsentiert die Abteilung, mit der das jeweilige Thema des LDA Modells am wahrscheinlichsten zugeordnet wäre.  \\
+
+\begin{center}
+\begin{tabular}{c c c c c c c c c c c c c c c c c c c}
+\hline
+& 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17  \\ 
+\hline
+0& x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+1 &x & x & x &  x & x & x & x & x & x & x & x & x & x & x & x & x & x & x \\ 
+\hline
+2& x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+3&x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+4&x  & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+5 &x  & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+6 &x  & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x \\ 
+\hline
+7 & x  &  x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+8 & x  & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+9 & x  & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+10 & x  & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+11 & x  & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+12 & x  & x & x & x & x &x &  x & x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+13 & x  & x & x & x & x & x &x &  x & x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+14 & x  & x & x & x & x & x & x &x &  x & x & x & x & x & x & x & x & x & x  \\ 
+\hline
+15 & x  & x & x & x & x & x & x & x &x &  x & x & x & x & x & x & x & x & x  \\ 
+\hline
+16 & x  & x & x & x & x & x & x & x & x &x &  x & x & x & x & x & x & x & x  \\ 
+\hline
+17 & x  & x & x & x & x & x & x & x & x & x &x &  x & x & x & x & x & x & x \\ 
+\hline
+\end{tabular}\end{center}\\
+
+\\
 
 \begin{lstlisting}[language=Python]
 maxmatrix = [9, 10, 0, 9, 10, 10, 0, 10, 10, 0, 1, 2, 1, 9, 10, 9, 10, 9]
@@ -613,10 +673,12 @@ Diese Liste enthält die Stärke der Ähnlichkeit des neuen Dokuments zu den 18 
 Um eine aussagekräftigere Quote zu erhalten wird dieser Algorithmus für ein unbekanntes Dokument jeden Korpus durchgeführt. Die jeweiligen Zuordnungen werden in einer Liste gespeichert. Der Index besagt aus welchem Korpus ein Dokument entnommen wurde und der Wert, den Korpus, dem es zugeordnet wurde. Das Ergebnis zeigt folgendes: \\
 
 \begin{lstlisting}
-assignment = [0, 14,  2,  8, 4, 5]
-\end{lstlisting}
+assignment= [0,14,2,8,4,5,2,7,3,2, 8,11,12,13,4,15,9,6]
+\end{lstlisting}\\
+\\
+\\
 
-Eine perfekte Zuteilung wäre erreicht, wenn die Liste mit den Zahlen 0 bis 17 in aufsteigender Reihenfolge gefüllt wäre. Die Quote von richtig zugeordneten Dokumenten liegt somit bei X
+Eine perfekte Zuteilung wäre erreicht, wenn die Liste mit den Zahlen 0 bis 17 in aufsteigender Reihenfolge gefüllt wäre. Die Quote von richtig zugeordneten Dokumenten liegt somit bei 50\%. Bei der korrekten Zuordnung war eine klare Abgrenzung der Distanz gegenüber den inkorrekten Abteilungen festzustellen. Die korrekten Abteilungen hatten eine Distanz von ca $[0.01,0.09]$ . Bei inkorrekten hingegen entschied sich die Zuordnung durch wenige Zehntel Unterschiede in der Ähnlichkeit mit der korrekten Abteilung. 
 
 \subsection{Alternativ zu Möglichkeit 1 (Erster Versuch)} Das Ziel ist die Generierung einer Themenverteilung über alle Dokumente im Korpus. Diese könnte Aufschluss über die generelle Kategorien der Abteilungen geben. Dafür müssen zuerst alle Daten in einen großen Korpus vereinigt werden, das ist in der Methode „returnAll()“ implementiert. Danach wird diese in eine Liste aufgeteilt und in ein Dictionary verwandelt. Diese wird dann genutzt um mit der „gensim.models.LdaMulticore()“-Methode in einen LDA Modell verwandelt wird. Für dieses Modell wurde die Themenanzahl auf 18 gesetzt, da dies die aktuelle Anzahl der Themen bei dem ZVO ist. 
 
@@ -633,7 +695,7 @@ Wenn man den gleichen Quelltext mit einer geringeren Themenanzahl aufruft, kommt
 
 \includegraphics[scale=0.5]{lda4.png}
 
-Wieder hat das meistvertrene Thema die Wörter „Zweckverband“, „sierksdorf“ und „ostholstein“ als häufigste vorkommende Elemente. Als Einflussfaktor dient die Dirichlet Variable Alpha, die beeinflusst, wie stark die Wahrscheinlichkeitsunterschiede zwischen den einzelnen Werten ist. Im vorherigen Beispiel war Alpha 0,8 von 1.0. Im folgenden ist es 0,2 von 1.0: 
+Wieder hat das meistvertrene Thema die Wörter „zweckverband“, „sierksdorf“ und „ostholstein“ als häufigste vorkommende Elemente. Als Einflussfaktor dient die Dirichlet Variable Alpha, die beeinflusst, wie stark die Wahrscheinlichkeitsunterschiede zwischen den einzelnen Werten ist. Im vorherigen Beispiel war Alpha 0,8 von 1.0. Im folgenden ist es 0,2 von 1.0: 
 
 \includegraphics[scale=0.5]{lda5.png}
 
@@ -923,3 +985,142 @@ Wieder hat das meistvertrene Thema die Wörter „Zweckverband“, „sierksdorf
 %  LocalWords:  Arseneau amsmath ist Tipps und zur Formulierung
 %  LocalWords:  mathematischer Gedanken Mathematik Studienanfänger
 %  LocalWords:  Albrecht Vieweg Teubner Verlag
+%----------- Unbekanntes Dokument aus Abteilung 2
+\begin{comment}
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 0
+0.9862926810138586
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 1
+0.9571869236469115
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 2
+0.4243761541963673
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 3
+0.8170893195471294
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 4
+0.9874729799815282
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 5
+0.9931561753584889
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 6
+0.5336300510210132
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 7
+0.9835423840076553
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 8
+0.9055489259816708
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 9
+0.918315655409751
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 10
+0.9717280957764937
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 11
+1.0200485943384316
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 12
+0.9799722682938453
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 13
+0.9902009138740018
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 14
+0.9448712978582676
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 15
+0.853285453931238
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 16
+0.9800777378752288
+Ähnlichkeit Dokument aus Abteilung 2 new_doc mit Abteilung 17
+0.9868668309925873
+----------- Unbekanntes Dokument aus Abteilung 3
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 0
+0.9546402250634405
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 1
+0.9501046677430375
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 2
+0.9475955507807069
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 3
+0.8203275509481707
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 4
+0.9564101798708572
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 5
+0.962763088940358
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 6
+0.9586901745657708
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 7
+0.9530716371514371
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 8
+0.81912659051298
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 9
+0.9485436573609711
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 10
+0.9489000910471992
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 11
+0.9880846832670455
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 12
+0.9542904546015017
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 13
+0.958165395915207
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 14
+0.946601483319905
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 15
+0.9290476335509387
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 16
+0.9488928818477043
+Ähnlichkeit Dokument aus Abteilung 3 new_doc mit Abteilung 17
+0.9552382581661794
+----------- Unbekanntes Dokument aus Abteilung 4
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 0
+0.9839514363285209
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 1
+0.8354915628775844
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 2
+0.972318475461502
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 3
+0.9915257842072557
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 4
+0.03325975046028289
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 5
+0.9841236015589845
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 6
+0.6232323879458616
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 7
+0.9836855987617704
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 8
+0.9879726956648679
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 9
+0.9202843331970301
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 10
+0.9373869579957838
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 11
+1.018147207280227
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 12
+0.8841344473377906
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 13
+0.9151038193984281
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 14
+0.9813243338224691
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 15
+0.9739033570519001
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 16
+0.9650038868307649
+Ähnlichkeit Dokument aus Abteilung 4 new_doc mit Abteilung 17
+0.6152921391535795
+----------- Unbekanntes Dokument aus Abteilung 5
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 0
+0.9683745511670415
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 1
+0.9562579997342372
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 2
+0.9734004705950261
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 3
+0.9891193261219854
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 4
+0.9824404824310721
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 5
+0.06112917743764569
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 6
+0.9865532722447153
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 7
+0.9802884380055117
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 8
+0.856042711885809
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 9
+0.9799059839753889
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 10
+0.9730939990637961
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 11
+1.0169799125851966
+Ähnlichkeit Dokument aus Abteilung 5 new_doc mit Abteilung 12
+0.9780887776302069\end{comment}

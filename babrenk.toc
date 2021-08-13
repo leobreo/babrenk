@@ -37,32 +37,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Der generative Prozess}{5}{section*.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Daten}{6}{section.2.6}% 
+\contentsline {subsection}{Alpha und Beta}{6}{section*.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Gibbs Sampling}{7}{section*.6}% 
+\contentsline {section}{\numberline {2.6}Daten}{7}{section.2.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Hellinger Distanz}{8}{section*.7}% 
+\contentsline {subsection}{Gibbs Sampling}{8}{section*.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Datenreinigung}{8}{section*.8}% 
+\contentsline {subsection}{Hellinger Distanz}{8}{section*.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Ansätze}{8}{section.2.7}% 
+\contentsline {subsection}{Datenreinigung}{9}{section*.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Möglichkeit 1: Ein großer Korpus \leavevmode {\color {red}Groppe}}{9}{section*.9}% 
+\contentsline {section}{\numberline {2.7}Ansätze}{9}{section.2.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Möglichkeit 2 : 18 Korpora mit Durchschnitt \leavevmode {\color {red}Felix}}{10}{section*.10}% 
+\contentsline {subsection}{Möglichkeit 1: Ein großer Korpus \leavevmode {\color {red}Groppe}}{10}{section*.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Möglichkeit 3: 18 Korpora mit Mehrheitsentscheid \leavevmode {\color {red}Felix2}}{11}{section*.11}% 
+\contentsline {subsection}{Möglichkeit 2 : 18 Korpora mit Durchschnitt \leavevmode {\color {red}Felix}}{11}{section*.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Alternativ zu Möglichkeit 1 (Erster Versuch)}{12}{section*.12}% 
+\contentsline {subsection}{Möglichkeit 3: 18 Korpora mit Mehrheitsentscheid \leavevmode {\color {red}Felix2}}{12}{section*.12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\leavevmode {\color {red}Möglichkeit 4 ??}}{14}{section*.13}% 
+\contentsline {subsection}{Alternativ zu Möglichkeit 1 (Erster Versuch)}{13}{section*.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Auswertung}{14}{section.2.8}% 
+\contentsline {subsection}{\leavevmode {\color {red}Möglichkeit 4 ??}}{15}{section*.14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Quellcode}{14}{section*.14}% 
+\contentsline {section}{\numberline {2.8}Auswertung}{15}{section.2.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Perplexität}{14}{section*.15}% 
+\contentsline {subsection}{Quellcode}{15}{section*.15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{ZVO}{14}{section*.16}% 
+\contentsline {subsection}{Perplexität}{15}{section*.16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusion}{15}{chapter.3}% 
+\contentsline {subsection}{ZVO}{15}{section*.17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Conclusion}{16}{chapter.3}% 
