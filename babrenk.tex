@@ -378,6 +378,7 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usetikzlibrary{arrows, automata, positioning}
+\usepackage{pgfplots}
 
 
 \begin{document}
@@ -433,7 +434,7 @@ Diese Arbeit wird die Theorie der Themenmodellierung anhand des Beispiels des Zw
 \section{Modellvergleich}
 \subsection{Latent Dirichlet Allocation}
 Themenmodellierung besteht aus vielen Methoden, die meist verbreitete ist die „Latent Dirichlet Allocation (LDA)“, was als Bag of Word modelliert ist, also keine Kontextinformationen beinhaltet. Dieses Verfahren ist eine Weiterentwicklung des ‚PLSI‘, das durch zwei Dirichlet-Priors ergänzt wurde. LDA liegt ein generierender Prozess zugrunde, den zwei Dirichlet Verteilungen maßgeblich beeinflussen: die Dokument-Themen Verteilung, die die Ausprägungen verschiedener Themen in einem Dokument beschreibt, und die Themen-Wörter Verteilung, die die Wahrscheinlichkeit beschreibt, dass ein bestimmtes Wort in einer gewissen Regularität in einem Themenbereich vorkommt. Dabei geht man davon aus, dass ein Dokument eine Verteilung von Themen ist, während ein Thema als eine Verteilung über Wörter betrachtet wird. 
-Die Wahrscheinlichkeit, dass ein bestimmtes Dokument generiert wird, ist das Produkt der Wahrscheinlichkeiten der beiden Verteilungen mit den Wahrscheinlichkeiten zweier multinomialen Verteilungen, die erst zufällig Topics, wie in der Dirichlet-Verteilung definiert, auswählen und aus diesen dann, mithilfe der zweiten Dirichlet-Verteilung, Wörter aus diesen Topics herleiten, wodurch das Enddokument entsteht. Das Enddokument wird höchstwahrscheinlich stark von dem gegebenen Dokument abweichen, jedoch kann durch anpassen der Dirichlet-Verteilungen ein Optimierungsproblem formuliert werden, nach dem die Dirchlet-Verteilungen gesucht werden, die ein möglichst ähnliches Dokument generieren.
+Die Wahrscheinlichkeit, dass ein bestimmtes Dokument generiert wird, ist das Produkt der Wahrscheinlichkeiten der beiden Verteilungen mit den Wahrscheinlichkeiten zweier multinomialen Verteilungen, die erst zufällig Topics, wie in der Dirichlet-Verteilung definiert, auswählen und aus diesen dann, mithilfe der zweiten Dirichlet-Verteilung, Wörter aus diesen Topics herleiten, wodurch das Enddokument entsteht. Das Enddokument wird höchstwahrscheinlich stark von dem gegebenen Dokument abweichen, jedoch kann durch anpassen der Dirichlet-Verteilungen ein Optimierungsproblem formuliert werden, nach dem die Dirchlet- Verteilungen gesucht werden, die ein möglichst ähnliches Dokument generieren.
 
 \subsection{Latent Semantic Analysis (LSA)}
 Ein anderes verbreitetes Verfahren ist das „Latent Semantic Analysis“ (LSA), welches auf das Finden von sogenannten Hauptkomponenten in Dokumenten abzielt. Dadurch können sowohl ähnliche Wörter gefunden, als auch Textbereiche, die inhaltliche Überschneidungen mit einem bestimmten Begriff haben, aber das Wort selber nicht enthalten, gefunden werden. Die Methode basiert auf dem Prinzip der Singulärwertzerlegung(SVD). Als Ausgangslage wird aus einer Textsammlung eine Term-Dokument-Matrix erstellt. Diese Matrix wird in der SVD als Produkt von drei Matrizen dargestellt, von denen die mittlere eine Diagonalmatrix darstellt. Die Werte auf der Diagonalen lassen daraus die Topics der Textmenge ablesen. Auf das SVD Verfahren selbst hat der Entwickler wenig Einfluss. Um Rauschen zu verhindern, kann jedoch die Anfangsmatrix mithilfe der term-frequency und inverse-document-frequency verbessert werden, was sich auf das Gesamtergebnis auswirkt. LSA stellt sich als ein attraktives Verfahren heraus, da es Synonyme besser erkennen kann, als LDA und wird heutzutage unter anderem intensiv in dem Bereich des Digital Marketings genutzt.
@@ -485,20 +486,21 @@ Der Algorithmus hinter LDA generiert neue Dokumente mithilfe von Dirichletvertei
 	\end{enumerate}
 \end{enumerate}
 
-Somit kann der Algorithmus nun neue Dokumente erstellen und das Ergebnis durch die Parameter, wie Alpha und Beta, anpassen, bis das Ergebnis ähnlich genug zu dem Anfangsdokument ist. Dann ist die Verteilung der Themen in diesem Dokument bekannt. Bei der Anwendung von LDA für praktische Problemstellungen, geht LDA das Prinzip rückwärts durch, d.h. für bestehende Gruppen an Dokumenten werden Verteilungen gesucht, durch die das Dokument generiert hätte werden können.
+Somit kann der Algorithmus nun neue Dokumente erstellen und das Ergebnis durch die Parameter, wie Alpha und Beta, anpassen, bis das Ergebnis ähnlich genug zu dem Anfangsdokument ist. Dann ist die Verteilung der Themen in diesem Dokument bekannt. Bei der Anwendung von LDA für praktische Problemstellungen, geht LDA das Prinzip rückwärts durch, d.h. für bestehende Gruppen an Dokumenten werden Verteilungen gesucht, durch die das Dokument generiert hätte werden können. \\
 
 \begin{equation}
-P(w,z,\theta, \phi, \alpha, \beta) = \bigg{\prod} P(\theta, \alpha) \cdot \prod P(\alpha, \beta) \cdot \prod P(z,\tehta) \cdot \prod P(w \mid \phi) 
+P(w,z,\theta, \phi, \alpha, \beta) = \prod P(\theta, \alpha) \cdot \prod P(\alpha, \beta) \cdot \prod P(z,\tehta) \cdot \prod P(w \mid \phi) 
 \end{equation}
-
+\\
 Die Formel beschreibt die totale Wahrscheinlichkeit des LDA Modells. Sie setzt sich zusammen aus den Produkten der Dirichlet Verteilung der Topics und der Wörter zusammen mit den multinomialen Verteilungen der Themen und Wörter. Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung der gegebenen Dokumente für latente Variablen. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken: 
 
 \begin{center}
 \begin{equation}
 P(\theta, z \mid w, \alpha, \beta) = \frac{P(\theta, z, w \mid \alpha, \beta)}{P(w \mid \alpha, \beta)}
 \end{equation}
-\end{center}
-
+\end{center}\\
+\\
+\\
 Die Formel berechnet die Wahrscheinlichkeit der Verteilung unter einem bestimmten Thema gegeben der $\alpha$ und $\beta$ Parameter und dem bekannten Wort. Die Wahrscheinlichkeit kann nicht exakt bestimmt werden, weshalb Verfahren wie Gibbs Sampling diese approximieren.\\
 
 \subsection{Alpha und Beta}
@@ -525,21 +527,50 @@ In der ersten Abbildung führt ein kleiner $\alpha = 0.01$ zu einer sehr eindeut
 \section{Daten}
 Die Daten liegen in folgendem Format vor: 
 
-\begin{center}
-\includegraphics{daten1}
-\end{center}
-
-Relevant für die Auswertung sind die subject-message und die jeweilige Abteilung. Die Tabelle verfügt über eine Matrix mit 18 Abteilungen, von denen pro subject-message eine mit einer 1 versehen ist. Dies beschreibt die Abteilung, der diese Anfrage manuell zugeordnet wurde. Die Daten in subject-message sind bereits bereinigt, also liegen vor, wie in diesem Beispiel, der Zeile 0:
+%\begin{center}
+%\includegraphics{daten1}
+%\end{center}
 
 \begin{center}
-\includegraphics{daten2}
+\begin{tabular}{ccccccccccc}
+
+\hline
+\hline
+& filname & subject-message & Abt0 & Abt1 & Abt2 & Abt3 & ... & Abt15 & Abt16 & Abt17\\
+\hline
+0 & FILE0& content0 &0&0&0&1&...&0&0&0\\
+1& FILE1 & content1 &0 &0 &0 &0 &... &1&0&0\\
+2& FILE2 & content2 & 1 &0 &0 &0 &...&0 &0&0 \\
+3& FILE3 & content3 & 0 & 0  &0 &1 &...&0 &1&0 \\
+4& FILE4 & content4 & 0 & 1 &0 &0 &...&0 &0&1 \\
+...& ... & ... & ... & ...  &... &... &...&... & ...&... \\
+133044& FILE133044 & content133044 & 0 & 0  &1 & 0&...&0 &0&0 \\
+\hline
+\hline
+\end{tabuar}
 \end{center}
 
-Um die Einträge in eine computer-lesbare Form zu verwandeln, muss ein Dictionary erstellt werden, dass alle Wörter auf eine Anzahl ihrer Vorkommen abbildet. Dafür müssen die Wörter als alleinige Listeneinträge einlesbar sein: 
+Relevant für die Auswertung sind die subject-message und die jeweilige Abteilung. Die Tabelle verfügt über eine Matrix mit 18 Abteilungen, von denen pro subject-message eine oder mehrere mit einer 1 versehen ist bzw. sind. Dies beschreibt die Abteilung bzw. Abteilungen, der bzw. denen diese Anfrage manuell zugeordnet wurde. Die Daten in subject-message sind bereits bereinigt, also liegen wie in diesem künstlichen Beispiel vor:\\
 
-\begin{center}
-\includegraphics{daten3}
-\end{center}
+%\begin{center}
+%\includegraphics{daten2}
+%\end{center}
+
+\begin{lstlisting}
+OUTPUT: 
+'wasser verbraucht amt deutschland ablesung zaehlen strom voll ort luebeck art straße messung verband nummer platz markieren wechsel lieferant stelle verbrauch kunde kunden anrede mann sommer beschwerde schrift allgemein kommunikation datenmanagement fern'
+\end{lstlisting}\\
+
+Um die Einträge in eine computer-lesbare Form zu verwandeln, muss ein Dictionary erstellt werden, dass alle Wörter auf eine Anzahl ihrer Vorkommen abbildet. Dafür müssen die Wörter als alleinige Listeneinträge einlesbar sein: \\
+
+%\begin{center}
+%\includegraphics{daten3}
+%\end{center}
+
+\begin{lstlisting}
+OUTPUT split: 
+['wasser', 'verbraucht', 'amt', 'deutschland', 'ablesung', 'zaehlen', 'strom', 'voll', 'ort', 'luebeck', 'art', 'straße', 'messung', 'verband', 'nummer', 'platz', 'markieren', 'wechsel', 'lieferant', 'stelle', 'verbrauch', 'kunde', 'kunden', 'anrede', 'mann', 'sommer', 'beschwerde', 'schrift', 'allgemein', 'kommunikation', 'datenmanagement', 'fern']
+\end{lstlisting}\\
 
 \subsection{Gibbs Sampling}
 Gibbs Sampling ist eine Technik, um ein LDA Modell zu trainieren. Für das menschliche Auge kann ein Wort eines Dokuments intuitiv einem Thema zugordnet werden. Für den Computer ist dies schwer, da er die Semantik des Wortes nicht kennt. Mit Gibbs Sampling werden Wörter iterativ Topics zugewiesen basierend auf allen restlichen Wörtern und Dokumenten. Dabei ist zum Einen relevant, was die führende Topic in dem jeweiligen Dokument ist und zum Anderen welcher Topic die gleichen Wörter im gesamten Korpus bereits am häufigsten zugeordnet wurden. Die beiden Beobachtungen werden multipliziert, um die Kombination mit der maximalen Wahrscheinlichkeit zu finden. Um zu verhindern, dass ein Wort einem Topic nicht zugewiesen werden kann, das sich nicht in dem bestimmten Dokument befindet, wird der Anzahl der jeweils vorkommenden Themen im Dokument $\alpha$ und der Anzahl der belegten Themen des gleichen Wörter in anderen Dokumenten $\beta$ addiert.  Wurde ein Wort einem Topic zugewiesen wird das nächste Wort betrachtet. Nun ist zu beachten, dass sich die Verteilungen zur Berechnung jedes mal ändern. Somit haben wir einen iterativen Lernfortschritt bei der Topicverteilung.
@@ -571,7 +602,7 @@ Jede Abteilung stellt einen Korpus da, deren Verteilung mit der des neuen Dokume
 Jede Abteilung stellt einen Korpus dar, deren Dokumente alle einzeln mit der Verteilung des neuen Dokuments verglichen werden, das dann quantitativ einer Abteilung zugeordnet wird. Die Wörter-Themen Verteilung ist für alle dokumente eines Korpus gleich, während für jedes Dokument eine Dokument-Themen Verteilung errechnet wird. Wenn die Dokument-Themen Verteilung der bestehenden Dokumente und die des neuen Dokuments bereitstehen, können diese auf Ähnlichkeit überprüft werden. Da bereits bekannt ist, welcher Abteilung jedes Dokument angehört, stellen die Top X ähnlichsten Dokumente eine Verteilung der Abteilungen dar, denen das neue Dokument inhaltlich am ähnlichsten ist. 
 \end{enumerate}
 
-\subsection{Möglichkeit 1: Ein großer Korpus \textcolor{red}{Groppe}}
+\subsection{Möglichkeit 1: Ein großer Korpus - Mapping \textcolor{red}{Groppe}}
 Ziel dieser Untersuchung ist der Vergleich der Themen, die sich durch ein LDA Modell ergeben mit den händisch eingeteilten Themen. Dafür wird ein Korpus auf allen Dokumenten generiert, der eine Themenverteilung erzeugt. Um herauszufinden, welches Dokument, zu welchem Thema gehört, werden die Themenverteilungen der einzelnen Dokumente inferiert. Die durch LDA erzeugte Themen werden mit den händisch geordneten Themen verglichen, indem Überschneidungen der enthaltenen Dokumente quantifiziert werden.  Da LDA die Themen nicht benennen kann ,sondern nur die Verteilung der Wörter auflistet, müssen die von LDA gefundenen Gruppen noch den händischen zugeordnet werden. Die Zuordnung, die in Summe die meisten Übereinstimmungen zwischen den Gruppen ergibt, stellt die realistischste Interpretation der LDA Themen dar. Das Ergebnis kann Aufschluss über die vorgegeben  Themen geben. Bei einem perfekten Modell und optimaler Themeneinteilung  müssten die Themen mit einer sehr hohen Überschneidungsrate eindeutig einteilbar sein.  \\
 
 
@@ -631,7 +662,51 @@ maxmatrix = [9, 10, 0, 9, 10, 10, 0, 10, 10, 0, 1, 2, 1, 9, 10, 9, 10, 9]
 \\
 Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau ein Thema der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. und 10. Thema der ZVO kompatibel wären. Somit ist zumindest keine optimale Zuordnung des Modellergebnisses möglich, was entweder auf die Aufteilung der Themen oder das Modell zurückzuführen ist.
 
-\subsection{Möglichkeit 2 : 18 Korpora mit Durchschnitt \textcolor{red}{Felix}}
+\subsection{Möglichkeit 2: 1 Korpus 80\% mit Testdaten 5-20\%}\textcolor{red}{Groppe2}}
+Ein Korpus wird generiert mit 80\% der verfügbaren ZVO Daten. Dieser Korpus bringt eine Dokument-Topic-Verteilung hervor. In Möglichkeit 1 wurden die Dokumente, die den Korpus generieren per Dokument-Topic-Verteilung in Abteilungen eingeteilt. In diesem Fall werden die restlichen 20\% der Daten genutzt, um die Zuordnungsgenauigkeit des Modells zu testen. Die folgenden Quoten wurden erreicht mit unterschiedlich vielen Testdaten: \\
+\begin{center}
+\begin{tabular}{c c}
+\hline
+Testdaten (in \% von 20\%) & Korrekt zugeordnet \\
+\hline
+5 & 329/6652 \\
+10 & x \\
+15 & x\\
+20 & x \\ 
+\hline
+\end{tabular}\\
+\\
+%HIER NOCHMAL ALS GRAPH 
+
+\begin{tikzpicture}
+\begin{axis}[
+    title={Training Daten - Test Daten},
+    xlabel={Anzahl Testdokumente  [\%]},
+    ylabel={Quote korrekt [\%]},
+    xmin=0, xmax=25,
+    ymin=0, ymax=100,
+    xtick={0,5,10,15,20,25},
+    ytick={0,10,20,30,40,50,60,70,80,90,100},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    coordinates {
+    (5,4.94)(10,10)(15,10)(20,10)
+    };
+    \legend{Quote}
+    
+\end{axis}
+\end{tikzpicture}
+\end{center}
+Die Zahlen zeigen eine ...
+
+\subsection{Möglichkeit 3: 18 Korpora mit Durchschnitt \textcolor{red}{Felix}}
 Als weitere Möglichkeit wird aus jeder der 18 vorgegebenen Abteilungen ein eigener Korpus generiert. Somit verfügt jeder Korpus über eine Dokument-Topic-Verteilung, die die Vorkommenswahrscheinlichkeit der 18 Themen in dem jeweiligen Korpus repräsentiert. Ziel der Untersuchung ist die Klassifikationsfähigkeit eines unbekannten Dokuments. Da jeder Korpus aus verschiedenen Dokumenten besteht, gibt es in 18 Korpora auch 18 verschiedene Topic-Word-Verteilungen. Pro Korpus wird für das neue Dokument die Dokument-Topic-Verteilung auf Basis der individuellen Topic-Word-Verteilung generiert. Dafür ist die Dokument-Topic-Verteilung der einzelnen Korpora relevant, die sich aus dem Durchschnitt aller Dokument-Topic-Verteilung der Dokumente eines jeweiligen Korpus ergibt. Aus dem Vergleich der Dokument-Topic-Verteilung des neuen Dokuments mit der des Korpus ergibt sich, wie gut das Dokument zu der Abteilung passt. Dieser Vergleich kann z.B. durch die Berechnung des Hellinger-Abstands der Verteilungen durchgeführt werden. Ist das Ergebnis klein, sind die Verteilungen ähnlich zu einander. Das neue Dokument wird dem Korpus zugeteilt, dessen Abstandsberechnung das minimale Ergebnis zeigt. Um zu analysieren, wie gut das Modell unbekannte Dokumente zuweist, kann nun die berechnetet Abteilung mit dem vorgelabelten Ergebnis verglichen werden. Bei einem Dokument ist das Ergebnis entweder richtig oder falsch, führt man den Vorgang jedoch mit mehreren Dokumenten aus, kann eine Quote errechnet werden. Diese sagt aus, wie gut die Dokumente klassifiziert wurden. 
 
 Das Ergebnis kann sich durch Anpassung der Parameter im Modell verändern. Diese Änderungen werden wir untersuchen. 
@@ -639,7 +714,7 @@ Das Ergebnis kann sich durch Anpassung der Parameter im Modell verändern. Diese
 \textcolor{red}{Aktuelles Problem: Durschnittsberechnung (hardgecoded) dauert für alle mehrere Tage}\\
 
 
-\subsection{Möglichkeit 3: 18 Korpora mit Mehrheitsentscheid \textcolor{red}{Felix2}}
+\subsection{Möglichkeit 4: 18 Korpora mit Mehrheitsentscheid \textcolor{red}{Felix2}}
 Die Unterscheidung dieser Methode zu Möglichkeit 2 ist, dass sich die Topic-Wort-Verteilung eines Korpus nicht aus dem Durchschnitt aller ergibt, sondern das unbekannte Dokument mit allen Verteilungen einzeln verglichen wird. Die Ähnlichkeit wird dann durch die Hellinger-Distanz bestimmt. Dabei berechnet man die Distanz zwischen der Verteilung des neuen Dokuments und der jeden Dokuments enthalten im Korpus. Der Durchschnitt beschreibt die Ähnlichkeit zu dem Korpus und ergibt sich aus der Summe aller Distanzen geteilt durch die Anzahl der Vergleiche. Bei 18 Korpora wird das neue Dokument dem zugeordnet, der die höchste Ähnlichkeit errechnet hat. Als Code wird dies folgendermaßen abgebildet: \\
 
 \begin{lstlisting}
@@ -673,7 +748,7 @@ Diese Liste enthält die Stärke der Ähnlichkeit des neuen Dokuments zu den 18 
 Um eine aussagekräftigere Quote zu erhalten wird dieser Algorithmus für ein unbekanntes Dokument jeden Korpus durchgeführt. Die jeweiligen Zuordnungen werden in einer Liste gespeichert. Der Index besagt aus welchem Korpus ein Dokument entnommen wurde und der Wert, den Korpus, dem es zugeordnet wurde. Das Ergebnis zeigt folgendes: \\
 
 \begin{lstlisting}
-assignment= [0,14,2,8,4,5,2,7,3,2, 8,11,12,13,4,15,9,6]
+assignment= [0,14,2,8,4,5,2,7,3,2, 8,11,12,13,4,15,11,6]
 \end{lstlisting}\\
 \\
 \\
