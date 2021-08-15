@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  15 AUG 2021 18:19
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  15 AUG 2021 18:26
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.069 seconds
+luaotfload | main : initialization completed in 0.077 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -4080,7 +4080,7 @@ ue_spec, 12 attribute_list, 2 write nodes
    avail lists: 1:2,2:3104,3:366,4:162,5:998,6:29,7:5287,8:51,9:1726,10:22,11:49
 6
  64565 multiletter control sequences out of 65536+600000
- 208 fonts using 64867495 bytes
+ 208 fonts using 64867375 bytes
  72i,17n,135p,1838b,3300s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
 agella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegre
@@ -4096,7 +4096,7 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (23 pages, 1408240 bytes).
+Output written on babrenk.pdf (23 pages, 1409588 bytes).
 
 PDF statistics: 352 PDF objects out of 1000 (max. 8388607)
  271 compressed objects within 3 object streams
