@@ -663,18 +663,19 @@ maxmatrix = [9, 10, 0, 9, 10, 10, 0, 10, 10, 0, 1, 2, 1, 9, 10, 9, 10, 9]
 Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau ein Thema der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. und 10. Thema der ZVO kompatibel wären. Somit ist zumindest keine optimale Zuordnung des Modellergebnisses möglich, was entweder auf die Aufteilung der Themen oder das Modell zurückzuführen ist.
 
 \subsection{Möglichkeit 2: 1 Korpus 80\% mit Testdaten 5-20\%}\textcolor{red}{Groppe2}}
-Ein Korpus wird generiert mit 80\% der verfügbaren ZVO Daten. Dieser Korpus bringt eine Dokument-Topic-Verteilung hervor. In Möglichkeit 1 wurden die Dokumente, die den Korpus generieren per Dokument-Topic-Verteilung in Abteilungen eingeteilt. In diesem Fall werden die restlichen 20\% der Daten genutzt, um die Zuordnungsgenauigkeit des Modells zu testen. Die folgenden Quoten wurden erreicht mit unterschiedlich vielen Testdaten: \\
+Ein Korpus wird generiert mit 80\% der verfügbaren ZVO Daten. Dieser Korpus bringt eine Dokument-Topic-Verteilung hervor. In Möglichkeit 1 wurden die Dokumente, die den Korpus generieren per Dokument-Topic-Verteilung in Abteilungen eingeteilt. In diesem Fall werden die restlichen 20\% der Daten genutzt, um die Zuordnungsgenauigkeit des Modells zu testen. Die folgenden Quoten wurden erreicht mit unterschiedlich vielen Testdaten. Zuerst wurden 5\% der Testdaten verwendet, dann 10\%, 15\% und die gesamten 20\%. Die unterschiedlichen Durchgänge ergaben folgende Quoten: \\
 \begin{center}
 \begin{tabular}{c c}
 \hline
 Testdaten (in \% von 20\%) & Korrekt zugeordnet \\
 \hline
 5 & 329/6652 \\
-10 & x \\
-15 & x\\
-20 & x \\ 
+10 & 654/13304 \\
+15 & 963/19956\\
+20 & 1393/27042 \\ 
 \hline
 \end{tabular}\\
+\\
 \\
 %HIER NOCHMAL ALS GRAPH 
 
@@ -683,10 +684,10 @@ Testdaten (in \% von 20\%) & Korrekt zugeordnet \\
     title={Training Daten - Test Daten},
     xlabel={Anzahl Testdokumente  [\%]},
     ylabel={Quote korrekt [\%]},
-    xmin=0, xmax=25,
-    ymin=0, ymax=100,
-    xtick={0,5,10,15,20,25},
-    ytick={0,10,20,30,40,50,60,70,80,90,100},
+    xmin=5, xmax=20,
+    ymin=4, ymax=6,
+    xtick={5,10,15,20},
+    ytick={4,4.5,4.75,5,5.25,5.5,6},
     legend pos=north west,
     ymajorgrids=true,
     grid style=dashed,
@@ -697,14 +698,14 @@ Testdaten (in \% von 20\%) & Korrekt zugeordnet \\
     mark=square,
     ]
     coordinates {
-    (5,4.94)(10,10)(15,10)(20,10)
+    (5,4.94)(10,4.91)(15,4.82)(20,5.15)
     };
     \legend{Quote}
     
 \end{axis}
 \end{tikzpicture}
 \end{center}
-Die Zahlen zeigen eine ...
+Der Versuch zeigt ein sehr schlechtes Ergebnis mit einem Quotendurchschnitt von 4.96. Dabei wurden keine erheblichen Unterschiede bei der Verwendung verschieden vieler Testdaten im Ergebnis festgestellt. Dies lässt zu der Folgerung führen, dass die Nutzung eines einzigen Korpus für die ZVO nicht in Frage kommt. 
 
 \subsection{Möglichkeit 3: 18 Korpora mit Durchschnitt \textcolor{red}{Felix}}
 Als weitere Möglichkeit wird aus jeder der 18 vorgegebenen Abteilungen ein eigener Korpus generiert. Somit verfügt jeder Korpus über eine Dokument-Topic-Verteilung, die die Vorkommenswahrscheinlichkeit der 18 Themen in dem jeweiligen Korpus repräsentiert. Ziel der Untersuchung ist die Klassifikationsfähigkeit eines unbekannten Dokuments. Da jeder Korpus aus verschiedenen Dokumenten besteht, gibt es in 18 Korpora auch 18 verschiedene Topic-Word-Verteilungen. Pro Korpus wird für das neue Dokument die Dokument-Topic-Verteilung auf Basis der individuellen Topic-Word-Verteilung generiert. Dafür ist die Dokument-Topic-Verteilung der einzelnen Korpora relevant, die sich aus dem Durchschnitt aller Dokument-Topic-Verteilung der Dokumente eines jeweiligen Korpus ergibt. Aus dem Vergleich der Dokument-Topic-Verteilung des neuen Dokuments mit der des Korpus ergibt sich, wie gut das Dokument zu der Abteilung passt. Dieser Vergleich kann z.B. durch die Berechnung des Hellinger-Abstands der Verteilungen durchgeführt werden. Ist das Ergebnis klein, sind die Verteilungen ähnlich zu einander. Das neue Dokument wird dem Korpus zugeteilt, dessen Abstandsberechnung das minimale Ergebnis zeigt. Um zu analysieren, wie gut das Modell unbekannte Dokumente zuweist, kann nun die berechnetet Abteilung mit dem vorgelabelten Ergebnis verglichen werden. Bei einem Dokument ist das Ergebnis entweder richtig oder falsch, führt man den Vorgang jedoch mit mehreren Dokumenten aus, kann eine Quote errechnet werden. Diese sagt aus, wie gut die Dokumente klassifiziert wurden. 
