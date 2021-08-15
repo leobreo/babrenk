@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  15 AUG 2021 18:26
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  15 AUG 2021 20:34
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.077 seconds
+luaotfload | main : initialization completed in 0.072 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -1318,7 +1318,7 @@ Package biblatex Warning: 'firstinits' option is deprecated.
 (biblatex)                Please use 'giveninits' instead.
 
 )
-Package biblatex Info: Redefining '\cite' on input line 213.
+Package biblatex Info: Redefining '\cite' on input line 211.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2019/03/04 v0.8o Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -2280,7 +2280,7 @@ anguage=DFLT;"
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-LaTeX Info: Redefining \ttfamily on input line 349.
+LaTeX Info: Redefining \ttfamily on input line 347.
 
 Package fontspec Info: Could not resolve font "LatinModernMono/BI" (it
 (fontspec)             probably doesn't exist).
@@ -2313,11 +2313,11 @@ anguage=DFLT;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/LatinModernMono(1)/m/n on input line
- 349.
+ 347.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/LatinModernMono(1)/bx/n on input lin
-e 349.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 349.
+e 347.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 347.
 
 Package fontspec Info: Could not resolve font "TeXGyrePagellaMath/B" (it
 (fontspec)             probably doesn't exist).
@@ -2367,15 +2367,15 @@ x_copy_fontdimens:
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 349.
+(Font)              `operators' in the math version `normal' on input line 347.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TeXGyrePagellaMath(1)/m/n on input li
-ne 349.
+ne 347.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 349.
+(Font)              `operators' in the math version `bold' on input line 347.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TeXGyrePagellaMath(1)/bx/n on input 
-line 349.
+line 347.
 
 Package fontspec Info: TeXGyrePagellaMath scale = 1.0001.
 
@@ -2437,15 +2437,15 @@ ath;language=DFLT;+ssty=1;"
 (fontspec)             21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 349.
+(Font)              `symbols' in the math version `normal' on input line 347.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/TeXGyrePagellaMath(2)/m/n on input l
-ine 349.
+ine 347.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 349.
+(Font)              `symbols' in the math version `bold' on input line 347.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/TeXGyrePagellaMath(2)/bx/n on input 
-line 349.
+line 347.
 
 Package fontspec Info: TeXGyrePagellaMath scale = 0.9999.
 
@@ -2496,34 +2496,34 @@ ath;language=DFLT;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 34
-9.
+7.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/TeXGyrePagellaMath(3)/m/n on input l
-ine 349.
+ine 347.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 349.
+(Font)              `largesymbols' in the math version `bold' on input line 347.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/TeXGyrePagellaMath(3)/bx/n on input 
-line 349.
+line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 11.00117pt on input line 349.
+(Font)              scaled to size 11.00117pt on input line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 8.14085pt on input line 349.
+(Font)              scaled to size 8.14085pt on input line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 6.05064pt on input line 349.
+(Font)              scaled to size 6.05064pt on input line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 10.99883pt on input line 349.
+(Font)              scaled to size 10.99883pt on input line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 8.13913pt on input line 349.
+(Font)              scaled to size 8.13913pt on input line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 6.04935pt on input line 349.
-LaTeX Font Info:    Try loading font information for U+msa on input line 349.
+(Font)              scaled to size 6.04935pt on input line 347.
+LaTeX Font Info:    Try loading font information for U+msa on input line 347.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 349.
+LaTeX Font Info:    Try loading font information for U+msb on input line 347.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2577,18 +2577,18 @@ ge=DFLT;"<7.095-9.57>s*[1.1]"TeXGyreChorus:mode=base;script=latn;language=DFLT;"
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 12.10007pt on input line 349.
+(Font)              scaled to size 12.10007pt on input line 347.
 \sym__um_fam1=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/TeXGyreChorus(0)/m/n --> TU/TeXGyreChorus(0)/m/n on i
-nput line 349.
+nput line 347.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/TeXGyreChorus(0)/m/n --> TU/TeXGyreChorus(0)/bx/n on 
-input line 349.
+input line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.95404pt on input line 349.
+(Font)              scaled to size 8.95404pt on input line 347.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 6.65503pt on input line 349.
+(Font)              scaled to size 6.65503pt on input line 347.
 luaotfload | aux : font no 30 (nil) defines no feature for script math
 luaotfload | aux : no font with id 30
 
@@ -2640,10 +2640,10 @@ greya:mode=base;script=latn;language=DFLT;+lnum;"
 \sym__um_fam2=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
 (Font)                  TU/Alegreya(9)/m/n --> TU/Alegreya(9)/m/n on input line 
-349.
+347.
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
 (Font)                  TU/Alegreya(9)/m/n --> TU/Alegreya(9)/bx/n on input line
- 349.
+ 347.
 luaotfload | aux : font no 32 (nil) defines no feature for script math
 luaotfload | aux : no font with id 32
 
@@ -2694,10 +2694,10 @@ T;+lnum;"<7.095-9.57>"AlegreyaItalic:mode=base;script=latn;language=DFLT;+lnum;"
 \sym__um_fam3=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `normal'
 (Font)                  TU/AlegreyaItalic(0)/m/n --> TU/AlegreyaItalic(0)/m/n on
- input line 349.
+ input line 347.
 LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `bold'
 (Font)                  TU/AlegreyaItalic(0)/m/n --> TU/AlegreyaItalic(0)/bx/n o
-n input line 349.
+n input line 347.
 
 Package unicode-math Warning: I am trying to set up alphabet"it/num" but there
 (unicode-math)                are no configuration settings for it. (See
@@ -2754,10 +2754,10 @@ x_copy_fontdimens:
 \sym__um_fam4=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `__um_fam4' in version `normal'
 (Font)                  TU/AlegreyaBold(0)/m/n --> TU/AlegreyaBold(0)/m/n on inp
-ut line 349.
+ut line 347.
 LaTeX Font Info:    Overwriting symbol font `__um_fam4' in version `bold'
 (Font)                  TU/AlegreyaBold(0)/m/n --> TU/AlegreyaBold(0)/bx/n on in
-put line 349.
+put line 347.
 luaotfload | aux : font no 33 (nil) defines no feature for script math
 luaotfload | aux : no font with id 33
 
@@ -2810,10 +2810,10 @@ tex_copy_fontdimens:
 \sym__um_fam5=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `__um_fam5' in version `normal'
 (Font)                  TU/AlegreyaBoldItalic(0)/m/n --> TU/AlegreyaBoldItalic(0
-)/m/n on input line 349.
+)/m/n on input line 347.
 LaTeX Font Info:    Overwriting symbol font `__um_fam5' in version `bold'
 (Font)                  TU/AlegreyaBoldItalic(0)/m/n --> TU/AlegreyaBoldItalic(0
-)/bx/n on input line 349.
+)/bx/n on input line 347.
 
 Package unicode-math Warning: I am trying to set up alphabet"bfit/num" but
 (unicode-math)                there are no configuration settings for it. (See
@@ -2870,10 +2870,10 @@ ase;script=latn;language=DFLT;"
 \sym__um_fam6=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `__um_fam6' in version `normal'
 (Font)                  TU/Alegreya(10)/m/n --> TU/Alegreya(10)/m/n on input lin
-e 349.
+e 347.
 LaTeX Font Info:    Overwriting symbol font `__um_fam6' in version `bold'
 (Font)                  TU/Alegreya(10)/m/n --> TU/Alegreya(10)/bx/n on input li
-ne 349.
+ne 347.
 
 Package fontspec Info: Could not resolve font "LatinModernMonoProp/BI" (it
 (fontspec)             probably doesn't exist).
@@ -3107,28 +3107,28 @@ File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 (./babrenk.aux)
 \openout1 = babrenk.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 384.
-LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 382.
+LaTeX Font Info:    ... okay on input line 382.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 384.
+(Font)              scaled to size 12.0pt on input line 382.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -3195,7 +3195,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box83
-Package hyperref Info: Link coloring OFF on input line 384.
+Package hyperref Info: Link coloring OFF on input line 382.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -3205,15 +3205,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count455
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 384.
-LaTeX Info: Redefining \pageref on input line 384.
-LaTeX Info: Redefining \nameref on input line 384.
+LaTeX Info: Redefining \ref on input line 382.
+LaTeX Info: Redefining \pageref on input line 382.
+LaTeX Info: Redefining \nameref on input line 382.
 
 (./babrenk.out) (./babrenk.out)
 \@outlinefile=\write6
 
 \openout6 = babrenk.out
-LaTeX Info: Redefining \Ref on input line 384.
+LaTeX Info: Redefining \Ref on input line 382.
 \c@lstlisting=\count456
 Package biblatex Info: LuaTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
@@ -3228,86 +3228,63 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'babrenk.bbl' not found.
 
 No file babrenk.bbl.
-Package biblatex Info: Reference section=0 on input line 384.
-Package biblatex Info: Reference segment=0 on input line 384.
+Package biblatex Info: Reference section=0 on input line 382.
+Package biblatex Info: Reference segment=0 on input line 382.
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 ck labels; missing features). Consider writing \pgfplotsset{compat=1.16} into yo
 ur preamble.
- on input line 384.
+ on input line 382.
 
 <uzl-thesis-logo-itcs.pdf, id=63, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
-Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 384.
+Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 382.
 (luatex.def)             Requested size: 426.79045pt x 113.81091pt.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 384.
+(Font)              scaled to size 12.0pt on input line 382.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 15.4pt on input line 384.
-LaTeX Font Info:    Calculating math sizes for size <15.4> on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 15.40163pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 10.78108pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 7.7008pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 15.39835pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 10.77878pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 7.69917pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 16.94008pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 11.85799pt on input line 384.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.47003pt on input line 384.
-LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 10.77994pt on input line 384.
+(Font)              scaled to size 15.4pt on input line 382.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
-(Font)              scaled to size 15.4pt on input line 384.
-LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
-(Font)              scaled to size 10.77994pt on input line 384.
+(Font)              scaled to size 15.4pt on input line 382.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 384.
+(Font)              scaled to size 12.0pt on input line 382.
 <uzl-thesis-logo-slogan.pdf, id=64, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
-Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 384.
+Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 382.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./uzl-the
 sis-logo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 384.
+(Font)              scaled to size 12.0pt on input line 382.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 10.9pt on input line 384.
+(Font)              scaled to size 10.9pt on input line 382.
  [2
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 384.
+(Font)              scaled to size 12.00128pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 384.
+(Font)              scaled to size 8.00085pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 384.
+(Font)              scaled to size 6.00064pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 384.
+(Font)              scaled to size 11.99872pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 384.
+(Font)              scaled to size 7.99915pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 384.
+(Font)              scaled to size 5.99936pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 13.20007pt on input line 384.
+(Font)              scaled to size 13.20007pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 384.
+(Font)              scaled to size 8.80005pt on input line 382.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 6.60004pt on input line 384.
+(Font)              scaled to size 6.60004pt on input line 382.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 384.
+(Font)              scaled to size 8.0pt on input line 382.
  [3
 
 ]
@@ -3344,7 +3321,7 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 
 ]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 22.0pt on input line 384.
+(Font)              scaled to size 22.0pt on input line 382.
 
 (./babrenk.toc)
 \tf@toc=\write7
@@ -3358,8 +3335,8 @@ LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
 ]
 Kapitel 1.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 60.0pt on input line 392.
-Package Listings Info: Made | a short reference for \lstinline on input line 403
+(Font)              scaled to size 60.0pt on input line 390.
+Package Listings Info: Made | a short reference for \lstinline on input line 401
 .
 [1
 
@@ -3370,25 +3347,47 @@ Kapitel 2.
 
 ]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 426.
+(Font)              scaled to size 12.0pt on input line 424.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 435.
+(Font)              scaled to size 13.0pt on input line 433.
 
-Overfull \hbox (1.61119pt too wide) in paragraph at lines 436--438
+Overfull \hbox (1.61119pt too wide) in paragraph at lines 434--436
 \TU/Alegreya(0)/m/n/12 zwei Di-ri-ch-let Ver-tei-lun-gen maß-geb-lich be-ein-
 󰀎lus-sen: die Dokument-Themen Ver-tei-lung,
  []
 
 
-Overfull \hbox (2.14958pt too wide) in paragraph at lines 440--441
+Overfull \hbox (2.14958pt too wide) in paragraph at lines 438--439
 \TU/Alegreya(0)/m/n/12 frequency und inverse-document-frequency ver-bes-sert we
 r-den, was sich auf das Ge-samt-
  []
 
 [3]
-Overfull \hbox (4.29675pt too wide) in paragraph at lines 447--448
+Overfull \hbox (4.29675pt too wide) in paragraph at lines 445--446
 \TU/Alegreya(0)/m/n/12 men wer-den al-lein an der Vor-kom-mens-wahr-schein-lich
 -keit der Wör-ter oh-ne Reihenfolgen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+
+ []
+
+
+./babrenk.tex:447: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.447 ...ss die Anzahl der gesuchten Themen \mathcal
+                                                  {K} vorgegeben werden muss...
+? R
+OK, entering \nonstopmode...
+
+Overfull \hbox (2.9263pt too wide) in paragraph at lines 447--448
+\TU/Alegreya(0)/m/n/12 stimm-ten Teil ver-tre-ten sind. ”Di-ri-ch-let”be-sc
+hreibt ei-ne Ver-tei-lung von Ver-tei-lun-gen. Dies
  []
 
 
@@ -3397,26 +3396,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--448
  []
 
 
-./babrenk.tex:449: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:452: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
 
-See the LaTeX manual or LaTeX Companion for explanation.
+See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.449 ...ss die Anzahl der gesuchten Themen \mathcal
-                                                  {K} vorgegeben werden muss...
-? R
-OK, entering \nonstopmode...
-
-Overfull \hbox (2.9263pt too wide) in paragraph at lines 449--450
-\TU/Alegreya(0)/m/n/12 stimm-ten Teil ver-tre-ten sind. ”Di-ri-ch-let”be-sc
-hreibt ei-ne Ver-tei-lung von Ver-tei-lun-gen. Dies
- []
+l.452 	\draw
+           [very thick](6,3.5) rectangle (9,5.5)
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+./babrenk.tex:453: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
 
- []
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.453 	\draw
+           [very thick](3,0.25) rectangle (8.75,2.75)
+(That was another \errmessage.)
 
 
 ./babrenk.tex:454: Package tikz Error: Giving up on this path. Did you forget a
@@ -3427,34 +3431,31 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.454 	\draw
-           [very thick](6,3.5) rectangle (9,5.5)
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-
-./babrenk.tex:455: Package tikz Error: Giving up on this path. Did you forget a
- semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 	\draw
-           [very thick](3,0.25) rectangle (8.75,2.75)
+           (1.5,1.5) circle [very thick, radius = 0.8]  node {$\theta$};
 (That was another \errmessage.)
 
 
-./babrenk.tex:456: Package tikz Error: Giving up on this path. Did you forget a
+./babrenk.tex:462: Package tikz Error: Giving up on this path. Did you forget a
  semicolon?.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.456 	\draw
-           (1.5,1.5) circle [very thick, radius = 0.8]  node {$\theta$};
+l.462 	\draw
+           [->,ultra thick] (7.5,3.7) -- (7.5,2.3)
+(That was another \errmessage.)
+
+
+./babrenk.tex:463: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.463 	\draw
+           [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
 (That was another \errmessage.)
 
 
@@ -3466,7 +3467,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.464 	\draw
-           [->,ultra thick] (7.5,3.7) -- (7.5,2.3)
+           [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
 (That was another \errmessage.)
 
 
@@ -3478,19 +3479,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.465 	\draw
-           [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
-(That was another \errmessage.)
-
-
-./babrenk.tex:466: Package tikz Error: Giving up on this path. Did you forget a
- semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.466 	\draw
-           [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
+           [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
 (That was another \errmessage.)
 
 
@@ -3501,26 +3490,14 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.467 	\draw
-           [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
-(That was another \errmessage.)
-
-
-./babrenk.tex:469: Package tikz Error: Giving up on this path. Did you forget a
- semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.469 \end{tikzpicture}
+l.467 \end{tikzpicture}
                      
 (That was another \errmessage.)
 
-./babrenk.tex:469: Undefined control sequence.
+./babrenk.tex:467: Undefined control sequence.
 <argument> \pgf@baseline 
               
-l.469 \end{tikzpicture}
+l.467 \end{tikzpicture}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3530,104 +3507,104 @@ and I'll forget about whatever was undefined.
 
 [4]
 
-./babrenk.tex:471: LaTeX Error: There's no line here to end.
+./babrenk.tex:469: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.471 
+l.469 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:470: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 Dabei beschreibt \mathcal
+l.470 Dabei beschreibt \mathcal
                              {W} als einzige nicht verborgene Variable eines...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:470: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...icht verborgene Variable eines von \mathcal
+l.470 ...icht verborgene Variable eines von \mathcal
                                                   {N} Wörtern des Dokuments...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:470: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...as Wort ist semantisch einem Thema \mathcal
+l.470 ...as Wort ist semantisch einem Thema \mathcal
                                                   {Z} zugeordnet. Das Thema ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:470: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...m hängt von der Themen-Verteilung \mathcal
+l.470 ...m hängt von der Themen-Verteilung \mathcal
                                                   {theta} des Dokuments ab, ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:470: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...kuments ab, das als ein Elment der \mathcal
+l.470 ...kuments ab, das als ein Elment der \mathcal
                                                   {M} vorliegenden Dokumente...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:470: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...er jeweilgen Thema-Wort-Verteilung \mathcal
+l.470 ...er jeweilgen Thema-Wort-Verteilung \mathcal
                                                   {\phi} der \mathcal{K} The...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:470: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...Wort-Verteilung \mathcal{\phi} der \mathcal
+l.470 ...Wort-Verteilung \mathcal{\phi} der \mathcal
                                                   {K} Themen beeinflusst. Da...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--473
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
@@ -3635,18 +3612,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 472--473
 Missing character: There is no 𝜙 (U+1D719) in font [Alegreya-Regular.otf]:mod
 e=node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
 ]
-./babrenk.tex:485: Double subscript.
-l.485 ...le ein Wort $w_{d,i}$ als $Multinom(\phi_z_
+./babrenk.tex:483: Double subscript.
+l.483 ...le ein Wort $w_{d,i}$ als $Multinom(\phi_z_
                                                   {d,i})$
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
-./babrenk.tex:492: Undefined control sequence.
-l.492 ...rod P(\alpha, \beta) \cdot \prod P(z,\tehta
+./babrenk.tex:490: Undefined control sequence.
+l.490 ...rod P(\alpha, \beta) \cdot \prod P(z,\tehta
                                                   ) \cdot \prod P(w \mid \phi)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3655,51 +3632,51 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
+./babrenk.tex:500: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.500 \\
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./babrenk.tex:501: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.501 \\
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 ./babrenk.tex:502: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.502 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./babrenk.tex:503: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.503 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./babrenk.tex:504: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.504 D
+l.502 D
      ie Formel berechnet die Wahrscheinlichkeit der Verteilung unter einem b...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
+Underfull \hbox (badness 10000) in paragraph at lines 502--503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 514--516
+Underfull \hbox (badness 10000) in paragraph at lines 512--514
 
  []
 
@@ -3707,32 +3684,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 514--516
 <lda_alpha001.png, id=163, 895.345pt x 580.1675pt>
 File: lda_alpha001.png Graphic file (type png)
 <use lda_alpha001.png>
-Package luatex.def Info: lda_alpha001.png  used on input line 517.
+Package luatex.def Info: lda_alpha001.png  used on input line 515.
 (luatex.def)             Requested size: 268.60558pt x 174.05157pt.
 <lda_alpha1.png, id=164, 895.345pt x 562.1pt>
 File: lda_alpha1.png Graphic file (type png)
 <use lda_alpha1.png>
-Package luatex.def Info: lda_alpha1.png  used on input line 518.
+Package luatex.def Info: lda_alpha1.png  used on input line 516.
 (luatex.def)             Requested size: 268.60558pt x 168.6313pt.
 
 
-./babrenk.tex:550: LaTeX Error: \begin{tabular} on input line 535 ended by \end
+./babrenk.tex:548: LaTeX Error: \begin{tabular} on input line 533 ended by \end
 {tabuar}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./babrenk.tex:550: Missing } inserted.
+./babrenk.tex:548: Missing } inserted.
 <inserted text> 
 }
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3740,10 +3717,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:550: Missing } inserted.
+./babrenk.tex:548: Missing } inserted.
 <inserted text> 
 }
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3751,26 +3728,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:550: Missing \cr inserted.
+./babrenk.tex:548: Missing \cr inserted.
 <inserted text> 
 \cr 
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 I'm guessing that you meant to end an alignment here.
 
-./babrenk.tex:550: Missing { inserted.
+./babrenk.tex:548: Missing { inserted.
 <inserted text> 
 {
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./babrenk.tex:550: Missing } inserted.
+./babrenk.tex:548: Missing } inserted.
 <inserted text> 
 }
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3778,10 +3755,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:550: Missing $ inserted.
+./babrenk.tex:548: Missing $ inserted.
 <inserted text> 
 $
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3789,10 +3766,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:550: Missing } inserted.
+./babrenk.tex:548: Missing } inserted.
 <inserted text> 
 }
-l.550 \end{tabuar}
+l.548 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3801,74 +3778,74 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (51.48056pt too wide) in paragraph at lines 535--551
+Overfull \hbox (51.48056pt too wide) in paragraph at lines 533--549
  [] 
  []
 
 [7<./lda_alpha001.png><./lda_alpha1.png>]
-Overfull \hbox (15.52702pt too wide) in paragraph at lines 553--554
+Overfull \hbox (15.52702pt too wide) in paragraph at lines 551--552
 \TU/Alegreya(0)/m/n/12 Ab-tei-lun-gen, der bzw. de-nen die-se An-fra-ge ma-nu-e
 ll zu-ge-ord-net wur-de. Die Da-ten in subject-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--554
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
 
  []
 
 
-./babrenk.tex:563: LaTeX Error: There's no line here to end.
+./babrenk.tex:561: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.563 
+l.561 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--565
+Underfull \hbox (badness 10000) in paragraph at lines 562--563
 
  []
 
 
-./babrenk.tex:574: LaTeX Error: There's no line here to end.
+./babrenk.tex:572: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.574 
+l.572 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [8] [9]
-Overfull \hbox (11.86562pt too wide) in paragraph at lines 606--608
+Overfull \hbox (11.86562pt too wide) in paragraph at lines 604--606
 \TU/Alegreya(0)/m/n/12 zu wird ein neu-es Do-ku-ment in je-dem ein-zel-nen Kor-
 pus in-te-griert, um ei-ne Dokument-
  []
 
 [10]
 
-./babrenk.tex:664: LaTeX Error: There's no line here to end.
+./babrenk.tex:662: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.664 
+l.662 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (0.33434pt too wide) in paragraph at lines 665--666
+Overfull \hbox (0.33434pt too wide) in paragraph at lines 663--664
 \TU/Alegreya(0)/m/n/12 Schwie-rig-keit be-steht dar-in, ein Map-ping zu fin-den
 , das in Sum-me die mei-sten Über-
  []
@@ -3877,84 +3854,89 @@ Overfull \hbox (0.33434pt too wide) in paragraph at lines 665--666
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) [11]
 
-./babrenk.tex:692: LaTeX Error: There's no line here to end.
+./babrenk.tex:690: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.692 \\
+l.690 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:693: LaTeX Error: There's no line here to end.
+./babrenk.tex:691: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.693 \\
+l.691 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (36.4015pt too wide) in paragraph at lines 730--731
+Overfull \hbox (36.4015pt too wide) in paragraph at lines 728--729
 \TU/Alegreya(0)/m/n/12 ver-schie-de-ne Topic-Word-Verteilungen. Pro Kor-pus wir
 d für das neue Do-ku-ment die Dokument-
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 734--735
+Underfull \hbox (badness 10000) in paragraph at lines 732--733
 
  []
 
 
-Overfull \hbox (17.78557pt too wide) in paragraph at lines 738--739
+Overfull \hbox (17.78557pt too wide) in paragraph at lines 736--737
 \TU/Alegreya(0)/m/n/12 Die Un-ter-schei-dung die-ser Me-tho-de zu Mög-lich-kei
 t 󰋇 ist, dass sich die Topic-Wort-Verteilung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
 
  []
 
 [13]
 
-./babrenk.tex:757: LaTeX Error: There's no line here to end.
+./babrenk.tex:755: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.757 
+l.755 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
+Underfull \hbox (badness 10000) in paragraph at lines 757--758
 
  []
 
 
-./babrenk.tex:764: LaTeX Error: There's no line here to end.
+./babrenk.tex:762: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.764 
+l.762 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
+
+ []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 766--767
@@ -3962,9 +3944,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 766--767
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 768--769
+./babrenk.tex:771: LaTeX Error: There's no line here to end.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.771 \\
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./babrenk.tex:772: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.772 \\
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 ./babrenk.tex:773: LaTeX Error: There's no line here to end.
@@ -3973,33 +3976,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.773 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./babrenk.tex:774: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.774 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./babrenk.tex:775: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.775 
+l.773 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4009,26 +3986,26 @@ or  <return>  to continue without it.
 <lda1.png, id=242, 418.56375pt x 271.0125pt>
 File: lda1.png Graphic file (type png)
 <use lda1.png>
-Package luatex.def Info: lda1.png  used on input line 780.
+Package luatex.def Info: lda1.png  used on input line 778.
 (luatex.def)             Requested size: 209.28136pt x 135.5059pt.
 <lda2.png, id=243, 317.185pt x 555.07375pt>
 File: lda2.png Graphic file (type png)
 <use lda2.png>
-Package luatex.def Info: lda2.png  used on input line 781.
+Package luatex.def Info: lda2.png  used on input line 779.
 (luatex.def)             Requested size: 158.5921pt x 277.53618pt.
 <lda3.png, id=244, 455.7025pt x 55.20625pt>
 File: lda3.png Graphic file (type png)
 <use lda3.png>
-Package luatex.def Info: lda3.png  used on input line 785.
+Package luatex.def Info: lda3.png  used on input line 783.
 (luatex.def)             Requested size: 227.85068pt x 27.60304pt.
 
-Overfull \hbox (0.83833pt too wide) in paragraph at lines 787--788
+Overfull \hbox (0.83833pt too wide) in paragraph at lines 785--786
 []\TU/Alegreya(0)/m/n/12 Aus die-ser Aus-ga-be wird nun er-sicht-lich, wie wahr
 -schein-lich es ist, dass ein be-stimm-
  []
 
 
-Overfull \hbox (6.45352pt too wide) in paragraph at lines 789--790
+Overfull \hbox (6.45352pt too wide) in paragraph at lines 787--788
 []\TU/Alegreya(0)/m/n/12 Wenn man den glei-chen Quell-text mit ei-ner ge-rin-ge
 -ren The-men-an-zahl auf-ru󰀖t, kommt
  []
@@ -4036,13 +4013,13 @@ Overfull \hbox (6.45352pt too wide) in paragraph at lines 789--790
 <lda4.png, id=245, 455.7025pt x 565.11125pt>
 File: lda4.png Graphic file (type png)
 <use lda4.png>
-Package luatex.def Info: lda4.png  used on input line 791.
+Package luatex.def Info: lda4.png  used on input line 789.
 (luatex.def)             Requested size: 227.85068pt x 282.55493pt.
 [15<./lda1.png><./lda2.png><./lda3.png>]
 <lda5.png, id=254, 455.7025pt x 224.84pt>
 File: lda5.png Graphic file (type png)
 <use lda5.png>
-Package luatex.def Info: lda5.png  used on input line 795.
+Package luatex.def Info: lda5.png  used on input line 793.
 (luatex.def)             Requested size: 227.85068pt x 112.41972pt.
  [16<./lda4.png><./lda5.png>]
 Kapitel 3.
@@ -4053,35 +4030,35 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 \openout15 = babrenk-bibtex-entries.bib
 
 
-LaTeX Warning: Empty bibliography on input line 1064.
+LaTeX Warning: Empty bibliography on input line 1062.
 
 [17
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1064.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1064.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1062.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1062.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1064.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1064.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1062.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1062.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 2504506FFC8A8E1643AFA0026B44F32F;2065.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1064.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1062.
 )
 
 Here is how much of LuaTeX's memory you used:
- 63540 strings out of 494291
+ 63455 strings out of 494291
  125215,2373549 words of node,token memory allocated
  601 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 20 attribute, 64 gl
 ue_spec, 12 attribute_list, 2 write nodes
    avail lists: 1:2,2:3104,3:366,4:162,5:998,6:29,7:5287,8:51,9:1726,10:22,11:49
 6
- 64565 multiletter control sequences out of 65536+600000
- 208 fonts using 64867375 bytes
- 72i,17n,135p,1838b,3300s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 64522 multiletter control sequences out of 65536+600000
+ 170 fonts using 51982491 bytes
+ 72i,17n,135p,1838b,3224s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
 agella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegre
 ya/Alegreya-Regular.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/publi
@@ -4096,7 +4073,7 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (23 pages, 1409588 bytes).
+Output written on babrenk.pdf (23 pages, 1406637 bytes).
 
 PDF statistics: 352 PDF objects out of 1000 (max. 8388607)
  271 compressed objects within 3 object streams
