@@ -572,6 +572,11 @@ OUTPUT split:
 ['wasser', 'verbraucht', 'amt', 'deutschland', 'ablesung', 'zaehlen', 'strom', 'voll', 'ort', 'luebeck', 'art', 'straße', 'messung', 'verband', 'nummer', 'platz', 'markieren', 'wechsel', 'lieferant', 'stelle', 'verbrauch', 'kunde', 'kunden', 'anrede', 'mann', 'sommer', 'beschwerde', 'schrift', 'allgemein', 'kommunikation', 'datenmanagement', 'fern']
 \end{lstlisting}\\
 
+
+\subsection{Datenreinigung}
+Bevor eine Themenmodellierung auf Daten durchgeführt werden kann, müssen die Daten einem Prozess unterzogen werden. Dieser beginnt mit der Datenaquise, also der Akquirierung bestimmter relevanter Daten. Im Falle der ZVO bedeutet dies, dass es genügend Kundenanfragen gibt, die verarbeitet werden können. Wenn diese Daten bestehen, werden sie auf die relevanten Wörter reduziert, aus denen eine bedeutsame Inferenz von Informationen möglich ist, sodass unter anderem die sogeneannten „Stop-Words“, also eine Menge von Verbindungswörtern entfernt werden. Ein anderer Schritt der Datenreinigung ist das Transponieren aller Wörter in kleine Buchstaben, um eine Einheitlichkeit zu erlangen, da das Bag of Words Modell keine Reihenfolge mehr beachtet und somit große Satzanfänge irrelevant werden. Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dies kann zum Beispiel in Form eines Bag-of-Words Modells, Dictionary oder TF-IDF, also einer relativen Vorkommensauflistung verschiedner Wörter über Dokumente umgesetzt werden. Nachdem die Daten in eine für den Computer kompatiblen Form gebracht wurden, kann das Themenmodell entwickelt werden. 
+
+\section{Ansätze}
 \subsection{Gibbs Sampling}
 Gibbs Sampling ist eine Technik, um ein LDA Modell zu trainieren. Für das menschliche Auge kann ein Wort eines Dokuments intuitiv einem Thema zugordnet werden. Für den Computer ist dies schwer, da er die Semantik des Wortes nicht kennt. Mit Gibbs Sampling werden Wörter iterativ Topics zugewiesen basierend auf allen restlichen Wörtern und Dokumenten. Dabei ist zum Einen relevant, was die führende Topic in dem jeweiligen Dokument ist und zum Anderen welcher Topic die gleichen Wörter im gesamten Korpus bereits am häufigsten zugeordnet wurden. Die beiden Beobachtungen werden multipliziert, um die Kombination mit der maximalen Wahrscheinlichkeit zu finden. Um zu verhindern, dass ein Wort einem Topic nicht zugewiesen werden kann, das sich nicht in dem bestimmten Dokument befindet, wird der Anzahl der jeweils vorkommenden Themen im Dokument $\alpha$ und der Anzahl der belegten Themen des gleichen Wörter in anderen Dokumenten $\beta$ addiert.  Wurde ein Wort einem Topic zugewiesen wird das nächste Wort betrachtet. Nun ist zu beachten, dass sich die Verteilungen zur Berechnung jedes mal ändern. Somit haben wir einen iterativen Lernfortschritt bei der Topicverteilung.
 
@@ -585,16 +590,19 @@ In der Wahrscheinlichkeitsrechnung kann die Hellinger Distanz als Maß genutzt w
 \end{equation}
 \end{center}
 
-\subsection{Datenreinigung}
-Bevor eine Themenmodellierung auf Daten durchgeführt werden kann, müssen die Daten einem Prozess unterzogen werden. Dieser beginnt mit der Datenaquise, also der Akquirierung bestimmter relevanter Daten. Im Falle der ZVO bedeutet dies, dass es genügend Kundenanfragen gibt, die verarbeitet werden können. Wenn diese Daten bestehen, werden sie auf die relevanten Wörter reduziert, aus denen eine bedeutsame Inferenz von Informationen möglich ist, sodass unter anderem die sogeneannten „Stop-Words“, also eine Menge von Verbindungswörtern entfernt werden. Ein anderer Schritt der Datenreinigung ist das Transponieren aller Wörter in kleine Buchstaben, um eine Einheitlichkeit zu erlangen, da das Bag of Words Modell keine Reihenfolge mehr beachtet und somit große Satzanfänge irrelevant werden. Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dies kann zum Beispiel in Form eines Bag-of-Words Modells, Dictionary oder TF-IDF, also einer relativen Vorkommensauflistung verschiedner Wörter über Dokumente umgesetzt werden. Nachdem die Daten in eine für den Computer kompatiblen Form gebracht wurden, kann das Themenmodell entwickelt werden. 
-
-\section{Ansätze}
 In diesem Abschnitt werden verschiedene Möglichkeiten implementiert und analysiert, wie LDA im Sinne der ZVO genutzt werden kann. Dabei ist die Zielfrage, wie am besten für ein unbekanntes Dokument die bestimmte Abteilung gefunden werden kann. Dafür müssen Korpora bestehen, die bereits durch Verteilung definiert sind, sodass die Dokument-Themen Verteilung für das neues Dokument inferiert werden kann. Wenn die Themenverteilung des neuen Dokuments gegeben ist, kann über Vergleiche der Verteilungen mit Dokumenten oder Durschnitten von Korpora eine Abteilung für das Dokument identifiziert werden. 
 
 Die Möglichkeiten, die sich für diesen Zweck ergeben sind folgende: 
 \begin{enumerate}
 \item \textbf{Ein großer Korpus}\\
-Alle Dokumente ergeben ein Korpus. Das neue Dokument wird mit dem gesamten Korpus verglichen und auf thematische Kompatibilität geprüft. Ein Gesamtbild der thematischen Aufteilung aller Dokumente kann eine mögliche effektivere Neuverteilung der Kategorien schlussfolgern.
+Alle Dokumente ergeben einen Korpus. Dieser gibt eine Dokument-Topic-Verteilung aus, die eine generelle inhaltliche Verteilung der Anfragen darstellt. Neue Dokumente können auf dem Korpus geprüft werden, um eine Dokument-Topic-Verteilung zu inferieren. Diese ergibt eine Abteilung, dem das Dokument zugeordnet werden soll. 
+
+%Ein Gesamtbild der thematischen Aufteilung aller Dokumente kann eine mögliche effektivere Neuverteilung der Kategorien schlussfolgern. Diese Methode stellt die simpleste Form der LDA Anwendung auf die ZVO Daten dar. Dafür kann man zwei verschiedene Ansätze verfolgen: 
+%\begin{enumerate}
+%	\item Mit 80\% der Daten wird das Modell trainiert. Die letzten 20 \% werden zum Testen verwendet. In diesem Fall wird aus dem unüberwachten LDA-Prinzip ein überwachtes Modell simuliert, da die händisch zugeteilten Abteilungen für die Dokumente bereit bekannt sind. Somit kann man prüfen, wie gut das Modell ist. Dies lässt sich in einer Quote darstellen, die die richtig zugeordneten Dokumente durch die Gesamtanzahl der Testdaten teilt. 
+%	\item Mit 80\% der Daten wird das Modell trainiert. In dieser Methode werden jedoch die verwendeten 80\% der Daten verwendet, um zu testen, ob eine Veränderung der Korrektheit zu erkennen ist, wenn die  Trainingsdaten gleichzeitig die Testdaten sind. Dafür wird eine Matrix aufgetellt 
+%\end{enumerate}
+
 \item \textbf{18 Korpora mit Durchschnitt}\\
 Jede Abteilung stellt einen Korpus da, deren Verteilung mit der des neuen Dokuments verglichen wird. In diesem Fall hat jede der 18 Abteilungen eine Dokument-Themen Verteilung, die die Abteilung inhaltlich von den anderen unterscheidet. Dazu wird ein neues Dokument in jedem einzelnen Korpus integriert, um eine Dokument-Themen Verteilung für das neue Dokument auf Basis der korpusabhängigen Wörter-Themen Verteilung zu inferieren. 
 
@@ -602,13 +610,14 @@ Jede Abteilung stellt einen Korpus da, deren Verteilung mit der des neuen Dokume
 Jede Abteilung stellt einen Korpus dar, deren Dokumente alle einzeln mit der Verteilung des neuen Dokuments verglichen werden, das dann quantitativ einer Abteilung zugeordnet wird. Die Wörter-Themen Verteilung ist für alle dokumente eines Korpus gleich, während für jedes Dokument eine Dokument-Themen Verteilung errechnet wird. Wenn die Dokument-Themen Verteilung der bestehenden Dokumente und die des neuen Dokuments bereitstehen, können diese auf Ähnlichkeit überprüft werden. Da bereits bekannt ist, welcher Abteilung jedes Dokument angehört, stellen die Top X ähnlichsten Dokumente eine Verteilung der Abteilungen dar, denen das neue Dokument inhaltlich am ähnlichsten ist. 
 \end{enumerate}
 
-\subsection{Möglichkeit 1: Ein großer Korpus - Mapping \textcolor{red}{Groppe}}
-Ziel dieser Untersuchung ist der Vergleich der Themen, die sich durch ein LDA Modell ergeben mit den händisch eingeteilten Themen. Dafür wird ein Korpus auf allen Dokumenten generiert, der eine Themenverteilung erzeugt. Um herauszufinden, welches Dokument, zu welchem Thema gehört, werden die Themenverteilungen der einzelnen Dokumente inferiert. Die durch LDA erzeugte Themen werden mit den händisch geordneten Themen verglichen, indem Überschneidungen der enthaltenen Dokumente quantifiziert werden.  Da LDA die Themen nicht benennen kann ,sondern nur die Verteilung der Wörter auflistet, müssen die von LDA gefundenen Gruppen noch den händischen zugeordnet werden. Die Zuordnung, die in Summe die meisten Übereinstimmungen zwischen den Gruppen ergibt, stellt die realistischste Interpretation der LDA Themen dar. Das Ergebnis kann Aufschluss über die vorgegeben  Themen geben. Bei einem perfekten Modell und optimaler Themeneinteilung  müssten die Themen mit einer sehr hohen Überschneidungsrate eindeutig einteilbar sein.  \\
 
 
-Dabei werden zuerst alle Anfragedaten in einen String zusammengefügt, der als Grundlage für das Wörterbuch und den Korpus dient. Durch den Aufruf des LDA Modells wird der String in eine vorgegebene Anzahl an Themen eingeteilt, basierend auf häufig zusammen auftretenden Wörtern des Wörterbuchs. \\
+\subsection{Möglichkeit 1: Ein großer Korpus \textcolor{red}{Groppe}}
 
-Die Überschneidungen sind in einer Matrix aufgetragen, die für jedes Thema aus dem LDA Modell die Anzahl der Überschneidungen mit jedem manuell erzeugten Thema speichert. Mit einer Max-Funktion wird das maximale Element aus jeder Zeile gefunden und dessen Index in einer Liste gespeichert. Dieser Index repräsentiert die Abteilung, mit der das jeweilige Thema des LDA Modells am wahrscheinlichsten zugeordnet wäre.  \\
+Alle Dokumente ergeben ein Korpus. Das neue Dokument wird mit dem gesamten Korpus verglichen und auf thematische Kompatibilität geprüft. Dabei sind folgende Prozessschritte notwendig: 
+
+\begin{enumerate}
+\item Der Korpus generiert eine Topic-Verteilung für die Gesamtheit aller Dokumente. Dabei werden zuerst alle Anfragedaten in einen String zusammengefügt, der als Grundlage für das Wörterbuch und den Korpus dient. Durch den Aufruf des LDA Modells wird der String in eine vorgegebene Anzahl an Themen eingeteilt, basierend auf häufig zusammen auftretenden Wörtern des Wörterbuchs. Dabei ist an den Topics jedoch keine Verbindung zu den gegebenen Abteilungen ersichtlich. Diese muss zuerst herausgefunden werden, damit die Zuordnung der Dokumente evaluiert werden kann. Die Zuordnung der Topics zu Abteilungen kann nur approximiert werden, indem gezählt wird, in wie vielen Dokumenten sich die Topics und Abteilungen jeweils überschneiden. Für diese Überschneidung wird jedes Dokument erneut auf dem Korpus geprüft, um dessen Topic-Wort-Verteilung zu erstellen. Die Dokumente werden anhand ihrer einzigartigen Zeilen-ID adressiert. Die Überschneidungen werden in einer Matrix dargestellt, die für jede Topic des Modells die Überschneidungen zu jeder Abteilung auflistet. Somit kann für jede Zeile die passende Zuordnung gefunden werden. 
 
 \begin{center}
 \begin{tabular}{c c c c c c c c c c c c c c c c c c c}
@@ -653,17 +662,22 @@ Die Überschneidungen sind in einer Matrix aufgetragen, die für jedes Thema aus
 \hline
 \end{tabular}\end{center}\\
 
-\\
+Diese Matrix bildet die Überschneidungen der ersten 1000 Dokumenten dar. Die Schwierigkeit besteht darin, ein Mapping zu finden, das in Summe die meisten Überschneidungen ergibt und gleichzeitig jede Abteilung nur genau einem Topic zugeordnet wird. Würde man die zweite Prämisse vernachlässigen, würde sich diese Zuordnung der Topics zu Abteilungen ergeben: 
 
 \begin{lstlisting}[language=Python]
-maxmatrix = [9, 10, 0, 9, 10, 10, 0, 10, 10, 0, 1, 2, 1, 9, 10, 9, 10, 9]
+maxmatrix = [9, 10, 0, 9, 10, 10, 0, 10, 10, 0, 1, 2, 1, 9, 10, 9, 10, 9] TODO UPDATEN
 \end{lstlisting}
 
-\\
-Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau ein Thema der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. und 10. Thema der ZVO kompatibel wären. Somit ist zumindest keine optimale Zuordnung des Modellergebnisses möglich, was entweder auf die Aufteilung der Themen oder das Modell zurückzuführen ist.
+Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau eine Abteilung der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. und 10. Thema der ZVO kompatibel wären. Bezieht man die Bedingung, eine Abteilung nur einmal zu vergeben, mit ein, ergibt dies folgende Zuordnung, die für die zukünftige Verarbeitung neuer Dokumenten fundamental ist:
 
-\subsection{Möglichkeit 2: 1 Korpus 80\% mit Testdaten 5-20\%}\textcolor{red}{Groppe2}}
-Ein Korpus wird generiert mit 80\% der verfügbaren ZVO Daten. Dieser Korpus bringt eine Dokument-Topic-Verteilung hervor. In Möglichkeit 1 wurden die Dokumente, die den Korpus generieren per Dokument-Topic-Verteilung in Abteilungen eingeteilt. In diesem Fall werden die restlichen 20\% der Daten genutzt, um die Zuordnungsgenauigkeit des Modells zu testen. Die folgenden Quoten wurden erreicht mit unterschiedlich vielen Testdaten. Zuerst wurden 5\% der Testdaten verwendet, dann 10\%, 15\% und die gesamten 20\%. Die unterschiedlichen Durchgänge ergaben folgende Quoten: \\
+\begin{lstlisting}[language=Python]
+maxmatrix = []
+\end{lstlisting}
+
+\item Ist für jede Abteilung ein Topic-Äquivalent approximiert, kann die Dokument-Topic-Verteilung für ein neues Dokument basierend auf der Topic-Wort-Verteilung errechnet werden. Dafür werden die 20\% der Daten genutzt, die nicht für die Erstellung des Korpus verwendet wurden. Erhält man eine Dokument-Topic-Verteilung für ein neues Dokument, ist aus dieser ersichtlich, welches Topic am stärksten in diesem Dokument vertreten ist. Für das Topic wird die im vorherigen Schritt errechnete Abteilung assoziiert, der das Dokument zugeordnet wird. Um die Korrektheit der Zuordnung prüfen zu können, vergleichen wir die errechnete Abteilung mit der, der die Zeilen-ID des Dokuments in den gegeben Daten zugeordnet ist. Somit wurde eine unüberwachte Lernmethode in eines überwachtes Modell überführt. 
+
+\item Da ein Dokument keine zuverlässige Aussage über die Funktionalität des Modells macht, wird eine Menge an Dokumenten verwendet. Diese ergeben sich aus den letzten 20\%. Um zu prüfen, wie die Anzahl der Testdokumente die Quote der korrekt zugewiesenen Dokumente beeinflusst, wird die Zuordnung mit 5\%, 10\%, 15\% und 20\% durchgeführt. Das Ergebnis ist in der folgenden Abbildung dargestellt:  
+
 \begin{center}
 \begin{tabular}{c c}
 \hline
@@ -705,9 +719,14 @@ Testdaten (in \% von 20\%) & Korrekt zugeordnet \\
 \end{axis}
 \end{tikzpicture}
 \end{center}
+
+\end{enumerate}
+
 Der Versuch zeigt ein sehr schlechtes Ergebnis mit einem Quotendurchschnitt von 4.96. Dabei wurden keine erheblichen Unterschiede bei der Verwendung verschieden vieler Testdaten im Ergebnis festgestellt. Dies lässt zu der Folgerung führen, dass die Nutzung eines einzigen Korpus für die ZVO nicht in Frage kommt. 
 
-\subsection{Möglichkeit 3: 18 Korpora mit Durchschnitt \textcolor{red}{Felix}}
+
+
+\subsection{Möglichkeit 2: 18 Korpora mit Durchschnitt \textcolor{red}{Felix}}
 Als weitere Möglichkeit wird aus jeder der 18 vorgegebenen Abteilungen ein eigener Korpus generiert. Somit verfügt jeder Korpus über eine Dokument-Topic-Verteilung, die die Vorkommenswahrscheinlichkeit der 18 Themen in dem jeweiligen Korpus repräsentiert. Ziel der Untersuchung ist die Klassifikationsfähigkeit eines unbekannten Dokuments. Da jeder Korpus aus verschiedenen Dokumenten besteht, gibt es in 18 Korpora auch 18 verschiedene Topic-Word-Verteilungen. Pro Korpus wird für das neue Dokument die Dokument-Topic-Verteilung auf Basis der individuellen Topic-Word-Verteilung generiert. Dafür ist die Dokument-Topic-Verteilung der einzelnen Korpora relevant, die sich aus dem Durchschnitt aller Dokument-Topic-Verteilung der Dokumente eines jeweiligen Korpus ergibt. Aus dem Vergleich der Dokument-Topic-Verteilung des neuen Dokuments mit der des Korpus ergibt sich, wie gut das Dokument zu der Abteilung passt. Dieser Vergleich kann z.B. durch die Berechnung des Hellinger-Abstands der Verteilungen durchgeführt werden. Ist das Ergebnis klein, sind die Verteilungen ähnlich zu einander. Das neue Dokument wird dem Korpus zugeteilt, dessen Abstandsberechnung das minimale Ergebnis zeigt. Um zu analysieren, wie gut das Modell unbekannte Dokumente zuweist, kann nun die berechnetet Abteilung mit dem vorgelabelten Ergebnis verglichen werden. Bei einem Dokument ist das Ergebnis entweder richtig oder falsch, führt man den Vorgang jedoch mit mehreren Dokumenten aus, kann eine Quote errechnet werden. Diese sagt aus, wie gut die Dokumente klassifiziert wurden. 
 
 Das Ergebnis kann sich durch Anpassung der Parameter im Modell verändern. Diese Änderungen werden wir untersuchen. 
@@ -715,7 +734,7 @@ Das Ergebnis kann sich durch Anpassung der Parameter im Modell verändern. Diese
 \textcolor{red}{Aktuelles Problem: Durschnittsberechnung (hardgecoded) dauert für alle mehrere Tage}\\
 
 
-\subsection{Möglichkeit 4: 18 Korpora mit Mehrheitsentscheid \textcolor{red}{Felix2}}
+\subsection{Möglichkeit 3: 18 Korpora mit Mehrheitsentscheid \textcolor{red}{Felix2}}
 Die Unterscheidung dieser Methode zu Möglichkeit 2 ist, dass sich die Topic-Wort-Verteilung eines Korpus nicht aus dem Durchschnitt aller ergibt, sondern das unbekannte Dokument mit allen Verteilungen einzeln verglichen wird. Die Ähnlichkeit wird dann durch die Hellinger-Distanz bestimmt. Dabei berechnet man die Distanz zwischen der Verteilung des neuen Dokuments und der jeden Dokuments enthalten im Korpus. Der Durchschnitt beschreibt die Ähnlichkeit zu dem Korpus und ergibt sich aus der Summe aller Distanzen geteilt durch die Anzahl der Vergleiche. Bei 18 Korpora wird das neue Dokument dem zugeordnet, der die höchste Ähnlichkeit errechnet hat. Als Code wird dies folgendermaßen abgebildet: \\
 
 \begin{lstlisting}
@@ -756,7 +775,7 @@ assignment= [0,14,2,8,4,5,2,7,3,2, 8,11,12,13,4,15,11,6]
 
 Eine perfekte Zuteilung wäre erreicht, wenn die Liste mit den Zahlen 0 bis 17 in aufsteigender Reihenfolge gefüllt wäre. Die Quote von richtig zugeordneten Dokumenten liegt somit bei 50\%. Bei der korrekten Zuordnung war eine klare Abgrenzung der Distanz gegenüber den inkorrekten Abteilungen festzustellen. Die korrekten Abteilungen hatten eine Distanz von ca $[0.01,0.09]$ . Bei inkorrekten hingegen entschied sich die Zuordnung durch wenige Zehntel Unterschiede in der Ähnlichkeit mit der korrekten Abteilung. 
 
-\subsection{Alternativ zu Möglichkeit 1 (Erster Versuch)} Das Ziel ist die Generierung einer Themenverteilung über alle Dokumente im Korpus. Diese könnte Aufschluss über die generelle Kategorien der Abteilungen geben. Dafür müssen zuerst alle Daten in einen großen Korpus vereinigt werden, das ist in der Methode „returnAll()“ implementiert. Danach wird diese in eine Liste aufgeteilt und in ein Dictionary verwandelt. Diese wird dann genutzt um mit der „gensim.models.LdaMulticore()“-Methode in einen LDA Modell verwandelt wird. Für dieses Modell wurde die Themenanzahl auf 18 gesetzt, da dies die aktuelle Anzahl der Themen bei dem ZVO ist. 
+\subsection{Alternativ zu Möglichkeit 1 (Vermutlich nicht zu verwenden)} Das Ziel ist die Generierung einer Themenverteilung über alle Dokumente im Korpus. Diese könnte Aufschluss über die generelle Kategorien der Abteilungen geben. Dafür müssen zuerst alle Daten in einen großen Korpus vereinigt werden, das ist in der Methode „returnAll()“ implementiert. Danach wird diese in eine Liste aufgeteilt und in ein Dictionary verwandelt. Diese wird dann genutzt um mit der „gensim.models.LdaMulticore()“-Methode in einen LDA Modell verwandelt wird. Für dieses Modell wurde die Themenanzahl auf 18 gesetzt, da dies die aktuelle Anzahl der Themen bei dem ZVO ist. 
 
 \includegraphics[scale=0.5]{lda1.png}
 \includegraphics[scale=0.5]{lda2.png}

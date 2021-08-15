@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  15 AUG 2021 16:43
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  15 AUG 2021 18:19
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.053 seconds
+luaotfload | main : initialization completed in 0.069 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -3848,253 +3848,201 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [8] [9]
-Overfull \hbox (11.86562pt too wide) in paragraph at lines 598--600
+Overfull \hbox (11.86562pt too wide) in paragraph at lines 606--608
 \TU/Alegreya(0)/m/n/12 zu wird ein neu-es Do-ku-ment in je-dem ein-zel-nen Kor-
 pus in-te-griert, um ei-ne Dokument-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
-
- []
-
 [10]
-Overfull \hbox (14.10951pt too wide) in paragraph at lines 609--610
-[]\TU/Alegreya(0)/m/n/12 Da-bei wer-den zu-erst al-le An-fra-ge-da-ten in ei-ne
-n String zu-sam-men-ge-fügt, der als Grund-
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 611--612
-
- []
-
-
-./babrenk.tex:655: LaTeX Error: There's no line here to end.
+./babrenk.tex:664: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.655 
+l.664 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:657: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.657 
-    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Overfull \hbox (0.33434pt too wide) in paragraph at lines 665--666
+\TU/Alegreya(0)/m/n/12 Schwie-rig-keit be-steht dar-in, ein Map-ping zu fin-den
+, das in Sum-me die mei-sten Über-
+ []
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-)
+) [11]
 
-./babrenk.tex:663: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.663 E
-     ine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 o...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[11]
-./babrenk.tex:665: Too many }'s.
-l.665 ... Testdaten 5-20\%}\textcolor{red}{Groppe2}}
-                                                  
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 665--667
-
- []
-
-
-./babrenk.tex:678: LaTeX Error: There's no line here to end.
+./babrenk.tex:692: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.678 \\
+l.692 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:679: LaTeX Error: There's no line here to end.
+./babrenk.tex:693: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.679 \\
+l.693 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (36.4015pt too wide) in paragraph at lines 711--712
+Overfull \hbox (36.4015pt too wide) in paragraph at lines 730--731
 \TU/Alegreya(0)/m/n/12 ver-schie-de-ne Topic-Word-Verteilungen. Pro Kor-pus wir
 d für das neue Do-ku-ment die Dokument-
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
 
  []
 
 
-Overfull \hbox (17.78557pt too wide) in paragraph at lines 719--720
+Overfull \hbox (17.78557pt too wide) in paragraph at lines 738--739
 \TU/Alegreya(0)/m/n/12 Die Un-ter-schei-dung die-ser Me-tho-de zu Mög-lich-kei
 t 󰋇 ist, dass sich die Topic-Wort-Verteilung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 719--720
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 
  []
 
 [13]
 
-./babrenk.tex:738: LaTeX Error: There's no line here to end.
+./babrenk.tex:757: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.738 
+l.757 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 740--741
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 
  []
 
 
-./babrenk.tex:745: LaTeX Error: There's no line here to end.
+./babrenk.tex:764: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.745 
+l.764 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 747--748
+Underfull \hbox (badness 10000) in paragraph at lines 766--767
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 749--750
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 
  []
 
 
-./babrenk.tex:754: LaTeX Error: There's no line here to end.
+./babrenk.tex:773: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.754 \\
+l.773 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:755: LaTeX Error: There's no line here to end.
+./babrenk.tex:774: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.755 \\
+l.774 \\
       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:756: LaTeX Error: There's no line here to end.
+./babrenk.tex:775: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.756 
+l.775 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [14]
-<lda1.png, id=238, 418.56375pt x 271.0125pt>
+<lda1.png, id=242, 418.56375pt x 271.0125pt>
 File: lda1.png Graphic file (type png)
 <use lda1.png>
-Package luatex.def Info: lda1.png  used on input line 761.
+Package luatex.def Info: lda1.png  used on input line 780.
 (luatex.def)             Requested size: 209.28136pt x 135.5059pt.
-<lda2.png, id=239, 317.185pt x 555.07375pt>
+<lda2.png, id=243, 317.185pt x 555.07375pt>
 File: lda2.png Graphic file (type png)
 <use lda2.png>
-Package luatex.def Info: lda2.png  used on input line 762.
+Package luatex.def Info: lda2.png  used on input line 781.
 (luatex.def)             Requested size: 158.5921pt x 277.53618pt.
-<lda3.png, id=240, 455.7025pt x 55.20625pt>
+<lda3.png, id=244, 455.7025pt x 55.20625pt>
 File: lda3.png Graphic file (type png)
 <use lda3.png>
-Package luatex.def Info: lda3.png  used on input line 766.
+Package luatex.def Info: lda3.png  used on input line 785.
 (luatex.def)             Requested size: 227.85068pt x 27.60304pt.
 
-Overfull \hbox (0.83833pt too wide) in paragraph at lines 768--769
+Overfull \hbox (0.83833pt too wide) in paragraph at lines 787--788
 []\TU/Alegreya(0)/m/n/12 Aus die-ser Aus-ga-be wird nun er-sicht-lich, wie wahr
 -schein-lich es ist, dass ein be-stimm-
  []
 
 
-Overfull \hbox (6.45352pt too wide) in paragraph at lines 770--771
+Overfull \hbox (6.45352pt too wide) in paragraph at lines 789--790
 []\TU/Alegreya(0)/m/n/12 Wenn man den glei-chen Quell-text mit ei-ner ge-rin-ge
 -ren The-men-an-zahl auf-ru󰀖t, kommt
  []
 
-<lda4.png, id=241, 455.7025pt x 565.11125pt>
+<lda4.png, id=245, 455.7025pt x 565.11125pt>
 File: lda4.png Graphic file (type png)
 <use lda4.png>
-Package luatex.def Info: lda4.png  used on input line 772.
+Package luatex.def Info: lda4.png  used on input line 791.
 (luatex.def)             Requested size: 227.85068pt x 282.55493pt.
 [15<./lda1.png><./lda2.png><./lda3.png>]
-<lda5.png, id=250, 455.7025pt x 224.84pt>
+<lda5.png, id=254, 455.7025pt x 224.84pt>
 File: lda5.png Graphic file (type png)
 <use lda5.png>
-Package luatex.def Info: lda5.png  used on input line 776.
+Package luatex.def Info: lda5.png  used on input line 795.
 (luatex.def)             Requested size: 227.85068pt x 112.41972pt.
  [16<./lda4.png><./lda5.png>]
 Kapitel 3.
@@ -4105,34 +4053,34 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 \openout15 = babrenk-bibtex-entries.bib
 
 
-LaTeX Warning: Empty bibliography on input line 1045.
+LaTeX Warning: Empty bibliography on input line 1064.
 
 [17
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1045.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1045.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1064.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1064.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1045.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1045.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1064.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1064.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 2504506FFC8A8E1643AFA0026B44F32F;2065.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1045.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1064.
 )
 
 Here is how much of LuaTeX's memory you used:
- 63532 strings out of 494291
+ 63540 strings out of 494291
  125215,2373549 words of node,token memory allocated
  601 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 20 attribute, 64 gl
 ue_spec, 12 attribute_list, 2 write nodes
-   avail lists: 1:2,2:2881,3:364,4:161,5:945,6:29,7:5001,8:51,9:1723,10:22,11:45
-7
- 64561 multiletter control sequences out of 65536+600000
- 208 fonts using 64867375 bytes
+   avail lists: 1:2,2:3104,3:366,4:162,5:998,6:29,7:5287,8:51,9:1726,10:22,11:49
+6
+ 64565 multiletter control sequences out of 65536+600000
+ 208 fonts using 64867495 bytes
  72i,17n,135p,1838b,3300s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
 agella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegre
@@ -4148,10 +4096,10 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (23 pages, 1407687 bytes).
+Output written on babrenk.pdf (23 pages, 1408240 bytes).
 
-PDF statistics: 347 PDF objects out of 1000 (max. 8388607)
- 266 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 131072)
+PDF statistics: 352 PDF objects out of 1000 (max. 8388607)
+ 271 compressed objects within 3 object streams
+ 100 named destinations out of 1000 (max. 131072)
  128 words of extra memory for PDF output out of 10000 (max. 100000000)
 
