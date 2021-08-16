@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  16 AUG 2021 16:09
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  16 AUG 2021 20:02
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.055 seconds
+luaotfload | main : initialization completed in 0.064 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -3088,6 +3088,57 @@ File: tikzlibraryplotmarks.code.tex 2019/04/04 v3.1.2 (3.1.2)
 ks.code.tex
 File: pgflibraryplotmarks.code.tex 2019/04/04 v3.1.2 (3.1.2)
 )))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count449
+\algocf@hangindent=\skip80
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count450
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip81
+\skiplinenumber=\skip82
+\skiprule=\skip83
+\skiphlne=\skip84
+\skiptext=\skip85
+\skiplength=\skip86
+\algomargin=\skip87
+\skipalgocfslide=\skip88
+\algowidth=\dimen298
+\inoutsize=\dimen299
+\inoutindent=\dimen300
+\interspacetitleruled=\dimen301
+\interspacealgoruled=\dimen302
+\interspacetitleboxruled=\dimen303
+\algocf@ruledwidth=\skip89
+\algocf@inoutbox=\box82
+\algocf@inputbox=\box83
+\AlCapSkip=\skip90
+\AlCapHSkip=\skip91
+\algoskipindent=\skip92
+\algocf@nlbox=\box84
+\algocf@hangingbox=\box85
+\algocf@untilbox=\box86
+\algocf@skipuntil=\skip93
+\algocf@capbox=\box87
+\algocf@lcaptionbox=\skip94
+\algoheightruledefault=\skip95
+\algoheightrule=\skip96
+\algotitleheightruledefault=\skip97
+\algotitleheightrule=\skip98
+\c@algocfline=\count451
+\c@algocfproc=\count452
+\c@algocf=\count453
+\algocf@algoframe=\box88
+\algocf@algobox=\box89
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -3107,41 +3158,41 @@ File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 (./babrenk.aux)
 \openout1 = babrenk.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 382.
-LaTeX Font Info:    ... okay on input line 382.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 384.
+LaTeX Font Info:    ... okay on input line 384.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 382.
+(Font)              scaled to size 12.0pt on input line 384.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count449
-\scratchdimen=\dimen298
-\scratchbox=\box82
-\nofMPsegments=\count450
-\nofMParguments=\count451
+\scratchcounter=\count454
+\scratchdimen=\dimen304
+\scratchbox=\box90
+\nofMPsegments=\count455
+\nofMParguments=\count456
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count452
-\MPscratchDim=\dimen299
-\MPnumerator=\count453
-\makeMPintoPDFobject=\count454
+\MPscratchCnt=\count457
+\MPscratchDim=\dimen305
+\MPnumerator=\count458
+\makeMPintoPDFobject=\count459
 \everyMPtoPDFconversion=\toks49
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -3194,27 +3245,27 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box83
-Package hyperref Info: Link coloring OFF on input line 382.
+\AtBeginShipoutBox=\box91
+Package hyperref Info: Link coloring OFF on input line 384.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count455
+\c@section@level=\count460
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 382.
-LaTeX Info: Redefining \pageref on input line 382.
-LaTeX Info: Redefining \nameref on input line 382.
+LaTeX Info: Redefining \ref on input line 384.
+LaTeX Info: Redefining \pageref on input line 384.
+LaTeX Info: Redefining \nameref on input line 384.
 
 (./babrenk.out) (./babrenk.out)
 \@outlinefile=\write6
 
 \openout6 = babrenk.out
-LaTeX Info: Redefining \Ref on input line 382.
-\c@lstlisting=\count456
+LaTeX Info: Redefining \Ref on input line 384.
+\c@lstlisting=\count461
 Package biblatex Info: LuaTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -3228,63 +3279,63 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'babrenk.bbl' not found.
 
 No file babrenk.bbl.
-Package biblatex Info: Reference section=0 on input line 382.
-Package biblatex Info: Reference segment=0 on input line 382.
+Package biblatex Info: Reference section=0 on input line 384.
+Package biblatex Info: Reference segment=0 on input line 384.
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 ck labels; missing features). Consider writing \pgfplotsset{compat=1.16} into yo
 ur preamble.
- on input line 382.
+ on input line 384.
 
 <uzl-thesis-logo-itcs.pdf, id=83, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
-Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 382.
+Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 384.
 (luatex.def)             Requested size: 426.79045pt x 113.81091pt.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 382.
+(Font)              scaled to size 12.0pt on input line 384.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 15.4pt on input line 382.
+(Font)              scaled to size 15.4pt on input line 384.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
-(Font)              scaled to size 15.4pt on input line 382.
+(Font)              scaled to size 15.4pt on input line 384.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 382.
+(Font)              scaled to size 12.0pt on input line 384.
 <uzl-thesis-logo-slogan.pdf, id=84, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
-Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 382.
+Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 384.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./uzl-the
 sis-logo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 382.
+(Font)              scaled to size 12.0pt on input line 384.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 10.9pt on input line 382.
+(Font)              scaled to size 10.9pt on input line 384.
  [2
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 382.
+(Font)              scaled to size 12.00128pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 382.
+(Font)              scaled to size 8.00085pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 382.
+(Font)              scaled to size 6.00064pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 382.
+(Font)              scaled to size 11.99872pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 382.
+(Font)              scaled to size 7.99915pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 382.
+(Font)              scaled to size 5.99936pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 13.20007pt on input line 382.
+(Font)              scaled to size 13.20007pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 382.
+(Font)              scaled to size 8.80005pt on input line 384.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 6.60004pt on input line 382.
+(Font)              scaled to size 6.60004pt on input line 384.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 382.
+(Font)              scaled to size 8.0pt on input line 384.
  [3
 
 ]
@@ -3321,7 +3372,7 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 
 ]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 22.0pt on input line 382.
+(Font)              scaled to size 22.0pt on input line 384.
 
 (./babrenk.toc)
 \tf@toc=\write7
@@ -3335,8 +3386,8 @@ LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
 ]
 Kapitel 1.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 60.0pt on input line 390.
-Package Listings Info: Made | a short reference for \lstinline on input line 401
+(Font)              scaled to size 60.0pt on input line 392.
+Package Listings Info: Made | a short reference for \lstinline on input line 403
 .
 [1
 
@@ -3344,17 +3395,17 @@ Package Listings Info: Made | a short reference for \lstinline on input line 401
 ] [2]
 Kapitel 2.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 426.
+(Font)              scaled to size 12.0pt on input line 428.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 435.
+(Font)              scaled to size 13.0pt on input line 437.
 
-Overfull \hbox (1.61119pt too wide) in paragraph at lines 436--438
+Overfull \hbox (1.61119pt too wide) in paragraph at lines 438--440
 \TU/Alegreya(0)/m/n/12 zwei Di-ri-ch-let Ver-tei-lun-gen maß-geb-lich be-ein-
 󰀎lus-sen: die Dokument-Themen Ver-tei-lung,
  []
 
 
-Overfull \hbox (2.14958pt too wide) in paragraph at lines 440--441
+Overfull \hbox (2.14958pt too wide) in paragraph at lines 442--443
 \TU/Alegreya(0)/m/n/12 frequency und inverse-document-frequency ver-bes-sert we
 r-den, was sich auf das Ge-samt-
  []
@@ -3362,31 +3413,9 @@ r-den, was sich auf das Ge-samt-
 [3
 
 ]
-Overfull \hbox (4.29675pt too wide) in paragraph at lines 447--448
+Overfull \hbox (4.29675pt too wide) in paragraph at lines 449--450
 \TU/Alegreya(0)/m/n/12 men wer-den al-lein an der Vor-kom-mens-wahr-schein-lich
 -keit der Wör-ter oh-ne Reihenfolgen-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 447--448
-
- []
-
-
-./babrenk.tex:449: LaTeX Error: \symcalallowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.449 ...ss die Anzahl der gesuchten Themen \mathcal
-                                                  {K} vorgegeben werden muss...
-? R
-OK, entering \nonstopmode...
-
-Overfull \hbox (2.9263pt too wide) in paragraph at lines 449--450
-\TU/Alegreya(0)/m/n/12 stimm-ten Teil ver-tre-ten sind. ”Di-ri-ch-let”be-sc
-hreibt ei-ne Ver-tei-lung von Ver-tei-lun-gen. Dies
  []
 
 
@@ -3394,34 +3423,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--450
 
  []
 
+
+./babrenk.tex:451: LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.451 ...ss die Anzahl der gesuchten Themen \mathcal
+                                                  {K} vorgegeben werden muss...
+? R
+OK, entering \nonstopmode...
+
+Overfull \hbox (2.9263pt too wide) in paragraph at lines 451--452
+\TU/Alegreya(0)/m/n/12 stimm-ten Teil ver-tre-ten sind. ”Di-ri-ch-let”be-sc
+hreibt ei-ne Ver-tei-lung von Ver-tei-lun-gen. Dies
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+
+ []
+
 [4]
-
-./babrenk.tex:454: Package tikz Error: Giving up on this path. Did you forget a
- semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.454 	\draw
-           [very thick](6,3.5) rectangle (9,5.5)
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-
-./babrenk.tex:455: Package tikz Error: Giving up on this path. Did you forget a
- semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 	\draw
-           [very thick](3,0.25) rectangle (8.75,2.75)
-(That was another \errmessage.)
-
 
 ./babrenk.tex:456: Package tikz Error: Giving up on this path. Did you forget a
  semicolon?.
@@ -3431,31 +3455,34 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.456 	\draw
+           [very thick](6,3.5) rectangle (9,5.5)
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+./babrenk.tex:457: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.457 	\draw
+           [very thick](3,0.25) rectangle (8.75,2.75)
+(That was another \errmessage.)
+
+
+./babrenk.tex:458: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.458 	\draw
            (1.5,1.5) circle [very thick, radius = 0.8]  node {$\theta$};
-(That was another \errmessage.)
-
-
-./babrenk.tex:464: Package tikz Error: Giving up on this path. Did you forget a
- semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.464 	\draw
-           [->,ultra thick] (7.5,3.7) -- (7.5,2.3)
-(That was another \errmessage.)
-
-
-./babrenk.tex:465: Package tikz Error: Giving up on this path. Did you forget a
- semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.465 	\draw
-           [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
 (That was another \errmessage.)
 
 
@@ -3467,7 +3494,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.466 	\draw
-           [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
+           [->,ultra thick] (7.5,3.7) -- (7.5,2.3)
 (That was another \errmessage.)
 
 
@@ -3479,7 +3506,19 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.467 	\draw
-           [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
+           [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
+(That was another \errmessage.)
+
+
+./babrenk.tex:468: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.468 	\draw
+           [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
 (That was another \errmessage.)
 
 
@@ -3490,14 +3529,26 @@ See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.469 \end{tikzpicture}
+l.469 	\draw
+           [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
+(That was another \errmessage.)
+
+
+./babrenk.tex:471: Package tikz Error: Giving up on this path. Did you forget a
+ semicolon?.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 \end{tikzpicture}
                      
 (That was another \errmessage.)
 
-./babrenk.tex:469: Undefined control sequence.
+./babrenk.tex:471: Undefined control sequence.
 <argument> \pgf@baseline 
               
-l.469 \end{tikzpicture}
+l.471 \end{tikzpicture}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3506,104 +3557,104 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./babrenk.tex:471: LaTeX Error: There's no line here to end.
+./babrenk.tex:473: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.471 
+l.473 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:474: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 Dabei beschreibt \mathcal
+l.474 Dabei beschreibt \mathcal
                              {W} als einzige nicht verborgene Variable eines...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:474: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...icht verborgene Variable eines von \mathcal
+l.474 ...icht verborgene Variable eines von \mathcal
                                                   {N} Wörtern des Dokuments...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:474: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...as Wort ist semantisch einem Thema \mathcal
+l.474 ...as Wort ist semantisch einem Thema \mathcal
                                                   {Z} zugeordnet. Das Thema ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:474: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...m hängt von der Themen-Verteilung \mathcal
+l.474 ...m hängt von der Themen-Verteilung \mathcal
                                                   {theta} des Dokuments ab, ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:474: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...kuments ab, das als ein Elment der \mathcal
+l.474 ...kuments ab, das als ein Elment der \mathcal
                                                   {M} vorliegenden Dokumente...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:474: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...er jeweilgen Thema-Wort-Verteilung \mathcal
+l.474 ...er jeweilgen Thema-Wort-Verteilung \mathcal
                                                   {\phi} der \mathcal{K} The...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./babrenk.tex:472: LaTeX Error: \symcalallowed only in math mode.
+./babrenk.tex:474: LaTeX Error: \symcalallowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.472 ...Wort-Verteilung \mathcal{\phi} der \mathcal
+l.474 ...Wort-Verteilung \mathcal{\phi} der \mathcal
                                                   {K} Themen beeinflusst. Da...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--473
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
  []
 
@@ -3611,18 +3662,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 472--473
 Missing character: There is no 𝜙 (U+1D719) in font [Alegreya-Regular.otf]:mod
 e=node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
 ]
-./babrenk.tex:485: Double subscript.
-l.485 ...le ein Wort $w_{d,i}$ als $Multinom(\phi_z_
+./babrenk.tex:487: Double subscript.
+l.487 ...le ein Wort $w_{d,i}$ als $Multinom(\phi_z_
                                                   {d,i})$
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
-./babrenk.tex:492: Undefined control sequence.
-l.492 ...rod P(\alpha, \beta) \cdot \prod P(z,\tehta
+./babrenk.tex:494: Undefined control sequence.
+l.494 ...rod P(\alpha, \beta) \cdot \prod P(z,\tehta
                                                   ) \cdot \prod P(w \mid \phi)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3631,84 +3682,84 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./babrenk.tex:502: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.502 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./babrenk.tex:503: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.503 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 ./babrenk.tex:504: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.504 D
+l.504 \\
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./babrenk.tex:505: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.505 \\
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./babrenk.tex:506: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.506 D
      ie Formel berechnet die Wahrscheinlichkeit der Verteilung unter einem b...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 514--516
+Underfull \hbox (badness 10000) in paragraph at lines 516--518
 
  []
 
 <lda_alpha001.png, id=185, 895.345pt x 580.1675pt>
 File: lda_alpha001.png Graphic file (type png)
 <use lda_alpha001.png>
-Package luatex.def Info: lda_alpha001.png  used on input line 517.
+Package luatex.def Info: lda_alpha001.png  used on input line 519.
 (luatex.def)             Requested size: 268.60558pt x 174.05157pt.
 <lda_alpha1.png, id=186, 895.345pt x 562.1pt>
 File: lda_alpha1.png Graphic file (type png)
 <use lda_alpha1.png>
-Package luatex.def Info: lda_alpha1.png  used on input line 518.
+Package luatex.def Info: lda_alpha1.png  used on input line 520.
 (luatex.def)             Requested size: 268.60558pt x 168.6313pt.
 [7<./lda_alpha001.png><./lda_alpha1.png>]
 Kapitel 3.
 
-./babrenk.tex:552: LaTeX Error: \begin{tabular} on input line 537 ended by \end
+./babrenk.tex:554: LaTeX Error: \begin{tabular} on input line 539 ended by \end
 {tabuar}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./babrenk.tex:552: Missing } inserted.
+./babrenk.tex:554: Missing } inserted.
 <inserted text> 
 }
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3716,10 +3767,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:552: Missing } inserted.
+./babrenk.tex:554: Missing } inserted.
 <inserted text> 
 }
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3727,26 +3778,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:552: Missing \cr inserted.
+./babrenk.tex:554: Missing \cr inserted.
 <inserted text> 
 \cr 
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 I'm guessing that you meant to end an alignment here.
 
-./babrenk.tex:552: Missing { inserted.
+./babrenk.tex:554: Missing { inserted.
 <inserted text> 
 {
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./babrenk.tex:552: Missing } inserted.
+./babrenk.tex:554: Missing } inserted.
 <inserted text> 
 }
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3754,10 +3805,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:552: Missing $ inserted.
+./babrenk.tex:554: Missing $ inserted.
 <inserted text> 
 $
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3765,10 +3816,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:552: Missing } inserted.
+./babrenk.tex:554: Missing } inserted.
 <inserted text> 
 }
-l.552 \end{tabuar}
+l.554 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3777,36 +3828,36 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (51.48056pt too wide) in paragraph at lines 537--553
+Overfull \hbox (51.48056pt too wide) in paragraph at lines 539--555
  [] 
  []
 
 
-Overfull \hbox (15.52702pt too wide) in paragraph at lines 555--556
+Overfull \hbox (15.52702pt too wide) in paragraph at lines 557--558
 \TU/Alegreya(0)/m/n/12 Ab-tei-lun-gen, der bzw. de-nen die-se An-fra-ge ma-nu-e
 ll zu-ge-ord-net wur-de. Die Da-ten in subject-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 
  []
 
 
-./babrenk.tex:565: LaTeX Error: There's no line here to end.
+./babrenk.tex:567: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.565 
+l.567 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--567
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
@@ -3814,56 +3865,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
 ]
 
-./babrenk.tex:576: LaTeX Error: There's no line here to end.
+./babrenk.tex:578: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.576 
+l.578 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 584--585
+
+ []
+
+./babrenk.tex:595: Undefined control sequence.
+<argument> \Do 
+    
+l.595 	{
+      Füge Dokumentinhalt zu data hinzu}\;
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 [9]
+Overfull \hbox (22.51266pt too wide) in paragraph at lines 605--607
+\TU/Alegreya(0)/m/n/12 pic wel-che Ab-tei-lung der ZVO dar-stellt. Da-für be-t
+rach-ten wir die Topic-Wort-Verteilungen
+ []
+
+
+Overfull \hbox (17.68552pt too wide) in paragraph at lines 608--610
+\TU/Alegreya(0)/m/n/12 ge-spei-chert, die je-des Ele-ment von [][][] auf je-des
+ Ele-ment von [][][]
+ []
+
+[10] [11]
 Kapitel 4.
 
-./babrenk.tex:621: LaTeX Error: \begin{document} ended by \end{enumerate}.
+./babrenk.tex:651: LaTeX Error: \begin{document} ended by \end{enumerate}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.621 \end{enumerate}
+l.651 \end{enumerate}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./babrenk.tex:621: Extra \endgroup.
+./babrenk.tex:651: Extra \endgroup.
 <recently read> \endgroup 
           
-l.621 \end{enumerate}
+l.651 \end{enumerate}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 
-Overfull \hbox (52.26067pt too wide) in paragraph at lines 634--677
+Overfull \hbox (52.26067pt too wide) in paragraph at lines 664--707
  [] 
  []
 
-[10
+[12
 
 ]
 
-./babrenk.tex:678: LaTeX Error: There's no line here to end.
+./babrenk.tex:708: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.678 
+l.708 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3871,9 +3950,9 @@ or  <return>  to continue without it.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-) [11]
+) [13]
 Kapitel 5.
-[12
+[14
 
 ]
 Kapitel 6.
@@ -3884,35 +3963,35 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 \openout15 = babrenk-bibtex-entries.bib
 
 
-LaTeX Warning: Empty bibliography on input line 1072.
+LaTeX Warning: Empty bibliography on input line 1102.
 
-[13
+[15
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1072.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1072.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1102.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1102.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1072.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1072.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1102.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1102.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: C3E99F1676F61A32C2A71495339E4DA7;2946.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1072.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1102.
 )
 
 Here is how much of LuaTeX's memory you used:
- 62927 strings out of 494291
+ 64081 strings out of 494291
  125215,2373549 words of node,token memory allocated
- 595 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 18 attribute, 64 gl
+ 680 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 18 attribute, 81 gl
 ue_spec, 11 attribute_list, 2 write nodes
-   avail lists: 1:2,2:2897,3:229,4:164,5:845,6:39,7:4276,8:52,9:1708,10:22,11:49
+   avail lists: 1:1,2:2897,3:229,4:164,5:846,6:39,7:4282,8:52,9:1708,10:22,11:49
 1
- 64051 multiletter control sequences out of 65536+600000
- 170 fonts using 51982659 bytes
- 72i,7n,135p,1838b,3224s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 65172 multiletter control sequences out of 65536+600000
+ 170 fonts using 51982407 bytes
+ 72i,8n,135p,1871b,3224s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
 agella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegre
 ya/Alegreya-Regular.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/publi
@@ -3927,10 +4006,10 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (19 pages, 392731 bytes).
+Output written on babrenk.pdf (21 pages, 401236 bytes).
 
-PDF statistics: 310 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 131072)
+PDF statistics: 323 PDF objects out of 1000 (max. 8388607)
+ 254 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 131072)
  168 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -47,14 +47,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Anwendungsfall ZVO}{9}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementierung}{10}{chapter.4}% 
+\contentsline {chapter}{\numberline {4}Implementierung}{12}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Topic Modeling Methode}{10}{section.4.1}% 
+\contentsline {section}{\numberline {4.1}Topic Modeling Methode}{12}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Toolauswahl}{10}{section.4.2}% 
+\contentsline {section}{\numberline {4.2}Toolauswahl}{12}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Ein großer Korpus \leavevmode {\color {red}Groppe}}{10}{section.4.3}% 
+\contentsline {section}{\numberline {4.3}Ein großer Korpus \leavevmode {\color {red}Groppe}}{12}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Analyse}{12}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Analyse}{14}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{13}{chapter.6}% 
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{15}{chapter.6}% 
