@@ -379,6 +379,7 @@
 \usepackage{pgfplots}
 \usepackage{algorithm2e}
 \usetikzlibrary{shapes,arrows}
+\usetikzlibrary{shapes.geometric, arrows}
 
 
 \begin{document}
@@ -581,10 +582,38 @@ OUTPUT split:
 Bevor eine Themenmodellierung auf Daten durchgeführt werden kann, müssen die Daten einem Prozess unterzogen werden. Dieser beginnt mit der Datenaquise, also der Akquirierung bestimmter relevanter Daten. Im Falle der ZVO bedeutet dies, dass es genügend Kundenanfragen gibt, die verarbeitet werden können. Wenn diese Daten bestehen, werden sie auf die relevanten Wörter reduziert, aus denen eine bedeutsame Inferenz von Informationen möglich ist, sodass unter anderem die sogeneannten „Stop-Words“, also eine Menge von Verbindungswörtern entfernt werden. Ein anderer Schritt der Datenreinigung ist das Transponieren aller Wörter in kleine Buchstaben, um eine Einheitlichkeit zu erlangen, da das Bag of Words Modell keine Reihenfolge mehr beachtet und somit große Satzanfänge irrelevant werden. Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dies kann zum Beispiel in Form eines Bag-of-Words Modells, Dictionary oder TF-IDF, also einer relativen Vorkommensauflistung verschiedner Wörter über Dokumente umgesetzt werden. Nachdem die Daten in eine für den Computer kompatiblen Form gebracht wurden, kann das Themenmodell entwickelt werden. 
 
 \section{Anwendungsfall ZVO}
-Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschinell klassifiziert werden. Für die korrekte Klassifikation ist die Qualität der vorliegenden Daten immens wichtig. Die Qualität der ZVO Daten werden in dieser Arbeit untersucht. Dafür wird ein LDA Modell generiert, das als Datengrundlage alle verfügbaren ZVO Daten verwendet. Der Algorithmus durchläuft dafür folgende Schritte: \\
+Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschinell klassifiziert werden. Für die korrekte Klassifikation ist die Qualität der vorliegenden Daten immens wichtig. Die Qualität der ZVO Daten werden in dieser Arbeit untersucht. Dafür wird ein LDA Modell generiert, das als Datengrundlage alle verfügbaren ZVO Daten verwendet. Die Qualitätsuntersuchung der Daten wird durch zwei Methoden durchgeführt. Dies zeigt das folgende Prozessablaufdiagramm:  \\
 
 % FLOW CHART %%%%%%%
+\tikzstyle{rect} = [rectangle, text centered, draw =black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
+\begin{center}
+\begin{tikzpicture}[node distance = 2cm]
+
+\node (mails) [rect] {Datenerhebung durch Mailanfragen};
+\node (zuordnung) [rect, below of = mails] {manuelle Zuordnung Daten zu Abteilungen};
+\node (Datenreinigung) [rect, below of = zuordnung] {Datenreinigung};
+\node (Feature) [rect, below of = Datenreinigung] {Feature Engineering};
+\node (LDA) [rect, below of= Feature] {LDA Modell erstellen};
+\node (Schluesselwoerter) [rect, below right of = LDA, node distance = 3cm]{Schlüsselwörter finden};
+\node (Topics) [rect, below left of = LDA, node distance = 3cm] {Topics finden};
+\node (Matrix) [rect, below of = Schluesselwoerter] {Matrix erstellen};
+\node (Ueberschneidungen) [rect, below of = Matrix] {Überschneidungen analysieren};
+\node (Topicsana)[rect, below of=Topics]{Topics und Keywords analysieren};
+
+\draw [arrow] (mails) -- (zuordnung);
+\draw [arrow] (zuordnung) -- (Datenreinigung);
+\draw [arrow] (Datenreinigung) -- (Feature);
+\draw [arrow] (Feature) -- (LDA);
+\draw [arrow] (LDA) -- (Schluesselwoerter);
+\draw [arrow] (LDA) -- (Topics);
+\draw [arrow] (Topics) -- (Topicsana);
+\draw [arrow] (Schluesselwoerter) -- (Matrix);
+\draw [arrow] (Matrix) -- (Ueberschneidungen);
+
+\end{tikzpicture}
+\end{center}
 
 \begin{algorithm}[H]
 \KwData{Alle ZVO Daten}
