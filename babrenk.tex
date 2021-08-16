@@ -380,6 +380,8 @@
 \usepackage{algorithm2e}
 \usetikzlibrary{shapes,arrows}
 \usetikzlibrary{shapes.geometric, arrows}
+\usepackage{algorithm}
+\usepackage{algorithmic}
 
 
 \begin{document}
@@ -581,6 +583,9 @@ OUTPUT split:
 \subsection{Datenreinigung}
 Bevor eine Themenmodellierung auf Daten durchgeführt werden kann, müssen die Daten einem Prozess unterzogen werden. Dieser beginnt mit der Datenaquise, also der Akquirierung bestimmter relevanter Daten. Im Falle der ZVO bedeutet dies, dass es genügend Kundenanfragen gibt, die verarbeitet werden können. Wenn diese Daten bestehen, werden sie auf die relevanten Wörter reduziert, aus denen eine bedeutsame Inferenz von Informationen möglich ist, sodass unter anderem die sogeneannten „Stop-Words“, also eine Menge von Verbindungswörtern entfernt werden. Ein anderer Schritt der Datenreinigung ist das Transponieren aller Wörter in kleine Buchstaben, um eine Einheitlichkeit zu erlangen, da das Bag of Words Modell keine Reihenfolge mehr beachtet und somit große Satzanfänge irrelevant werden. Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dies kann zum Beispiel in Form eines Bag-of-Words Modells, Dictionary oder TF-IDF, also einer relativen Vorkommensauflistung verschiedner Wörter über Dokumente umgesetzt werden. Nachdem die Daten in eine für den Computer kompatiblen Form gebracht wurden, kann das Themenmodell entwickelt werden. 
 
+\subsection{Feature Engineering}
+TODO Dictrionary, etc. 
+
 \section{Anwendungsfall ZVO}
 Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschinell klassifiziert werden. Für die korrekte Klassifikation ist die Qualität der vorliegenden Daten immens wichtig. Die Qualität der ZVO Daten werden in dieser Arbeit untersucht. Dafür wird ein LDA Modell generiert, das als Datengrundlage alle verfügbaren ZVO Daten verwendet. Die Qualitätsuntersuchung der Daten wird durch zwei Methoden durchgeführt. Dies zeigt das folgende Prozessablaufdiagramm:  \\
 
@@ -613,22 +618,28 @@ Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschine
 \draw [arrow] (Matrix) -- (Ueberschneidungen);
 
 \end{tikzpicture}
-\end{center}
+\end{center}\\
+\\
 
-\begin{algorithm}[H]
-\KwData{Alle ZVO Daten}
-\KwResult{LDA Modell}
-initialization\;
-data = ""\;
-\For {Anzahl Dokumente} \Do
-	{Füge Dokumentinhalt zu data hinzu}\;
-Teile data in einzelne items einer Liste auf\;
-Erstelle ein Dictionary aus der Liste\;
-Wandle ID aus Dictionary in Wörter um\;
-Erstelle den Korpus\;
-Erstelle das Modell\;
-Gibt die Topic-Wort-Verteilungen für alle Topics aus\;
+Nach der Erhebung der Daten können die einzelnen Anfragen manuell in die vorgegebenen Abteilungsgruppen eingeteilt werden. Dort wird die Datenreinigung, wie in 3.2 beschrieben vorgenommen. Sind die Daten bereinigt, kann das Feature Engineering beginnen, wonach die Daten für den Computer verständlich formatiert sind. Die Erstellung des LDA Modells wird vorgenommen, sobald der Korpus aus den feature engineerten Daten erfolgt ist. Die Modellerstellung ist durch folgenden Pseudocode beschrieben: \\
+\\
+
+\begin{algorithm}
+\begin{algorithmic}
+\STATE data $\leftarrow ""$
+\FOR{d in Anzahl Dokumente} $data \leftarrow data + str(d)$\ENDFOR 
+\STATE Teile data in einzelne items einer Liste auf
+\STATE Erstelle ein Dictionary aus der Liste
+\STATE Wandle ID aus Dictionary in Wörter um
+\STATE Erstelle den Korpus
+\STATE Erstelle das Modell
+\STATE Gibt die Topic-Wort-Verteilungen für alle Topics aus
+\end{algorithmic}
 \end{algorithm}
+\\
+\\
+
+Ist das Modell generiert und die Topics auslesbar, können die Daten evaluiert werden. Dazu werden zwei Ansätze verfolgt. Zum Einen werden Topics und zugehörigen Schlüsselwörter untersucht, um u.a. Aufschluss über mögliche Verbesserungspotentiale bei der Datenreinigung oder dem Feature Engineering feszustellen. Als zweites werden die vom Modell erfassten Gruppen betrachtet und den gegebenen manuell klassifizierten Abteilungen zugeordnet. Die folgenden Punkte beschreiben den Prozess im Detail: \\
 
 \begin{enumerate}
 \item \textbf{Gruppen und Wörter finden}\\
