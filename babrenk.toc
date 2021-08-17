@@ -55,7 +55,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Toolauswahl}{13}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Ein großer Korpus \leavevmode {\color {red}Groppe}}{13}{section.4.3}% 
+\contentsline {section}{\numberline {4.3}Umsetzung Konzept}{13}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Analyse}{18}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
