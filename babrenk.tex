@@ -849,13 +849,18 @@ Das LDA hat erfolgreich auf allen verfügbaren Daten ein Modell gebaut, das die 
 \end{tabular}
 \end{center}\\
 
-Diese Matrix bildet die Überschneidungen der ersten 1000 Dokumenten dar. Dabei sind die 18 LDA Topics auf der vertikalen Achse und die 18 LABEL Abteilungen auf der horizontalen Achse aufgetragen. Die Schwierigkeit besteht darin, ein Mapping zu finden, das in Summe die meisten Überschneidungen ergibt und gleichzeitig jede Abteilung nur genau einem Topic zugeordnet wird. Würde man die zweite Prämisse vernachlässigen, würde sich diese Zuordnung der Topics zu Abteilungen ergeben: 
+Diese Matrix bildet die Überschneidungen der ersten 1000 Dokumenten dar. Dabei sind die 18 LDA Topics auf der vertikalen Achse und die 18 LABEL Abteilungen auf der horizontalen Achse aufgetragen. Die Schwierigkeit besteht darin, ein Mapping zu finden, das in Summe die meisten Überschneidungen ergibt und gleichzeitig jede Abteilung nur genau einem Topic zugeordnet wird. Würde man die zweite Prämisse vernachlässigen, würde sich diese Zuordnung der Topics zu Abteilungen ergeben: \\
 
 \begin{lstlisting}[language=Python]
 maxmatrix = [9, 10, 0, 9, 10, 10, 0, 10, 10, 0, 1, 2, 1, 9, 10, 9, 10, 9] TODO UPDATEN
-\end{lstlisting}
+\end{lstlisting}\\
 
-Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau eine Abteilung der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. und 10. Thema der ZVO kompatibel wären. Für die Verarbeitung der Daten ist die injektive Zuordnung funamental wichtig, jedoch schwierig zu erreichen. Für die Beurteilung der Matrix führen wir einen weiteren Parameter ein, die durchschnittliche Überschneidung. 
+Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau eine Abteilung der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. und 10. Thema der ZVO kompatibel wären. Für die Verarbeitung der Daten ist die injektive Zuordnung funamental wichtig, jedoch schwierig zu erreichen. Für die Beurteilung der Matrix führen wir einen weiteren Parameter ein, die durchschnittliche Überschneidung. Dadurch kann die Kompatibilität der Abteilungen im Bezug auf das Matching mit Topics besser analysiert werden. Vorallem bei Abteilungen, die eine sehr unausgeglichene Überschneidungsmengen haben, bietet der Durchschnitt eine alternative Sichtweise. Die durchschnittliche Überschneidung ergibt sich aus der Summe aller Werte in einer Spalte geteilt durch die Anzahl der Werte. Somit ist die durchschnittliche Anzahl, die eine bestimmte Abteilung mit allen Topics hat gegeben: \\
+
+\begin{lstlisting}[language=Python]
+sum_[734, x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x]
+average_cut = [40.78,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x]
+\end{lstlisting}\\
 
 \end{enumerate}
 %\subsection{Kuhn-Munkres-Algorithmus}
@@ -908,7 +913,6 @@ Eine optimale Zuordnung ist erreicht, wenn alle Zahlen von Eins bis 18 ohne Dupl
 %\end{tikzpicture}
 %\end{center}
 
-Der Versuch zeigt ein sehr schlechtes Ergebnis mit einem Quotendurchschnitt von 4.96. Dabei wurden keine erheblichen Unterschiede bei der Verwendung verschieden vieler Testdaten im Ergebnis festgestellt. Dies lässt zu der Folgerung führen, dass die Nutzung eines einzigen Korpus für die ZVO nicht in Frage kommt. 
 
 
 
@@ -991,7 +995,7 @@ Die Implementierung des LDA Modells wurde im vorausgegangenen Teil umegsetzt. Di
 In der Implementierung wurden 18 Topics gefunden. Diese Topics sind durch die Wörter der Topic-Wort-Verteilung definiert. Als Anwendungsziel in Bezug auf die ZVO sollen die Topics des Modells in Zukunft die Abteilungen darstellen. Betrachtet man dafür die Wörter der Topics, um die Topics semantisch den Abteilungen zuzuordnen, wird dies nicht gelingen. Das liegt daran, dass sich die dominaten Wörter in den Topics zu stark überschneiden. Zum Beispiel gehört \lstlinline{"ostholstein"} in allen Topics zu den Top 5 Wörtern. Das bedeutet, dass sich die Themen semantisch nicht stark genug von einander abgrenzen lassen, da die Wörter zu ähnlich sind. Dies lässt auf die Folgerung schließen, dass die Daten bei der Datenreinigung noch stärker um die  häufigen Wörter reduziert werden sollten, um eine bessere Qualität zu erreichen. Dabei ist es jedoch wichtig, nicht die entscheidenen Topic-relevanten Wörter auszuschließen.
 \\
 \item \textbf{Zuordnung Abteilung zu Topic}\\
-
+Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wider, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Konkret für die Abteilungen bedeutet das: 
 \end{enumerate}
 
 
