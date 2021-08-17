@@ -57,6 +57,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Ein großer Korpus \leavevmode {\color {red}Groppe}}{13}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Analyse}{15}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Analyse}{18}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{16}{chapter.6}% 
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{19}{chapter.6}% 

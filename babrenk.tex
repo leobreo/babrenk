@@ -584,7 +584,8 @@ OUTPUT split:
 Bevor eine Themenmodellierung auf Daten durchgeführt werden kann, müssen die Daten einem Prozess unterzogen werden. Dieser beginnt mit der Datenaquise, also der Akquirierung bestimmter relevanter Daten. Im Falle der ZVO bedeutet dies, dass es genügend Kundenanfragen gibt, die verarbeitet werden können. Wenn diese Daten bestehen, werden sie auf die relevanten Wörter reduziert, aus denen eine bedeutsame Inferenz von Informationen möglich ist, sodass unter anderem die sogeneannten „Stop-Words“, also eine Menge von Verbindungswörtern entfernt werden. Ein anderer Schritt der Datenreinigung ist das Transponieren aller Wörter in kleine Buchstaben, um eine Einheitlichkeit zu erlangen, da das Bag of Words Modell keine Reihenfolge mehr beachtet und somit große Satzanfänge irrelevant werden. Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dies kann zum Beispiel in Form eines Bag-of-Words Modells, Dictionary oder TF-IDF, also einer relativen Vorkommensauflistung verschiedner Wörter über Dokumente umgesetzt werden. Nachdem die Daten in eine für den Computer kompatiblen Form gebracht wurden, kann das Themenmodell entwickelt werden. 
 
 \subsection{Feature Engineering}
-TODO Dictrionary, etc. 
+Das alleinige Reinigen der Daten reicht nicht aus, um das LDA Topic Modell auf diesen zu generieren. Für eine maschinelle Verarbeitung sind die Wörter in der Form nicht adressierbar. Bei LDA ist ein elementarer Bestandteil, wie oft ein Wort vorkommt. Das bedeutet im Feature Engineering müssen die Daten in ein Format übersetzt werden, das für jedes Wort ohne Duplikate die Anzahl mit einer Wort-ID referenziert. Die Auflistung der Wörter zusammen mit ihrer Vorkommensanzahl und laufenden Indexnummer kann als Input für ein LDA Modell verwendet werden. Dies nennt sich das Wörterbuch (o.a. Dictionary). 
+
 
 \section{Anwendungsfall ZVO}
 Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschinell klassifiziert werden. Für die korrekte Klassifikation ist die Qualität der vorliegenden Daten immens wichtig. Die Qualität der ZVO Daten werden in dieser Arbeit untersucht. Dafür wird ein LDA Modell generiert, das als Datengrundlage alle verfügbaren ZVO Daten verwendet. Die Qualitätsuntersuchung der Daten wird durch zwei Methoden durchgeführt. Dies zeigt das folgende Prozessablaufdiagramm:  \\
@@ -657,8 +658,10 @@ TODO pseudocode von topic model
 \chapter{Implementierung}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%IMPLEMENTIERUNG
 
 \section{Topic Modeling Methode}
+Zur Untersuchung der Qualität der ZVO-Daten wird in dieser Arbeit die LDA Methode verwendet. Als grundlegendes Topic Modellierungsverfahren findet es Verwendung in einem breiten Anwendungsspektrum. Durch die Bekanntheit von LDA sind bereits viele Pakete und Bibliotheken in Programmierumgebungen vorzufinden und einfach zu implementieren. Seit LDAs Veröffentlichung in 2000 wurde eine umfassende und detailreiche Dokumentation entwickelt, die neben vielen Forenbeiträgen, die Arbeit mit LDA stark erleichtern. 
+
 \section{Toolauswahl}
-	Gensim mit ... 
+Als Bibliothek wird Gensim verwendet, die für die Verarbeitung von unstrukturierten Daten und Anwendung von unüberwachten Algorithmen entwickelt wurde. Algorithmen, wie \lstinline{word2vec}, \lstinline{LSI} oder \lstinline{LDA} entdecken automatisch Strukturen durch das Prüfen von gemeinsam auftretenden Mustern im Korpus der Trainingsdaten. Gensim erlangte in der Vergangenheit Bekanntheit durch seine hochoptimierten Implementationen bekannter Algorithmen und der Schnelligkeit und Verlässlichkeit, mit der diese ausgeführt wurden.
 %\subsection{Gibbs Sampling}
 %Gibbs Sampling ist eine Technik, um ein LDA Modell zu trainieren. Für das menschliche Auge kann ein Wort eines Dokuments intuitiv einem Thema zugordnet werden. Für den Computer ist dies schwer, da er die Semantik des Wortes nicht kennt. Mit Gibbs Sampling werden Wörter iterativ Topics zugewiesen basierend auf allen restlichen Wörtern und Dokumenten. Dabei ist zum Einen relevant, was die führende Topic in dem jeweiligen Dokument ist und zum Anderen welcher Topic die gleichen Wörter im gesamten Korpus bereits am häufigsten zugeordnet wurden. Die beiden Beobachtungen werden multipliziert, um die Kombination mit der maximalen Wahrscheinlichkeit zu finden. Um zu verhindern, dass ein Wort einem Topic nicht zugewiesen werden kann, das sich nicht in dem bestimmten Dokument befindet, wird der Anzahl der jeweils vorkommenden Themen im Dokument $\alpha$ und der Anzahl der belegten Themen des gleichen Wörter in anderen Dokumenten $\beta$ addiert.  Wurde ein Wort einem Topic zugewiesen wird das nächste Wort betrachtet. Nun ist zu beachten, dass sich die Verteilungen zur Berechnung jedes mal ändern. Somit haben wir einen iterativen Lernfortschritt bei der Topicverteilung.
 
@@ -694,9 +697,103 @@ TODO pseudocode von topic model
 
 \section{Ein großer Korpus \textcolor{red}{Groppe}}
 
-Alle Dokumente ergeben ein Korpus. Das neue Dokument wird mit dem gesamten Korpus verglichen und auf thematische Kompatibilität geprüft. Dabei sind folgende Prozessschritte notwendig: 
+Alle Dokumente ergeben einen Korpus. Der Korpus generiert eine Topic-Verteilung für die Gesamtheit aller Dokumente. Dabei werden zuerst alle Anfragedaten in einen String zusammengefügt, der als Grundlage für das Wörterbuch und den Korpus dient. Um diesen in ein Dictionary, also eine numerierte Auflistung aller Wörter und dessen Anzahl, zu verwandelt, muss der String in eine Liste mit voneinander getrennten Items gesplittet werden. Hier wird ein Bag of Words Prinzip verfolgt, die Reihenfolge ist irrelevant für das Ergebnis des Modells. Aus der Liste wird dann das Dictionary erstellt. Durch den Aufruf des LDA Modells wird aus dem Bag of Words mithilfe des Dictionary eine vorgegebene Anzahl an Themen aus der Wortenge modelliert, basierend auf häufig zusammen auftretenden Wörtern. Dadurch ergibt sich neben einer Verteilung der Topics in einem Modell die Verteilung der Wörter, die ein Topic besonders beeinflussen. Ist das Modell generiert, können die Topics ausgelesen werden mit diesem Aufruf:\lstinline{pprint(lda.print_topics())}\\
+\\
 
-Der Korpus generiert eine Topic-Verteilung für die Gesamtheit aller Dokumente. Dabei werden zuerst alle Anfragedaten in einen String zusammengefügt, der als Grundlage für das Wörterbuch und den Korpus dient. Durch den Aufruf des LDA Modells wird der String in eine vorgegebene Anzahl an Themen eingeteilt, basierend auf häufig zusammen auftretenden Wörtern des Wörterbuchs. Dabei ist an den Topics jedoch keine Verbindung zu den gegebenen Abteilungen ersichtlich. Diese muss zuerst herausgefunden werden, damit die Zuordnung der Dokumente evaluiert werden kann. Die Zuordnung der Topics zu Abteilungen kann nur approximiert werden, indem gezählt wird, in wie vielen Dokumenten sich die Topics und Abteilungen jeweils überschneiden. Für diese Überschneidung wird jedes Dokument erneut auf dem Korpus geprüft, um dessen Topic-Wort-Verteilung zu erstellen. Die Dokumente werden anhand ihrer einzigartigen Zeilen-ID adressiert. Die Überschneidungen werden in einer Matrix dargestellt, die für jede Topic des Modells die Überschneidungen zu jeder Abteilung auflistet. Somit kann für jede Zeile die passende Zuordnung gefunden werden. Das folgende Beispiel zeigt eine Zurdnung mithilfe der ersten 10000 Dokumente: 
+\begin{lstlisting}
+INPUT:
+data = ''
+
+for x in range(0,106000):
+    data += df.at[x,'subject-message']
+
+list = data.split()
+
+dictionary = corpora.Dictionary([list])
+temp = dictionary[0]
+id2word = dictionary.id2token
+
+corpus = [dictionary.doc2bow(text) for text in [list]]
+
+lda = LdaModel(corpus, num_topics=18, id2word = id2word)
+
+
+OUTPUT:
+[(0,
+  '0.012*"ostholstein" + 0.011*"nachricht" + 0.010*"sierksdorf" + '
+  '0.009*"zweckverband" + 0.008*"betreff" + 0.008*"danken" + 0.007*"email" + '
+  '0.007*"hra" + 0.007*"datum" + 0.007*"hyperlink"'),
+ (1,
+  '0.014*"ostholstein" + 0.011*"nachricht" + 0.010*"zweckverband" + '
+  '0.009*"sierksdorf" + 0.008*"sitzen" + 0.008*"danken" + 0.007*"wagrienring" '
+  '+ 0.007*"lübeck" + 0.007*"betreff" + 0.006*"the"'),
+ (2,
+  '0.014*"sierksdorf" + 0.013*"zweckverband" + 0.011*"nachricht" + '
+  '0.010*"ostholstein" + 0.008*"danken" + 0.008*"betreff" + 0.007*"sitzen" + '
+  '0.006*"the" + 0.006*"homepage" + 0.006*"frau"'),
+ (3,
+  '0.014*"sierksdorf" + 0.011*"ostholstein" + 0.011*"nachricht" + '
+  '0.010*"zweckverband" + 0.010*"betreff" + 0.008*"the" + 0.007*"frau" + '
+  '0.006*"danken" + 0.006*"denken" + 0.006*"lübeck"'),
+ (4,
+  '0.012*"zweckverband" + 0.011*"frau" + 0.011*"sierksdorf" + '
+  '0.011*"ostholstein" + 0.009*"nachricht" + 0.008*"betreff" + 0.007*"the" + '
+  '0.007*"danken" + 0.006*"lübeck" + 0.006*"öffentlich"'),
+ (5,
+  '0.015*"zweckverband" + 0.011*"sierksdorf" + 0.011*"ostholstein" + '
+  '0.009*"the" + 0.008*"betreff" + 0.007*"lübeck" + 0.007*"danken" + '
+  '0.007*"nachricht" + 0.007*"hyperlink" + 0.006*"sitzen"'),
+ (6,
+  '0.013*"nachricht" + 0.012*"ostholstein" + 0.012*"zweckverband" + '
+  '0.010*"betreff" + 0.009*"sierksdorf" + 0.007*"danken" + 0.006*"the" + '
+  '0.006*"lübeck" + 0.006*"frau" + 0.005*"hyperlink"'),
+ (7,
+  '0.012*"ostholstein" + 0.012*"sierksdorf" + 0.011*"zweckverband" + '
+  '0.010*"nachricht" + 0.008*"danken" + 0.008*"the" + 0.007*"hra" + '
+  '0.007*"email" + 0.007*"betreff" + 0.006*"lübeck"'),
+ (8,
+  '0.012*"ostholstein" + 0.009*"sierksdorf" + 0.008*"nachricht" + '
+  '0.008*"danken" + 0.008*"betreff" + 0.008*"frau" + 0.008*"zweckverband" + '
+  '0.008*"hyperlink" + 0.007*"email" + 0.007*"homepage"'),
+ (9,
+  '0.013*"sierksdorf" + 0.012*"zweckverband" + 0.011*"ostholstein" + '
+  '0.009*"nachricht" + 0.009*"danken" + 0.008*"frau" + 0.007*"the" + '
+  '0.007*"lübeck" + 0.006*"hyperlink" + 0.006*"sitzen"'),
+ (10,
+  '0.011*"zweckverband" + 0.011*"nachricht" + 0.010*"sierksdorf" + '
+  '0.010*"betreff" + 0.009*"ostholstein" + 0.009*"lübeck" + 0.007*"the" + '
+  '0.007*"sitzen" + 0.007*"danken" + 0.007*"hyperlink"'),
+ (11,
+  '0.013*"sierksdorf" + 0.009*"ostholstein" + 0.009*"zweckverband" + '
+  '0.008*"betreff" + 0.008*"nachricht" + 0.007*"danken" + 0.007*"hyperlink" + '
+  '0.007*"lübeck" + 0.006*"email" + 0.006*"datum"'),
+ (12,
+  '0.013*"ostholstein" + 0.012*"sierksdorf" + 0.009*"nachricht" + '
+  '0.009*"zweckverband" + 0.008*"betreff" + 0.008*"danken" + 0.007*"email" + '
+  '0.006*"frau" + 0.006*"lübeck" + 0.006*"wagrienring"'),
+ (13,
+  '0.013*"sierksdorf" + 0.010*"the" + 0.010*"zweckverband" + '
+  '0.009*"ostholstein" + 0.009*"nachricht" + 0.008*"danken" + 0.007*"lübeck" + '
+  '0.007*"betreff" + 0.007*"frau" + 0.007*"öffentlich"'),
+ (14,
+  '0.012*"zweckverband" + 0.011*"danken" + 0.011*"sierksdorf" + '
+  '0.010*"ostholstein" + 0.010*"betreff" + 0.008*"nachricht" + '
+  '0.007*"hyperlink" + 0.007*"gmbh" + 0.006*"lübeck" + 0.006*"kundennummer"'),
+ (15,
+  '0.014*"ostholstein" + 0.011*"sierksdorf" + 0.008*"zweckverband" + '
+  '0.008*"danken" + 0.008*"frau" + 0.007*"betreff" + 0.007*"the" + '
+  '0.007*"nachricht" + 0.006*"amtsgericht" + 0.006*"sitzen"'),
+ (16,
+  '0.014*"zweckverband" + 0.013*"ostholstein" + 0.011*"nachricht" + '
+  '0.009*"danken" + 0.008*"sierksdorf" + 0.007*"hyperlink" + 0.007*"lübeck" + '
+  '0.006*"sitzen" + 0.006*"the" + 0.006*"betreff"'),
+ (17,
+  '0.012*"ostholstein" + 0.011*"danken" + 0.011*"sierksdorf" + 0.009*"betreff" '
+  '+ 0.009*"zweckverband" + 0.008*"nachricht" + 0.007*"the" + 0.007*"frau" + '
+  '0.006*"hyperlink" + 0.006*"sitzen"')]
+\end{lstlisting}
+
+Dabei ist an den Topics jedoch keine Verbindung zu den gegebenen Abteilungen ersichtlich. Diese muss zuerst herausgefunden werden, damit die Zuordnung der Dokumente evaluiert werden kann. Die Zuordnung der Topics zu Abteilungen kann nur approximiert werden, indem gezählt wird, in wie vielen Dokumenten sich die Topics und Abteilungen jeweils überschneiden. Für diese Überschneidung wird jedes Dokument erneut auf dem Korpus geprüft, um dessen Topic-Wort-Verteilung zu erstellen. Die Dokumente werden anhand ihrer einzigartigen Zeilen-ID adressiert. Die Überschneidungen werden in einer Matrix dargestellt, die für jede Topic des Modells die Überschneidungen zu jeder Abteilung auflistet. Somit kann für jede Zeile die passende Zuordnung gefunden werden. Das folgende Beispiel zeigt eine Zurdnung mithilfe der ersten 10000 Dokumente: 
 
 %comp bei 10000: [[536, 91, 67, 1, 12, 1, 12, 6, 23, 145, 69, 0, 22, 12, 38, 87, 24, 6], [15, 22, 11, 0, 2, 0, 0, 1, 7, 32, 77, 0, 6, 3, 5, 16, 3, 1], [6, 50, 81, 1, 3, 1, 31, 6, 28, 61, 30, 0, 18, 15, 22, 33, 4, 16], [14, 69, 58, 3, 3, 0, 19, 11, 37, 104, 63, 0, 18, 20, 21, 51, 33, 5], [7, 81, 104, 1, 3, 0, 7, 9, 56, 112, 97, 1, 11, 28, 36, 42, 15, 12], [0, 4, 3, 1, 0, 0, 1, 0, 2, 5, 3, 0, 1, 1, 0, 1, 0, 0], [2, 7, 24, 0, 0, 0, 2, 0, 7, 25, 23, 0, 2, 5, 2, 13, 8, 1], [19, 331, 90, 3, 16, 3, 49, 22, 111, 206, 200, 2, 29, 49, 61, 127, 36, 44], [3, 20, 33, 0, 1, 0, 2, 1, 11, 41, 78, 0, 3, 5, 7, 15, 8, 1], [4, 21, 17, 0, 2, 0, 1, 2, 26, 18, 33, 0, 3, 9, 5, 4, 2, 0], [13, 137, 115, 0, 6, 0, 25, 16, 53, 183, 136, 3, 6, 34, 75, 57, 39, 9], [27, 429, 221, 8, 34, 4, 129, 34, 291, 312, 271, 2, 48, 137, 75, 149, 50, 106], [0, 12, 8, 0, 1, 0, 3, 2, 5, 24, 13, 0, 2, 1, 3, 10, 5, 1], [12, 89, 73, 0, 9, 1, 9, 18, 25, 106, 124, 0, 4, 14, 29, 69, 52, 5], [10, 174, 110, 4, 11, 1, 15, 5, 42, 226, 137, 1, 19, 38, 39, 181, 21, 27], [8, 67, 70, 1, 4, 0, 11, 4, 21, 85, 115, 0, 8, 16, 20, 47, 21, 14], [19, 33, 44, 0, 5, 0, 4, 4, 18, 56, 63, 0, 6, 9, 16, 18, 7, 3], [39, 47, 52, 0, 5, 1, 15, 10, 203, 74, 71, 1, 12, 13, 16, 33, 17, 6]]
 
