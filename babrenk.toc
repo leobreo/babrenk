@@ -21,42 +21,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.5}Ziel}{2}{section.1.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}% 
+\contentsline {chapter}{\numberline {2}Grundlagen}{4}{chapter.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Notation}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.1}Notation}{4}{section.2.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Modellvergleich}{3}{section.2.2}% 
+\contentsline {section}{\numberline {2.2}Modellvergleich}{4}{section.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Latent Dirichlet Allocation}{3}{section*.2}% 
+\contentsline {subsection}{Probabilistic Latent Semantic Analysis (PLSA)}{4}{section*.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Latent Semantic Analysis (LSA)}{4}{section*.3}% 
+\contentsline {subsection}{Latent Dirichlet Allocation}{4}{section*.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Non-Negative Matrix Factorization (NMF)}{4}{section*.4}% 
+\contentsline {subsection}{Latent Semantic Analysis (LSA)}{5}{section*.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Grundlagen der Latent Dirichlet Allocation (LDA)}{4}{section.2.3}% 
+\contentsline {subsection}{Non-Negative Matrix Factorization (NMF)}{5}{section*.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Der generative Prozess}{6}{section*.5}% 
+\contentsline {section}{\numberline {2.3}Grundlagen der Latent Dirichlet Allocation (LDA)}{5}{section.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Alpha und Beta}{7}{section*.6}% 
+\contentsline {subsection}{Der generative Prozess}{7}{section*.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Konzept}{8}{chapter.3}% 
+\contentsline {subsection}{Alpha und Beta}{8}{section*.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Daten}{8}{section.3.1}% 
+\contentsline {chapter}{\numberline {3}Konzept}{9}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Datenreinigung}{9}{section*.7}% 
+\contentsline {section}{\numberline {3.1}Daten}{9}{section.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Feature Engineering}{9}{section*.8}% 
+\contentsline {subsection}{Datenreinigung}{10}{section*.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Anwendungsfall ZVO}{10}{section.3.2}% 
+\contentsline {subsection}{Feature Engineering}{10}{section*.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementierung}{13}{chapter.4}% 
+\contentsline {section}{\numberline {3.2}Anwendungsfall ZVO}{11}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Topic Modeling Methode}{13}{section.4.1}% 
+\contentsline {chapter}{\numberline {4}Implementierung}{14}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Toolauswahl}{13}{section.4.2}% 
+\contentsline {section}{\numberline {4.1}Topic Modeling Methode}{14}{section.4.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Umsetzung Konzept}{13}{section.4.3}% 
+\contentsline {section}{\numberline {4.2}Toolauswahl}{14}{section.4.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Analyse}{19}{chapter.5}% 
+\contentsline {section}{\numberline {4.3}Umsetzung Konzept}{14}{section.4.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{20}{chapter.6}% 
+\contentsline {chapter}{\numberline {5}Analyse}{20}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{21}{chapter.6}% 
