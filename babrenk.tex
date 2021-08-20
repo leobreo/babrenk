@@ -483,7 +483,7 @@ Bei LDA werden zwei Verteilungen aus den Dokumenten $d \in \mathcal{D}$ und $k \
 
 
 \subsection{Der generative Prozess} 
-Der Algorithmus hinter LDA generiert neue Dokumente mithilfe von Dirichletverteilungen $Dir(\gamma)$ und Multinomialverteilungen $Multinom(\delta)$. Dabei sorgen Multinomialverteilungen dafür, dass ein Dokument Teil mehrerer Topics sein kann. Die Verteilungen $\theta$ und $\phi$ werden errechnet, indem iterativ neue Dokumente über andere Verteilung generiert werden, bis das generierte Dokument die Anforderungen befriedigt, dann können die Verteilungen abgelesen werden, mit denen das Dokument erstellt wurde. Der Prozess verläuft folgendermaßen: 
+Bei der Klassifikatorenerstellung gibt es zwei unterschiedliche Herangehensweisen: den deskriptiven und den generativen Ansatz. Bei der deskriptiven, oder auch beschreibenden, Statistik geht es um die sinnvolle und übersichtliche Darstellung empirischer Daten durch zum Beispiel Tabellen oder Kennzahlen. Betrachtet man zwei Variablen, ein bekanntes $\mathcal{X}$ und eine gesuchte Variable $\mathcal{Y}$, dann wird im deskriptiven Modell die bedingte Wahrscheinlichkeit von $\mathcal{Y}$ bedingt durch $\mathcal{X}$ betrachtet. Im Gegensatz dazu ist bei generativen Modellen die Wahrscheinlichkeit von $\mathcal{X}$ und $\mathcal{Y}$ gemeinsam relevant. Bei generativen Modellen besteht die Möglichkeit, Ausgabeinstanzen zu erstellen. Beispiele dafür sind das "Hidden Markov Modell", Bayes Netze oder das "Gaussian mixure model". Bei LDA handelt es sich um einen generativen Algorithmus. Somit können theoretisch im Fall einer neuen Dokumentzuordnung zu Abteilungen für jede Abteilung zufällig Dokumente generiert werden und diese mit dem neuen Dokument verglichen werden. Der Algorithmus hinter LDA generiert neue Dokumente mithilfe von Dirichletverteilungen $Dir(\gamma)$ und Multinomialverteilungen $Multinom(\delta)$. Dabei sorgen Multinomialverteilungen dafür, dass ein Dokument Teil mehrerer Topics sein kann. Die Verteilungen $\theta$ und $\phi$ werden errechnet, indem iterativ neue Dokumente über andere Verteilung generiert werden, bis das generierte Dokument die Anforderungen befriedigt, dann können die Verteilungen abgelesen werden, mit denen das Dokument erstellt wurde. Der Prozess verläuft folgendermaßen: 
 \begin{enumerate}
 	\item Wähle ein $\theta$ als $Dir(\alpha)$
 	\item Wähle ein $\phi$ als $Dir(\beta)$
@@ -525,7 +525,7 @@ Dabei kann 1) erreicht werden, wenn alle Worte eine Topic wären, was jedoch nic
 \includegraphics[scale=0.3]{lda_alpha001.png}\\
 \includegraphics[scale=0.3]{lda_alpha1.png}\\
 \end{center}
-In der ersten Abbildung führt ein kleiner $\alpha = 0.01$ zu einer sehr eindeutigen Themenvertieilung. Bei der unteren Abbildung hingegen haben wir ein $\alpha = 1$, was eine gleichmäßigere Verteilung zur Folge hat.
+In der ersten Abbildung führt ein kleiner $\alpha = 0.01$ zu einer sehr eindeutigen Themenvertieilung. Bei der unteren Abbildung hingegen haben wir ein $\alpha = 1$, was eine gleichmäßigere Verteilung zur Folge hat. Der Trade-off zwischen den beiden Zielen ist der Grund für das funktionieren von LDA. Dadurch wird eine
 
 %\begin{center}
 %\includegraphics{img1.png}
@@ -613,6 +613,9 @@ Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschine
 \node (Matrix) [rect, below of = Schluesselwoerter] {Matrix erstellen};
 \node (Ueberschneidungen) [rect, below of = Matrix] {Überschneidungen analysieren};
 \node (Topicsana)[rect, below of=Topics]{Topics und Keywords analysieren};
+\node (d1)[rect, above right of=Datenreinigung]{Stopwords};
+\node (d2)[rect, below right of=Datenreinigung]{Lemmatizing};
+\node (f1)[rect, left of=Feature]{Bag of Words};
 
 \draw [arrow] (mails) -- (zuordnung);
 \draw [arrow] (zuordnung) -- (Datenreinigung);
@@ -622,6 +625,7 @@ Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschine
 \draw [arrow] (LDA) -- (Topics);
 \draw [arrow] (Topics) -- (Topicsana);
 \draw [arrow] (Schluesselwoerter) -- (Matrix);
+\draw [arrow] (Matrix) -- (Ueberschneidungen);
 \draw [arrow] (Matrix) -- (Ueberschneidungen);
 
 \end{tikzpicture}
@@ -664,7 +668,7 @@ TODO pseudocode von topic model
 \chapter{Implementierung}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%IMPLEMENTIERUNG
 
 \section{Topic Modeling Methode}
-Zur Untersuchung der Qualität der ZVO-Daten wird in dieser Arbeit die LDA Methode verwendet. Als grundlegendes Topic Modellierungsverfahren findet es Verwendung in einem breiten Anwendungsspektrum. Durch die Bekanntheit von LDA sind bereits viele Pakete und Bibliotheken in Programmierumgebungen vorzufinden und einfach zu implementieren. Seit LDAs Veröffentlichung in 2000 wurde eine umfassende und detailreiche Dokumentation entwickelt, die neben vielen Forenbeiträgen, die Arbeit mit LDA stark erleichtern. Bei LDA Modellen ist die Anzahl der Topics ein individueller Input, durch den sich das Ergebnis schwerwiegend verändern kann. Die optimale Anzahl an Topics ist grundsätzlich ein nicht einfaches Problem bei Anwendungen. Im Fall der ZVO werden als Anzahl der Topics 18  gewählt, da dies die Anzahl der bereits erstellten Abteilungen ist. 
+Zur Untersuchung der Qualität der ZVO-Daten wird in dieser Arbeit die LDA Methode verwendet. Dabei wird nur der Text als bekannt angenommen. Weder die Meta-Daten, noch die Anmerkungen oder Labels sind zu Beginn bekannt. Als grundlegendes Topic Modellierungsverfahren findet es Verwendung in einem breiten Anwendungsspektrum. Durch die Bekanntheit von LDA sind bereits viele Pakete und Bibliotheken in Programmierumgebungen vorzufinden und einfach zu implementieren. Seit LDAs Veröffentlichung in 2000 wurde eine umfassende und detailreiche Dokumentation entwickelt, die neben vielen Forenbeiträgen, die Arbeit mit LDA stark erleichtern. Bei LDA Modellen ist die Anzahl der Topics ein individueller Input, durch den sich das Ergebnis schwerwiegend verändern kann. Die optimale Anzahl an Topics ist grundsätzlich ein nicht einfaches Problem bei Anwendungen. Im Fall der ZVO werden als Anzahl der Topics 18  gewählt, da dies die Anzahl der bereits erstellten Abteilungen ist. 
 
 \section{Toolauswahl}
 Als Bibliothek wird Gensim verwendet, die für die Verarbeitung von unstrukturierten Daten und Anwendung von unüberwachten Algorithmen entwickelt wurde. Algorithmen, wie \lstinline{word2vec}, \lstinline{LSI} oder \lstinline{LDA} entdecken automatisch Strukturen durch das Prüfen von gemeinsam auftretenden Mustern im Korpus der Trainingsdaten. Gensim erlangte in der Vergangenheit Bekanntheit durch seine hochoptimierten Implementationen bekannter Algorithmen und der Schnelligkeit und Verlässlichkeit, mit der diese ausgeführt wurden.
