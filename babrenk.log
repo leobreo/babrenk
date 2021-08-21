@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  21 AUG 2021 15:23
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  21 AUG 2021 16:44
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.052 seconds
+luaotfload | main : initialization completed in 0.066 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -4517,6 +4517,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 814--815
 
  []
 
+
+Overfull \hbox (18.82086pt too wide) in paragraph at lines 867--868
+ [] 
+ []
+
 [18
 Missing character: There is no ␣ (U+2423) in font [Alegreya-Regular.otf]:mode=
 node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
@@ -4734,97 +4739,117 @@ Missing character: There is no ␣ (U+2423) in font [Alegreya-Regular.otf]:mode=
 node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
 Missing character: There is no ␣ (U+2423) in font [Alegreya-Regular.otf]:mode=
 node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
-]
-LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 823.
-LaTeX Font Info:    Calculating math sizes for size <7.2> on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 7.20076pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 5.0405pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 3.60037pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 7.19922pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 5.03941pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 3.5996pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 7.92003pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 5.54398pt on input line 825.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 3.96pt on input line 825.
-LaTeX Font Info:    Font shape `TU/Alegreya(0)/bx/n' will be
-(Font)              scaled to size 7.2pt on input line 831.
-
-Overfull \hbox (29.95107pt too wide) in paragraph at lines 825--869
- [] 
- []
-
-
-./babrenk.tex:870: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.870 
-    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (20.59686pt too wide) in paragraph at lines 925--926
- [] 
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 928--929
-
- []
-
-
-./babrenk.tex:933: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.933 
-    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[20
+] [19
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Overfull \hbox (3.80635pt too wide) in paragraph at lines 1053--1054
+
+./babrenk.tex:985: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.985 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (17.90627pt too wide) in paragraph at lines 988--989
+\TU/Alegreya(0)/m/n/12 ein-deu-tig ei-ner Ab-tei-lung zu-ord-nen las-sen. Das E
+r-geb-nis zeigt, dass die Topic-Verteilung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 988--989
+
+ []
+
+[20]
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
+(Font)              scaled to size 7.2pt on input line 997.
+LaTeX Font Info:    Calculating math sizes for size <7.2> on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
+(Font)              scaled to size 7.20076pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
+(Font)              scaled to size 5.0405pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
+(Font)              scaled to size 3.60037pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
+(Font)              scaled to size 7.19922pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
+(Font)              scaled to size 5.03941pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
+(Font)              scaled to size 3.5996pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 7.92003pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 5.54398pt on input line 999.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 3.96pt on input line 999.
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/bx/n' will be
+(Font)              scaled to size 7.2pt on input line 1005.
+
+Overfull \hbox (29.95107pt too wide) in paragraph at lines 999--1043
+ [] 
+ []
+
+
+./babrenk.tex:1044: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1044 
+     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
+
+ []
+
+
+./babrenk.tex:1056: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1056 
+     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (3.80635pt too wide) in paragraph at lines 1061--1062
 \TU/Alegreya(0)/m/n/12 men-gen ha-ben, bie-tet der Durch-schnitt ei-ne al-ter-n
 a-ti-ve Sicht-wei-se. Die durch-schnitt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1062
 
  []
 
 [21]
-Overfull \hbox (1.20865pt too wide) in paragraph at lines 1056--1057
+Overfull \hbox (1.20865pt too wide) in paragraph at lines 1064--1065
 [][][][][]  
  []
 
 
-./babrenk.tex:1060: LaTeX Error: There's no line here to end.
+./babrenk.tex:1068: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1060 
+l.1068 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4832,8 +4857,8 @@ or  <return>  to continue without it.
 
 [22]
 Kapitel 5.
-./babrenk.tex:1191: Undefined control sequence.
-l.1191 ...chneiden. Zum Beispiel gehört \lstlinline
+./babrenk.tex:1199: Undefined control sequence.
+l.1199 ...chneiden. Zum Beispiel gehört \lstlinline
                                                   {"ostholstein"} in allen T...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4841,10 +4866,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./babrenk.tex:1191: Argument of \language@active@arg" has an extra }.
+./babrenk.tex:1199: Argument of \language@active@arg" has an extra }.
 <inserted text> 
 \par 
-l.1191 ...eispiel gehört \lstlinline{"ostholstein"}
+l.1199 ...eispiel gehört \lstlinline{"ostholstein"}
                                                    in allen Topics zu den To...
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -4854,17 +4879,17 @@ argument that might be the root of the problem. But if
 your `}' was spurious, just type `2' and it will go away.
 
 Runaway argument?
-./babrenk.tex:1191: Paragraph ended before \language@active@arg" was complete.
+./babrenk.tex:1199: Paragraph ended before \language@active@arg" was complete.
 <to be read again> 
 \par 
-l.1191 ...eispiel gehört \lstlinline{"ostholstein"}
+l.1199 ...eispiel gehört \lstlinline{"ostholstein"}
                                                    in allen Topics zu den To...
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1191--1193
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1201
 
  []
 
@@ -4879,31 +4904,31 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 \openout15 = babrenk-bibtex-entries.bib
 
 
-LaTeX Warning: Empty bibliography on input line 1454.
+LaTeX Warning: Empty bibliography on input line 1462.
 
 [24
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1454.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1454.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1462.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1462.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1454.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1454.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1462.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1462.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 0D2B501E30B68C1FEE37D7D922E646AC;2858.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1454.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1462.
 )
 
 Here is how much of LuaTeX's memory you used:
  65211 strings out of 494291
  156520,2373549 words of node,token memory allocated
- 685 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 18 attribute, 82 gl
-ue_spec, 11 attribute_list, 2 write nodes
-   avail lists: 1:7,2:7458,3:421,4:496,5:2303,6:47,7:6770,8:59,9:5778,10:26,11:7
+ 691 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 20 attribute, 82 gl
+ue_spec, 12 attribute_list, 2 write nodes
+   avail lists: 1:7,2:7455,3:496,4:496,5:2303,6:47,7:6770,8:59,9:5778,10:26,11:7
 14
  66075 multiletter control sequences out of 65536+600000
  247 fonts using 78087651 bytes
@@ -4922,7 +4947,7 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (30 pages, 442398 bytes).
+Output written on babrenk.pdf (30 pages, 444407 bytes).
 
 PDF statistics: 473 PDF objects out of 1000 (max. 8388607)
  394 compressed objects within 4 object streams
