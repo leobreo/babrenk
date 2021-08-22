@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  22 AUG 2021 14:00
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  22 AUG 2021 17:47
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.071 seconds
+luaotfload | main : initialization completed in 0.070 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -4956,7 +4956,7 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (31 pages, 451626 bytes).
+Output written on babrenk.pdf (31 pages, 451713 bytes).
 
 PDF statistics: 476 PDF objects out of 1000 (max. 8388607)
  396 compressed objects within 4 object streams
