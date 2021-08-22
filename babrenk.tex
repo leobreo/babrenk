@@ -819,7 +819,7 @@ Das LDA hat erfolgreich auf allen verfügbaren Daten ein Modell gebaut, das die 
 \begin{center}
 \begin{tikzpicture}
  
-\begin{axis} [tick label style={/pgf/number format/fixed}, scaled ticks=false,ybar,xmin=-0.5,xmax=17.5,ymin=0,ymax=30000, bar width=8pt, height=8cm,width=15cm, ylabel={Anzahl Elemente}, xlabel={Topics bzw. Abteilungen}]
+\begin{axis} [tick label style={/pgf/number format/fixed}, scaled ticks=false,ybar,xmin=-1,xmax=18,ymin=0,ymax=30000, bar width=8pt, height=8cm,width=15cm, ylabel={Anzahl Elemente}, xlabel={Topics bzw. Abteilungen}]
 \addplot coordinates {
     (0,8605)
     (1,3959)
@@ -985,11 +985,11 @@ Abteilung & Counts Label & Anteil$[\%]$\\
 
 
 
-Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als die ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterschieden sich durch $5923$ Dokumente. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von der ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modelling erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von der ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zu, Beispiel "Ostholstein" oder "Zweckverband". Die Wörter können dafür sorgen, dass Dokumente in die gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
+Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als die ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterschieden sich durch $5923$ Dokumente. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von der ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modelling erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von der ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zu, Beispiel 'Ostholstein' oder 'Zweckverband'. Die Wörter können dafür sorgen, dass Dokumente in die gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
 
 
 
-Den Topics ist also keine Verbindung zu den gegebenen Abteilungen direkt zuzuordnen. Diese muss über andere Weise herausgefunden werden, damit die Zuordnung der Dokumente evaluiert werden kann. Die Zuordnung der Topics zu Abteilungen kann nur approximiert werden, indem gezählt wird, in wie vielen Dokumenten sich die Topics und Abteilungen jeweils überschneiden. Für diese Überschneidung wird jedes Dokument erneut auf dem Korpus geprüft, um dessen Topic-Wort-Verteilung zu erstellen. Die Dokumente werden anhand ihrer einzigartigen Zeilen-ID adressiert. Die Überschneidungen werden in einer Matrix dargestellt, die für jedes Topic des Modells die Überschneidungen zu jeder Abteilung auflistet. Somit kann für jede Zeile die passende Zuordnung gefunden werden. Dabei stellt eine Zeile jeweils die Dokumente dar, die aufsummiert die Zahl der Tabelle X (vorherige) ergeben: 
+Den Topics ist also keine Verbindung zu den gegebenen Abteilungen direkt zuzuordnen. Diese muss über andere Weise herausgefunden werden, damit die Zuordnung der Dokumente evaluiert werden kann. Die Zuordnung der Topics zu Abteilungen kann approximiert werden, indem gezählt wird, in wie vielen Dokumenten sich die Topics und Abteilungen jeweils überschneiden. Genau wie bei der Gruppeneinteilung wird für diese Überschneidung jedes Dokument erneut auf dem Korpus geprüft, um dessen Topic-Wort-Verteilung zu erstellen. Die Dokumente werden anhand ihrer einzigartigen Zeilen-ID adressiert. Die IDs werden der Topic zugeordnet, die die höchste Wahrscheinlichkeit in der Verteilung des Dokuments erreicht. Die Zuordnung findet in einer großen Liste statt, die über 18 Unterlisten verfügt, in die die IDs jeweils hinzugefügt werden. Die Überschneidungen werden in einer Matrix dargestellt, die für jedes Topic des Modells die Überschneidungen zu jeder Abteilung auflistet. Somit kann für jede Zeile die passende Zuordnung gefunden werden. Dabei stellt eine Zeile jeweils die Dokumente dar, die aufsummiert die Zahl der Tabelle X (vorherige) ergeben: 
 
 %comp bei 10000: [[536, 91, 67, 1, 12, 1, 12, 6, 23, 145, 69, 0, 22, 12, 38, 87, 24, 6], [15, 22, 11, 0, 2, 0, 0, 1, 7, 32, 77, 0, 6, 3, 5, 16, 3, 1], [6, 50, 81, 1, 3, 1, 31, 6, 28, 61, 30, 0, 18, 15, 22, 33, 4, 16], [14, 69, 58, 3, 3, 0, 19, 11, 37, 104, 63, 0, 18, 20, 21, 51, 33, 5], [7, 81, 104, 1, 3, 0, 7, 9, 56, 112, 97, 1, 11, 28, 36, 42, 15, 12], [0, 4, 3, 1, 0, 0, 1, 0, 2, 5, 3, 0, 1, 1, 0, 1, 0, 0], [2, 7, 24, 0, 0, 0, 2, 0, 7, 25, 23, 0, 2, 5, 2, 13, 8, 1], [19, 331, 90, 3, 16, 3, 49, 22, 111, 206, 200, 2, 29, 49, 61, 127, 36, 44], [3, 20, 33, 0, 1, 0, 2, 1, 11, 41, 78, 0, 3, 5, 7, 15, 8, 1], [4, 21, 17, 0, 2, 0, 1, 2, 26, 18, 33, 0, 3, 9, 5, 4, 2, 0], [13, 137, 115, 0, 6, 0, 25, 16, 53, 183, 136, 3, 6, 34, 75, 57, 39, 9], [27, 429, 221, 8, 34, 4, 129, 34, 291, 312, 271, 2, 48, 137, 75, 149, 50, 106], [0, 12, 8, 0, 1, 0, 3, 2, 5, 24, 13, 0, 2, 1, 3, 10, 5, 1], [12, 89, 73, 0, 9, 1, 9, 18, 25, 106, 124, 0, 4, 14, 29, 69, 52, 5], [10, 174, 110, 4, 11, 1, 15, 5, 42, 226, 137, 1, 19, 38, 39, 181, 21, 27], [8, 67, 70, 1, 4, 0, 11, 4, 21, 85, 115, 0, 8, 16, 20, 47, 21, 14], [19, 33, 44, 0, 5, 0, 4, 4, 18, 56, 63, 0, 6, 9, 16, 18, 7, 3], [39, 47, 52, 0, 5, 1, 15, 10, 203, 74, 71, 1, 12, 13, 16, 33, 17, 6]]
 
@@ -1046,25 +1046,55 @@ Den Topics ist also keine Verbindung zu den gegebenen Abteilungen direkt zuzuord
 
 %[[555, 977, 2150, 21, 66, 19, 211, 251, 910, 960, 902, 2, 210, 596, 302, 758, 318, 250], [512, 580, 650, 3, 36, 7, 139, 101, 370, 453, 570, 0, 66, 378, 91, 196, 123, 53], [508, 755, 263, 9, 67, 21, 254, 145, 282, 1498, 1207, 1, 119, 300, 479, 527, 177, 130], [108, 179, 98, 2, 15, 3, 33, 57, 236, 432, 218, 0, 34, 55, 153, 198, 74, 27], [493, 867, 442, 5, 63, 8, 134, 180, 451, 1111, 1033, 8, 73, 348, 446, 489, 191, 89], [91, 467, 98, 5, 25, 2, 60, 75, 162, 480, 309, 1, 55, 127, 169, 351, 113, 47], [1263, 3993, 1738, 28, 127, 48, 811, 587, 1384, 4139, 4730, 6, 573, 2096, 1620, 2080, 680, 495], [3376, 1298, 870, 17, 524, 16, 221, 338, 662, 1904, 1740, 9, 185, 381, 664, 891, 537, 133], [310, 585, 216, 10, 27, 5, 67, 114, 203, 771, 1013, 0, 81, 323, 264, 440, 205, 73], [58, 126, 47, 0, 3, 1, 17, 16, 131, 174, 400, 0, 15, 55, 63, 69, 59, 17], [286, 1610, 1733, 12, 51, 27, 284, 299, 858, 1567, 1331, 4, 239, 893, 674, 673, 304, 248], [194, 409, 377, 8, 27, 3, 88, 122, 180, 678, 470, 0, 80, 173, 167, 395, 142, 118], [486, 2355, 2495, 16, 80, 24, 564, 327, 1005, 2672, 1513, 3, 311, 1254, 886, 1377, 579, 327], [151, 393, 198, 5, 23, 4, 64, 83, 160, 414, 639, 1, 68, 192, 123, 275, 151, 68], [1008, 6084, 2681, 86, 153, 61, 990, 820, 2223, 5730, 3832, 8, 701, 2327, 1860, 3093, 993, 552], [270, 95, 36, 3, 10, 1, 29, 32, 46, 228, 284, 0, 19, 31, 61, 81, 23, 21], [81, 82, 25, 1, 3, 0, 18, 38, 27, 105, 90, 0, 14, 29, 37, 76, 24, 15], [20, 206, 128, 4, 7, 1, 25, 25, 120, 217, 395, 0, 23, 58, 85, 157, 55, 37]] MIT 133044 Dokumenten!!!!
 
-Diese Matrix bildet die Überschneidungen aller 133044 Dokumenten dar. Dabei sind die 18 LDA Topics auf der vertikalen Achse und die 18 LABEL Abteilungen auf der horizontalen Achse aufgetragen. Die Ausführung auf diesen Daten hat bereits mehrere Tage gedauert. 
-
-Somit muss ein alternativer Ansatz gewählt werden, um ein Mapping zu finden, das in Summe die meisten Überschneidungen ergibt und gleichzeitig jede Abteilung nur genau einer Topic zugeordnet wird. Würde man die zweite Prämisse vernachlässigen, würde sich diese Zuordnung der Topics zu Abteilungen ergeben. Dabei wählt jede Topic die Abteilung aus, mit der sie die meisten Überschneidungen hat: \\
+Diese Matrix bildet die Überschneidungen aller 133044 Dokumenten dar. Dabei sind die 18 LDA Topics auf der vertikalen Achse und die 18 LABEL Abteilungen auf der horizontalen Achse aufgetragen. Die Ausführung auf diesen Daten hat bereits mehrere Tage gedauert. Bezüglich der Zuordnung ist der naivste Ansatz, jeder Zeile (also LDA Topic) die Spalte (also Label Abteilung) mit der maximalen Überschneidung zuzuordnen. Dabei ist der Ziel die Anzahl der Gesamtüberschneidungen zu maximieren. Wendet man diesen Algorithmus an, sieht der Output wie folgt aus: \\
 
 \begin{lstlisting}[language=Python]
 maxmatrix = [2,2,9,9,9,9,10,0,10,10,1,9,9,10,9,10,9,9]
 \end{lstlisting}\\
 
-Eine optimale Zuordnung wäre erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Das würde bedeuten, dass einem Thema von LDA genau eine Abteilung der ZVO am wahrscheinlichsten zugeordnet ist. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem 9. Thema der ZVO kompatibel wären. 
+Wie zu erkennen ist, sind nur die Zahlen $ 0,1,2,9,10 $ in der Liste vertreten. Eine optimale Zuordnung wäre jedoch erst erreicht, wenn alle Zahlen von Eins bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Dies liegt daran, dass eine Topic nur genau eine Abteilung darstellen darf. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem neunten Thema der ZVO kompatibel wären. Dabei werden $9/18$ Topics Abteilung $9$, $1/18$ Topic Abteilung $1$, $5/18$ Topics Abteilung $10$ und $2/18$ Topics Abteilung $2$ zugeordnet. Hier fällt auf, dass diesen Abteilungen die meisten Dokumente von der ZVO händisch zugeordnet wurden. Somit können sie sich auch mit vielen Dokumenten aus den LDA Topics überschneiden. \textbf{Dies lässt zusätzlich vermuten, dass zum Beispiel die Abteilung 9, die laut Tabelle X die meisten Dokumente enthält, ein zu breites inhaltliches Spektrum abdeckt und in noch weitere Unterthemen unterteilt werden könnte. Dies wird dadurch begründet, dass das Topic-Modell viele der Dokumente aus Abteilung 9 in verschiedene Topics eingeteilt hat.}\\
 
 
+Die Zuteilung anhand der maximalen absoluten Überschneidungen ist nicht injektiv. Für die Verarbeitung der Daten ist die injektive Zuordnung jedoch fundamental wichtig, aber schwierig zu erreichen. Für die Beurteilung der Matrix führen wir einen weiteren Parameter ein, die durchschnittliche Überschneidung. Dadurch kann die Kompatibilität der Abteilungen im Bezug auf das Matching mit Topics besser analysiert werden. Vorallem bei Abteilungen, die eine sehr unausgeglichene Überschneidungsmengen haben, da sie deutlich mehr Dokumente als andere enthalten, bietet der Durchschnitt eine alternative Sichtweise. Für die durchschnittliche Überschneidung wird zuerst die Summe aller Dokumente einer Abteilung errechnet, indem alle Werte einer Spalte addiert werden. Daraufhin entsteht eine neue Matrix, in der jeder Wert jeweils durch die Summe seiner Spalte dividiert wird. Somit beschreibt jeder Wert, wie groß der Anteil der aus dieser Topic überschneidenden Dokumente bezogen auf die gesamte Abteilung ist in $\%$: \\
 
-Für die Verarbeitung der Daten ist die injektive Zuordnung funamental wichtig, jedoch schwierig zu erreichen. Für die Beurteilung der Matrix führen wir einen weiteren Parameter ein, die durchschnittliche Überschneidung. Dadurch kann die Kompatibilität der Abteilungen im Bezug auf das Matching mit Topics besser analysiert werden. Vorallem bei Abteilungen, die eine sehr unausgeglichene Überschneidungsmengen haben, bietet der Durchschnitt eine alternative Sichtweise. Die durchschnittliche Überschneidung ergibt sich aus der Summe aller Werte in einer Topic, also einer Reihe, geteilt durch die Anzahl der Werte. Somit ist die durchschnittliche Anzahl, die ein bestimmtes Topic mit allen Abteilungen hat gegeben: \\
+\begin{center}
+\tiny
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{ccccccccccccccccccc}
+\hline
+\hline
+&0&1&2&3&4&5&6&7&8&9&10&11&12&13&14&15&16&17\\
+\hline
+0&5.68&4.64&15.09&8.94&5.05&7.57&5.26&6.95&9.67&4.08&4.36&4.65&7.33&6.2&3.71&6.25&6.7&9.26\\\hline
+1&5.24&2.75&4.56&1.28&2.75&2.79&3.47&2.8&3.93&1.92&2.76&0&2.3&3.93&1.12&1.62&2.59&1.96\\\hline
+2&5.2&3.58&1.85&3.83&5.13&8.37&6.34&4.02&3&6.37&5.84&2.33&4.15&3.12&5.88&4.35&3.73&4.81\\\hline
+3&1.11&0.85&0.69&0.85&1.15&1.2&0.82&1.58&2.51&1.84&1.05&0&1.19&0.57&1.88&1.63&1.56&1\\\hline
+4&5.05&4.12&3.1&2.13&4.82&3.19&3.34&4.99&4.79&4.72&5&18.6&2.55&3.62&5.48&4.03&4.02&3.3\\\hline
+5&0.93&2.22&0.69&2.13&1.91&0.8&1.5&2.08&1.72&2.04&1.49&2.33&1.92&1.32&2.08&2.89&2.38&1.74\\\hline
+6&12.93&18.96&12.2&11.91&9.72&19.12&20.23&16.26&14.71&17.59&22.88&13.95&19.99&21.8&19.89&17.15&14.32&18.33\\\hline
+7&34.55&6.16&6.11&7.23&40.09&6.37&5.51&9.36&7.04&8.09&8.42&20.93&6.45&3.96&8.15&7.35&11.31&4.93\\\hline
+8&3.17&2.78&1.52&4.26&2.07&1.99&1.67&3.16&2.16&3.28&4.9&0&2.83&3.36&3.24&3.63&4.32&2.7\\\hline
+9&0.59&0.6&0.33&0&0.23&0.4&0.42&0.44&1.39&0.74&1.93&0&0.52&0.57&0.77&0.57&1.24&0.63\\\hline
+10&2.93&7.64&12.17&5.11&3.9&10.76&7.08&8.28&9.12&6.66&6.44&9.3&8.34&9.29&8.28&5.55&6.4&9.19\\\hline
+11&1.99&1.94&2.65&3.4&2.07&1.2&2.2&3.38&1.91&2.88&2.27&0&2.79&1.8&2.05&3.26&2.99&4.37\\\hline
+12&4.97&11.18&17.51&6.81&6.12&9.56&14.07&9.06&10.68&11.35&7.32&6.98&10.85&13.04&10.88&11.36&12.19&12.11\\\hline
+13&1.55&1.87&1.39&2.13&1.76&1.59&1.6&2.3&1.7&1.76&3.09&2.33&2.37&2&1.51&2.27&3.18&2.52\\\hline
+14&10.32&28.89&18.82&36.6&11.71&24.3&24.69&22.71&23.62&24.35&18.53&18.6&24.46&24.2&22.84&25.51&20.91&20.44\\\hline
+15&2.76&0.45&0.25&1.28&0.77&0.4&0.72&0.89&0.49&0.97&1.37&0&0.66&0.32&0.75&0.67&0.48&0.78\\\hline
+16&0.83&0.39&0.18&0.43&0.23&0&0.45&1.05&0.29&0.45&0.44&0&0.49&0.3&0.45&0.63&0.51&0.56\\\hline
+17&0.2&0.98&0.9&1.7&0.54&0.4&0.62&0.69&1.28&0.92&1.91&0&0.8&0.6&1.04&1.29&1.16&1.37\\\hline\hline
+$\sum$&100&100&100&100&100&100&100&100&100&100&100&100&100&100&100&100&100&100\\\hline \hline
+
+\end{tabular}
+\end{center}
+
+Wählt man aus jeder Zeile das maximale Element aus und notiert die assoziierten Abteilungen in einer Liste, dann ergibt sich das folgende Ergebnis. Der Unterschied bei der Darstellung ist nun, dass die Zahlen pro Zeile nicht mehr als absolutes Maß betrachtet werden, sonder als relative Häufigkeit in der jeweiligen Abteilung. Somit macht es keinen Unterschied, dass die Abteilungen verschieden viele Dokumente von der ZVO zugeordnet bekommen haben. \\
 
 \begin{lstlisting}[language=Python]
-sum=[9458,4321,6742,1922,6431,2637,26398,13766,4707,1251,11093,3631,
-16274,3012,33202,1270,665,1563]
-average_cut = [1.1,,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x]
+average_row = [2,0,5,8,11,15,10,4,10,10,2,17,2,16,3,0,7,10]
 \end{lstlisting}\\
+
+Man erkennt bereits eine Verbesserung zu Figure X (absolute Max Zuteilung), da in der Zuteilung mehr Abteilungen zugeordnet wurden. Insgesamt sind $12/18$ in der Liste vertreten. Wie bei der ersten Liste, bei der  $ 0,1,2,9,10 $ mehrfach zugeweisen wurden, sind hier $2$ und $10$ drei mal zugewiesen und $0$ zwei mal. Somit zeig das Ergebnis die Problematik der Zuteilung der ZVO in Bezug auf diese Abteilungen. \\
 
 \end{enumerate}
 %\subsection{Kuhn-Munkres-Algorithmus}
