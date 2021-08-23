@@ -382,6 +382,7 @@
 \usetikzlibrary{shapes.geometric, arrows}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{caption}
 
 
 \begin{document}
@@ -461,7 +462,8 @@ Latent Dirichlet Allocation ist ein grundlegendes und bekanntes Verfahren aus de
 
 Bezüglich der Namensgeben, steht "Latent" für alles, was wir im Vorhinein nicht kennen. Im Fall LDA handelt es sich um die Themen, die in einem Dokument zu einem bestimmten Teil vertreten sind. "Dirichlet" beschreibt eine Verteilung von Verteilungen. Dies ist vergleichbar mit einem Würfel, bei dem regulierbar ist, wie gleichmäßig die Zahlen gewürfelt werden. Dabei ist der Würfel eine Verteilung und die Aufteilung der Gleichmäßigkeit auch. Beim Topic Modeling bedeutet Dirichlet eine Verteilung von Topics in Dokumenten und eine Verteilung von Wörtern in Topics. Die "Allocation" weist  mithilfe der errechneten Dirichlet-Verteilungen Topics Wörter und Dokumenten Topics zu. Eine Besonderheit bei der Themenerkennung mit LDA ist, dass die Anzahl der gesuchten Themen \mathcal{K} vorgegeben werden muss. Oft ist diese vorher jedoch nicht bekannt und muss über Hilfsverfahren, wie der Perplexitätsberechnung ermittelt werden. Die Funktionsweise von LDA ist über folgende graphische Abbildung beschrieben: \\
 
-\begin{center}
+\begin{figure}[h]
+\centering
 \begin{tikzpicture}
 	\draw (0,0) [very thick] rectangle (9,3) 
 	\draw [very thick](6,3.5) rectangle (9,5.5)
@@ -478,9 +480,9 @@ Bezüglich der Namensgeben, steht "Latent" für alles, was wir im Vorhinein nich
 	\draw [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
 	\draw [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
 	\draw [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
-	
-\end{tikzpicture}   
-\end{center}\\
+\end{tikzpicture}
+\caption{Graphische Darstellung von LDA}
+\end{figure}
 
 Dabei beschreibt \mathcal{W} als einzige nicht verborgene Variable eines von \mathcal{N} Wörtern des Dokuments. Das Wort ist semantisch einem Thema \mathcal{Z} zugeordnet. Das Thema wiederum hängt von der Themen-Verteilung \mathcal{theta} des Dokuments ab, das als ein Elment der \mathcal{M} vorliegenden Dokumente betrachtet wird. Neben dem Thema, wird jedes Wort auch von der jeweilgen Thema-Wort-Verteilung \mathcal{\phi} der \mathcal{K} Themen beeinflusst. Das Modell und dessen Verteilungen kann durch die Parameter $\alpha$ und $\beta$ angepasst werden. $\alpha$ kann bestimmt die Intensität der Dokument-Themen-Verteilung, während $\beta$ die der Topic-Wort-Verteilung beeinflusst. Bei einem großen $\alpha$ ist die Verteilung der Topics in einem Dokument ähnlicher. Zusätzlich werden bei LDA zwei Bedingungen verfolgt, die von den beiden Parametern beeinflusst werden können. Erstens strebt man für alle Wort eines bestimmten Dokuments so wenig zugeordnete Themen an, wie möglich. Zweitens soll ein Thema über so wenig relevante Wörter wie möglich verfügen. Die beiden Ziele stehen in einer Wechselbeziehung zueinander, da eine minimale Anzahl an vertretenen Topics in einem Dokument zu maximal vielen Wörtern in diesen Topics führt. Die minimale Anzahl an Topics wäre erreicht, wenn man alle Wörter eines Dokuments einem Thema zuweist. Dadurch verfügt das Topic jedoch über alle Wörter des Dokuments. $\alpha$ befindet sich in dem Bereicht $[0,1]$ mit sinnvollen Werten zwischen $[0.01, 0.1]$, während $\beta =0.01$ durchschnittlich die besten Ergebnisse liefert. Große Werte führen zu einer Gleichverteilung, die wiederum eine Verschlechterung der Perplexität bedeutet. Somit bietet die Perplexität ein Mittel, um $\alpha$ und $\beta$ optimal für die individuelle Anwendung zu finden. \\
 
@@ -527,8 +529,14 @@ Die Dirichlet Verteilungen werden durch die beiden Parameter $\alpha$ und $\beta
 Dabei kann 1) erreicht werden, wenn alle Worte eine Topic wären, was jedoch nicht mit 2) übereinstimmen würde. Für ein erfülltes 2) gibt es nicht die minimale Anzahl an Topics. Die Funktionsweise von verschiedenen $alpha$-Werten zeigen folgende Abbildungen: 
 \\
 \begin{center}
-\includegraphics[scale=0.3]{lda_alpha001.png}\\
-\includegraphics[scale=0.3]{lda_alpha1.png}\\
+\begin{figure}[h]
+\includegraphics[scale=0.3]{lda_alpha001.png}
+\caption{Ein kleines Alpha} 
+\end{figure}\\
+\begin{figure}[h]
+\includegraphics[scale=0.3]{lda_alpha1.png}
+\caption{Ein. großes Alpha}
+\end{figure}\\
 \end{center}
 In der ersten Abbildung führt ein kleiner $\alpha = 0.01$ zu einer sehr eindeutigen Themenvertieilung. Bei der unteren Abbildung hingegen haben wir ein $\alpha = 1$, was eine gleichmäßigere Verteilung zur Folge hat. Der Trade-off zwischen den beiden Zielen ist der Grund für das funktionieren von LDA. Dadurch wird eine
 
@@ -547,6 +555,7 @@ Die Daten liegen in folgendem Format vor:
 %\end{center}
 
 \begin{center}
+\begin{figure}[h]
 \begin{tabular}{ccccccccccc}
 
 \hline
@@ -563,6 +572,8 @@ Die Daten liegen in folgendem Format vor:
 \hline
 \hline
 \end{tabuar}
+\caption{Daten TODO...}
+\end{figure}
 \end{center}
 
 Relevant für die Auswertung sind die subject-message und die jeweilige Abteilung. Die Tabelle verfügt über eine Matrix mit 18 Abteilungen, von denen pro subject-message eine oder mehrere mit einer 1 versehen ist bzw. sind. Dies beschreibt die Abteilung bzw. Abteilungen, der bzw. denen diese Anfrage manuell zugeordnet wurde. Die Daten in subject-message sind bereits bereinigt, also liegen wie in diesem künstlichen Beispiel vor:\\

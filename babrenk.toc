@@ -37,17 +37,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Grundlagen der Latent Dirichlet Allocation }{6}{section.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Der generative Prozess}{7}{section*.6}% 
+\contentsline {subsection}{Der generative Prozess}{7}{section*.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Alpha und Beta}{8}{section*.7}% 
+\contentsline {subsection}{Alpha und Beta}{8}{section*.8}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Konzept}{10}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Daten}{10}{section.3.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Datenreinigung}{11}{section*.8}% 
+\contentsline {subsection}{Datenreinigung}{11}{section*.12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Feature Engineering}{11}{section*.9}% 
+\contentsline {subsection}{Feature Engineering}{11}{section*.13}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Anwendungsfall ZVO}{12}{section.3.2}% 
 \defcounter {refsection}{0}\relax 
