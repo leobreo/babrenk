@@ -660,7 +660,7 @@ Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschine
 \end{center}
 \end{figure}
 
-Nach TEST \ref{fig:flowchart}} der Erhebung der Daten können die einzelnen Anfragen manuell in die vorgegebenen Abteilungsgruppen eingeteilt werden. Dort wird die Datenreinigung, wie in 3.2 beschrieben vorgenommen. Sind die Daten bereinigt, kann das Feature Engineering beginnen, wonach die Daten für den Computer verständlich formatiert sind. Die Erstellung des LDA Modells wird vorgenommen, sobald der Korpus aus den feature engineerten Daten erfolgt ist. Die Modellerstellung ist durch folgenden Pseudocode beschrieben: \\
+Nach TEST \ref{fig:flowchart} der Erhebung der Daten können die einzelnen Anfragen manuell in die vorgegebenen Abteilungsgruppen eingeteilt werden. Dort wird die Datenreinigung, wie in 3.2 beschrieben vorgenommen. Sind die Daten bereinigt, kann das Feature Engineering beginnen, wonach die Daten für den Computer verständlich formatiert sind. Die Erstellung des LDA Modells wird vorgenommen, sobald der Korpus aus den feature engineerten Daten erfolgt ist. Die Modellerstellung ist durch folgenden Pseudocode beschrieben: \\
 \\
 
 \begin{figure}[h]
@@ -1203,10 +1203,11 @@ Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Vertei
   \end{axis}
 \end{tikzpicture}
 \caption{Topicabdeckung der Top 5 Wörter aller Topics}
+\label{fig:top5}
 \end{center}
 \end{figure}
 
-Das bedeutet, dass sich die Themen semantisch nicht stark genug von einander abgrenzen lassen, da die Wörter zu ähnlich sind. Dies lässt auf die Folgerung schließen, dass die Daten bei der Datenreinigung noch stärker um die  häufigen Wörter reduziert werden sollten, um eine bessere Qualität zu erreichen. Dabei ist es jedoch wichtig, nicht die entscheidenen Topic-relevanten Wörter auszuschließen.
+In Abbildung \ref{fig:top5} sind die Top 5 Wörter aller Topics aufgelistet. Hätten alle 18 Topics eindeutige Schlüsselwörter, würden sich 90 verschiedene Wörter auf der Y-Achse ergeben. Hier sind jedoch nur 9 Wörter aufgezählt, deren Anzahl sich auf 90 addiert. Die Topics teilen sich also auf 90 möglichen Schlüsselwörtern nur 9 Stück. Das bedeutet, dass sich die Topics semantisch sehr schwach bis garnicht von einander unterscheiden lassen. Dies ist auf die Qualität der Daten und dessen Wörter zurückzuführen. Die Topics lassen sich nicht stark genug von einander abgrenzen, wenn in jeden Topic die selben Wörter zu einem hohen Anteil vorkommen. Die häufigsten Wörter sind auf der Y-Achse des Graphen aufgelistet. Wörter, wie \"Ostholstein\" sind dazu nicht aussagekräftig für die Abteilung, da sich alle Abteilungen in Ostholstein befinden. So kann man als Ergebnis schlussfolgern, dass die Daten noch weiter bereinigt werden müssen. Dabei müssen Wörter, die in vielen Topics vorkommen entfernt werden, da sie die Ähnlichkeit der Topics stärken und die Abgrenzung erschweren. Dazu muss auf die Anzahl derer geachtete werden und die stark vertretenen Worte dieser Art entfernt werden. Zuletzt ist bedeutend, wie stark die semantische Bedeutung des jeweiligen Wortes für die bestimmte Abteilung ist. Ein Wort, das eine ganz bestimmt Abteilung beschreibt, wie \"ablesen\" die Abteilung "Ablseung", darf dies natürlich nicht entfernt werden. 
 \\
 \item \textbf{Zuordnung Abteilung zu Topic}\\
 Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wider, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Konkret für die Abteilungen bedeutet das: 
