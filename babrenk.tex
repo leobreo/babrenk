@@ -1179,7 +1179,34 @@ Die Implementierung des LDA Modells wurde im vorausgegangenen Teil umegsetzt. Di
 
 \begin{enumerate}
 \item \textbf{Gruppen und Wörter finden}\\
-In der Implementierung wurden 18 Topics gefunden. Diese Topics sind durch die Wörter der Topic-Wort-Verteilung definiert. Als Anwendungsziel in Bezug auf die ZVO sollen die Topics des Modells in Zukunft die Abteilungen darstellen. Betrachtet man dafür die Wörter der Topics, um die Topics semantisch den Abteilungen zuzuordnen, wird dies nicht gelingen. Das liegt daran, dass sich die dominaten Wörter in den Topics zu stark überschneiden. Zum Beispiel gehört \lstlinline{"ostholstein"} in allen Topics zu den Top 5 Wörtern. Das bedeutet, dass sich die Themen semantisch nicht stark genug von einander abgrenzen lassen, da die Wörter zu ähnlich sind. Dies lässt auf die Folgerung schließen, dass die Daten bei der Datenreinigung noch stärker um die  häufigen Wörter reduziert werden sollten, um eine bessere Qualität zu erreichen. Dabei ist es jedoch wichtig, nicht die entscheidenen Topic-relevanten Wörter auszuschließen.
+Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Verteilung von Schlüsselwörtern beschrieben. Als Anwendungsziel in Bezug auf die ZVO sollen die Topics des Modells in Zukunft die Abteilungen darstellen. Betrachtet man dafür die Wörter der Topics, um die Topics semantisch den Abteilungen zuzuordnen, wird dies nicht gelingen. Das liegt daran, dass sich die dominaten Wörter in den Topics zu stark überschneiden. Zum Beispiel gehört \lstlinline{"ostholstein"} in allen Topics zu den Top 5 Wörtern. In der folgenden Darstellung sind die Top 5 Wörter aufgelistet und mit den 18 Topics auf Vorkommen geprüft: 
+
+\begin{figure}[H]
+\begin{center}
+%\tiny
+%\renewcommand{\arraystretch}{2}
+%\begin{tabular}{ccccccccccccccccccc}
+%Wort&L0&L1&L2&L3&L4&L5&L6&L7&L8&L9&L10&L11&L12&L13&L14&L15&L16&L17&L18\\
+\begin{tikzpicture}
+  \begin{axis}[title  = Topicabdeckung der Top 5 Schlüsselwörter,
+    xbar,
+    y axis line style = { opacity = 0 },
+    axis x line       = none,
+    tickwidth         = 0pt,
+    ytick             = data,
+    enlarge y limits  = 0.05,
+    enlarge x limits  = 0.02,
+    width=0.7\textwidth,,
+    bar width=5.5mm,    symbolic y coords = {oosthosltein,sierksdorf,zweckverband,nachricht,betreff,danken,frau,the,sitzen}, nodes near coords
+  ]
+  \addplot coordinates { (18,ostholstein)(17,zweckverband)(18,sierksdorf)(14,nachricht)(10,betreff)(8,danken)(2,frau)(2,the)(1,sitzen)};
+  \end{axis}
+\end{tikzpicture}
+\caption{Topicabdeckung der Top 5 Wörter aller Topics}
+\end{center}
+\end{figure}
+
+Das bedeutet, dass sich die Themen semantisch nicht stark genug von einander abgrenzen lassen, da die Wörter zu ähnlich sind. Dies lässt auf die Folgerung schließen, dass die Daten bei der Datenreinigung noch stärker um die  häufigen Wörter reduziert werden sollten, um eine bessere Qualität zu erreichen. Dabei ist es jedoch wichtig, nicht die entscheidenen Topic-relevanten Wörter auszuschließen.
 \\
 \item \textbf{Zuordnung Abteilung zu Topic}\\
 Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wider, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Konkret für die Abteilungen bedeutet das: 
