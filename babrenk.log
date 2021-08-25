@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  25 AUG 2021 22:00
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  26 AUG 2021 00:05
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.069 seconds
+luaotfload | main : initialization completed in 0.046 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -3621,38 +3621,35 @@ or  <return>  to continue without it.
 File: lda_alpha001.png Graphic file (type png)
 <use lda_alpha001.png>
 Package luatex.def Info: lda_alpha001.png  used on input line 580.
-(luatex.def)             Requested size: 268.60558pt x 174.05157pt.
+(luatex.def)             Requested size: 282.03517pt x 182.75372pt.
 <lda_alpha1.png, id=204, 895.345pt x 562.1pt>
 File: lda_alpha1.png Graphic file (type png)
 <use lda_alpha1.png>
-Package luatex.def Info: lda_alpha1.png  used on input line 586.
-(luatex.def)             Requested size: 268.60558pt x 168.6313pt.
+Package luatex.def Info: lda_alpha1.png  used on input line 587.
+(luatex.def)             Requested size: 282.03517pt x 177.06244pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10] [11<./lda_alpha001.png><./lda_alpha1.png>]
+[10] [11<./lda_alpha001.png><./lda_alpha1.png>] [12]
 Kapitel 3.
 
-./babrenk.tex:623: LaTeX Error: \begin{tabular} on input line 608 ended by \end
+./babrenk.tex:627: LaTeX Error: \begin{tabular} on input line 612 ended by \end
 {tabuar}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./babrenk.tex:623: Missing } inserted.
+./babrenk.tex:627: Missing } inserted.
 <inserted text> 
 }
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3660,10 +3657,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:623: Missing } inserted.
+./babrenk.tex:627: Missing } inserted.
 <inserted text> 
 }
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3671,26 +3668,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:623: Missing \cr inserted.
+./babrenk.tex:627: Missing \cr inserted.
 <inserted text> 
 \cr 
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 I'm guessing that you meant to end an alignment here.
 
-./babrenk.tex:623: Missing { inserted.
+./babrenk.tex:627: Missing { inserted.
 <inserted text> 
 {
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./babrenk.tex:623: Missing } inserted.
+./babrenk.tex:627: Missing } inserted.
 <inserted text> 
 }
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3698,10 +3695,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:623: Missing $ inserted.
+./babrenk.tex:627: Missing $ inserted.
 <inserted text> 
 $
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3709,10 +3706,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./babrenk.tex:623: Missing } inserted.
+./babrenk.tex:627: Missing } inserted.
 <inserted text> 
 }
-l.623 \end{tabuar}
+l.627 \end{tabuar}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3721,96 +3718,98 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (19.73886pt too wide) in paragraph at lines 608--624
+Overfull \hbox (19.73886pt too wide) in paragraph at lines 612--628
 [][] 
  []
 
 
-Overfull \hbox (12.2015pt too wide) in paragraph at lines 628--629
-\TU/Alegreya(0)/m/n/12 Die Ta-bel-le ver-fügt über ei-ne Ma-trix mit 󰋆
-󰋍 Ab-tei-lun-gen, von de-nen pro subject-message
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 628--629
+Underfull \hbox (badness 10000) in paragraph at lines 632--633
 
  []
 
+[13
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+]
 
-
-./babrenk.tex:641: LaTeX Error: There's no line here to end.
+./babrenk.tex:646: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.641 
+l.646 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--643
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-./babrenk.tex:655: LaTeX Error: There's no line here to end.
+./babrenk.tex:661: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.655 
+l.661 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-[12
-
-] [13]
-Overfull \hbox (3.78386pt too wide) in paragraph at lines 663--665
-\TU/Alegreya(0)/m/n/12 un-ter-schie-den. Das Dic-tion-a-ry wird bei bei-den kre
--iert. TO-DO ER-KLÄ-RE TF-IDF UND
- []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 709--711
+Overfull \hbox (16.11667pt too wide) in paragraph at lines 670--671
+\TU/Alegreya(0)/m/n/12 klas-si-fi-ziert wer-den. Da-für wird im Rah-men des M
+󰋉KK ein Kundenanfrage-Klassifikator
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 707--709
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--711
+Underfull \hbox (badness 10000) in paragraph at lines 707--709
 
  []
 
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/bx/n' will be
-(Font)              scaled to size 10.9pt on input line 716.
+(Font)              scaled to size 10.9pt on input line 714.
 
-./babrenk.tex:716: LaTeX Error: Something's wrong--perhaps a missing \item.
+./babrenk.tex:714: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.716 ...nte} $data \leftarrow data + str(d)$\ENDFOR
+l.714 ...nte} $data \leftarrow data + str(d)$\ENDFOR
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 724.
+(Font)              scaled to size 12.0pt on input line 722.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/bx/sc' will be
-(Font)              scaled to size 12.0pt on input line 724.
+(Font)              scaled to size 12.0pt on input line 722.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+./babrenk.tex:727: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.727 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
 ./babrenk.tex:729: LaTeX Error: There's no line here to end.
@@ -3819,80 +3818,61 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.729 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./babrenk.tex:730: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.730 
+l.729 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
+Underfull \hbox (badness 10000) in paragraph at lines 730--731
 
  []
 
-[15]
-Overfull \hbox (15.25906pt too wide) in paragraph at lines 734--736
+[16]
+Overfull \hbox (15.25906pt too wide) in paragraph at lines 733--735
 \TU/Alegreya(0)/m/n/12 ten se-man-tisch dar-stell-bar ma-chen: die Dokument-Top
 ic-Verteilung und die Topic-
  []
 
 
-Overfull \hbox (0.52626pt too wide) in paragraph at lines 734--736
+Overfull \hbox (0.52626pt too wide) in paragraph at lines 733--735
 \TU/Alegreya(0)/m/n/12 nicht in-halt-lich ben-nen, son-dern nur die Ver-tei-lun
 -gen dar-stel-len. So-mit ist nicht
  []
 
-
-Overfull \hbox (1.05502pt too wide) in paragraph at lines 737--739
-\TU/Alegreya(0)/m/n/12 rech-net. Das To-pic, für das das Do-ku-ment am wahr-sc
-hein-lich-sten ist, be-stimmt,
- []
-
-[16] [17]
+[17] [18]
 Kapitel 4.
 
-Overfull \hbox (7.98225pt too wide) in paragraph at lines 752--755
+Overfull \hbox (7.98225pt too wide) in paragraph at lines 747--750
 \TU/Alegreya(0)/m/n/12 che Al-go-rith-men. Be-trach-tet wur-den in die-ser Ar-b
 eit Mal-let, Gen-sim und Sci-kit Learn.
  []
 
-[18
+[19
 
 ]
 
-./babrenk.tex:782: LaTeX Error: \begin{itemize} on input line 537 ended by \end
+./babrenk.tex:777: LaTeX Error: \begin{itemize} on input line 537 ended by \end
 {enumerate}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.782 \end{enumerate}
+l.777 \end{enumerate}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--792
+Underfull \hbox (badness 10000) in paragraph at lines 785--787
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--792
+Underfull \hbox (badness 10000) in paragraph at lines 785--787
 
  []
 
@@ -3900,12 +3880,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 790--792
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 13.07996pt on input line 821.
- [19]
+(Font)              scaled to size 13.07996pt on input line 816.
+ [20]
 Overfull \vbox (21.40926pt too high) has occurred while \output is active []
 
 
-[20
+[21
 Missing character: There is no ␣ (U+2423) in font [Alegreya-Regular.otf]:mode=
 node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
 Missing character: There is no ␣ (U+2423) in font [Alegreya-Regular.otf]:mode=
@@ -4339,39 +4319,39 @@ node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
 Missing character: There is no ␣ (U+2423) in font [Alegreya-Regular.otf]:mode=
 node;script=latn;language=DFLT;+tlig;+pnum;+lnum;!
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 902--903
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
 
  []
 
-[21]
+[22]
 
-./babrenk.tex:940: LaTeX Error: There's no line here to end.
+./babrenk.tex:935: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.940 D
+l.935 D
      as selbe ergibt sich für die Abteilungen und die Anzahl derer Dokument...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 940--941
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 975--977
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 970--972
 
  []
 
-./babrenk.tex:1000: Extra alignment tab has been changed to \cr.
+./babrenk.tex:995: Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
              
-l.1000 L15&
-         ZSK-Standard Abfall\
+l.995 L15&
+        ZSK-Standard Abfall\
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
@@ -4379,57 +4359,57 @@ So I'll assume that you meant to type \cr instead.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23]
+[24]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 1017.
-LaTeX Font Info:    Calculating math sizes for size <7.2> on input line 1019.
+(Font)              scaled to size 7.2pt on input line 1012.
+LaTeX Font Info:    Calculating math sizes for size <7.2> on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 7.20076pt on input line 1019.
+(Font)              scaled to size 7.20076pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 5.0405pt on input line 1019.
+(Font)              scaled to size 5.0405pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 3.60037pt on input line 1019.
+(Font)              scaled to size 3.60037pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 7.19922pt on input line 1019.
+(Font)              scaled to size 7.19922pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 5.03941pt on input line 1019.
+(Font)              scaled to size 5.03941pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 3.5996pt on input line 1019.
+(Font)              scaled to size 3.5996pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 7.92003pt on input line 1019.
+(Font)              scaled to size 7.92003pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 5.54398pt on input line 1019.
+(Font)              scaled to size 5.54398pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 3.96pt on input line 1019.
+(Font)              scaled to size 3.96pt on input line 1014.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/bx/n' will be
-(Font)              scaled to size 7.2pt on input line 1025.
+(Font)              scaled to size 7.2pt on input line 1020.
 
-Overfull \hbox (17.53267pt too wide) in paragraph at lines 1019--1063
+Overfull \hbox (17.53267pt too wide) in paragraph at lines 1014--1058
  [] 
  []
 
 
-./babrenk.tex:1067: LaTeX Error: There's no line here to end.
+./babrenk.tex:1062: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1067 
+l.1062 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 1071--1072
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
 
  []
 
-[25]
+[26]
 Kapitel 5.
-./babrenk.tex:1082: Undefined control sequence.
-l.1082 ...chneiden. Zum Beispiel gehört \lstlinline
+./babrenk.tex:1077: Undefined control sequence.
+l.1077 ...chneiden. Zum Beispiel gehört \lstlinline
                                                   {"ostholstein"} in allen T...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4437,10 +4417,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./babrenk.tex:1082: Argument of \language@active@arg" has an extra }.
+./babrenk.tex:1077: Argument of \language@active@arg" has an extra }.
 <inserted text> 
 \par 
-l.1082 ...eispiel gehört \lstlinline{"ostholstein"}
+l.1077 ...eispiel gehört \lstlinline{"ostholstein"}
                                                    in allen Topics zu den To...
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -4450,17 +4430,17 @@ argument that might be the root of the problem. But if
 your `}' was spurious, just type `2' and it will go away.
 
 Runaway argument?
-./babrenk.tex:1082: Paragraph ended before \language@active@arg" was complete.
+./babrenk.tex:1077: Paragraph ended before \language@active@arg" was complete.
 <to be read again> 
 \par 
-l.1082 ...eispiel gehört \lstlinline{"ostholstein"}
+l.1077 ...eispiel gehört \lstlinline{"ostholstein"}
                                                    in allen Topics zu den To...
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 
-./babrenk.tex:1102: Package pgfplots Error: Sorry, the input coordinate `osthol
+./babrenk.tex:1097: Package pgfplots Error: Sorry, the input coordinate `osthol
 stein' has not been defined with 'symbolic y coords={oosthosltein,sierksdorf,zw
 eckverband,nachricht,betreff,danken,frau,the,sitzen}... Maybe it has been missp
 elled? Or did you mean something like [normalized]ostholstein?.
@@ -4469,7 +4449,7 @@ See the pgfplots package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1102 ...reff)(8,danken)(2,frau)(2,the)(1,sitzen)};
+l.1097 ...reff)(8,danken)(2,frau)(2,the)(1,sitzen)};
                                                   
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -4477,21 +4457,21 @@ Pretend that you're Hercule Poirot: Examine all clues,
 and deduce the truth by order and method.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1110--1112
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1107
 
  []
 
-[26
+[27
 
 ]
 
-./babrenk.tex:1160: Package caption Error: \caption outside float.
+./babrenk.tex:1155: Package caption Error: \caption outside float.
 
 See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1160 \caption
+l.1155 \caption
              {Vergleich der Anzahl an Dokumenten pro Topic bzw. Abteilung}
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4500,61 +4480,61 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (27.55458pt too wide) in paragraph at lines 1162--1163
+Overfull \hbox (27.55458pt too wide) in paragraph at lines 1157--1158
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1165--1166
+Underfull \hbox (badness 10000) in paragraph at lines 1160--1161
 
  []
 
-[27
+[28
 Missing character: There is no ; (U+003B) in font nullfont!
-] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1236--1237
+] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1231--1232
 
- []
-
-[29]
-Overfull \hbox (7.55833pt too wide) in paragraph at lines 1375--1376
- [] 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1392--1393
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1394--1395
-
- []
-
-
-Overfull \hbox (82.77899pt too wide) in paragraph at lines 1400--1424
+Overfull \hbox (7.55833pt too wide) in paragraph at lines 1370--1371
  [] 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1428--1429
+Underfull \hbox (badness 10000) in paragraph at lines 1387--1388
 
  []
 
 
-./babrenk.tex:1438: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 1389--1390
+
+ []
+
+
+Overfull \hbox (82.77899pt too wide) in paragraph at lines 1395--1419
+ [] 
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1424
+
+ []
+
+
+./babrenk.tex:1433: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1438 
+l.1433 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[32]
+[33]
 Kapitel 6.
 
 LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
@@ -4563,33 +4543,33 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 \openout15 = babrenk-bibtex-entries.bib
 
 
-LaTeX Warning: Empty bibliography on input line 1705.
+LaTeX Warning: Empty bibliography on input line 1700.
 
-[33
+[34
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1705.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1705.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1700.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1700.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1705.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1705.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1700.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1700.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 0D2B501E30B68C1FEE37D7D922E646AC;2858.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1705.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1700.
 )
 
 Here is how much of LuaTeX's memory you used:
- 66706 strings out of 494291
- 195657,2373549 words of node,token memory allocated
+ 66691 strings out of 494291
+ 195660,2373549 words of node,token memory allocated
  691 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 20 attribute, 82 gl
 ue_spec, 12 attribute_list, 2 write nodes
-   avail lists: 1:9,2:10194,3:2233,4:650,5:3059,6:75,7:10103,8:73,9:7398,10:22,1
+   avail lists: 1:7,2:10194,3:2233,4:650,5:3059,6:75,7:10103,8:73,9:7398,10:22,1
 1:815
- 67514 multiletter control sequences out of 65536+600000
+ 67498 multiletter control sequences out of 65536+600000
  249 fonts using 78770299 bytes
  72i,19n,135p,4909b,3224s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
@@ -4606,10 +4586,10 @@ Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Bold.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/huerta/al
 egreya/AlegreyaSans-Italic.otf></usr/local/texlive/2019/texmf-dist/fonts/opentyp
 e/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on babrenk.pdf (39 pages, 476402 bytes).
+Output written on babrenk.pdf (40 pages, 478179 bytes).
 
-PDF statistics: 564 PDF objects out of 1000 (max. 8388607)
- 474 compressed objects within 5 object streams
- 223 named destinations out of 1000 (max. 131072)
+PDF statistics: 581 PDF objects out of 1000 (max. 8388607)
+ 490 compressed objects within 5 object streams
+ 224 named destinations out of 1000 (max. 131072)
  168 words of extra memory for PDF output out of 10000 (max. 100000000)
 
