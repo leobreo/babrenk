@@ -739,12 +739,12 @@ Das LDA Modell erstellt aus den Daten 18 Topics. Diese Topics sollten im optimal
 
 
 \chapter{Implementierung}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%IMPLEMENTIERUNG
-
+Dieser Abschnitt befasst sich mit der Implementierung des im Abschnitt 3 beschriebenen Konzepts. Dabei wird die Implementierung durch Python Code erklärt und die genaue Vorgehensweise dargestellt. Die Ergebnisse werden gezeigt, jedoch noch nicht analysiert. \\
 \section{Topic Modeling Methode}
-Zur Untersuchung der Qualität der ZVO-Daten wird in dieser Arbeit die LDA Methode verwendet. Dabei wird nur der Text als bekannt angenommen. Weder die Meta-Daten, noch die Anmerkungen oder Labels sind zu Beginn bekannt. Als grundlegendes Topic Modellierungsverfahren findet es Verwendung in einem breiten Anwendungsspektrum. Durch die Bekanntheit von LDA sind bereits viele Pakete und Bibliotheken in Programmierumgebungen vorzufinden und einfach zu implementieren. Seit LDAs Veröffentlichung in 2000 wurde eine umfassende und detailreiche Dokumentation entwickelt, die neben vielen Forenbeiträgen, die Arbeit mit LDA stark erleichtern. Zusätzlich hat LDA in diesem Anwendungsfall den Vorteil, dass es nicht wie zum Beispiel LSA direkt Dokumentähnlichkeiten ausgibt, sondern das Ergebnis in Form einer Matrix dartellt, die Wörter auf Dokumente abbildet. Damit ergeben sich als Werte der Matrix die Topics, denen die Wörter jeweils angehören. Bei LDA Modellen ist die Anzahl der Topics ein individueller Input, durch den sich das Ergebnis schwerwiegend verändern kann. Die Werte in der Matrix können somit von $0$ bis zu der individuellen Anzahl der Topics reichen. Die optimale Anzahl an Topics ist grundsätzlich ein nicht einfaches Problem bei Anwendungen. Im Fall der ZVO werden als Anzahl der Topics 18  gewählt, da dies die Anzahl der bereits erstellten Abteilungen ist. 
+Zur Untersuchung der Qualität der ZVO-Daten wird in dieser Arbeit die LDA Methode verwendet. Dabei wird nur der Text als bekannt angenommen. Die Topics sind zu Beginn nicht bekannt. Als grundlegendes Topic Modellierungsverfahren findet es Verwendung in einem breiten Anwendungsspektrum. Durch die Bekanntheit von LDA sind bereits viele Pakete und Bibliotheken in Programmierumgebungen vorzufinden und einfach zu implementieren. Seit LDAs Veröffentlichung in 2000 wurde eine umfassende und detailreiche Dokumentation entwickelt, die neben vielen Forenbeiträgen, die Arbeit mit LDA stark erleichtern. Zusätzlich hat LDA in diesem Anwendungsfall den Vorteil, dass es nicht wie zum Beispiel LSA direkt Dokumentähnlichkeiten ausgibt, sondern das Ergebnis in Form einer Matrix dartellt, die Wörter auf Dokumente abbildet. Damit ergeben sich als Werte der Matrix die Topics, denen die Wörter jeweils angehören. Bei LDA Modellen ist die Anzahl der Topics ein individueller Input, durch den sich das Ergebnis schwerwiegend verändern kann. Die Werte in der Matrix können somit von $0$ bis zu der individuellen Anzahl der Topics reichen. Die optimale Anzahl an Topics ist grundsätzlich ein nicht einfaches Problem bei Anwendungen. Im Fall der ZVO werden als Anzahl der Topics 18  gewählt, da dies die Anzahl der bereits erstellten Abteilungen ist. 
 
 \section{Toolauswahl}
-Bekannte Frameworks zum Topic-Modelling implementieren grundsätzlich ähnliche Algorithmen. Betrachtet wurden in dieser Arbeit Mallet, Gensim und Sci-kit Learn.  Wichtige Schritte sind die Vorbereitung der Daten, die Implementierung, die Auswertung und die Visualisierung. Als Bibliothek wird in dieser Arbeit Gensim verwendet, die für die Verarbeitung von unstrukturierten Daten und Anwendung von unüberwachten Algorithmen bekannt ist. Algorithmen, wie \lstinline{word2vec}, \lstinline{LSI} oder \lstinline{LDA} entdecken automatisch Strukturen durch das Prüfen von gemeinsam auftretenden Mustern im Korpus der Trainingsdaten. Viele bekannte Algorithmen sind bereits in diesem Framework implementiert, was die Umsetzung der Topic-Modellierung vereinfacht. Gensim erlangte in der Vergangenheit Bekanntheit durch seine hochoptimierten Implementationen bekannter Algorithmen und der Schnelligkeit und Verlässlichkeit, mit der diese ausgeführt wurden. Außerdem wird Gensim in Python verfasst, was sich sehr gut für Probleme im Bereich der Data Science eignet. 
+Bekannte Frameworks zur Topic-Modellierung implementieren grundsätzlich ähnliche Algorithmen. Betrachtet wurden in dieser Arbeit Mallet, Gensim und Sci-kit Learn.  Wichtige Schritte sind die Vorbereitung der Daten, die Implementierung, die Auswertung und die Visualisierung. Als Bibliothek wird in dieser Arbeit Gensim verwendet, die für die Verarbeitung von unstrukturierten Daten und Anwendung von unüberwachten Algorithmen bekannt ist. Algorithmen, wie \lstinline{word2vec}, \lstinline{LSI} oder \lstinline{LDA} entdecken automatisch Strukturen durch das Prüfen von gemeinsam auftretenden Mustern im Korpus der Trainingsdaten. Viele bekannte Algorithmen sind bereits in diesem Framework implementiert, was die Umsetzung der Topic-Modellierung vereinfacht. Gensim erlangte in der Vergangenheit Bekanntheit durch seine hochoptimierten Implementierungen bekannter Algorithmen und der Schnelligkeit und Verlässlichkeit, mit der diese ausgeführt werden. Außerdem wird Gensim in Python verfasst, was sich sehr gut für Probleme im Bereich des Data Science eignet. 
 %\subsection{Gibbs Sampling}
 %Gibbs Sampling ist eine Technik, um ein LDA Modell zu trainieren. Für das menschliche Auge kann ein Wort eines Dokuments intuitiv einem Thema zugordnet werden. Für den Computer ist dies schwer, da er die Semantik des Wortes nicht kennt. Mit Gibbs Sampling werden Wörter iterativ Topics zugewiesen basierend auf allen restlichen Wörtern und Dokumenten. Dabei ist zum Einen relevant, was die führende Topic in dem jeweiligen Dokument ist und zum Anderen welcher Topic die gleichen Wörter im gesamten Korpus bereits am häufigsten zugeordnet wurden. Die beiden Beobachtungen werden multipliziert, um die Kombination mit der maximalen Wahrscheinlichkeit zu finden. Um zu verhindern, dass ein Wort einem Topic nicht zugewiesen werden kann, das sich nicht in dem bestimmten Dokument befindet, wird der Anzahl der jeweils vorkommenden Themen im Dokument $\alpha$ und der Anzahl der belegten Themen des gleichen Wörter in anderen Dokumenten $\beta$ addiert.  Wurde ein Wort einem Topic zugewiesen wird das nächste Wort betrachtet. Nun ist zu beachten, dass sich die Verteilungen zur Berechnung jedes mal ändern. Somit haben wir einen iterativen Lernfortschritt bei der Topicverteilung.
 
@@ -780,9 +780,11 @@ Bekannte Frameworks zum Topic-Modelling implementieren grundsätzlich ähnliche 
 
 \section{Umsetzung Konzept}
 
+Wie in Abschnitt 3.2 beschrieben verfolgt die Arbeit zwei Ansätze. Im Folgenden wird die Umsetzung dieser dargelegt: \\
+ 
 \begin{enumerate}
 \item
-Alle Dokumente ergeben einen Korpus. Der Korpus generiert eine Topic-Verteilung für die Gesamtheit aller Dokumente. Dabei werden zuerst alle Anfragedaten in einen String zusammengefügt, der als Grundlage für das Wörterbuch und den Korpus dient. Um diesen in ein Dictionary, also eine numerierte Auflistung aller Wörter und dessen Anzahl, zu verwandelt, muss der String in eine Liste mit voneinander getrennten Items gesplittet werden. Hier wird ein Bag of Words Prinzip verfolgt, die Reihenfolge ist irrelevant für das Ergebnis des Modells. Aus der Liste wird dann das Dictionary erstellt. Durch den Aufruf des LDA Modells wird aus dem Bag of Words mithilfe des Dictionary eine vorgegebene Anzahl an Themen aus der Wortenge modelliert, basierend auf häufig zusammen auftretenden Wörtern. Dadurch ergibt sich neben einer Verteilung der Topics in einem Modell die Verteilung der Wörter, die ein Topic besonders beeinflussen. Ist das Modell generiert, können die Topics ausgelesen werden mit diesem Aufruf:\lstinline{pprint(lda.print_topics())}\\
+Alle Dokumente werden für die Erstellung eines Korpus genutzt. Der Korpus generiert eine Topic-Verteilung für die Gesamtheit aller Dokumente. Dabei werden zuerst alle Anfragedaten in einen String zusammengefügt, der als Grundlage für das Wörterbuch und den Korpus dient. Um diesen in ein Dictionary, also eine nummerierte Auflistung aller Wörter und dessen Anzahl, zu verwandelt, muss der String in eine Liste mit voneinander getrennten Items gesplittet werden. Hier wird ein Bag of Words Prinzip verfolgt, die Reihenfolge ist somit irrelevant für das Ergebnis des Modells. Aus der Liste wird dann das Dictionary erstellt. Durch den Aufruf des LDA Modells wird aus dem Bag of Words mithilfe des Dictionary eine vorgegebene Anzahl an Themen aus der Wortenge modelliert, basierend auf häufig zusammen auftretenden Wörtern. Dadurch ergibt sich neben einer Verteilung der Topics in einem Modell die Verteilung der Wörter, die ein Topic besonders beeinflussen. Ist das Modell generiert, können die Topics ausgelesen werden. Der Programmcode für die beschreibenen Schritte ist in Abbildung \ref{fig:codeinput} dargestellt.\\
 \\
 
 \begin{figure}[H]
@@ -790,24 +792,33 @@ Alle Dokumente ergeben einen Korpus. Der Korpus generiert eine Topic-Verteilung 
 INPUT:
 data = ''
 
+# Zusammenfügen aller Dokumente in einen gorßen String
 for x in range(0,106000):
     data += df.at[x,'subject-message']
 
+# Aufteilen des Strings in viele einzelne Wörter
 list = data.split()
 
+# Erstellen eines Dictionarys
 dictionary = corpora.Dictionary([list])
 temp = dictionary[0]
 id2word = dictionary.id2token
 
+# Erstellen des Korpus
 corpus = [dictionary.doc2bow(text) for text in [list]]
 
+# Erstellen des LDA Modells
 lda = LdaModel(corpus, num_topics=18, id2word = id2word)
 
+#Ausgeben aller Topics inklusive Schlüsselwörtern
 pprint(lda.print_topics())
 
 \end{lstlisting}
 \caption{Der Input zum Aufbau eines LDA Modells}
+\label{fig:codeinput}
 \end{figure}
+
+Der Input-Code generiert aus allen Daten ein Korpus, der 18 Gruppen in den Daten findet. Jede Topic-Word-Verteilungen hat die Eigenschaft, alle Wörter des Korpus aufzulisten, auch wenn das Topic von gewissen Wörtern keinen Gebrauch macht. Die Topics, die von dem Modell generiert wurden, sind durch die 10 häufigsten Schlüsselwörter und ihren Wahrscheinlichkeiten zum Auftreten definiert. Der Output des in Abbildung \ref{fig:codeinput} definierten Algorithmus ist in Abbildung \ref{fig:codeoutput} gelistet. 
 
 \begin{figure}[H]
 \begin{lstlisting}[language=Python]
@@ -824,6 +835,11 @@ OUTPUT:
   '0.014*"sierksdorf" + 0.013*"zweckverband" + 0.011*"nachricht" + '
   '0.010*"ostholstein" + 0.008*"danken" + 0.008*"betreff" + 0.007*"sitzen" + '
   '0.006*"the" + 0.006*"homepage" + 0.006*"frau"'),
+  \end{lstlisting}
+  \end{figure}
+  \newpage
+  \begin{figure}[h]
+  \begin{lstlisting}
  (3,
   '0.014*"sierksdorf" + 0.011*"ostholstein" + 0.011*"nachricht" + '
   '0.010*"zweckverband" + 0.010*"betreff" + 0.008*"the" + 0.007*"frau" + '
@@ -860,7 +876,6 @@ OUTPUT:
   '0.013*"sierksdorf" + 0.009*"ostholstein" + 0.009*"zweckverband" + '
   '0.008*"betreff" + 0.008*"nachricht" + 0.007*"danken" + 0.007*"hyperlink" + '
   '0.007*"lübeck" + 0.006*"email" + 0.006*"datum"'),
-  
   \end{lstlisting}
   \end{figure}
   \newpage
@@ -892,12 +907,13 @@ OUTPUT:
   '0.006*"hyperlink" + 0.006*"sitzen"')]
 \end{lstlisting}
 \caption{Die Topics und Schlüsselwörter}
+\label{fig:codeoutput}
 \end{figure}
 
-Das LDA hat erfolgreich auf allen verfügbaren Daten ein Modell gebaut, das die Daten in Topics $[0,17]$ eingeteilt hat. Jedes Topic hat dominante Wörter, die zusammen mit ihren jeweiligen Auftretenswahrscheinlichkeiten aufgeslistet sind. Dabei sind dies nur die Wörter mit der höchsten Vorkommenswahrscheinlichkeit. Jedes Topic wird von allen verfügbaren Wörtern im Dictionary dargestellt, nur zu einem unterschiedlichen Anteil. Somit ist Die Wahrscheinlichkeiten für das Auftreten von Wörtern liegt im Intervall $[1.5\%,0\%]$. Dabei sind viele Wörter in mehreren Topics als Schlüsselwörter zu finden. \\
+Das LDA hat erfolgreich auf allen verfügbaren Daten ein Modell gebaut, das die Daten in Topics $[0,17]$ eingeteilt hat. Jedes Topic hat dominante Wörter, die zusammen mit ihren jeweiligen Auftretenswahrscheinlichkeiten aufgeslistet sind. Dabei sind dies nur die Wörter mit der höchsten Vorkommenswahrscheinlichkeit. Jedes Topic wird von allen verfügbaren Wörtern im Dictionary dargestellt, nur zu einem unterschiedlichen Anteil. Die Wahrscheinlichkeiten für das Auftreten von Wörtern liegt im Intervall $[1.5\%,0\%]$. Dabei sind viele Wörter in mehreren Topics als Schlüsselwörter zu finden. \\
 
 
-\item Die Qualität der Daten und des Klassifikators kann alternativ über die Zuordnung der Topics zu den Abteilungen untersucht werden. Die optimalen Daten werden eine perfekte Zuordnung schaffen, ohne beim Modell eine Verwirrung festzustellen. Dafür wird in dieser Arbeit untersucht, wie gut sich die Topics auf die Abteilungen zuordnen lassen. Der wohl naivste Ansatz ist, Topic $x$ auf Abteilung $x$ für alle $x$ in $[0,17]$ abzubilden. Dafür ist die Anzahl der Dokumente pro Topic bzw. Abteilung relevant. Dabei wird nur die Anzahl der zugeordneten Dokumente überprüft, indem für jedes auf Basis des Korpus eine Dokument-Topic-Verteilung generiert wird. Bei dieser wird vom Algorithmus die Topic, für die die höchste Wahrscheinlichkeit errechnet wurde, für das Dokument ausgewählt. Um welche Dokumente es sich jedoch bei dem Vergleich jeweils tatsächlich handelt ist zu diesem Punkt noch irrelevant. Überschneidungen werden noch nicht betrachtet. Im Folgenden ist die Anzahl der Dokumenten in den Topics dargestellt:
+\item Die Qualität der Daten und des Klassifikators kann alternativ über die Zuordnung der Topics zu den Abteilungen untersucht werden. Die optimalen Daten werden eine perfekte Zuordnung schaffen, ohne beim Modell eine Verwirrung festzustellen. Dafür wird in dieser Arbeit untersucht, wie gut sich die Topics auf die Abteilungen zuordnen lassen. Der wohl naivste Ansatz ist, Topic $x$ auf Abteilung $x$ für alle $x \in [0,17]$ abzubilden. Dafür ist die Anzahl der Dokumente pro Topic bzw. Abteilung relevant. Dabei wird nur die Anzahl der zugeordneten Dokumente überprüft, indem für jedes auf Basis des Korpus eine Dokument-Topic-Verteilung generiert wird. Bei dieser wird vom Algorithmus die Topic, für die die höchste Wahrscheinlichkeit errechnet wurde, für das Dokument ausgewählt. Um welche Dokumente es sich jedoch bei dem Vergleich jeweils tatsächlich handelt ist zu diesem Punkt noch irrelevant. Überschneidungen werden noch nicht betrachtet. In Abbildung \ref{fig:count1} ist die Anzahl der Dokumente in den Topics dargestellt:
 
 \begin{figure}[H]
 \begin{center}
@@ -932,7 +948,7 @@ T17&1400\\
 \end{center}
 \end{figure}
 \\
-Das selbe ergibt sich für die Abteilungen und die Anzahl derer Dokumente. Dafür wird in dem von der ZVO bereitgestellten Datensatz die Zuordnung für jedes Dokument abgefragt. Dadurch kann das Dokument akkurat der Topic zugewiesen werden, wie es händisch getan wurde. : \\ 
+Dasselbe ergibt sich für die Abteilungen und die Anzahl derer Dokumente. Dafür wird in dem von der ZVO bereitgestellten Datensatz die Zuordnung für jedes Dokument abgefragt. Dadurch kann das Dokument akkurat der Topic zugewiesen werden, wie es händisch getan wurde. Dies ist in Abbildung \ref{fig:count2} zu erkennen. \\ 
 
 \begin{figure}[H]
 \begin{center}
@@ -968,7 +984,9 @@ L17&2700\\
 \end{figure}
 
 Bei diesem Ansatz muss bedacht werden, dass ein Dokument von der ZVO in mehrere Abteilungen eingeteilt werden kann, während der Algorithmus in diesem Fall das Dokument immer nur einem Topic zuordnen. Da die Mehrheit der Dokument jedoch nur einer Abteilung zugewiesen ist, entsteht hier nur eine kleine Tendenz, die die Daten der ZVO in Abbildung \ref{fig:count2} etwas mehr Dokumente zuordnet, als in Abbildung \ref{fig:count1}.\\
-In Abbildung \ref{fig:count2} sind die Abteilungen über Labels von $0$ bis $17$ aufgelistet. Im Anwendungsfall steht jedes Label damit für eine reale Abteilung. Die Zuordnung der Labels zu Abteilungen ist in Tabelle \ref{fig:labels} dargestellt.\\ 
+
+In Abbildung \ref{fig:count2} sind die Abteilungen über Labels von $0$ bis $17$ aufgelistet. Dabei dient der Begriff Label der Adressierung einer Abteilung. So stellt Label 0 die Abteilung 0 der ZVO dar. Im Anwendungsfall steht jedes Label damit für eine reale Abteilung. Die Zuordnung der Labels zu Abteilungen ist in Tabelle \ref{fig:labels} dargestellt.
+
 
 \begin{figure}[h]
 \begin{center}
@@ -1001,7 +1019,8 @@ L17&ZSK-Widersprüche Abfall\\
 \caption{Die Zuordnung von Label zu Abteilung}
 \label{fig:labels}
 \end{center}
-\end{figure}
+\end{figure}\\
+
 
 Die Anzahl der Dokumente eines Topics kann nun mit der einer Abteilung verglichen werden, um die grundsätzliche Kompatibilität zwischen Topics und Abteilungen prüfen zu können. Dies gibt jedoch nur eine grobe Richtung an, da die Dokument selbst nicht geprüft werden. Das bedeutet, dass die verglichenen Anzahlen nicht prüfen, ob es sich sowohl in der Topic, als auch in der Abteilung auch wirklich um das gleiche Dokument handelt. Um die Dokumente mit in den Vergleich einzubeziehen und damit die Zuordnung von Topic auf Abteilung zu verbessern, wird eine weitere Methode betrachtet. Die Zuordnung der Topics zu Abteilungen kann approximiert werden, indem gezählt wird, in wie vielen Dokumenten sich die Topics und Abteilungen jeweils überschneiden. Genau wie bei der Gruppeneinteilung wird für diese Überschneidung jedes Dokument erneut auf dem Korpus geprüft, um dessen Topic-Wort-Verteilung zu erstellen. Die Dokumente werden anhand ihrer einzigartigen Zeilen-ID adressiert. Die IDs werden der Topic zugeordnet, die die höchste Wahrscheinlichkeit in der Verteilung des Dokuments erreicht. Die Zuordnung findet in einer großen Liste statt, die über 18 Unterlisten verfügt, in die die IDs jeweils hinzugefügt werden. Die Überschneidungen werden in einer Matrix dargestellt, die für jedes Topic des Modells die Überschneidungen zu jeder Abteilung auflistet. Somit kann für jede Zeile die passende Zuordnung gefunden werden. Dabei stellt eine Zeile jeweils die Dokumente dar, die aufsummiert die Zahl einer Zeile in Abbildung \ref{fig:count1} ergeben. 
 
@@ -1055,7 +1074,7 @@ T17&20& 206& 128& 4& 7& 1& 25& 25& 120& \textbf{217}& 395& 0& 23& 58& 85& 157& 5
 \hline
 \hline
 \end{tabular}
-\caption{Anzahl der Überschneidungen zwischen LDA Topics (vert.) und ZVO Labels (horiz.)}
+\caption{Anzahl der Überschneidungen zwischen LDA Topics (vert.) und ZVO Labels (horiz.) mit den maximalen Werten pro Zeile in \textbf{fett} markiert.}
 \label{fig:matrixnormal}
 \end{center}
 \end{figure}\\
@@ -1063,18 +1082,18 @@ T17&20& 206& 128& 4& 7& 1& 25& 25& 120& \textbf{217}& 395& 0& 23& 58& 85& 157& 5
 
 %[[555, 977, 2150, 21, 66, 19, 211, 251, 910, 960, 902, 2, 210, 596, 302, 758, 318, 250], [512, 580, 650, 3, 36, 7, 139, 101, 370, 453, 570, 0, 66, 378, 91, 196, 123, 53], [508, 755, 263, 9, 67, 21, 254, 145, 282, 1498, 1207, 1, 119, 300, 479, 527, 177, 130], [108, 179, 98, 2, 15, 3, 33, 57, 236, 432, 218, 0, 34, 55, 153, 198, 74, 27], [493, 867, 442, 5, 63, 8, 134, 180, 451, 1111, 1033, 8, 73, 348, 446, 489, 191, 89], [91, 467, 98, 5, 25, 2, 60, 75, 162, 480, 309, 1, 55, 127, 169, 351, 113, 47], [1263, 3993, 1738, 28, 127, 48, 811, 587, 1384, 4139, 4730, 6, 573, 2096, 1620, 2080, 680, 495], [3376, 1298, 870, 17, 524, 16, 221, 338, 662, 1904, 1740, 9, 185, 381, 664, 891, 537, 133], [310, 585, 216, 10, 27, 5, 67, 114, 203, 771, 1013, 0, 81, 323, 264, 440, 205, 73], [58, 126, 47, 0, 3, 1, 17, 16, 131, 174, 400, 0, 15, 55, 63, 69, 59, 17], [286, 1610, 1733, 12, 51, 27, 284, 299, 858, 1567, 1331, 4, 239, 893, 674, 673, 304, 248], [194, 409, 377, 8, 27, 3, 88, 122, 180, 678, 470, 0, 80, 173, 167, 395, 142, 118], [486, 2355, 2495, 16, 80, 24, 564, 327, 1005, 2672, 1513, 3, 311, 1254, 886, 1377, 579, 327], [151, 393, 198, 5, 23, 4, 64, 83, 160, 414, 639, 1, 68, 192, 123, 275, 151, 68], [1008, 6084, 2681, 86, 153, 61, 990, 820, 2223, 5730, 3832, 8, 701, 2327, 1860, 3093, 993, 552], [270, 95, 36, 3, 10, 1, 29, 32, 46, 228, 284, 0, 19, 31, 61, 81, 23, 21], [81, 82, 25, 1, 3, 0, 18, 38, 27, 105, 90, 0, 14, 29, 37, 76, 24, 15], [20, 206, 128, 4, 7, 1, 25, 25, 120, 217, 395, 0, 23, 58, 85, 157, 55, 37]] MIT 133044 Dokumenten!!!!
 
-Diese Matrix bildet die Überschneidungen aller 133044 Dokumenten dar. Dabei sind die 18 LDA Topics auf der vertikalen Achse und die 18 LABEL Abteilungen auf der horizontalen Achse aufgetragen. Die Ausführung auf diesen Daten hat bereits mehrere Tage gedauert. Bezüglich der Zuordnung ist der naivste Ansatz, jeder Zeile (also LDA Topic) die Spalte (also Label Abteilung) mit der maximalen Überschneidung zuzuordnen. Dabei ist der Ziel die Anzahl der Gesamtüberschneidungen zu maximieren. \\
+Diese Matrix bildet die Überschneidungen aller 133044 Dokumenten ab. Dabei sind die 18 LDA Topics auf der vertikalen Achse und die 18 LABEL Abteilungen auf der horizontalen Achse aufgetragen. Bezüglich der Zuordnung ist der naivste Ansatz, jeder Zeile (also LDA Topic) die Spalte (also Label Abteilung) mit der maximalen Überschneidung zuzuordnen. Dabei ist das Ziel die Anzahl der Gesamtüberschneidungen zu maximieren. \\
 
 
 \end{enumerate}
 
 	
 \chapter{Analyse}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ANALYSE
-Die Implementierung des LDA Modells wurde im vorausgegangenen Teil umegsetzt. Die Ausgaben werden nun analysiert....
+Die Implementierung des LDA Modells wurde im vorausgegangenen Teil vorgenommen. In diesem Abschnitt werden die Ausgaben analysiert und aus verschiedenen Perspektiven auf Erkenntnisse geprüft. Wie in Abschnitt 3 und 4 wird auch dieser Abschnitt in die zwei Teilbereiche dieser Arbeit unterteilt.
 
 \begin{enumerate}
 \item \textbf{Gruppen und Wörter finden}\\
-Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Verteilung von Schlüsselwörtern beschrieben. Als Anwendungsziel in Bezug auf die ZVO sollen die Topics des Modells in Zukunft die Abteilungen darstellen. Betrachtet man dafür die Wörter der Topics, um die Topics semantisch den Abteilungen zuzuordnen, wird dies nicht gelingen. Das liegt daran, dass sich die dominaten Wörter in den Topics zu stark überschneiden. Zum Beispiel gehört \lstlinline{"ostholstein"} in allen Topics zu den Top 5 Wörtern. In der folgenden Darstellung sind die Top 5 Wörter aufgelistet und mit den 18 Topics auf Vorkommen geprüft: 
+Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Verteilung von Schlüsselwörtern beschrieben. Als Anwendungsziel in Bezug auf die ZVO sollen die Topics des Modells in Zukunft die Abteilungen darstellen. Betrachtet man dafür die Wörter der Topics, um die Topics semantisch den Abteilungen zuzuordnen, wird dies nicht gelingen. Das liegt daran, dass sich die dominaten Wörter in den Topics zu stark überschneiden. Zum Beispiel gehört ostholstein in allen Topics zu den häufigsten 5 Wörtern. In der folgenden Darstellung sind die häufigsten 5 Wörter aufgelistet und mit den 18 Topics auf Vorkommen geprüft: 
 
 \begin{figure}[H]
 \begin{center}
@@ -1083,7 +1102,7 @@ Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Vertei
 %\begin{tabular}{ccccccccccccccccccc}
 %Wort&L0&L1&L2&L3&L4&L5&L6&L7&L8&L9&L10&L11&L12&L13&L14&L15&L16&L17&L18\\
 \begin{tikzpicture}
-  \begin{axis}[title  = Topicabdeckung der Top 5 Schlüsselwörter,
+  \begin{axis}[title  = Topicabdeckung der häufigsten 5 Schlüsselwörter,
     xbar,
     y axis line style = { opacity = 0 },
     axis x line       = none,
@@ -1097,17 +1116,17 @@ Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Vertei
   \addplot coordinates { (18,ostholstein)(17,zweckverband)(18,sierksdorf)(14,nachricht)(10,betreff)(8,danken)(2,frau)(2,the)(1,sitzen)};
   \end{axis}
 \end{tikzpicture}
-\caption{Topicabdeckung der Top 5 Wörter aller Topics}
+\caption{Topicabdeckung der häufigsten 5 Wörter aller Topics}
 \label{fig:top5}
 \end{center}
 \end{figure}
 
-In Abbildung \ref{fig:top5} sind die häufigsten 5 Wörter aller Topics auf der Y-Achse aufgelistet. Die X-Achse beschreibt die Anzahl der Topics, die das bestimmte Wort als eines der häufigsten 5 besitzen. Hätten alle 18 Topics Schlüsselwörter, die das Topic eindeutig beschreiben, würden sich 90 verschiedene Wörter auf der Y-Achse ergeben. Hier sind jedoch nur 9 Wörter aufgezählt, deren Anzahl sich auf 90 addiert. Die Topics teilen sich also auf 90 möglichen Schlüsselwörtern nur 9 Stück. Das bedeutet, dass sich die Topics semantisch sehr schwach bis garnicht von einander unterscheiden lassen. Dies ist auf die Qualität der Daten und dessen Wörter zurückzuführen. Die Topics lassen sich nicht stark genug von einander abgrenzen, wenn in jeden Topic die selben Wörter zu einem hohen Anteil vorkommen. Somit kann die Qualität der Daten und damit die des Klassifikators erhöht werden, indem die Stoppwörter erweitert werden. Wenn man beispielsweise das Wort Ostholstein betrachtet, ist dies nicht aussagekräftig für die Abteilung, da sich alle Abteilungen in Ostholstein befinden. Die Wahl der zu ergänzenden Stoppwörter hängt also mit von der semantischen Bedeutung des Wortes ab. Dazu muss auf die Anzahl der Wörter insgesamt geachtete werden und die stark vertretenen Worte dieser Art entfernt werden. Zuletzt ist bedeutend, wie stark die semantische Bedeutung des jeweiligen Wortes für die bestimmte Abteilung ist. Ein Wort, das eine ganz bestimmt Abteilung beschreibt, wie \"ablesen\" die Abteilung "Ablesung", darf dies natürlich nicht entfernt werden. 
+In Abbildung \ref{fig:top5} sind die häufigsten 5 Wörter aller Topics auf der Y-Achse aufgelistet. Die X-Achse beschreibt die Anzahl der Topics, die das bestimmte Wort als eines der häufigsten 5 besitzen. Hätten alle 18 Topics Schlüsselwörter, die das Topic eindeutig beschreiben, würden sich 90 verschiedene Wörter auf der Y-Achse ergeben. Hier sind jedoch nur 9 Wörter aufgezählt, deren Anzahl sich auf 90 addiert. Die Topics teilen sich also auf 90 möglichen Schlüsselwörtern nur 9 Stück. Das bedeutet, dass sich die Topics semantisch sehr schwach bis garnicht von einander unterscheiden lassen. Dies ist auf die Qualität der Daten und dessen Wörter zurückzuführen. Die Topics lassen sich nicht stark genug von einander abgrenzen, wenn in jeden Topic die selben Wörter zu einem hohen Anteil vorkommen. Somit kann die Qualität der Daten und damit die des Klassifikators erhöht werden, indem die Stoppwörter erweitert werden. Wenn man beispielsweise das Wort ostholstein betrachtet, ist dies nicht aussagekräftig für die Abteilung, da sich alle Abteilungen in Ostholstein befinden. Die Wahl der zu ergänzenden Stoppwörter hängt also mit von der semantischen Bedeutung des Wortes ab. Dazu muss auf die Anzahl der Wörter insgesamt geachtete werden und die stark vertretenen Worte dieser Art entfernt werden. Zuletzt ist bedeutend, wie stark die semantische Bedeutung des jeweiligen Wortes für die bestimmte Abteilung ist. Ein Wort, das eine ganz bestimmt Abteilung beschreibt, wie ablesen die Abteilung Ablesung, darf dies natürlich nicht entfernt werden. 
 \\
 
+%\begin{figure}[H]
 \begin{center}
-\begin{tikzpicture}
- 
+\begin{tikzpicture} 
 \begin{axis} [tick label style={/pgf/number format/fixed}, scaled ticks=false,ybar,xmin=-1,xmax=18,ymin=0,ymax=30000, bar width=8pt, height=8cm,width=15cm, ylabel={Anzahl Elemente}, xlabel={Topics bzw. Abteilungen}]
 \addplot coordinates {
     (0,8605)
@@ -1149,15 +1168,15 @@ In Abbildung \ref{fig:top5} sind die häufigsten 5 Wörter aller Topics auf der 
 (16,4748)
 (17,2700)
 };
-
 \legend{LDA, Label};
 \end{axis}
 \caption{Vergleich der Anzahl an Dokumenten pro Topic bzw. Abteilung}
 \label{fig:countschart}
 \end{tikzpicture}
 \end{center}
+%\end{figure}
 
-Das Säulendiagramm zeigt, dass die Topics nicht optimal auf die Abteilungen abgebildet sind. Die Anzahl der enthaltenen Dokumente sollte ähnlicher sein. Betrachtet man zum Beispiel Topic 14, kann diese nicht Abteilung 14 darstellen, da es sich um einen Unterschied von 21312 Dokumenten, also 72$\%$, handelt.\\
+Das Säulendiagramm in Abbildung \ref{fig:countschart} bildet jeweils für alle $x in [0,17]$ Abteilung x auf Topic x ab und stellt die Anzahl in diesen Topics bzw. Abteilungen gegenüber. Dies zeigt, dass die Topics nicht optimal auf die Abteilungen abgebildet sind. Die Anzahl der enthaltenen Dokumente sollte ähnlicher sein. Betrachtet man zum Beispiel Topic 14, kann diese nicht Abteilung 14 darstellen, da es sich um einen Unterschied von 21312 Dokumenten, also 72$\%$, handelt.\\
 
 In den Abbildungen \ref{fig:count1} und \ref{fig:count2} ist die Anzahl der Dokumente in den jeweiligen Topics und Abteilungen aufgelistet. Um eine bessere Übersicht über die Daten zu bekommen, sind die Listen in den folgenden Abbildungen nach der Größe sortiert und mit einem weiteren Parameter dargestellt, der als Vergleichswert dienen soll. Dieser Parameter stellt den prozentualen Anteil der Topics im Korpus dar: 
 
@@ -1228,15 +1247,14 @@ Abteilung & Counts Label & Anteil$[\%]$\\
 \end{figure}
 
 
-Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als die ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterschieden sich durch $5923$ Dokumente. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von der ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modelling erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von der ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zu, Beispiel 'Ostholstein' oder 'Zweckverband'. Die Wörter können dafür sorgen, dass Dokumente in die gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
-
-
-
+Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als die ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterschieden sich durch $5923$ Dokumente. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von der ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modelling erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von der ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zu, Beispiel Ostholstein oder Zweckverband. Die Wörter können dafür sorgen, dass Dokumente in die gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
 
 \item \textbf{Zuordnung Abteilung zu Topic}\\
-Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wider, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Für die Umsetzung betrachten wir die Abbildung \ref{fig:matrixnormal} aus Abschnitt 4, die eine Matrix mit allen Überschneidungen zwischen Topics und Abteilungen mit absoluten Werten aufzeichnet. Hierbei beinhalten die Werte nur Dokumente, die sowohl in der Topic, als auch in der Abteilung enthalten sind. Um eine möglichst effektive Zuteilung zu erlangen, wählen wir zuerst den naivsten Ansatz, aus jeder Zeile den maximalen Wert zu nehmen. Als Graphik ist das wie folgt darzustellen: 
+%Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wieder, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Für die Umsetzung betrachten wir die Abbildung \ref{fig:matrixnormal} aus Abschnitt 4, die eine Matrix mit allen Überschneidungen zwischen Topics und Abteilungen mit absoluten Werten aufzeichnet. Hierbei beinhalten die Werte nur Dokumente, die sowohl in der Topic, als auch in der Abteilung enthalten sind. Um eine möglichst effektive Zuteilung zu erlangen, wählen wir zuerst den naivsten Ansatz, aus jeder Zeile den maximalen Wert zu nehmen. Als Graphik ist das wie folgt darzustellen: 
 
-\begin{figure}[h]
+Für die Zuordnung der Topics auf Abteilungen wurde in Abschnitt 4 in Abbildung \ref{fig:matrixnormal} eine Matrix erstellt, die alle Überschneidungen gezählt hat. Diese wurden dann für alle Topics und Abteilungen in der Matrix als absolute Werte aufgetragen. Abbildung \ref{fig:maxgraph} stellt die Ergebnisse der Matrix in einem Graphen dar, auf dem die X-Achse die Labels, also Abteilungen, aufträgt und die Y-Achse für die Anzahl der überschneidenden Dokumente steht. Wie viele Dokumente sich in jedem Topic und Abteilung überschneiden ist durch die 18 Graphen dargestellt, die jeweils den Wert in einer Funktion aufgetragen haben. Aus Abbildung \ref{fig:matrixgraph} ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. 
+
+%\begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
@@ -1371,9 +1389,9 @@ width=15cm,height=15cm,
 \caption{Alternative Darstellung der Matrix \ref{fig:matrixnormal}}
 \label{fig:matrixgraph}
 \end{center}
-\end{figure}
+%\end{figure}
 
-Die Abbildung \ref{fig:matrixgraph} zeigt für alle Topics die Anzahl der Überschneidungen mit allen Abteilungen. Dabei ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. Wählte man für jede Topic die Abteilung mit der maximalen Überschneidung, bekommt man die folgende Liste, die jedem Index, der die Topics repräsentiert, die Abteilungen als Werte zuordnet.
+Die Erkenntnis kann auf die hohe Anzahl der Dokumente in diesen Abteilungen zurückgeführt werden. Eine alternative Erklären könnte sein, dass die Dokumente in den Abteilungen ein sehr breites semantisches Spektum abdecken, womit sich viele Topics identifizieren können. Wählte man für jede Topic die Abteilung mit der maximalen Überschneidung, bekommt man die Liste in Abbildung \ref{fig:maxlist}, die jedem Index, der die Topics repräsentiert, die Abteilungen als Werte zuordnet.
 
 \begin{figure}[H]
 \begin{center}
@@ -1381,8 +1399,11 @@ Die Abbildung \ref{fig:matrixgraph} zeigt für alle Topics die Anzahl der Übers
 maxmatrix = [2,2,9,9,9,9,10,0,10,10,1,9,9,10,9,10,9,9]
 \end{lstlisting}
 \caption{Liste der zugeordneten Topics und Abteilungen bei maximaler Überschneidung pro Topic}
+\label{fig:maxlist}
 \end{center}
 \end{figure}
+
+\textbf{HIER DIE NEUE CHART HIN MIT ÜBERSHCNIEDUNGEN IM VGL ZU BETRAG DER ABETILUNG BZW TOPIC}
 
 Wie zu erkennen ist, sind nur die Zahlen $ 0,1,2,9,10 $ in der Liste vertreten. Eine optimale Zuordnung wäre jedoch erst erreicht, wenn alle Zahlen von 1 bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Dies liegt daran, dass eine Topic nur genau eine Abteilung darstellen darf. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem neunten Thema der ZVO kompatibel wären. Dabei werden $9/18$ Topics Abteilung $9$, $1/18$ Topic Abteilung $1$, $5/18$ Topics Abteilung $10$ und $2/18$ Topics Abteilung $2$ zugeordnet. Hier fällt auf, dass diesen Abteilungen die meisten Dokumente von der ZVO händisch zugeordnet wurden. Somit können sie sich auch mit vielen Dokumenten aus den LDA Topics überschneiden. Dies lässt zusätzlich vermuten, dass zum Beispiel die Abteilung 9, die laut Abbildung \ref{fig:count2} die meisten Dokumente enthält, ein zu breites inhaltliches Spektrum abdeckt und in noch weitere Unterthemen unterteilt werden könnte. Dies wird dadurch begründet, dass das Topic-Modell viele der Dokumente aus Abteilung 9 in verschiedene Topics eingeteilt hat.\\
 
