@@ -440,11 +440,11 @@ Diese Arbeit beschäftigt sich mit der Vorhersage der Qualität des Klassifikato
 \section{Notation}
 
 \begin{itemize}
-	\item Ein Wort wird mit $w \in N$ mit $N$ als Menge aller Worte bezeichnet
-	\item Eine Menge Wörter ergeben ein Dokument $d \in D$ mit $D$ als Menge aller Dokumente
-	\item Eine Menge an Dokumenten ergibt einen Korpus $D$
-	\item Eine Menge an Wörtern ergibt eine Topic $z \in K$ mit $K$ als Menge aller Topics
-	\item Ein Topic-Modell wird mit $M$ beschrieben
+	\item $\mathcal{K}$ ist die Anzahl der Topics in einem Topic-Modell $\mathcal{M}$
+	\item Ein Model $\mathcal{M}$ repräsentiert den Korpus $\mathcal{D}$
+	\item Eine Menge von Dokumenten ist ein Korpus $\mathcal{D}$
+	\item Ein Dokument $\mathcal{d}$ eines Korpus ist eine Menge von $\mathcal{N}$-vielen 
+	Worten 
 \end{itemize}
 
 
@@ -456,7 +456,7 @@ Das Feld des Information Retrieval bietet vielseitige Verfahren, um Topic-Modell
 Das Verfahren der (Tf-idf) beschreibt ein statistisches Maß, um die Wichtigkeit von Wörtern in einer Gruppe von Dokumenten zu beurteilen. Die Term-Frequency(Tf) erstellt eine Matrix, die die Anzahl der Wörter auf die Dokumente abbildet, in denen sie enthalten sind. Um zu vermeiden, dass Wörter, die wenig Aussagekraft für den Korpus haben, wie das Wort (und), bestimmt die Inverse Document Frequency(idf) wie spezifisch ein Wort für einen gesamten Korpus ist. Das einzelne Dokument ist dafür demnach nicht mehr wichtig. Die Idee dabei ist, dass Wörter, die sehr selten vorkommen ein Dokument unter Umständen stärker beeinflussen können, als ein Wort, das so häufig vorkommt, dass es schon keine Aussagekraft oder semantische Relevanz mehr hat. Das Verfahren verwendet keine probabilistischen Elemente sondern ist eine rein statistisch Möglichkeit herauszufinden, wie wichtig ein Wort eines Dokuments für das Gesamtthema des Dokuments ist. 
 
 \subsection{Latent Semantic Analysis}
-Viele Verfahren der Topic-Modellierung gehen auf das sogenannte Latent Semantic Analysis (LSA) zurück, das zuerst 1990 erwähnt wurde. LSA baut auf dem Prinzip der Tf-idf auf, indem es die Tf-Matrix nutzt und adaptiert. Bei dem Verfahren geht es um das Finden von sogenannten Hauptkomponenten in Dokumenten. Grob können Hauptkomponenten als allgemeine Überthemen verstanden werden. So wäre Politik die Hauptkomponente, die von Wörtern wie Politiker, Bundestag und Regierung beschrieben wird. Mathematisch gesehen verbindet man mit der Hauptkomponente die Hauptkomponentenanalyse, die als statistische Methode versucht, viele Variablen mithilfe von Eigenvektoren und Kovarianzen in einer vereinfachten Form mit einem möglichst geringen Informationsverlust darszustellen. Dabei ist das Ziel die Tf-Matrix möglichst verkleinert darzustellen, die die Anzahl der Vorkommen für jedes Wort pro Dokument abbildet. Sie wird in Matrizen aus Eigenvektoren und Eigenwerten aufgespalten, wodurch es möglich ist, die wichtigen Hauptkomponenten aus der meist sehr großen Tf-matrix zu extrahieren. Diese Matrix wird als Produkt von drei Matrizen dargestellt, von denen die mittlere eine Diagonalmatrix darstellt. Die Werte auf der Diagonalen lassen daraus die Topics der Textmenge ablesen. LSA stellt sich als ein attraktives Verfahren heraus, da es Synonyme besser erkennen kann, als LDA und wird heutzutage unter anderem intensiv in dem Bereich des Digital Marketings genutzt. 
+Viele Verfahren der Topic-Modellierung gehen auf das sogenannte Latent Semantic Analysis (LSA) zurück, das zuerst 1990 erwähnt wurde. LSA baut auf dem Prinzip der Tf-idf auf, indem es die Tf-Matrix nutzt und adaptiert. Bei dem Verfahren geht es um das Finden von sogenannten Hauptkomponenten in Dokumenten. Grob können Hauptkomponenten als allgemeine Überthemen verstanden werden. So wäre Politik die Hauptkomponente, die von Wörtern wie Politiker, Bundestag und Regierung beschrieben wird. Mathematisch gesehen verbindet man mit der Hauptkomponente die Hauptkomponentenanalyse, die als statistische Methode versucht, viele Variablen mithilfe von Eigenvektoren und Kovarianzen in einer vereinfachten Form mit einem möglichst geringen Informationsverlust darszustellen. Dabei ist das Ziel die Tf-Matrix möglichst verkleinert darzustellen, die die Anzahl der Vorkommen für jedes Wort pro Dokument abbildet. Sie wird in Matrizen aus Eigenvektoren und Eigenwerten aufgespalten, wodurch es möglich ist, die wichtigen Hauptkomponenten aus der meist sehr großen Tf-matrix zu extrahieren. Diese Matrix wird als Produkt von drei Matrizen dargestellt, von denen die mittlere eine Diagonalmatrix darstellt. Die Werte auf der Diagonalen lassen daraus die Topics der Textmenge ablesen. LSA stellt sich als ein attraktives Verfahren heraus, da es Synonyme besser erkennen kann, als LDA und wird heutzutage unter anderem intensiv in dem Bereich des Digital Marketings genutzt.
 
 \subsection{Probabilistic Latent Semantic Analysis}
 Im Gegensatz zu LSA, was Singulärwertzerlegung für die Topic-Modellierung nutzt, verfolgt Probabilistic Latent Semantic Analysis (PLSA) einen anderen Ansatz. Die Kernidee ist, ein Wahrscheinlichkeitsmodell zu finden, das ein Dokument erzeugt, dass zu der Tf Matrix passt. PLSA hat als erstes Modell dem Konzept der Topic-Modellierung Wahrscheinlichkeiten hinzugefügt. Dabei sind Das Dokument und Wort bekannt, das assoziierte Topic jedoch nicht. Der grundlegende Gedanke ist, dass ein Dokument generiert werden kann, indem zuerst das Dokument mit einer bestimmten Wahrscheinlichkeit gewählt wird, dann ein Topic und aus diesem Topic dann ein Wort - alles mit Wahrscheinlichkeiten beschrieben. Es lässt sich der Fall, dass Dokument $d$ über Topic $z$ handelt, mit einer Wahrscheinlichkeit von $P(z \mid d)$ beschreiben. Dazu berechnet $P(w \mid z)$, wie wahrscheinlich es ist, dass das Wort $w$ aus einem gegebenen Dokument $d$ zu Topic $z$ gehört. Somit führt PLSA die Gesamtwahrscheinlich ein, dass ein Wort in einem gegebenen Dokument zu finden ist: $P(D,W) = P(D) \sum_{Z}{P(Z\mid D)P(W\mid Z)}$. Die Gleichung verbindet die Wahrscheinlichkeit ein bestimmtes Dokument zu erhalten mit der eines Wortes in diesem bedingt durch die Topic-Verteilung in diesem Dokument. 
@@ -473,44 +473,32 @@ Die Wahrscheinlichkeit, dass ein bestimmtes Dokument generiert wird, ist das Pro
 \section{Grundlagen der Latent Dirichlet Allocation }
 Latent Dirichlet Allocation ist ein grundlegendes und bekanntes Verfahren aus der maschinellen Verarbeitung natürlichen Sprachen. Begründet wird dies unter anderem auf der Komplexität der damals bestehenden Techniken der Textverarbeitung. So waren Clusteralgorithmen zu starr in ihrem Anwendungsumfeld, während Dimensionsreduktionen, wie die Hauptkomponentenanalyse von LSA Ergebnisse lieferte, die sehr schwer zu interpretieren waren. Das Prinzip der Topic-Modellierung basiert auf einer Menge an Dokumenten, die den Korpus darstellen. Dabei werden bei LDA alle Dokumente als Menge von Wörtern angenommen. Diese sind als sogenannter Bag of Words modelliert. Das bedeutet, dass die Wörter als Menge ohne Reihenfolge interpretiert werden und nur die Häufigkeit der Begriffe in dieser Menge relevant ist. LDA ist ein generatives Modell, das durch unterschiedliche Einflussgrößen, wie in Abbildung \ref{fig:ldagraphic} dargestellt, Dokumente erstellen kann. \\
 
-Bezüglich der Namensgebung, steht Latent für alles, was wir im Vorhinein nicht kennen. Im Fall LDA handelt es sich um die Themen, die in einem Dokument zu einem bestimmten Teil vertreten sind. Dirichlet beschreibt eine Verteilung von Verteilungen. Dies ist vergleichbar mit einem Würfel, bei dem regulierbar ist, wie gleichmäßig die Zahlen gewürfelt werden. Dabei ist der Würfel eine Verteilung und die Aufteilung der Gleichmäßigkeit auch. Beim Topic Modeling bedeutet Dirichlet eine Verteilung von Topics in Dokumenten und eine Verteilung von Wörtern in Topics. Die Dirichlet-Verteilungen sind die ausschlaggebende Veränderung im Vergleich zu PLSA. Durch sie kann die Stärke der Ausprägung der Topics in der Dokument-Topic-Verteilung und der Wörter in der Topic-Word-Verteilung bestimmt werden. Die Allocation weist mithilfe der errechneten Dirichlet-Verteilungen Topics Wörter und Dokumenten Topics zu. Eine Besonderheit bei der Topic-Modellierung mit LDA ist, dass die Anzahl der gesuchten Themen \mathcal{K} vorgegeben werden muss. Oft ist diese vorher jedoch nicht bekannt und muss über Hilfsverfahren, wie der Perplexitätsberechnung ermittelt werden. Dabei wird gemessen, wie geeignet die das Modell für die Verarbeitung der gegebenen Daten ist. Die Funktionsweise von LDA ist über folgende graphische Abbildung beschrieben: \\
+Bezüglich der Namensgebung, steht "Latent" für alles, was wir im Vorhinein nicht kennen. Im Fall LDA handelt es sich um die Themen, die in einem Dokument zu einem bestimmten Teil vertreten sind. "Dirichlet" beschreibt eine Verteilung von Verteilungen. Dies ist vergleichbar mit einem Würfel, bei dem regulierbar ist, wie gleichmäßig die Zahlen gewürfelt werden. Dabei ist der Würfel eine Verteilung und die Aufteilung der Gleichmäßigkeit auch. Beim Topic Modeling bedeutet Dirichlet eine Verteilung von Topics in Dokumenten und eine Verteilung von Wörtern in Topics. Die Allocation weist mithilfe der errechneten Dirichlet-Verteilungen Topics Wörter und Dokumenten Topics zu. Eine Besonderheit bei der Topic-Modellierung mit LDA ist, dass die Anzahl der gesuchten Themen \mathcal{K} vorgegeben werden muss. Oft ist diese vorher jedoch nicht bekannt und muss über Hilfsverfahren, wie der Perplexitätsberechnung ermittelt werden. Dabei wird gemessen, wie geeignet die das Modell für die Verarbeitung der gegebenen Daten ist. Die Funktionsweise von LDA ist über folgende graphische Abbildung beschrieben: \\
 
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
-	\draw (0,0) [very thick] rectangle (9,3);
-	\node at (8.5,0.5) {N};
-	\node at (8.5,0.5) {N};
-	\draw [very thick](6,3.5) rectangle (9,5.5);
-	\node at (0.35,0.35) {D};
-	\node at (0.35,0.35) {D};
-	\draw [very thick](3,0.25) rectangle (8.75,2.75);
-    \node at (8.75,3.75) {K};
-    \node at (8.75,3.75) {K};    
-	\draw (1.5,1.5) circle [ultra thick, radius = 0.8]  node {$\theta$};
+	\draw (0,0) [very thick] rectangle (9,3) 
+	\draw [very thick](6,3.5) rectangle (9,5.5)
+	\draw [very thick](3,0.25) rectangle (8.75,2.75)
+	\draw (1.5,1.5) circle [very thick, radius = 0.8]  node {$\theta$};
 	\draw (4.5,1.5)  circle [very thick, radius = 0.8] node {$\mathcal{Z}$};
 	\draw (7.5,1.5) circle [ultra thick, radius = 0.8] node {$W$}; 
 	\draw (-1.5,1.5) circle [very thick, radius = 0.8] node {$\alpha$};
 	\draw (7.5,4.5) circle  [very thick, radius = 0.8] node {$\beta$};
 	\draw (4.5,4.5) circle  [very thick, radius = 0.8] node {$\phi$};
-	\draw [->,ultra thick] (5.3,4.5) -- (6.7,4.5);
-	\draw [->,ultra thick] (7.5,3.7) -- (7.5,2.3);
-	\draw [->,ultra thick] (5.3,1.5) -- (6.7,1.5);
-	\draw [->,ultra thick] (2.3,1.5) -- (3.7,1.5);
-	\draw [->,ultra thick] (-0.7,1.5) -- (0.7,1.5);
 	
-\end{tikzpicture}\caption{Graphische Darstellung von LDA}
+	\draw [->,ultra thick] (5.3,4.5) -- (6.7,4.5)
+	\draw [->,ultra thick] (7.5,3.7) -- (7.5,2.3)
+	\draw [->,ultra thick] (5.3,1.5) -- (6.7,1.5)
+	\draw [->,ultra thick] (2.3,1.5) -- (3.7,1.5)
+	\draw [->,ultra thick] (-0.7,1.5) -- (0.7,1.5)
+\end{tikzpicture}
+\caption{Graphische Darstellung von LDA}
 \label{fig:ldagraphic}
 \end{figure}
 
-Dabei beschreibt $W$ als einzige nicht verborgene Variable eines von $N$ Wörtern des Dokuments. Das Wort ist semantisch einem Thema $Z$ zugeordnet. Das Thema wiederum hängt von der Themen-Verteilung $\theta$ des Dokuments ab, das als ein Element der $\mid M \mid$ vorliegenden Dokumente betrachtet wird. Bei LDA werden zwei Verteilungen aus den Dokumenten $d \in D$ und $k \in K$ gelernt: 
-
-\begin{itemize}
-\item die Dokument-Topic-Verteilung $\theta_d$, die angibt, mit welcher Wahrscheinlichkeit das Dokument zu jedem Themen gehört und 
-\item die Topic-Wort-Verteilung $\phi_k$, die die Wahrscheinlichkeit berechnet, dass ein Wort einem Thema angehört. 
-\end{itemize}\\
-
-$M = LDA(D)$ beschreibt ein LDA Modell, das auf dem Korpus $D$ trainiert wurde. Das Modell und dessen Verteilungen kann durch die Parameter $\alpha$ und $\beta$ angepasst werden. $\alpha$ bestimmt die Intensität der Dokument-Themen-Verteilung, während $\beta$ die der Topic-Wort-Verteilung beeinflusst. Bei einem großen $\alpha$ ist die Verteilung der Topics in einem Dokument ähnlicher. Bei LDA werden zwei widersprüchliche Bedingungen verfolgt, die von den beiden Parametern beeinflusst werden können:
+Dabei beschreibt \mathcal{W} als einzige nicht verborgene Variable eines von \mathcal{N} Wörtern des Dokuments. Das Wort ist semantisch einem Thema \mathcal{Z} zugeordnet. Das Thema wiederum hängt von der Themen-Verteilung $\theta$ des Dokuments ab, das als ein Element der $\mid$ \mathcal{M} $\mid$ vorliegenden Dokumente betrachtet wird. Bei LDA werden zwei Verteilungen aus den Dokumenten $d \in \mathcal{D}$ und $k \in \mathcal{K}$ gelernt: die Dokument-Topic-Verteilung $\theta$ und die Topic-Wort-Verteilung $\phi$. Dabei gibt die Dokument-Topic-Verteilung an, mit welcher Wahrscheinlichkeit das Dokument zu jedem Themen gehört. Die Topic-Word-Verteilung berechnet die Wahrscheinlichkeit, dass ein Wort einem Thema angehört. $\mathcal{M} = LDA(\mathcal{D})$ beschreibt ein LDA Modell, das auf der Dokumentenmenge/Korpus $\mathcal{D}$ trainiert wurde. Das Modell und dessen Verteilungen kann durch die Parameter $\alpha$ und $\beta$ angepasst werden. $\alpha$ bestimmt die Intensität der Dokument-Themen-Verteilung, während $\beta$ die der Topic-Wort-Verteilung beeinflusst. Bei einem großen $\alpha$ ist die Verteilung der Topics in einem Dokument ähnlicher. Bei LDA werden zwei widersprüchliche Bedingungen verfolgt, die von den beiden Parametern beeinflusst werden können:
 \begin{enumerate}
 \item Erstens strebt man für alle Wort eines bestimmten Dokuments so wenig zugeordnete Themen an, wie möglich.
 \item Zweitens soll ein Thema über so wenig relevante Wörter wie möglich verfügen.
@@ -521,11 +509,10 @@ Die beiden Ziele stehen in einer Wechselbeziehung zueinander, da eine minimale A
 
 
 \subsection{Der generative Prozess} 
-Bei der Erstellung eines Klassifikators gibt es zwei unterschiedliche Herangehensweisen: den deskriptiven und den generativen Ansatz. Bei der deskriptiven, oder auch beschreibenden Statistik geht es um die sinnvolle und übersichtliche Darstellung empirischer Daten durch zum Beispiel Tabellen oder Kennzahlen. Betrachtet man zwei Variablen, ein bekanntes $X$ und eine gesuchte Variable $Y$, dann wird im deskriptiven Modell die bedingte Wahrscheinlichkeit $P(Y \mid X)$ betrachtet. Im Gegensatz dazu ist bei generativen Modellen die Wahrscheinlichkeit von $X$ und $Y$ gemeinsam relevant, also $P(X \cap Y)$ . Bei generativen Modellen besteht die Möglichkeit, Ausgabeinstanzen zu erstellen. Bei LDA handelt es sich um einen generativen Algorithmus. Das bedeutet nicht direkt, dass LDA bei der Ausführung aktiv neue Dokumente entwickelt, sondern stellt eine Erklärung dar, wie die Zusammenstellung der Topics und deren Wörter in einem spezifischen Fall entstanden sind. Es könnten theoretisch im Fall einer neuen Dokumentzuordnung zu Abteilungen für jede Abteilung zufällig Dokumente generiert werden. Diese würden zufällig gewählte Wörter basierend auf der Topic-Verteilung aneinanderreihen und mit hoher Wahrscheinlichkeit keinen Sinn ergeben. Trotzdem könnten diese Dokumente mit den den Dokumenten der Abteilungen verglichen und auf Ähnlichkeit werden. Dann könnten die Parameter solange angepasst werden, bis das Ergebnis akzeptabel ist. Der reguläre Weg ist jedoch andersherum: Wir suchen nicht das Dokument zu einer gegebenen Dokument-Topic-Verteilung und einer Topic-Word-Verteilung, sondern haben das Dokument bereits und suchen die Dokument-Topic-Verteilung. Es wird ein Model gelernt, dass den gegebenen Korpus am wahrscheinlichsten nach folgender Vorgehensweise generiert haben könnte. Dabei sei $Dir(\alpha)$ eine Dirichletverteilung, was einen Parameter $\alpha$ bzw. $\beta$ übergeben bekommt und $Multinom(\theta_d)$ eine Multinomialverteilung mit dem Parameter $\theta$ bzw. $\phi$. Bei der Berechnung ergibt sich der Output durch die dann berechneten Wahrscheinlichkeitsverteilungen $\theta_d$ und $\phi_k$.
-
+Bei der Erstellung eines Klassifikators gibt es zwei unterschiedliche Herangehensweisen: den deskriptiven und den generativen Ansatz. Bei der deskriptiven, oder auch beschreibenden Statistik geht es um die sinnvolle und übersichtliche Darstellung empirischer Daten durch zum Beispiel Tabellen oder Kennzahlen. Betrachtet man zwei Variablen, ein bekanntes $X$ und eine gesuchte Variable $Y$, dann wird im deskriptiven Modell die bedingte Wahrscheinlichkeit $P(Y \mid X)$ betrachtet. Im Gegensatz dazu ist bei generativen Modellen die Wahrscheinlichkeit von $X$ und $Y$ gemeinsam relevant, also $P(X \cap Y)$ . Bei generativen Modellen besteht die Möglichkeit, Ausgabeinstanzen zu erstellen. Beispiele dafür sind das "Hidden Markov Modell", Bayes Netze oder das "Gaussian mixure model". Bei LDA handelt es sich um einen generativen Algorithmus. Somit können theoretisch im Fall einer neuen Dokumentzuordnung zu Abteilungen für jede Abteilung zufällig Dokumente generiert werden und diese mit dem neuen Dokument verglichen werden. Der Algorithmus hinter LDA generiert neue Dokumente mithilfe von Dirichletverteilungen $Dir(\gamma)$ und Multinomialverteilungen $Multinom(\delta)$. Dabei sorgen Multinomialverteilungen dafür, dass ein Dokument Teil mehrerer Topics sein kann. Die Verteilungen $\theta$ und $\phi$ werden errechnet, indem iterativ neue Dokumente über andere Verteilung generiert werden, bis das generierte Dokument die Anforderungen befriedigt, dann können die Verteilungen abgelesen werden, mit denen das Dokument erstellt wurde. Der Prozess verläuft folgendermaßen: 
 \begin{enumerate}
-	\item Wähle ein $\theta_d$ als $Dir(\alpha)$
-	\item Wähle ein $\phi_k$ als $Dir(\beta)$
+	\item Wähle ein $\theta$ als $Dir(\alpha)$
+	\item Wähle ein $\phi$ als $Dir(\beta)$
 	\item Für jedes Wort $w$ and Stelle $i = 1,...,N$ im Dokument $d$: 
 	\begin{enumerate}
 		\item Wähle ein Thema $z_{d,i}$ als $Multinom(\theta_d)$
@@ -533,37 +520,22 @@ Bei der Erstellung eines Klassifikators gibt es zwei unterschiedliche Herangehen
 	\end{enumerate}
 \end{enumerate}
 
-Für das Modell kann die Gesamtwahrscheinlichkeit berechnet werden. Diese ergibt sich aus dem Produkt aus: 
-\begin{itemize}
-\item der Wahrscheinlichkeit der Dokument-Topic-Verteilung zusammen mit der Dirichlet-Verteilung $\alpha$ für jedes Dokument
-\item der Wahrscheinlichkeit der Topic-Word-Verteilung zusammen mit der Dirichlet-Verteilungen $\beta$ für alle Topics
-\item der Wahrscheinlichkeit eines Topics zusammen mit der Dokument-Topic-Verteilung für alle Wörter in allen Dokumenten
-\item der Wahrscheinlichkeit eines Wortes zusammen mit der Topic-Word-Verteilung für alle Wörter in allen Dokumenten\\
+Somit kann der Algorithmus nun neue Dokumente erstellen und das Ergebnis durch die Parameter, wie Alpha und Beta, anpassen, bis das Ergebnis ähnlich genug zu dem Anfangsdokument ist. Dann ist die Verteilung der Themen in diesem Dokument bekannt. Bei der Anwendung von LDA für praktische Problemstellungen, geht LDA das Prinzip rückwärts durch, d.h. für bestehende Gruppen an Dokumenten werden Verteilungen gesucht, durch die das Dokument generiert hätte werden können. \\
 
-\begin{figure}[h]
-\begin{center}
 \begin{equation}
-P(w,z,\theta, \phi, \alpha, \beta) = \prod_{i=1}^{K} P(\phi_i, \beta) \cdot \prod_{j=1}^{D}P(\theta_i, \alpha) \cdot \prod_{r=1}^{N} P(z_{j,r}\mid\theta_i) \cdot P(w_{j,r} \mid \phi_{j,r}) 
+P(w,z,\theta, \phi, \alpha, \beta) = \prod P(\theta, \alpha) \cdot \prod P(\alpha, \beta) \cdot \prod P(z,\tehta) \cdot \prod P(w \mid \phi) 
 \end{equation}
-\end{center}
-\caption{Die totale Wahrscheinlichkeit eines LDA Modells $M$}
-\label{fig:equ1}
-\end{figure}
 \\
+Die Formel beschreibt die totale Wahrscheinlichkeit des LDA Modells. Sie setzt sich zusammen aus den Produkten der Dirichlet Verteilung der Topics und der Wörter zusammen mit den multinomialen Verteilungen der Topics und Wörter. Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung der gegebenen Dokumente für latente Variablen. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken: 
 
-
-Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung und entsprechenden Topics der gegebenen Dokumente für latente Variablen. Das heißt bekannt sind das Wort und die Dirichlet-Verteilungen $\alpha$ und $\beta$. Auf Basis dieser gegebenen Informationen wird dann die Wahrscheinlichkeit für deine Topic errechnet, der das Wort angehört. Dazu wird die Dokument-Topic-Verteilung gesucht, die von den Dirichlet-Verteilungen beeinflusst wird. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken, ist jedoch nur approximierbar und nicht exakt zu bestimmen: \\
-
-\begin{figure}[h]
 \begin{center}
 \begin{equation}
 P(\theta, z \mid w, \alpha, \beta) = \frac{P(\theta, z, w \mid \alpha, \beta)}{P(w \mid \alpha, \beta)}
 \end{equation}
-\end{center}
-\caption{Die bedingte Wahrscheinlichkeit für die Topic und Dokument-Topic-Verteilung gegeben einem Wort und den Dirichlet-Verteilungen $\alpha$ und $\beta$}
-\label{fig:equ2}
-\end{figure}\\
-
+\end{center}\\
+\\
+\\
+Die Formel berechnet die Wahrscheinlichkeit der Verteilung unter einem bestimmten Topic gegeben der $\alpha$ und $\beta$ Parameter und dem bekannten Wort. Die Wahrscheinlichkeit kann nicht exakt bestimmt werden, weshalb Verfahren wie Gibbs Sampling diese approximieren.\\
 
 \subsection{Alpha und Beta}
 Die Dirichlet Verteilungen werden durch die beiden Parameter $\alpha$ und $\beta$ bestimmt. Diese formulieren die mathematische Bedeutung der beiden Ziele von LDA:
@@ -573,7 +545,7 @@ Die Dirichlet Verteilungen werden durch die beiden Parameter $\alpha$ und $\beta
 	\item Jedes Thema hat so wenig relevante Wörter wie möglich ($\beta$)
 \end{enumerate}
 
-Dabei kann 1. erreicht werden, wenn alle Worte eine Topic wären, was jedoch nicht mit 2. übereinstimmen würde. Für ein erfülltes 2. gibt es nicht die minimale Anzahl an Topics. Die Funktionsweise von verschiedenen $alpha$-Werten zeigen folgende Abbildungen: 
+Dabei kann 1) erreicht werden, wenn alle Worte eine Topic wären, was jedoch nicht mit 2) übereinstimmen würde. Für ein erfülltes 2) gibt es nicht die minimale Anzahl an Topics. Die Funktionsweise von verschiedenen $alpha$-Werten zeigen folgende Abbildungen: 
 \\
 \begin{figure}[h]
 \begin{center}
