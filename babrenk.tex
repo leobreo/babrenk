@@ -1413,33 +1413,52 @@ Für diese Zuordnung prüfen wir nun die Anzahl der Dokumente in den jeweils gew
 \begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}
-\begin{axis} [tick label style={/pgf/number format/fixed}, 
+\begin{axis} [%tick label style={/pgf/number format/fixed}, 
 scaled ticks=false,
-ybar,
+xtick={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17},
+%ybar,
 xmin=-1,
 xmax=18,
 ymin=0,
 ymax=30000, 
 bar width=5pt, 
-height=8cm,
+height=15cm,
 width=15cm, 
-ylabel={Anzahl Elemente}, 
-xlabel={Topics bzw. Abteilungen}, 
+ylabel={Anzahl Überschneidungen mit jeweiliger Abteilung}, 
+xlabel={Topics}, 
 grid style=dashed,
 legend pos = north west,
 xmajorgrids=true]
-\addplot coordinates {
-    (0,8605)(1,3959)(2,5974)(3,1714)(4,5823)(5,2291)(6,3558)(7,12721)(8,4207)(9,1100)(10,10021)(11,3243)(12,14556)(13,2697)(14,29456)(15,1162)(16,575)(17,1400)
-};
-\addplot coordinates {
+
+\addplot[ybar, bar width=5,bar shift=-2.5pt,fill = blue!50] coordinates {
 (0,14245)(1,14245)(2,23533)(3,23533)(4,23533)(5,23533)(6,20676)(7,9770)(8,20676)(9,20676)(10,21061)(11,23533)(12,23533)(13,20676)(14,23533)(15,20676)(16,23533)(17,23533)
 };
-\addplot coordinates{
-(0,2150)(1,650)(2,1498)(3,432)(4,1111)(5,480)(6,4730)(7,3376)(8,1013)(9,400)(10,1610)(11,678)(12,2672)(13,639)(14,5730)(15,284)(16,105)(17,217)
+    
+\addplot[ybar, bar width=5,bar shift=2.5pt,fill=orange!50] coordinates {
+    (0,8605)(1,3959)(2,5974)(3,1714)(4,5823)(5,2291)(6,3558)(7,12721)(8,4207)(9,1100)(10,10021)(11,3243)(12,14556)(13,2697)(14,29456)(15,1162)(16,575)(17,1400)
 };
+
+\addplot[
+ybar,
+bar width = 5pt,
+color=black,
+fill = red!50,
+%mark=square,
+]
+coordinates {(0,2150)(1,650)(2,1498)(3,432)(4,1111)(5,480)(6,4730)(7,3376)(8,1013)(9,400)(10,1610)(11,678)(12,2672)(13,639)(14,5730)(15,284)(16,105)(17,217)};
+
+
+\addplot[
+    color=red,
+    mark=-,
+    style={ultra thick}
+    ]
+    coordinates {(0,2150)(1,650)(2,1498)(3,432)(4,1111)(5,480)(6,4730)(7,3376)(8,1013)(9,400)(10,1610)(11,678)(12,2672)(13,639)(14,5730)(15,284)(16,105)(17,217)};
+
 \legend{Topics (geordnet), Label(ungeordnet, Überschneidungen};
 \end{axis}
 \end{tikzpicture}
+
 \end{center}
 \caption{Die aus Abbildung \ref{fig:maxlist} zeigt die gewählten Zuordnungen. Diese werden in dieser Abbildung mit den absoluten Dokumentmengen der Topics bzw. Abteilungen verglichen.}
 \label{fig:comp}
