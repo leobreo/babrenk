@@ -1428,6 +1428,8 @@ grid style=dashed,
 legend pos = north west,
 xmajorgrids=true,
 legend cell align={left},
+nodes near coords,
+point meta=explicit symbolic
 ]
 
 \addlegendimage{no markers, thick, orange}
@@ -1436,7 +1438,25 @@ legend cell align={left},
 
 % BLAU
 \addplot[ybar, bar width=15,bar shift=0pt,color=blue,fill = blue!50,style = {very thick}] coordinates {
-(0,14245)(1,14245)(2,23533)(3,23533)(4,23533)(5,23533)(6,20676)(7,9770)(8,20676)(9,20676)(10,21061)(11,23533)(12,23533)(13,20676)(14,23533)(15,20676)(16,23533)(17,23533)};
+(0,14245)[\textbf{\textcolor{blue!90}{L2}}]
+(1,14245)[\textbf{\textcolor{blue!90}{L2}}]
+(2,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(3,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(4,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(5,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(6,20676)[\textbf{\textcolor{blue!90}{L10}}]
+(7,9770)[\textbf{\textcolor{blue!90}{L0}}]
+(8,20676)[\textbf{\textcolor{blue!90}{L10}}]
+(9,20676)[\textbf{\textcolor{blue!90}{L10}}]
+(10,21061)[\textbf{\textcolor{blue!90}{L1}}]
+(11,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(12,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(13,20676)[\textbf{\textcolor{blue!90}{L10}}]
+(14,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(15,20676)[\textcolor{blue!90}{L10}]
+(16,23533)[\textbf{\textcolor{blue!90}{L9}}]
+(17,23533)[\textbf{\textcolor{blue!90}{L10}}]
+};
 
 \addplot[
     color=blue!95,
