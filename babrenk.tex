@@ -1124,6 +1124,11 @@ Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Vertei
 In Abbildung \ref{fig:top5} sind die häufigsten 5 Wörter aller Topics auf der Y-Achse aufgelistet. Die X-Achse beschreibt die Anzahl der Topics, die das bestimmte Wort als eines der häufigsten 5 besitzen. Hätten alle 18 Topics Schlüsselwörter, die das Topic eindeutig beschreiben, würden sich 90 verschiedene Wörter auf der Y-Achse ergeben. Hier sind jedoch nur 9 Wörter aufgezählt, deren Anzahl sich auf 90 addiert. Die Topics teilen sich also auf 90 möglichen Schlüsselwörtern nur 9 Stück. Das bedeutet, dass sich die Topics semantisch sehr schwach bis garnicht von einander unterscheiden lassen. Dies ist auf die Qualität der Daten und dessen Wörter zurückzuführen. Die Topics lassen sich nicht stark genug von einander abgrenzen, wenn in jeden Topic die selben Wörter zu einem hohen Anteil vorkommen. Somit kann die Qualität der Daten und damit die des Klassifikators erhöht werden, indem die Stoppwörter erweitert werden. Wenn man beispielsweise das Wort ostholstein betrachtet, ist dies nicht aussagekräftig für die Abteilung, da sich alle Abteilungen in Ostholstein befinden. Die Wahl der zu ergänzenden Stoppwörter hängt also mit von der semantischen Bedeutung des Wortes ab. Dazu muss auf die Anzahl der Wörter insgesamt geachtete werden und die stark vertretenen Worte dieser Art entfernt werden. Zuletzt ist bedeutend, wie stark die semantische Bedeutung des jeweiligen Wortes für die bestimmte Abteilung ist. Ein Wort, das eine ganz bestimmt Abteilung beschreibt, wie ablesen die Abteilung Ablesung, darf dies natürlich nicht entfernt werden. 
 \\
 
+
+
+\item \textbf{Zuordnung Abteilung zu Topic}\\
+%Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wieder, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Für die Umsetzung betrachten wir die Abbildung \ref{fig:matrixnormal} aus Abschnitt 4, die eine Matrix mit allen Überschneidungen zwischen Topics und Abteilungen mit absoluten Werten aufzeichnet. Hierbei beinhalten die Werte nur Dokumente, die sowohl in der Topic, als auch in der Abteilung enthalten sind. Um eine möglichst effektive Zuteilung zu erlangen, wählen wir zuerst den naivsten Ansatz, aus jeder Zeile den maximalen Wert zu nehmen. Als Graphik ist das wie folgt darzustellen: 
+Wie in der Konzeption beschrieben ist der naivste Ansatz, um die Topics als Abteilungen zu interpretieren, den Topics der Reihenfolge nach die Abteilungen zuzuordnen. Also würde Topic 0 Abteilung 0 zugeteilt bekommen. \\
 %\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture} 
@@ -1176,9 +1181,9 @@ In Abbildung \ref{fig:top5} sind die häufigsten 5 Wörter aller Topics auf der 
 \end{center}
 %\end{figure}
 
-Das Säulendiagramm in Abbildung \ref{fig:countschart} bildet jeweils für alle $x in [0,17]$ Abteilung x auf Topic x ab und stellt die Anzahl in diesen Topics bzw. Abteilungen gegenüber. Dies zeigt, dass die Topics nicht optimal auf die Abteilungen abgebildet sind. Die Anzahl der enthaltenen Dokumente sollte ähnlicher sein. Betrachtet man zum Beispiel Topic 14, kann diese nicht Abteilung 14 darstellen, da es sich um einen Unterschied von 21312 Dokumenten, also 72$\%$, handelt.\\
+Das Säulendiagramm in Abbildung \ref{fig:countschart} bildet jeweils für alle $x \in [0,17]$ Abteilung x auf Topic x ab und stellt die Anzahl in diesen Topics bzw. Abteilungen gegenüber. Dies zeigt, dass die Topics nicht optimal auf die Abteilungen abgebildet sind. Die Anzahl der enthaltenen Dokumente sollte ähnlicher sein. Betrachtet man zum Beispiel Topic 14, kann diese nicht Abteilung 14 darstellen, da es sich um einen Unterschied von 21312 Dokumenten, also 72$\%$, handelt.\\
 
-In den Abbildungen \ref{fig:count1} und \ref{fig:count2} ist die Anzahl der Dokumente in den jeweiligen Topics und Abteilungen aufgelistet. Um eine bessere Übersicht über die Daten zu bekommen, sind die Listen in den folgenden Abbildungen nach der Größe sortiert und mit einem weiteren Parameter dargestellt, der als Vergleichswert dienen soll. Dieser Parameter stellt den prozentualen Anteil der Topics im Korpus dar: 
+Die Abbilung \ref{fig:countchart} zeigt, dass die Topics unabhängig von ihrem Index jedem Topic zugeordnet werden könnten. Um die korrekte Zuordnung zu finden, müssen alternative Ansätze gefunden werden. In den Abbildungen \ref{fig:count1} und \ref{fig:count2} ist die Anzahl der Dokumente in den jeweiligen Topics und Abteilungen aufgelistet. Um eine bessere Übersicht über die Daten zu bekommen, sind die Listen in den folgenden Abbildungen nach der Größe sortiert und mit einem weiteren Parameter dargestellt, der als Vergleichswert dienen soll. Dieser Parameter stellt den prozentualen Anteil der Topics im Korpus dar: 
 
 \begin{figure}[H]
 \begin{center}
@@ -1209,6 +1214,7 @@ Topics & Counts LDA & Anteil$[\%]$\\
 \hline
 \end{tabular}
 \caption{Anzahl Dokumente in Topics mit relativem Anteil}
+\label{fig:count3}
 \end{center}
 \end{figure}
 
@@ -1243,16 +1249,14 @@ Abteilung & Counts Label & Anteil$[\%]$\\
 \hline
 \end{tabular}
 \caption{Anzahl Dokumente in Abteilungen mit relativem Anteil}
+\label{fig:count4}
 \end{center}
 \end{figure}
 
 
-Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als die ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterschieden sich durch $5923$ Dokumente. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von der ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modelling erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von der ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zu, Beispiel Ostholstein oder Zweckverband. Die Wörter können dafür sorgen, dass Dokumente in die gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
+Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Dafür sind die Anzahlen in Abbildung \ref{fig:count3} und Abbildung \ref{fig:count4} zu unterschiedlich. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als die ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterschieden sich durch $5923$ Dokumente. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von der ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modell erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von der ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zu, Beispiel Ostholstein oder Zweckverband. Die Wörter können dafür sorgen, dass Dokumente in die gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
 
-\item \textbf{Zuordnung Abteilung zu Topic}\\
-%Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wieder, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Für die Umsetzung betrachten wir die Abbildung \ref{fig:matrixnormal} aus Abschnitt 4, die eine Matrix mit allen Überschneidungen zwischen Topics und Abteilungen mit absoluten Werten aufzeichnet. Hierbei beinhalten die Werte nur Dokumente, die sowohl in der Topic, als auch in der Abteilung enthalten sind. Um eine möglichst effektive Zuteilung zu erlangen, wählen wir zuerst den naivsten Ansatz, aus jeder Zeile den maximalen Wert zu nehmen. Als Graphik ist das wie folgt darzustellen: 
-
-Für die Zuordnung der Topics auf Abteilungen wurde in Abschnitt 4 in Abbildung \ref{fig:matrixnormal} eine Matrix erstellt, die alle Überschneidungen gezählt hat. Diese wurden dann für alle Topics und Abteilungen in der Matrix als absolute Werte aufgetragen. Abbildung \ref{fig:maxgraph} stellt die Ergebnisse der Matrix in einem Graphen dar, auf dem die X-Achse die Labels, also Abteilungen, aufträgt und die Y-Achse für die Anzahl der überschneidenden Dokumente steht. Wie viele Dokumente sich in jedem Topic und Abteilung überschneiden ist durch die 18 Graphen dargestellt, die jeweils den Wert in einer Funktion aufgetragen haben. Aus Abbildung \ref{fig:matrixgraph} ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. 
+Die reine Anzahl der Dokumente ist nicht aussagekräftig genug, um eine Qualität der Zuordnung umfassend zu untersucht. Dafür werden die Überschneidungen zwischen Topic und Abteilung betrachtet. Für die Zuordnung der Topics auf Abteilungen wurde in Abschnitt 4 in Abbildung \ref{fig:matrixnormal} eine Matrix erstellt, die alle Überschneidungen gezählt hat. Diese wurden dann für alle Topics und Abteilungen in der Matrix als absolute Werte aufgetragen. Abbildung \ref{fig:maxgraph} stellt die Ergebnisse der Matrix in einem Graphen dar, auf dem die X-Achse die Labels, also Abteilungen, aufträgt und die Y-Achse für die Anzahl der überschneidenden Dokumente steht. Wie viele Dokumente sich in jedem Topic und Abteilung überschneiden ist durch die 18 Graphen dargestellt, die jeweils den Wert in einer Funktion aufgetragen haben. Aus Abbildung \ref{fig:matrixgraph} ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. 
 
 %\begin{figure}[h]
 \begin{center}
@@ -1401,8 +1405,45 @@ maxmatrix = [2,2,9,9,9,9,10,0,10,10,1,9,9,10,9,10,9,9]
 \caption{Liste der zugeordneten Topics und Abteilungen bei maximaler Überschneidung pro Topic}
 \label{fig:maxlist}
 \end{center}
-\end{figure}
+\end{figure}\\
 
+
+Für diese Zuordnung prüfen wir nun die Anzahl der Dokumente in den jeweils gewählten Topics bzw. Abteilungen. Dabei ist die reine Schnittmenge nicht der alleinige Parameter. Dafür werden die Anteile aus Abbildung \ref{fig:count1} und Abbildung \ref{fig:count2} zum Vergleich herangezogen. Eine Zuordnung ist nur dann gut, wenn die Überschneidungsmenge möglichst nah an der Gesamtmenge der zugeordneten Dokument in der Topic bzw. Abteilung ist. Eine vergleichsmäßig hohe Schnittmenge heißt nicht automatisch eine korrekte Zuteilung, wenn die Abteilung zum Beispiel manuell deutlich mehr Daten zugeordnet hat.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [tick label style={/pgf/number format/fixed}, 
+scaled ticks=false,
+ybar,
+xmin=-1,
+xmax=18,
+ymin=0,
+ymax=30000, 
+bar width=5pt, 
+height=8cm,
+width=15cm, 
+ylabel={Anzahl Elemente}, 
+xlabel={Topics bzw. Abteilungen}, 
+grid style=dashed,
+legend pos = north west,
+xmajorgrids=true]
+\addplot coordinates {
+    (0,8605)(1,3959)(2,5974)(3,1714)(4,5823)(5,2291)(6,3558)(7,12721)(8,4207)(9,1100)(10,10021)(11,3243)(12,14556)(13,2697)(14,29456)(15,1162)(16,575)(17,1400)
+};
+\addplot coordinates {
+(0,14245)(1,14245)(2,23533)(3,23533)(4,23533)(5,23533)(6,20676)(7,9770)(8,20676)(9,20676)(10,21061)(11,23533)(12,23533)(13,20676)(14,23533)(15,20676)(16,23533)(17,23533)
+};
+\addplot coordinates{
+(0,2150)(1,650)(2,1498)(3,432)(4,1111)(5,480)(6,4730)(7,3376)(8,1013)(9,400)(10,1610)(11,678)(12,2672)(13,639)(14,5730)(15,284)(16,105)(17,217)
+};
+\legend{Topics (geordnet), Label(ungeordnet, Überschneidungen};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\caption{Die aus Abbildung \ref{fig:maxlist} zeigt die gewählten Zuordnungen. Diese werden in dieser Abbildung mit den absoluten Dokumentmengen der Topics bzw. Abteilungen verglichen.}
+\label{fig:comp}
+\end{figure}
 \textbf{HIER DIE NEUE CHART HIN MIT ÜBERSHCNIEDUNGEN IM VGL ZU BETRAG DER ABETILUNG BZW TOPIC}
 
 Wie zu erkennen ist, sind nur die Zahlen $ 0,1,2,9,10 $ in der Liste vertreten. Eine optimale Zuordnung wäre jedoch erst erreicht, wenn alle Zahlen von 1 bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Dies liegt daran, dass eine Topic nur genau eine Abteilung darstellen darf. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem neunten Thema der ZVO kompatibel wären. Dabei werden $9/18$ Topics Abteilung $9$, $1/18$ Topic Abteilung $1$, $5/18$ Topics Abteilung $10$ und $2/18$ Topics Abteilung $2$ zugeordnet. Hier fällt auf, dass diesen Abteilungen die meisten Dokumente von der ZVO händisch zugeordnet wurden. Somit können sie sich auch mit vielen Dokumenten aus den LDA Topics überschneiden. Dies lässt zusätzlich vermuten, dass zum Beispiel die Abteilung 9, die laut Abbildung \ref{fig:count2} die meisten Dokumente enthält, ein zu breites inhaltliches Spektrum abdeckt und in noch weitere Unterthemen unterteilt werden könnte. Dies wird dadurch begründet, dass das Topic-Modell viele der Dokumente aus Abteilung 9 in verschiedene Topics eingeteilt hat.\\
