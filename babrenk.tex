@@ -412,15 +412,6 @@
 \section{Contributions of this Thesis}
 
 
-
-\section{Related Work}
-td-idf
-word-embeddings
-
-\section{Sturktur dieser Arbeit}
-Der Bereich Data Science und Datenverarbeitung durchläuft aktuell eine starke Welle an Innovation und Veränderung. Deshalb wird in dieser Arbeit zuerst eine Einleitung die Motivation und das Prinzip der Topic-Modellierung beschreiben. Gefolgt wird die allgemeine Einleitung von der Motivation und Aufgabenstellung in Bezug auf das Anwendungsbeispiel des Zweckverbands Ostholstein (ZVO). Die Anwendung der Algorithmen wird im Laufe der Arbeit mit theoretischen Grundlagen erklärt, die eine klare Notation fordern: diese ist im Teil der Notationen gelistet. Das Prinzip der Topic-Modellierung kann mit unterschiedlichen Ansätzen implementiert werden. Beispiele sind: LDA, NNF und LSA. Da sich diese in ihrem Ansatz und in ihrer Umsetzung unterscheiden, werden im nächsten Abschnitt die bekanntesten dieser Modelle verglichen, indem ihre Vorgehens- und Funktionsweise untersucht werden. Die Methode, die in dieser Arbeit genauer beleuchtet wird, ist Latent Dirichlet Allocation. Der dritte Abschnitt wird von der Herkunft, dem Format und der Verarbeitung der Daten der ZVO handeln. Dabei wird der Anwendungsfall und die ZVO genauer erklärt und ein Einblick in die Daten, deren Reinigung und Verarbeitung gegeben. Darauf folgt das Konzept der Lösungsstrategie, um die Aussagekraft und Qualität der Daten für Topic-Modellierung erfolgreich zu untersuchen. Dafür wird der Ablauf des Algorithmus anschaulich dargestellt und die Prozesskette der Analyse im Detail aufgeschlüsselt. Im vierten Abschnitt findet die Implementierung des im dritten Abschnitt erklärten Konzepts statt. Für diese wird eine Methode der Topic-Modellierung ausgewählt und in einer vorher definierten und begründeten Programmierumgebung realisiert. Die Umsetzung wird anhand des gelisteten Algorithmus zeilenweise erklärt. Der Output ist in die Arbeit integriert, um dessen zentrale Rolle in der Datenanalyse zu unterstreichen und die Ergebnisse verständlich begründen zu können. Die detaillierte Analyse folgt im nächsten Abschnitt, der sich damit befasst, die Ergebnisse der Implementierung im Anwendungsfall der ZVO zu interpretieren. Dabei wird begründet, wie gut sich die Daten für eine Topic-Modellierung der ZVO Daten eignen und was die Ergebnisse über die Qualität der Daten aussagt. Die Arbeit wird abgeschlossen mit der Zusammenfassung der gesamten Analyse und einem Ausblick für die ZVO in Bezug auf Topic-Modellierung. Die gewonnenen Ergebnisse der Datenqualität sollen der ZVO nach der Ergebnisgewinnung zu einer höheren Effizienz in der Datenverarbeitung verhelfen und Aufschluss über Handlungsbedarf und Optimierungspotential in den Datensätzen geben.
-
-
 \section{Motivation}
 Die digitalisierte Welt generiert täglich riesige Mengen an neuen Informationen. Von E-Books, Blogs über Nachrichten-Websites und Magazinen bis hin zu mobilen Anwendungen auf dem Smartphone, immer mehr Menschen verlassen sich auf und richten ihr Leben nach dem Internet aus. Das Zeitalter des Big-Data ermöglicht es Nutzern unbegrenzt viele Daten zu generieren und zu sammeln. Die Kapazitäten, die ein Mensch aufbringen kann, um solche Massen an Daten zu organisieren und zu verstehen, sind schon lange übertroffen. Vor allem durch die steigende digitale Kommunikation und stetig sinkenden Speicherplatzkosten, erhöht sich die Menge an zu speichernden Einsen und Nullen. Laut Statista wurden 2018 33 Zettabyte an Daten generiert mit einer prognostizierten Steigerung bis 2025 um 530\% auf 175 Zettabyte. Dieser dramatische Anstieg zeigt die Dringlichkeit für effiziente Algorithmen und Modelle der Datenverarbeitung. Neben der reinen Handhabung solcher Daten steigt aber auch das Bewusstsein, aus diesen Daten Verständnis und Potentiale zu schaffen. Besonders Suchverfahren gewinnen an Bedeutung, wenn in großen, unübersichtlichen Datenmengen bestimmte Informationen gefragt sind. Für die Mehrheit bieten Firmen, wie Google, diese Anwendung an. Zwar kann durch die Keyword-basierten Suche das passende Dokument gefunden werden, jedoch schlägt die Suchmaschine fehl, wenn nach einer Menge von Dokumente mit einem übergreifenden Thema gefragt ist. Um mehrere Dokumente auf geteilte Themen zu untersuchen, wird die sogenannte Topic-Modellierung verwendet. Topic-Modellierung (dt. Themenmodellierung) beschreibt eine Gruppe von Verfahren, die es ermöglichen, große elektronische Datensammlungen automatisiert zu durchsuchen, organisieren und zu verstehen. Es können Muster innerhalb der Daten entdeckt und Topics extrahiert werden. Ein Topic stellt dabei eine Menge an Wörtern dar, häufig gemeinsam in einem Kontext vorkommen. Einem Topic über Hunde würden beispielsweise die Wörter Bellen, Fell und Halsband zu einer hohen Wahrscheinlichkeit angehören, da sie oft gemeinsam in dem übergeordneten Thema über Hunde gebraucht werden. Die Modellierung solcher Topics wird als Topic-Modellierung bezeichnet, da in einer Datenmenge nach mehreren solcher Topics gesucht wird. Diese können zu unterschiedlichen Anteilen in dem Dokument vertreten sein. Ein Dokument ist dabei ein Teil eines Korpus, also einer Menge mehrerer Dokumente. Dabei stellen Topic-Modelle statistische Modelle dar, die Verwendung in der Inferenz abstrakter Topics in unsortierten Datenmengen finden. Topic Modelling gehört zu dem Bereich des Natural Language Processing, also der Verarbeitung natürlicher Sprache. Es verbindet Computerlinguistik, Informatik und Künstliche Intelligenz, um die Potentiale der Sprachverarbeitung mit der heutigen Technik auszuschöpfen. In einer Welt von exponentiell wachsenden Datenmengen finden Methoden der Topic-Modellierung stetig eine breitere Anwendung. Bereits heute wird Topic-Modellierung in vielen Bereichen der Wirtschaft, Wissenschaft und Informationstechnologie verwendet. So findet die Topic-Modellierung unter anderem Anwendung bei Zusammenfassungen, Spam Filtern, Internet of Things (IOT), Healthcare, Blockchain, Chatbots, FAQs oder HR. Dies zeigt wie umfangreich das Anwendungsspektrum der Topic-Modellierung ist. Um semantische Folgerungen aus Datenmengen zu generieren, gibt es verschiedene Ansätze – in dieser Arbeit wird es um das generative Modell Latent Dirichlet Allocation(LDA) gehen. Dabei werden ähnliche Wörter, die in ähnlichen Kontexten vorkommen in Topics gruppiert. Die Grundlagen des LDA liegen bei der Verallgemeinerung des bereits $1999$ veröffentlichten Probabilistic Latent semantic Analysis (PLSA). Im Gegensatz zu anderen Machine Learning Methoden im Bereich der Datenverarbeitung, hat Topic-Modellierung die Besonderheit, dass ein Dokument nicht nur zu einem Topic zugeordnet werden kann, wie z.B. bei Clusteralgorithmen. Bei der Topic-Modellierung wird jedes Dokument durch eine Verteilung an Topics beschreiben, das bedeutet in jedem Dokument sind immer alle Topics zu finden - nur zu einem bestimmten Anteil. Genauso sind in einem Topic immer alle Worte zu einer bestimmten Wahrscheinlichkeit vorhanden. Bei einem Artikel, der zu $90\%$ über Sport und $10\%$ über Politik handelt, werden somit neun mal mehr Wörter bezüglich Sport zu finden sein, als über Politik. Topic-Modellierung wird den unüberwachten Lernmethoden des Data Minings zugeordnet, also der Extraktion von Muster und Trends in Datenmengen durch die Anwendung statistischer Algorithmen. Das bedeutet, dass die Topics ohne die Einwirkung von manuell erzeugten Labels gefunden werden. Im Lernprozess werden dann Verteilungen basierend auf den bislang vorgenommenen Zuordnungen iterativ angepasst und verbessert - jedoch alles ohne menschliches Zutun. 
 
@@ -434,10 +425,17 @@ Diese Arbeit verfolgt zwei Ziele:
 
 Diese Arbeit beschäftigt sich mit der Vorhersage der Qualität des Klassifikators, indem die Qualität der manuell erstellten Kategorien und Kundenanfrage-Gruppen untersucht und mit den Ergebnissen verschiedenen Topic Modellierungen verglichen wird. Das Ergebnis eines Topic Models hängt stark von der Qualität der Daten ab, die sie als Input bekommt. Diese Daten durchlaufen eine Reinigungsphase, bevor sie klassifiziert werden, um sie in eine gut zu verarbeitende Form zu bringen. Der Prozess der Reinigung kann Einfluss auf das Ergebnis haben. Ziel dieser Arbeit ist es, Erkenntnisse über die Qualität des Klassifikators zu treffen, in Abhängigkeit zu den verwendeten Daten. Somit wird durch die Nutzung von LDA-Modellen die Qualität der Daten untersucht und Prognosen über einer höheren Qualität der Klassfikiation anhand der Daten gemacht. 
 
+\section{Sturktur dieser Arbeit}
+Der Bereich Data Science und Datenverarbeitung durchläuft aktuell eine starke Welle an Innovation und Veränderung. Deshalb wird in dieser Arbeit zuerst eine Einleitung die Motivation und das Prinzip der Topic-Modellierung beschreiben. Gefolgt wird die allgemeine Einleitung von der Motivation und Aufgabenstellung in Bezug auf das Anwendungsbeispiel des Zweckverbands Ostholstein (ZVO). Die Anwendung der Algorithmen wird im Laufe der Arbeit mit theoretischen Grundlagen erklärt, die eine klare Notation fordern: diese ist im Teil der Notationen gelistet. Das Prinzip der Topic-Modellierung kann mit unterschiedlichen Ansätzen implementiert werden. Beispiele sind: LDA, NNF und LSA. Da sich diese in ihrem Ansatz und in ihrer Umsetzung unterscheiden, werden im nächsten Abschnitt die bekanntesten dieser Modelle verglichen, indem ihre Vorgehens- und Funktionsweise untersucht werden. Die Methode, die in dieser Arbeit genauer beleuchtet wird, ist Latent Dirichlet Allocation. Der dritte Abschnitt wird von der Herkunft, dem Format und der Verarbeitung der Daten der ZVO handeln. Dabei wird der Anwendungsfall und die ZVO genauer erklärt und ein Einblick in die Daten, deren Reinigung und Verarbeitung gegeben. Darauf folgt das Konzept der Lösungsstrategie, um die Aussagekraft und Qualität der Daten für Topic-Modellierung erfolgreich zu untersuchen. Dafür wird der Ablauf des Algorithmus anschaulich dargestellt und die Prozesskette der Analyse im Detail aufgeschlüsselt. Im vierten Abschnitt findet die Implementierung des im dritten Abschnitt erklärten Konzepts statt. Für diese wird eine Methode der Topic-Modellierung ausgewählt und in einer vorher definierten und begründeten Programmierumgebung realisiert. Die Umsetzung wird anhand des gelisteten Algorithmus zeilenweise erklärt. Der Output ist in die Arbeit integriert, um dessen zentrale Rolle in der Datenanalyse zu unterstreichen und die Ergebnisse verständlich begründen zu können. Die detaillierte Analyse folgt im nächsten Abschnitt, der sich damit befasst, die Ergebnisse der Implementierung im Anwendungsfall der ZVO zu interpretieren. Dabei wird begründet, wie gut sich die Daten für eine Topic-Modellierung der ZVO Daten eignen und was die Ergebnisse über die Qualität der Daten aussagt. Die Arbeit wird abgeschlossen mit der Zusammenfassung der gesamten Analyse und einem Ausblick für die ZVO in Bezug auf Topic-Modellierung. Die gewonnenen Ergebnisse der Datenqualität sollen der ZVO nach der Ergebnisgewinnung zu einer höheren Effizienz in der Datenverarbeitung verhelfen und Aufschluss über Handlungsbedarf und Optimierungspotential in den Datensätzen geben.
+
 \chapter{Grundlagen}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%GRUNDLADEN
 
+....Einleitung Kapitel
 
 \section{Notation}
+
+...Einleitung Notation 
+
 
 \begin{itemize}
 	\item Ein Wort wird mit $w \in N$ mit $N$ als Menge aller Worte bezeichnet
@@ -448,7 +446,7 @@ Diese Arbeit beschäftigt sich mit der Vorhersage der Qualität des Klassifikato
 \end{itemize}
 
 
-\section{Modellvergleich}
+\section{Techniken der Topic-Modellierung}
 
 Das Feld des Information Retrieval bietet vielseitige Verfahren, um Topic-Modellierung zu betreiben. Bei vielen geht es um eine Dimensionsreduktion des Datensatzes, die Aufschluss und Erkenntnis über die Datenmenge geben soll. In dieser Arbeit wird die Latent Dirichlet Allocation(LDA) verwendet, das als Bindeglied zwischen statistichen und probabilistischen Maßen agiert. LDA wurde durch die Optimierung und Vermischung verschiednener vorangegangener Verfahren entwickelt. Die wichtigsten Verfahren in der Entwicklung von LDA sind im Folgenden aufgelistet und erklärt: 
 
@@ -596,11 +594,16 @@ In der ersten Abbildung \ref{fig:img1} führt ein kleiner $\alpha = 0.01$ Wert z
 %\end{center}
 
 
-\chapter{Konzept} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%KONZEPT
+\section{Related Work}
+td-idf
+word-embeddings
+
+
+\chapter{Konzeption} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%KONZEPT
 
 Dieser Abschnitt wird die Vorgehensweise beschreiben, wie unter der Nutzung der Daten der ZVO Topic-Modellierung umgesetzt wird, um Aufschluss über die Qualität der Daten zu erlangen. Dafür werden zuerst die Daten, deren Format und deren Verarbeitung vorgestellt und dann die Herangehensweise geschildert und aufgeschlüsselt.
 
-\section{Daten}
+\section{Kundenanfragen des ZVO}
 Die ZVO hat 133045 unterschiedlich große Dokumente zur Verfügung gestellt. Die Daten sind in einem Dataframe gespeichert und liegen in folgendem Format vor: 
 
 %\begin{center}
@@ -666,7 +669,7 @@ Bevor die Topic-Modellierung auf den Daten durchgeführt werden kann, müssen di
 \subsection{Feature Engineering}
 Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dabei sind die Features in Form der Spalten des Dataframes bereits passend gegliedert. Für die Darstellung der Dokumente als Menge an Zahlenwerten wird ein Dictionary erstellt, das die Wörter wie in Abbildung \ref{fig:data2} erhält und die Anzahl der Wörter ohne Duplikate in einer Liste, das Dictionary, auflistet. Diese Auflistung der Wörter zusammen mit ihrer Anzahl und laufenden Indexnummer kann als Input für ein LDA Modell verwendet werden. Die Worte werden intern als ID dargestellt, die für einen Menschen nicht zu verstehen ist. Aus diese Grund wird im Algorithmus der id2wordParameter eingeführt, der die Übersetzung zwischen Zahl und Datum darstellt. 
 
-\section{Anwendungsfall ZVO}
+\section{Verfahrensweise}
 Bei der ZVO sollen jährlich händisch aufgenommene Anfragen in Zukunft maschinell klassifiziert werden. Dafür wird im Rahmen des M4KK ein Kundenanfrage-Klassifikator erstellt. Für die korrekte Klassifikation ist die Qualität der vorliegenden Daten von hoher Bedeutung. Die Arbeit verfolgt das Ziel, die Qualität der Daten zu analysieren und semantische Gruppierungen zu analysieren. Dafür wird ein LDA Modell generiert, das als Datengrundlage alle verfügbaren ZVO Daten verwendet. Das Vorgehen ist wie folgt in Abbildung \ref{fig:flowchart} dargestellt:   
 
 % FLOW CHART %%%%%%%
@@ -740,7 +743,7 @@ Das LDA Modell erstellt aus den Daten 18 Topics. Diese Topics sollten im optimal
 
 \chapter{Implementierung}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%IMPLEMENTIERUNG
 Dieser Abschnitt befasst sich mit der Implementierung des im Abschnitt 3 beschriebenen Konzepts. Dabei wird die Implementierung durch Python Code erklärt und die genaue Vorgehensweise dargestellt. Die Ergebnisse werden gezeigt, jedoch noch nicht analysiert. \\
-\section{Topic Modeling Methode}
+\section{Topic-Modeling Methode}
 Zur Untersuchung der Qualität der ZVO-Daten wird in dieser Arbeit die LDA Methode verwendet. Dabei wird nur der Text als bekannt angenommen. Die Topics sind zu Beginn nicht bekannt. Als grundlegendes Topic Modellierungsverfahren findet es Verwendung in einem breiten Anwendungsspektrum. Durch die Bekanntheit von LDA sind bereits viele Pakete und Bibliotheken in Programmierumgebungen vorzufinden und einfach zu implementieren. Seit LDAs Veröffentlichung in 2000 wurde eine umfassende und detailreiche Dokumentation entwickelt, die neben vielen Forenbeiträgen, die Arbeit mit LDA stark erleichtern. Zusätzlich hat LDA in diesem Anwendungsfall den Vorteil, dass es nicht wie zum Beispiel LSA direkt Dokumentähnlichkeiten ausgibt, sondern das Ergebnis in Form einer Matrix dartellt, die Wörter auf Dokumente abbildet. Damit ergeben sich als Werte der Matrix die Topics, denen die Wörter jeweils angehören. Bei LDA Modellen ist die Anzahl der Topics ein individueller Input, durch den sich das Ergebnis schwerwiegend verändern kann. Die Werte in der Matrix können somit von $0$ bis zu der individuellen Anzahl der Topics reichen. Die optimale Anzahl an Topics ist grundsätzlich ein nicht einfaches Problem bei Anwendungen. Im Fall der ZVO werden als Anzahl der Topics 18  gewählt, da dies die Anzahl der bereits erstellten Abteilungen ist. 
 
 \section{Toolauswahl}
@@ -1009,8 +1012,8 @@ L10&ZSK-Bank\\
 L11&ZSK-Interessenten\\
 L12&ZSK-Korrekturrechnungen\\
 L13&ZSK-Schwierige Fälle\\
-L14&ZSK-Stammdaten/Postrückläufer
-L15&ZSK-Standard Abfall\
+L14&ZSK-Stammdaten/Postrückläufer\\
+L15&ZSK-Standard Abfall\\
 L16&ZSK-Standard Verbrauch\\
 L17&ZSK-Widersprüche Abfall\\
 \hline
@@ -1088,7 +1091,7 @@ Diese Matrix bildet die Überschneidungen aller 133044 Dokumenten ab. Dabei sind
 \end{enumerate}
 
 	
-\chapter{Analyse}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ANALYSE
+\chapter{Experimentelle Evaluation und Analyse}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ANALYSE
 Die Implementierung des LDA Modells wurde im vorausgegangenen Teil vorgenommen. In diesem Abschnitt werden die Ausgaben analysiert und aus verschiedenen Perspektiven auf Erkenntnisse geprüft. Wie in Abschnitt 3 und 4 wird auch dieser Abschnitt in die zwei Teilbereiche dieser Arbeit unterteilt.
 
 \begin{enumerate}
