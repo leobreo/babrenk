@@ -292,7 +292,7 @@
 % “modern aspect”), which means that his font must be installed.
 %
 %
-% \UzLStyle{computer modern scholary design}
+%\UzLStyle{computer modern scholary design}
 %
 % In my opinion, this is the ultimate “scholary design”: The thesis
 % will look like it has been typeset by hand some 150 years ago and
@@ -316,7 +316,7 @@
 % headlines. A nice alternative to the basic version.
 %
 %
-% \UzLStyle{pagella contrast design}
+\UzLStyle{pagella contrast design}
 %
 % This design tries to create some visual friction by contrasting the
 % sans serif headline font (in bold!) with the main text. I find it a
@@ -344,7 +344,7 @@
 % that comes to my mind.
 %
 %
-\UzLStyle{alegrya modern design}
+%\UzLStyle{alegrya modern design}
 %
 % A design that uses the sans serif version of the Alegrya font for
 % the headlines. This is a nice modern overall design.
@@ -1256,7 +1256,7 @@ Abteilung & Counts Label & Anteil$[\%]$\\
 
 Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Dafür sind die Anzahlen in Abbildung \ref{fig:count3} und Abbildung \ref{fig:count4} zu unterschiedlich. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als die ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterschieden sich durch $5923$ Dokumente. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von der ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modell erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von der ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zu, Beispiel Ostholstein oder Zweckverband. Die Wörter können dafür sorgen, dass Dokumente in die gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
 
-Die reine Anzahl der Dokumente ist nicht aussagekräftig genug, um eine Qualität der Zuordnung umfassend zu untersucht. Dafür werden die Überschneidungen zwischen Topic und Abteilung betrachtet. Für die Zuordnung der Topics auf Abteilungen wurde in Abschnitt 4 in Abbildung \ref{fig:matrixnormal} eine Matrix erstellt, die alle Überschneidungen gezählt hat. Diese wurden dann für alle Topics und Abteilungen in der Matrix als absolute Werte aufgetragen. Abbildung \ref{fig:maxgraph} stellt die Ergebnisse der Matrix in einem Graphen dar, auf dem die X-Achse die Labels, also Abteilungen, aufträgt und die Y-Achse für die Anzahl der überschneidenden Dokumente steht. Wie viele Dokumente sich in jedem Topic und Abteilung überschneiden ist durch die 18 Graphen dargestellt, die jeweils den Wert in einer Funktion aufgetragen haben. Aus Abbildung \ref{fig:matrixgraph} ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. 
+Die reine Anzahl der Dokumente ist nicht aussagekräftig genug, um eine Qualität der Zuordnung umfassend zu untersuchen. Dafür werden die Überschneidungen zwischen Topic und Abteilung betrachtet. Für die Zuordnung der Topics auf Abteilungen wurde in Abschnitt 4 in Abbildung \ref{fig:matrixnormal} eine Matrix erstellt, die alle Überschneidungen gezählt hat. Diese wurden dann für alle Topics und Abteilungen in der Matrix als absolute Werte aufgetragen. Abbildung \ref{fig:maxgraph} stellt die Ergebnisse der Matrix in einem Graphen dar, auf dem die X-Achse die Labels, also Abteilungen, aufträgt und die Y-Achse für die Anzahl der überschneidenden Dokumente steht. Wie viele Dokumente sich in jedem Topic und Abteilung überschneiden ist durch die 18 Graphen dargestellt, die jeweils den Wert in einer Funktion aufgetragen haben. Aus Abbildung \ref{fig:matrixgraph} ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. 
 
 %\begin{figure}[h]
 \begin{center}
@@ -1408,9 +1408,13 @@ maxmatrix = [2,2,9,9,9,9,10,0,10,10,1,9,9,10,9,10,9,9]
 \end{figure}\\
 
 
-Für diese Zuordnung prüfen wir nun die Anzahl der Dokumente in den jeweils gewählten Topics bzw. Abteilungen. Dabei ist die reine Schnittmenge nicht der alleinige Parameter. Dafür werden die Anteile aus Abbildung \ref{fig:count1} und Abbildung \ref{fig:count2} zum Vergleich herangezogen. Eine Zuordnung ist nur dann gut, wenn die Überschneidungsmenge möglichst nah an der Gesamtmenge der zugeordneten Dokument in der Topic bzw. Abteilung ist. Eine vergleichsmäßig hohe Schnittmenge heißt nicht automatisch eine korrekte Zuteilung, wenn die Abteilung zum Beispiel manuell deutlich mehr Daten zugeordnet hat.
+Für diese Zuordnung prüfen wir nun die Anzahl der Dokumente in den jeweils gewählten Topics bzw. Abteilungen. Dabei ist die reine Schnittmenge nicht der alleinige Parameter. Dafür werden die Anteile aus Abbildung \ref{fig:count1} und Abbildung \ref{fig:count2} zum Vergleich herangezogen. Eine Zuordnung ist nur dann gut, wenn die Überschneidungsmenge möglichst nah an der Gesamtmenge der zugeordneten Dokument in der Topic bzw. Abteilung ist. Eine vergleichsmäßig hohe Schnittmenge heißt nicht automatisch eine korrekte Zuteilung, wenn die Abteilung zum Beispiel manuell deutlich mehr Daten zugeordnet hat.\\
 
-\begin{figure}[h]
+
+Wie zu erkennen ist, sind nur die Zahlen $ 0,1,2,9,10 $ in der Liste vertreten. Eine optimale Zuordnung wäre jedoch erst erreicht, wenn alle Zahlen von 1 bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Dies liegt daran, dass eine Topic nur genau eine Abteilung darstellen darf. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem neunten Thema der ZVO kompatibel wären. Dabei werden $9/18$ Topics Abteilung $9$, $1/18$ Topic Abteilung $1$, $5/18$ Topics Abteilung $10$ und $2/18$ Topics Abteilung $2$ zugeordnet. Hier fällt auf, dass diesen Abteilungen die meisten Dokumente von der ZVO händisch zugeordnet wurden. Somit können sie sich auch mit vielen Dokumenten aus den LDA Topics überschneiden. Dies lässt zusätzlich vermuten, dass zum Beispiel die Abteilung 9, die laut Abbildung \ref{fig:count2} die meisten Dokumente enthält, ein zu breites inhaltliches Spektrum abdeckt und in noch weitere Unterthemen unterteilt werden könnte. Dies wird dadurch begründet, dass das Topic-Modell viele der Dokumente aus Abteilung 9 in verschiedene Topics eingeteilt hat.\\
+
+
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
 \begin{axis} [%tick label style={/pgf/number format/fixed}, 
@@ -1422,7 +1426,7 @@ ymin=0,
 ymax=30000, 
 height=15cm,
 width=15cm, 
-ylabel={Anzahl Überschneidungen mit jeweiliger Abteilung}, 
+ylabel={Anzahl Überschneidungen mit jeweiliger Abteilung (in Tsd)}, 
 xlabel={Topics}, 
 grid style=dashed,
 legend pos = north west,
@@ -1467,7 +1471,7 @@ point meta=explicit symbolic
  
 %ORANGE   
 \addplot[ybar, bar width=10,bar shift=0pt, color=orange, fill=orange!50,style = {very thick}] coordinates {
-    (0,8605)(1,3959)(2,5974)(3,1714)(4,5823)(5,2291)(6,3558)(7,12721)(8,4207)(9,1100)(10,10021)(11,3243)(12,14556)(13,2697)(14,29456)(15,1162)(16,575)(17,1400)
+    (0,8605)(1,3959)(2,5974)(3,1714)(4,5823)(5,2291)(6,23558)(7,12721)(8,4207)(9,1100)(10,10021)(11,3243)(12,14556)(13,2697)(14,29456)(15,1162)(16,575)(17,1400)
 };
 
 \addplot[
@@ -1506,11 +1510,9 @@ coordinates {(0,2150)(1,650)(2,1498)(3,432)(4,1111)(5,480)(6,4730)(7,3376)(8,101
 \label{fig:comp}
 \end{figure}
 
+Die Abbildung \ref{fig:comp} stellt die Überschneidungen mit der Menge der Dokumente in den Topics und Abteilungen gegenüber. Dabei zeigen die orangenen Balken die Anzahl der Dokumente, die in den 18 Topics nach der Zuordnung des LDA-Modells enthalten sind. Basierend auf der Zuordnung in Abbildung \ref{fig:maxlist} wurde jedem Topic eine Abteilung zugeordnet. Dies ist an den blauen Labels über den Balken zu erkennen. Die Anzahl der enthaltenen Dokumente in der jeweiligen Abteilung wird in Form der blauen Balken dargestellt. Die roten Balken stellen zusammen mit der roten Funktion die Anzahl der Überschneidungen zwischen Topic und Abteilung und dessen Verlauf dar. Es ist zu erkennen, dass die roten Säulen im Vergleich zu den Topics und Abteilungen sehr klein ausfallen. Das Erkenntnis aus dieser Abbildung ist demnach, dass die maximale Überschneidung nicht die höchste Ähnlichkeit zwischen Topics und Abteilungen darstellt. \\
 
-
-Wie zu erkennen ist, sind nur die Zahlen $ 0,1,2,9,10 $ in der Liste vertreten. Eine optimale Zuordnung wäre jedoch erst erreicht, wenn alle Zahlen von 1 bis 18 ohne Duplikate in der Liste in einer beliebigen Reihenfolge vorkommen. Dies liegt daran, dass eine Topic nur genau eine Abteilung darstellen darf. In der Liste wird jedoch deutlich, dass viele Themen des LDA Modells mit dem neunten Thema der ZVO kompatibel wären. Dabei werden $9/18$ Topics Abteilung $9$, $1/18$ Topic Abteilung $1$, $5/18$ Topics Abteilung $10$ und $2/18$ Topics Abteilung $2$ zugeordnet. Hier fällt auf, dass diesen Abteilungen die meisten Dokumente von der ZVO händisch zugeordnet wurden. Somit können sie sich auch mit vielen Dokumenten aus den LDA Topics überschneiden. Dies lässt zusätzlich vermuten, dass zum Beispiel die Abteilung 9, die laut Abbildung \ref{fig:count2} die meisten Dokumente enthält, ein zu breites inhaltliches Spektrum abdeckt und in noch weitere Unterthemen unterteilt werden könnte. Dies wird dadurch begründet, dass das Topic-Modell viele der Dokumente aus Abteilung 9 in verschiedene Topics eingeteilt hat.\\
-
-Die Zuteilung anhand der maximalen absoluten Überschneidungen ist nicht injektiv. Für die Verarbeitung der Daten ist die injektive Zuordnung jedoch fundamental wichtig, aber schwierig zu erreichen. Für die Beurteilung der Matrix führen wir einen weiteren Parameter ein, die durchschnittliche Überschneidung. Dadurch kann die Kompatibilität der Abteilungen im Bezug auf das Matching mit Topics besser analysiert werden. Vorallem bei Abteilungen, die eine sehr unausgeglichene Überschneidungsmengen haben, da sie deutlich mehr Dokumente als andere enthalten, bietet der Durchschnitt eine alternative Sichtweise. Für die durchschnittliche Überschneidung wird zuerst die Summe aller Dokumente einer Abteilung errechnet, indem alle Werte einer Spalte addiert werden. Daraufhin entsteht eine neue Matrix, in der jeder Wert jeweils durch die Summe seiner Spalte dividiert wird. Dabei wird die Anzahl an Dokumenten in jeder Abteilung irrelevant für das Endergebnis. Somit beschreibt jeder Wert, wie groß der Anteil der aus dieser Topic überschneidenden Dokumente bezogen auf die gesamte Abteilung ist in $\%$: \\
+Die Zuteilung anhand der maximalen absoluten Überschneidungen ist dazu nicht injektiv. Für die Verarbeitung der Daten ist die injektive Zuordnung jedoch fundamental wichtig, aber schwierig zu erreichen. Für die Beurteilung der Matrix führen wir einen weiteren Parameter ein, die durchschnittliche Überschneidung. Dadurch kann die Kompatibilität der Abteilungen im Bezug auf das Matching mit Topics besser analysiert werden. Vorallem bei Abteilungen, die eine sehr unausgeglichene Überschneidungsmengen haben, da sie deutlich mehr Dokumente als andere enthalten, bietet der Durchschnitt eine alternative Sichtweise. Für die durchschnittliche Überschneidung wird zuerst die Summe aller Dokumente einer Abteilung errechnet, indem alle Werte einer Spalte addiert werden. Daraufhin entsteht eine neue Matrix, in der jeder Wert jeweils durch die Summe seiner Spalte dividiert wird. Dabei wird die Anzahl an Dokumenten in jeder Abteilung irrelevant für das Endergebnis. Somit beschreibt jeder Wert, wie groß der Anteil der aus dieser Topic überschneidenden Dokumente bezogen auf die gesamte Abteilung ist in $\%$: \\
 
 \begin{figure}[H]
 \begin{center}
@@ -1564,8 +1566,8 @@ Man erkennt bereits eine Verbesserung zu Abbildung \ref{fig:matrixnormal}, da in
 % In a German thesis write: \subsection{Zusammenfassung und Ausblick}
 
 In dieser Arbeit wurde das Ziel verfolgt, die Qualität des Klassifikators zu analysieren und die Gruppierung der Abteilungen der ZVO zu untersuchen. Dabei beschäftigt sich der eine Teil der Arbeit mit der reinen Topic Modellierung und dessen Analyse. 
-Bei dieser wurde die Erkenntnis gewonnen, dass die Stoppwörter noch weiter ausgebaut werden müssen, um die Qualität zu verbessern. Zu diesen Stoppwörtern gehören unter anderem die folgenden: ostholstein, sierksdorf, zweckverband, nachricht, betreff, danken, the und sitzen. 
-Im zweiten Teil der Arbeit wurden die Abteilungen untersucht, indem versucht wurde, diesen die Topics zuzuordnen. Aufgefallen ist, dass die Zuteilung der Dokument sehr ungleich ist und Abteilungen wie L9 oder L10 zu viele Dokumente enthalten und in eindeutigere Unterthemen aufgeteilt werden sollten, um die Klassifikation zu verbessern. 
+Bei dieser wurde die Erkenntnis gewonnen, dass die Stoppwörter noch weiter ausgebaut werden müssen, um die Qualität zu verbessern. Zu diesen Stoppwörtern gehören unter anderem die folgenden: ostholstein, sierksdorf, zweckverband, nachricht, betreff, danken, the und sitzen. Dies führt unter anderem dazu, dass das LDA-Modell, aufgrund der Ähnlichkeit der Dokumente durch die unnötigen Wörter, größere Gruppen erkennt. 
+Im zweiten Teil der Arbeit wurden die Abteilungen untersucht, indem versucht wurde, diesen die Topics zuzuordnen. Aufgefallen ist, dass den Abteilungen, die von der ZVO am meisten Dokumente händisch erhalten haben, am meisten Dokumente von dem LDA-Modell zugeordnet wurden. Die Zuteilung der Dokument ist dazu sehr ungleich, sodass Abteilungen wie L9 oder L10 viele Dokumente enthalten, wohingegen Abteilungen wie L11 nur sehr wenige Dokumente haben. Dafür sind die Themen zu wenig von den anderen zu unterschieden, als das das Modell eine so spezifische Zuteilung erreichen kann. Die großen Abteilungen könnten in eindeutigere Unterthemen aufgeteilt werden, um die Klassifikation zu verbessern.  
 
 
 
@@ -1662,7 +1664,7 @@ Im zweiten Teil der Arbeit wurden die Abteilungen untersucht, indem versucht wur
 % remove the below environment, delete the \jobname-bibtex-entries.bib
 % file and instead write
 %
-% \addbibresource{filename-of-your-bibtex-file.bib}
+%\addbibresource{filename-of-your-bibtex-file.bib}
 %
 % in the preamble.
 %
@@ -1677,11 +1679,11 @@ Im zweiten Teil der Arbeit wurden die Abteilungen untersucht, indem versucht wur
 
 \begin{bibtex-entries}
 
-@Book{Knuth1986,
-  author =       {Donald Erwin Knuth},
-  title =        {The \TeX book},
-  publisher =    {Addison-Wesley},
-  year =         {1986},
+@Book{lda,
+  author =       {David M. Blei, Andrew Y. Ng, Michael I. Jordan},
+  title =        {Latent Dirichlet Allocation},
+  publisher =    {Journal of Machine Learning Research},
+  year =         {2003},
 }
 
 @Book{Lamport1994,
