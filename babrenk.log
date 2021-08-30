@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  30 AUG 2021 03:06
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  30 AUG 2021 03:16
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.048 seconds
+luaotfload | main : initialization completed in 0.047 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -2605,9 +2605,9 @@ or  <return>  to continue without it.
 
 
 ./babrenk.tex:1020: Package pgfplots Error: Sorry, the input coordinate `osthol
-stein' has not been defined with 'symbolic y coords={oosthosltein,sierksdorf,zw
-eckverband,nachricht,betreff,danken,frau,the,sitzen}... Maybe it has been missp
-elled? Or did you mean something like [normalized]ostholstein?.
+stein' has not been defined with 'symbolic y coords={osthosltein,sierksdorf,zwe
+ckverband,nachricht,betreff,danken,frau,the,sitzen}... Maybe it has been misspe
+lled? Or did you mean something like [normalized]ostholstein?.
 
 See the pgfplots package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -2809,9 +2809,6 @@ Package rerunfilecheck Info: File `babrenk.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1751.
 )
 
@@ -2838,7 +2835,7 @@ ns-Regular.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/clearsan
 s/ClearSans-Italic.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/
 clearsans/ClearSans-Bold.ttf></usr/local/texlive/2019/texmf-dist/fonts/opentype/
 public/lm/lmroman12-regular.otf>
-Output written on babrenk.pdf (43 pages, 498170 bytes).
+Output written on babrenk.pdf (43 pages, 498516 bytes).
 
 PDF statistics: 586 PDF objects out of 1000 (max. 8388607)
  498 compressed objects within 5 object streams
