@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  30 AUG 2021 03:16
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  30 AUG 2021 03:45
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.047 seconds
+luaotfload | main : initialization completed in 0.050 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -2635,45 +2635,30 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1034 W
-      ie in der Konzeption beschrieben ist der naivste Ansatz, um die Topics...
+      ie in der Konzeption beschrieben ist der einfachste Ansatz, um die Top...
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1036
+Overfull \hbox (5.39339pt too wide) in paragraph at lines 1081--1082
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1085
 
  []
 
 [28]
 
-./babrenk.tex:1081: Package caption Error: \caption outside float.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1081 \caption
-             {Vergleich der Anzahl an Dokumenten pro Topic bzw. Abteilung}
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (6.93298pt too wide) in paragraph at lines 1083--1084
- [] 
- []
+LaTeX Warning: Reference `fig:countschart' on page 29 undefined on input line 10
+87.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1087--1088
 
  []
-
-
-LaTeX Warning: Reference `fig:countchart' on page 29 undefined on input line 108
-9.
 
 [29
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -2683,27 +2668,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1160--1161
  []
 
 [30]
-
-LaTeX Warning: Reference `fig:maxgraph' on page 31 undefined on input line 1162.
-
-
-
-./babrenk.tex:1296: Package caption Error: \caption outside float.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1296 \caption
-             {Alternative Darstellung der Matrix \ref{fig:matrixnormal}}
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (9.16599pt too wide) in paragraph at lines 1295--1298
+Overfull \hbox (7.42339pt too wide) in paragraph at lines 1295--1296
  [] 
  []
 
@@ -2721,12 +2686,12 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 1314--1315
 
  []
 
-[32]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1317--1318
 
  []
@@ -2744,7 +2709,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1418--1419
  []
 
 
-Overfull \hbox (28.70865pt too wide) in paragraph at lines 1424--1448
+Overfull \hbox (32.99965pt too wide) in paragraph at lines 1424--1448
  [] 
  []
 
@@ -2786,10 +2751,10 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 LaTeX Warning: Tab has been converted to Blank Space.
 
 
-./babrenk.tex:1751: Undefined control sequence.
+./babrenk.tex:1752: Undefined control sequence.
 \@enddocumenthook ...ted \else \printbibliography 
                                                   \fi \caption@for@list \cap...
-l.1751 \end{document}
+l.1752 \end{document}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2798,31 +2763,34 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1751.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1751.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1752.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1752.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1751.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1751.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1752.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1752.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: A4F26903DEB501783C1D9603F069A9D7;2544.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1751.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1752.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56931 strings out of 494291
+ 56932 strings out of 494291
  156521,1977958 words of node,token memory allocated
  661 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 20 attribute, 76 gl
 ue_spec, 12 attribute_list, 2 write nodes
-   avail lists: 1:1,2:11783,3:2226,4:412,5:1867,6:46,7:7368,8:71,9:4463,10:29,11
+   avail lists: 1:1,2:12035,3:2231,4:412,5:1867,6:46,7:7368,8:71,9:4463,10:29,11
 :701
- 59064 multiletter control sequences out of 65536+600000
+ 59063 multiletter control sequences out of 65536+600000
  114 fonts using 29688023 bytes
- 64i,19n,128p,4943b,2495s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 64i,20n,128p,4943b,2495s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
 agella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gy
 re-math/texgyrepagella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/openty
@@ -2835,10 +2803,10 @@ ns-Regular.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/clearsan
 s/ClearSans-Italic.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/
 clearsans/ClearSans-Bold.ttf></usr/local/texlive/2019/texmf-dist/fonts/opentype/
 public/lm/lmroman12-regular.otf>
-Output written on babrenk.pdf (43 pages, 498516 bytes).
+Output written on babrenk.pdf (43 pages, 499689 bytes).
 
-PDF statistics: 586 PDF objects out of 1000 (max. 8388607)
- 498 compressed objects within 5 object streams
- 229 named destinations out of 1000 (max. 131072)
+PDF statistics: 592 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 231 named destinations out of 1000 (max. 131072)
  136 words of extra memory for PDF output out of 10000 (max. 100000000)
 
