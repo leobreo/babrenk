@@ -1,4 +1,3 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {german}{}
 \babel@toc {german}{}
 \babel@toc {german}{}
@@ -8,57 +7,30 @@
 \babel@toc {german}{}
 \babel@toc {english}{}
 \babel@toc {german}{}
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Ziel}{2}{section.1.1}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Sturktur dieser Arbeit}{3}{section.1.2}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Grundlagen}{4}{chapter.2}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Notation}{4}{section.2.1}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Techniken dere Topic- Modellierung}{4}{section.2.2}% 
-\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Techniken der Topic- Modellierung}{4}{section.2.2}% 
 \contentsline {subsection}{Term Frequency - Inverse Document Frequency(Tf-idf)}{5}{section*.2}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Latent Semantic Analysis}{5}{section*.3}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Probabilistic Latent Semantic Analysis}{5}{section*.4}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Latent Dirichlet Allocation}{6}{section*.5}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Grundlagen der Latent Dirichlet Allocation }{6}{section.2.3}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Der generative Prozess}{8}{section*.7}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Alpha und Beta}{10}{section*.10}% 
-\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Alpha und Beta}{9}{section*.10}% 
 \contentsline {chapter}{\numberline {3}Konzeption}{12}{chapter.3}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Verfahrensweise}{12}{section.3.1}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Gruppen und Wörter finden}{14}{section*.15}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Zuordnung Abteilung zu Topic}{14}{section*.16}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Implementierung}{16}{chapter.4}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Kundenanfragen des ZVO}{17}{section.4.1}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Datenvorbereitung}{18}{section.4.2}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Umsetzung Konzept}{19}{section.4.3}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Gruppen und Wörter finden}{19}{section*.20}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Zuordnung Abteilung zu Topic}{22}{section*.25}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Experimentelle Evaluation und Analyse}{27}{chapter.5}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Gruppen und Wörter finden}{27}{section*.30}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Zuordnung Abteilung zu Topic}{28}{section*.32}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{37}{chapter.6}% 

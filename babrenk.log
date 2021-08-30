@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  29 AUG 2021 18:53
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  30 AUG 2021 02:42
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.077 seconds
+luaotfload | main : initialization completed in 0.048 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -1089,237 +1089,168 @@ File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
+./babrenk.tex:181: Argument of \uzl@@storer has an extra }.
+<inserted text> 
+\par 
+l.181 }
+     
+? R
+OK, entering \nonstopmode...
+Runaway argument?
+{\@latex@error {Environment comment undefined}\@eha }\@ignorefalse \begingroup 
+\ETC.
+./babrenk.tex:181: Paragraph ended before \uzl@@storer was complete.
+<to be read again> 
+\par 
+l.181 }
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count315
+Runaway argument?
+\def 
+./babrenk.tex:181: Paragraph ended before \pgfkeys@addpath was complete.
+<to be read again> 
+\par 
+l.181 }
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\c@tabx@nest=\count316
-\c@listtotal=\count317
-\c@listcount=\count318
-\c@liststart=\count319
-\c@liststop=\count320
-\c@citecount=\count321
-\c@citetotal=\count322
-\c@multicitecount=\count323
-\c@multicitetotal=\count324
-\c@instcount=\count325
-\c@maxnames=\count326
-\c@minnames=\count327
-\c@maxitems=\count328
-\c@minitems=\count329
-\c@citecounter=\count330
-\c@maxcitecounter=\count331
-\c@savedcitecounter=\count332
-\c@uniquelist=\count333
-\c@uniquename=\count334
-\c@refsection=\count335
-\c@refsegment=\count336
-\c@maxextratitle=\count337
-\c@maxextratitleyear=\count338
-\c@maxextraname=\count339
-\c@maxextradate=\count340
-\c@maxextraalpha=\count341
-\c@abbrvpenalty=\count342
-\c@highnamepenalty=\count343
-\c@lownamepenalty=\count344
-\c@maxparens=\count345
-\c@parenlevel=\count346
-\blx@tempcnta=\count347
-\blx@tempcntb=\count348
-\blx@tempcntc=\count349
-\blx@maxsection=\count350
-\blx@maxsegment@0=\count351
-\blx@notetype=\count352
-\blx@parenlevel@text=\count353
-\blx@parenlevel@foot=\count354
-\blx@sectionciteorder@0=\count355
-\blx@entrysetcounter=\count356
-\labelnumberwidth=\skip58
-\labelalphawidth=\skip59
-\biblabelsep=\skip60
-\bibitemsep=\skip61
-\bibnamesep=\skip62
-\bibinitsep=\skip63
-\bibparsep=\skip64
-\bibhang=\skip65
-\blx@bcfin=\read3
-\blx@bcfout=\write4
-\c@mincomprange=\count357
-\c@maxcomprange=\count358
-\c@mincompwidth=\count359
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
+./babrenk.tex:181: Missing \endcsname inserted.
+<to be read again> 
+\def 
+l.181 }
+     
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'authoryear.dbx' not found.
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count360
-\c@savedafterword=\count361
-\c@annotator=\count362
-\c@savedannotator=\count363
-\c@author=\count364
-\c@savedauthor=\count365
-\c@bookauthor=\count366
-\c@savedbookauthor=\count367
-\c@commentator=\count368
-\c@savedcommentator=\count369
-\c@editor=\count370
-\c@savededitor=\count371
-\c@editora=\count372
-\c@savededitora=\count373
-\c@editorb=\count374
-\c@savededitorb=\count375
-\c@editorc=\count376
-\c@savededitorc=\count377
-\c@foreword=\count378
-\c@savedforeword=\count379
-\c@holder=\count380
-\c@savedholder=\count381
-\c@introduction=\count382
-\c@savedintroduction=\count383
-\c@namea=\count384
-\c@savednamea=\count385
-\c@nameb=\count386
-\c@savednameb=\count387
-\c@namec=\count388
-\c@savednamec=\count389
-\c@translator=\count390
-\c@savedtranslator=\count391
-\c@shortauthor=\count392
-\c@savedshortauthor=\count393
-\c@shorteditor=\count394
-\c@savedshorteditor=\count395
-\c@labelname=\count396
-\c@savedlabelname=\count397
-\c@institution=\count398
-\c@savedinstitution=\count399
-\c@lista=\count400
-\c@savedlista=\count401
-\c@listb=\count402
-\c@savedlistb=\count403
-\c@listc=\count404
-\c@savedlistc=\count405
-\c@listd=\count406
-\c@savedlistd=\count407
-\c@liste=\count408
-\c@savedliste=\count409
-\c@listf=\count410
-\c@savedlistf=\count411
-\c@location=\count412
-\c@savedlocation=\count413
-\c@organization=\count414
-\c@savedorganization=\count415
-\c@origlocation=\count416
-\c@savedoriglocation=\count417
-\c@origpublisher=\count418
-\c@savedorigpublisher=\count419
-\c@publisher=\count420
-\c@savedpublisher=\count421
-\c@language=\count422
-\c@savedlanguage=\count423
-\c@origlanguage=\count424
-\c@savedoriglanguage=\count425
-\c@pageref=\count426
-\c@savedpageref=\count427
-\shorthandwidth=\skip66
-\shortjournalwidth=\skip67
-\shortserieswidth=\skip68
-\shorttitlewidth=\skip69
-\shortauthorwidth=\skip70
-\shorteditorwidth=\skip71
-\locallabelnumberwidth=\skip72
-\locallabelalphawidth=\skip73
-\localshorthandwidth=\skip74
-\localshortjournalwidth=\skip75
-\localshortserieswidth=\skip76
-\localshorttitlewidth=\skip77
-\localshortauthorwidth=\skip78
-\localshorteditorwidth=\skip79
-Package biblatex Info: Trying to load enhanced support for Unicode engines...
-Package biblatex Info: ... file 'blx-unicode.def' found.
+./babrenk.tex:181: Missing \endcsname inserted.
+<to be read again> 
+\def 
+l.181 }
+     
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-unicode.def)
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-)
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-bibtex.def
-File: blx-bibtex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+Runaway argument?
+\def 
+./babrenk.tex:181: Paragraph ended before \pgfkeys@splitter was complete.
+<to be read again> 
+\par 
+l.181 }
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
 
-Package biblatex Warning: Using fall-back BibTeX(8) backend:
-(biblatex)                functionality may be reduced/unavailable.
+./babrenk.tex:181: LaTeX Error: Missing \begin{document}.
 
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count428
-\c@textcitetotal=\count429
-\c@textcitemaxnames=\count430
-\c@biburlnumpenalty=\count431
-\c@biburlucpenalty=\count432
-\c@biburllcpenalty=\count433
-\c@smartand=\count434
-)
-Package biblatex Info: Trying to load bibliography style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.bbx' found.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.181 }
+     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-File: authoryear.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
+./babrenk.tex:181: Argument of \uzl@@storer has an extra }.
+<inserted text> 
+\par 
+l.181 }
+     
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count435
-\c@bbx:relatedtotal=\count436
-))
-Package biblatex Info: Trying to load citation style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.cbx' found.
+Runaway argument?
+{comment}\ifx \reserved@a \@currenvir \else \@badend {comment}\fi \expandafter 
+\ETC.
+./babrenk.tex:181: Paragraph ended before \uzl@@storer was complete.
+<to be read again> 
+\par 
+l.181 }
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-File: authoryear.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
+Runaway argument?
+\endcomment \def 
+./babrenk.tex:181: Paragraph ended before \pgfkeys@addpath was complete.
+<to be read again> 
+\par 
+l.181 }
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
-)
 
-Package biblatex Warning: 'firstinits' option is deprecated.
-(biblatex)                Please use 'giveninits' instead.
+Overfull \hbox (30.78pt too wide) in paragraph at lines 181--181
+[]\TU/lmr/m/n/11 // 
+ []
 
-)
-Package biblatex Info: Redefining '\cite' on input line 181.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+./babrenk.tex:181: Missing \endcsname inserted.
+<to be read again> 
+\endcomment 
+l.181 }
+     
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./babrenk.tex:181: Missing \endcsname inserted.
+<to be read again> 
+\endcomment 
+l.181 }
+     
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./babrenk.tex:181: Missing \endcsname inserted.
+<to be read again> 
+\endcomment 
+l.181 }
+     
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+Runaway argument?
+\endcomment \def 
+./babrenk.tex:181: Paragraph ended before \pgfkeys@splitter was complete.
+<to be read again> 
+\par 
+l.181 }
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+./babrenk.tex:181: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.181 }
+     
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (30.78pt too wide) in paragraph at lines 181--182
+[]\TU/lmr/m/n/11 // 
+ []
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2019/03/04 v0.8o Unicode maths in XeLaTeX and LuaLaTeX
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math-luatex.
@@ -1354,9 +1285,9 @@ Package lualatex-math Info: I'm going to patch macro \frac .
 Package lualatex-math Info: I'm going to patch macro \genfrac .
 
 )
-\g__um_fam_int=\count437
-\g__um_fonts_used_int=\count438
-\l__um_primecount_int=\count439
+\g__um_fam_int=\count315
+\g__um_fonts_used_int=\count316
+\l__um_primecount_int=\count317
 \g__um_primekern_muskip=\muskip18
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
@@ -1841,7 +1772,7 @@ DFLT;"
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write5
+\CommentStream=\write4
 
 Excluding comment 'comment')
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
@@ -1868,8 +1799,8 @@ Package pgfplots info on input line 124: Initializing with LUA version Lua 5.3
 \t@pgfplots@tokb=\toks43
 \t@pgfplots@tokc=\toks44
 \pgfplots@tmpa=\dimen284
-\c@pgfplots@coordindex=\count440
-\c@pgfplots@scanlineindex=\count441
+\c@pgfplots@coordindex=\count318
+\c@pgfplots@scanlineindex=\count319
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
 .code.tex))
@@ -1885,7 +1816,7 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 soldpgfsupp_pgflibraryfpu.code.tex)
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
 soldpgfsupp_pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count442
+\c@pgfmathroundto@lastzeros=\count320
 )
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/luamath/pgflibrar
 yluamath.code.tex)
@@ -1903,13 +1834,13 @@ liststructure.code.tex)
 liststructureext.code.tex)
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 array.code.tex
-\c@pgfplotsarray@tmp=\count443
+\c@pgfplotsarray@tmp=\count321
 )
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 matrix.code.tex)
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 shared.code.tex
-\c@pgfplotstable@counta=\count444
+\c@pgfplotstable@counta=\count322
 \t@pgfplotstable@a=\toks45
 )
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
@@ -1922,7 +1853,7 @@ ta.code.tex))
 .code.tex)
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
 s.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count445
+\c@pgfplotslibrarysurf@no=\count323
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
 .surfshading.pgfsys-luatex.def)))
@@ -1959,7 +1890,7 @@ s.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen287
 \pgfdecoratedinputsegmentremainingdistance=\dimen288
 \pgf@decorate@distancetomove=\dimen289
-\pgf@decorate@repeatstate=\count446
+\pgf@decorate@repeatstate=\count324
 \pgfdecorationsegmentamplitude=\dimen290
 \pgfdecorationsegmentlength=\dimen291
 )
@@ -1973,7 +1904,7 @@ brarydecorations.pathmorphing.code.tex))
 s/tikzlibrarydecorations.pathreplacing.code.tex
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count447
+\pgfplots@numplots=\count325
 \pgfplots@xmin@reg=\dimen292
 \pgfplots@xmax@reg=\dimen293
 \pgfplots@ymin@reg=\dimen294
@@ -1991,12 +1922,16 @@ File: pgflibraryplotmarks.code.tex 2019/04/04 v3.1.2 (3.1.2)
 )))
 (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count448
-\algocf@hangindent=\skip80
+\c@AlgoLine=\count326
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip58
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count449
+\c@checkoddpage=\count327
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -2004,39 +1939,39 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip81
-\skiplinenumber=\skip82
-\skiprule=\skip83
-\skiphlne=\skip84
-\skiptext=\skip85
-\skiplength=\skip86
-\algomargin=\skip87
-\skipalgocfslide=\skip88
+\skiptotal=\skip59
+\skiplinenumber=\skip60
+\skiprule=\skip61
+\skiphlne=\skip62
+\skiptext=\skip63
+\skiplength=\skip64
+\algomargin=\skip65
+\skipalgocfslide=\skip66
 \algowidth=\dimen298
 \inoutsize=\dimen299
 \inoutindent=\dimen300
 \interspacetitleruled=\dimen301
 \interspacealgoruled=\dimen302
 \interspacetitleboxruled=\dimen303
-\algocf@ruledwidth=\skip89
+\algocf@ruledwidth=\skip67
 \algocf@inoutbox=\box82
 \algocf@inputbox=\box83
-\AlCapSkip=\skip90
-\AlCapHSkip=\skip91
-\algoskipindent=\skip92
+\AlCapSkip=\skip68
+\AlCapHSkip=\skip69
+\algoskipindent=\skip70
 \algocf@nlbox=\box84
 \algocf@hangingbox=\box85
 \algocf@untilbox=\box86
-\algocf@skipuntil=\skip93
+\algocf@skipuntil=\skip71
 \algocf@capbox=\box87
-\algocf@lcaptionbox=\skip94
-\algoheightruledefault=\skip95
-\algoheightrule=\skip96
-\algotitleheightruledefault=\skip97
-\algotitleheightrule=\skip98
-\c@algocfline=\count450
-\c@algocfproc=\count451
-\c@algocf=\count452
+\algocf@lcaptionbox=\skip72
+\algoheightruledefault=\skip73
+\algoheightrule=\skip74
+\algotitleheightruledefault=\skip75
+\algotitleheightrule=\skip76
+\c@algocfline=\count328
+\c@algocfproc=\count329
+\c@algocf=\count330
 \algocf@algoframe=\box88
 \algocf@algobox=\box89
 )
@@ -2046,14 +1981,14 @@ ment
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count453
+\c@float@type=\count331
 \float@exts=\toks46
 \float@box=\box90
 \@float@everytoks=\toks47
 \@floatcapt=\box91
 )
 \@float@every@algorithm=\toks48
-\c@algorithm=\count454
+\c@algorithm=\count332
 
 
 /usr/local/texlive/2019/texmf-dist/tex/latex/algorithms/algorithm.sty:97: LaTeX
@@ -2066,16 +2001,18 @@ Type  H <return>  for immediate help.
                                                   
 l.97 ...hms}{\listof{algorithm}{\listalgorithmname}}
                                                   
-? R
-OK, entering \nonstopmode...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count455
-\c@ALC@line=\count456
-\c@ALC@rem=\count457
-\c@ALC@depth=\count458
-\ALC@tlm=\skip99
-\algorithmicindent=\skip100
+\c@ALC@unique=\count333
+\c@ALC@line=\count334
+\c@ALC@rem=\count335
+\c@ALC@depth=\count336
+\ALC@tlm=\skip77
+\algorithmicindent=\skip78
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
@@ -2102,8 +2039,8 @@ Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionskip
  \sbox \@tempboxa {{\UzLStyle {float label}#1:} #2}\ifdim \wd \@tempboxa >\hsize
  {{\UzLStyle {float label}#1:} #2\par } \else \global \@minipagefalse \hb@xt@ \h
 size {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip .
-\c@caption@flags=\count459
-\c@ContinuedFloat=\count460
+\c@caption@flags=\count337
+\c@ContinuedFloat=\count338
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -2112,17 +2049,25 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'german'.
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
-)
+
+./babrenk.tex:359: Class uzl-thesis Error: Bibliography style not specified! 
+(uzl-thesis)              You must use 
+(uzl-thesis)              'Naturwissenschaftliche Bibliographie' or 
+(uzl-thesis)              'Ingenieurwissenschaftliche Bibliographie' 
+(uzl-thesis)              in \UzLThesisSetup.
+
+See the uzl-thesis class documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359 \begin{document}
+                    
+Say \UzLThesisSetup{Naturwissenschaftliche Bibliographie} or 
+\UzLThesisSetup{Ingenieurwissenschaftliche Bibliographie} somewhere 
+in the preamble, depending on the study programme of your thesis 
+
+
 (./babrenk.aux)
 \openout1 = babrenk.aux
 
@@ -2149,16 +2094,16 @@ LaTeX Font Info:    ... okay on input line 359.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count461
+\scratchcounter=\count339
 \scratchdimen=\dimen311
 \scratchbox=\box92
-\nofMPsegments=\count462
-\nofMParguments=\count463
+\nofMPsegments=\count340
+\nofMParguments=\count341
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count464
+\MPscratchCnt=\count342
 \MPscratchDim=\dimen312
-\MPnumerator=\count465
-\makeMPintoPDFobject=\count466
+\MPnumerator=\count343
+\makeMPintoPDFobject=\count344
 \everyMPtoPDFconversion=\toks50
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2219,7 +2164,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count467
+\c@section@level=\count345
 LaTeX Info: Redefining \Ref on input line 515.
 )
 LaTeX Info: Redefining \ref on input line 359.
@@ -2227,25 +2172,11 @@ LaTeX Info: Redefining \pageref on input line 359.
 LaTeX Info: Redefining \nameref on input line 359.
 
 (./babrenk.out) (./babrenk.out)
-\@outlinefile=\write6
+\@outlinefile=\write5
 
-\openout6 = babrenk.out
+\openout5 = babrenk.out
 LaTeX Info: Redefining \Ref on input line 359.
-\c@lstlisting=\count468
-Package biblatex Info: LuaTeX detected.
-(biblatex)             Assuming input encoding 'utf8'.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' specified.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-
-\openout4 = babrenk-blx.bib
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'babrenk.bbl' found.
- (./babrenk.bbl)
-Package biblatex Info: Reference section=0 on input line 359.
-Package biblatex Info: Reference segment=0 on input line 359.
+\c@lstlisting=\count346
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
@@ -2255,7 +2186,8 @@ ur preamble.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<uzl-thesis-logo-itcs.pdf, id=67, 426.79149pt x 113.8112pt>
+[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<uzl-thesis-logo-itcs.pdf, id=73, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
 Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 359.
@@ -2270,15 +2202,16 @@ LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/it' will be
 (Font)              scaled to size 13.29996pt on input line 359.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/it' will be
 (Font)              scaled to size 13.29996pt on input line 359.
-<uzl-thesis-logo-slogan.pdf, id=68, 142.26349pt x 11.38112pt>
+<uzl-thesis-logo-slogan.pdf, id=74, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
 Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 359.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
 [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./uzl-the
-sis-logo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
+<./uzl-thesis-logo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 359.
  [2
@@ -2286,49 +2219,15 @@ LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/n' will be
 ] [3
 
 ]
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2019/02/27 1.8b listings language file
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
-) [4
-
-]
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
 (Font)              scaled to size 18.99994pt on input line 359.
 
 (./babrenk.toc)
-\tf@toc=\write7
+\tf@toc=\write6
 
-\openout7 = babrenk.toc
- [5
+\openout6 = babrenk.toc
+ [4
 
-
-] [6
 
 ]
 Kapitel 1.
@@ -2336,6 +2235,9 @@ LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
 (Font)              scaled to size 56.99982pt on input line 367.
 Package Listings Info: Made | a short reference for \lstinline on input line 378
 .
+
+LaTeX Warning: Citation `statista' on page 1 undefined on input line 381.
+
 [1
 
 
@@ -2353,11 +2255,24 @@ Overfull \hbox (7.51405pt too wide) in paragraph at lines 399--400
 en-det und hat vie-le Ver-än-de-run-gen durch-
  []
 
-LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
-(Font)              scaled to size 11.39996pt on input line 417.
 [4
 
-] [5]
+]
+LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
+(Font)              scaled to size 11.39996pt on input line 417.
+ [5]
+Overfull \hbox (6.22708pt too wide) in paragraph at lines 427--429
+\TU/TeXGyrePagella(0)/m/n/11 Verteilung mit den Wahr-schein-lich-kei-ten der zw
+ei hin-zu-ge-füg-ten mul-ti-no-mia-len Dirichlet-
+ []
+
+
+Overfull \hbox (5.61751pt too wide) in paragraph at lines 427--429
+\TU/TeXGyrePagella(0)/m/n/11 Verteilungen. So wer-den erst die To-pics zu-fäl-
+lig aus-ge-wählt, wie in der Dirichlet-Verteilung
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
@@ -2379,6 +2294,7 @@ LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 452.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 452.
+[7]
 
 ./babrenk.tex:474: LaTeX Error: There's no line here to end.
 
@@ -2392,7 +2308,6 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[7]
 
 ./babrenk.tex:480: LaTeX Error: There's no line here to end.
 
@@ -2442,6 +2357,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 518--519
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 ./babrenk.tex:529: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2455,12 +2373,12 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [9]
-<lda_alpha001.png, id=185, 895.345pt x 580.1675pt>
+<lda_alpha001.png, id=179, 895.345pt x 580.1675pt>
 File: lda_alpha001.png Graphic file (type png)
 <use lda_alpha001.png>
 Package luatex.def Info: lda_alpha001.png  used on input line 543.
 (luatex.def)             Requested size: 282.03517pt x 182.75372pt.
-<lda_alpha1.png, id=186, 895.345pt x 562.1pt>
+<lda_alpha1.png, id=180, 895.345pt x 562.1pt>
 File: lda_alpha1.png Graphic file (type png)
 <use lda_alpha1.png>
 Package luatex.def Info: lda_alpha1.png  used on input line 550.
@@ -2853,54 +2771,59 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 LaTeX Warning: Tab has been converted to Blank Space.
 
 
-
-LaTeX Warning: Empty bibliography on input line 1746.
+./babrenk.tex:1753: Undefined control sequence.
+\@enddocumenthook ...ted \else \printbibliography 
+                                                  \fi \caption@for@list \cap...
+l.1753 \end{document}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1746.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1746.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1753.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1753.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1746.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1746.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1753.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1753.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
-(rerunfilecheck)             Checksum: 7DE301101AFDD11E8FA9B3549796E829;2549.
+(rerunfilecheck)             Checksum: A4F26903DEB501783C1D9603F069A9D7;2544.
 
 
 LaTeX Warning: There were undefined references.
 
-Package logreq Info: Writing requests to 'babrenk.run.xml'.
-
-\openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1746.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1753.
 )
 
 Here is how much of LuaTeX's memory you used:
- 64494 strings out of 494291
- 156520,2373549 words of node,token memory allocated
- 691 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 20 attribute, 82 gl
+ 56938 strings out of 494291
+ 156521,1977958 words of node,token memory allocated
+ 661 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 20 attribute, 76 gl
 ue_spec, 12 attribute_list, 2 write nodes
-   avail lists: 1:9,2:11783,3:2226,4:412,5:1867,6:46,7:7277,8:71,9:4463,10:28,11
-:700
- 66425 multiletter control sequences out of 65536+600000
- 115 fonts using 29819635 bytes
- 64i,19n,128p,4909b,3225s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:1,2:11783,3:2226,4:412,5:1867,6:46,7:7368,8:71,9:4463,10:29,11
+:701
+ 59071 multiletter control sequences out of 65536+600000
+ 114 fonts using 29687855 bytes
+ 64i,19n,128p,4943b,2495s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
 agella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gy
 re-math/texgyrepagella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/openty
-pe/public/tex-gyre/texgyrepagella-bold.otf></usr/local/texlive/2019/texmf-dist/f
-onts/opentype/public/tex-gyre-math/texgyrepagella-math.otf></usr/local/texlive/2
-019/texmf-dist/fonts/opentype/public/lm/lmmonoprop10-regular.otf></usr/local/tex
-live/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf><
-/usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella
--italic.otf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/clearsans/C
-learSans-Regular.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/cl
-earsans/ClearSans-Italic.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/
-intel/clearsans/ClearSans-Bold.ttf>
-Output written on babrenk.pdf (44 pages, 500893 bytes).
+pe/public/tex-gyre-math/texgyrepagella-math.otf></usr/local/texlive/2019/texmf-d
+ist/fonts/opentype/public/tex-gyre/texgyrepagella-bold.otf></usr/local/texlive/2
+019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf></usr/l
+ocal/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-itali
+c.otf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/clearsans/ClearSa
+ns-Regular.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/clearsan
+s/ClearSans-Italic.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/
+clearsans/ClearSans-Bold.ttf></usr/local/texlive/2019/texmf-dist/fonts/opentype/
+public/lm/lmroman12-regular.otf>
+Output written on babrenk.pdf (43 pages, 498169 bytes).
 
-PDF statistics: 592 PDF objects out of 1000 (max. 8388607)
- 502 compressed objects within 6 object streams
- 231 named destinations out of 1000 (max. 131072)
+PDF statistics: 586 PDF objects out of 1000 (max. 8388607)
+ 498 compressed objects within 5 object streams
+ 229 named destinations out of 1000 (max. 131072)
  136 words of extra memory for PDF output out of 10000 (max. 100000000)
 
