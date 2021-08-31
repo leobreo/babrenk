@@ -1,6 +1,5 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  30 AUG 2021 03:45
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  30 AUG 2021 15:08
  restricted system commands enabled.
- file:line:error style messages enabled.
 **babrenk.tex
 (./babrenk.tex
 LaTeX2e <2018-12-01>
@@ -49,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.050 seconds
+luaotfload | main : initialization completed in 0.076 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -1089,28 +1088,25 @@ File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
 Package: listings 2019/02/27 1.8b (Carsten Heinz)
 )
-./babrenk.tex:181: Argument of \uzl@@storer has an extra }.
+! Argument of \uzl@@storer has an extra }.
 <inserted text> 
+\par 
+l.181 }
+     
+? 
+Runaway argument?
+{\@latex@error {Environment comment undefined}\@eha }\@ignorefalse \begingroup 
+\ETC.
+! Paragraph ended before \uzl@@storer was complete.
+<to be read again> 
 \par 
 l.181 }
      
 ? R
 OK, entering \nonstopmode...
 Runaway argument?
-{\@latex@error {Environment comment undefined}\@eha }\@ignorefalse \begingroup 
-\ETC.
-./babrenk.tex:181: Paragraph ended before \uzl@@storer was complete.
-<to be read again> 
-\par 
-l.181 }
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
 \def 
-./babrenk.tex:181: Paragraph ended before \pgfkeys@addpath was complete.
+! Paragraph ended before \pgfkeys@addpath was complete.
 <to be read again> 
 \par 
 l.181 }
@@ -1119,7 +1115,7 @@ I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
-./babrenk.tex:181: Missing \endcsname inserted.
+! Missing \endcsname inserted.
 <to be read again> 
 \def 
 l.181 }
@@ -1127,7 +1123,7 @@ l.181 }
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
 
-./babrenk.tex:181: Missing \endcsname inserted.
+! Missing \endcsname inserted.
 <to be read again> 
 \def 
 l.181 }
@@ -1137,7 +1133,7 @@ not appear between \csname and \endcsname.
 
 Runaway argument?
 \def 
-./babrenk.tex:181: Paragraph ended before \pgfkeys@splitter was complete.
+! Paragraph ended before \pgfkeys@splitter was complete.
 <to be read again> 
 \par 
 l.181 }
@@ -1147,7 +1143,7 @@ control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 
-./babrenk.tex:181: LaTeX Error: Missing \begin{document}.
+! LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1158,7 +1154,7 @@ l.181 }
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./babrenk.tex:181: Argument of \uzl@@storer has an extra }.
+! Argument of \uzl@@storer has an extra }.
 <inserted text> 
 \par 
 l.181 }
@@ -1173,7 +1169,7 @@ your `}' was spurious, just type `2' and it will go away.
 Runaway argument?
 {comment}\ifx \reserved@a \@currenvir \else \@badend {comment}\fi \expandafter 
 \ETC.
-./babrenk.tex:181: Paragraph ended before \uzl@@storer was complete.
+! Paragraph ended before \uzl@@storer was complete.
 <to be read again> 
 \par 
 l.181 }
@@ -1184,7 +1180,7 @@ My plan is to forget the whole thing and hope for the best.
 
 Runaway argument?
 \endcomment \def 
-./babrenk.tex:181: Paragraph ended before \pgfkeys@addpath was complete.
+! Paragraph ended before \pgfkeys@addpath was complete.
 <to be read again> 
 \par 
 l.181 }
@@ -1198,7 +1194,7 @@ Overfull \hbox (30.78pt too wide) in paragraph at lines 181--181
 []\TU/lmr/m/n/11 // 
  []
 
-./babrenk.tex:181: Missing \endcsname inserted.
+! Missing \endcsname inserted.
 <to be read again> 
 \endcomment 
 l.181 }
@@ -1206,7 +1202,7 @@ l.181 }
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
 
-./babrenk.tex:181: Missing \endcsname inserted.
+! Missing \endcsname inserted.
 <to be read again> 
 \endcomment 
 l.181 }
@@ -1214,7 +1210,7 @@ l.181 }
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
 
-./babrenk.tex:181: Missing \endcsname inserted.
+! Missing \endcsname inserted.
 <to be read again> 
 \endcomment 
 l.181 }
@@ -1224,7 +1220,7 @@ not appear between \csname and \endcsname.
 
 Runaway argument?
 \endcomment \def 
-./babrenk.tex:181: Paragraph ended before \pgfkeys@splitter was complete.
+! Paragraph ended before \pgfkeys@splitter was complete.
 <to be read again> 
 \par 
 l.181 }
@@ -1234,7 +1230,7 @@ control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 
-./babrenk.tex:181: LaTeX Error: Missing \begin{document}.
+! LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1991,8 +1987,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@algorithm=\count332
 
 
-/usr/local/texlive/2019/texmf-dist/tex/latex/algorithms/algorithm.sty:97: LaTeX
- Error: Command \listofalgorithms already defined.
+! LaTeX Error: Command \listofalgorithms already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -2051,7 +2046,7 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'german'.
 
 
-./babrenk.tex:359: Class uzl-thesis Error: Bibliography style not specified! 
+! Class uzl-thesis Error: Bibliography style not specified! 
 (uzl-thesis)              You must use 
 (uzl-thesis)              'Naturwissenschaftliche Bibliographie' or 
 (uzl-thesis)              'Ingenieurwissenschaftliche Bibliographie' 
@@ -2296,7 +2291,7 @@ LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 452.
 [7]
 
-./babrenk.tex:474: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2309,7 +2304,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:480: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2330,7 +2325,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 481--482
  []
 
 [8]
-./babrenk.tex:494: Double subscript.
+! Double subscript.
 l.494 ...le ein Wort $w_{d,i}$ als $Multinom(\phi_z_
                                                   {d,i})$
 I treat `x_1_2' essentially like `x_1{}_2'.
@@ -2342,7 +2337,7 @@ ung zu-sam-men mit der Dirichlet-Verteilungen
  []
 
 
-./babrenk.tex:516: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2375,7 +2370,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 518--519
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-./babrenk.tex:529: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2427,7 +2422,7 @@ rteilung und die Topic-Word-Verteilung.
 
 [13] [14]
 
-./babrenk.tex:624: LaTeX Error: \begin{document} ended by \end{enumerate}.
+! LaTeX Error: \begin{document} ended by \end{enumerate}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2439,7 +2434,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./babrenk.tex:624: Extra \endgroup.
+! Extra \endgroup.
 <recently read> \endgroup 
           
 l.624 \end{enumerate}
@@ -2466,7 +2461,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 658--659
  []
 
 
-./babrenk.tex:668: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2485,7 +2480,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
 [17]
 
-./babrenk.tex:679: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2522,7 +2517,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 815--816
 
 [22]
 
-./babrenk.tex:854: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2548,7 +2543,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 889--890
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-./babrenk.tex:926: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2566,7 +2561,7 @@ Overfull \hbox (30.6616pt too wide) in paragraph at lines 936--980
  []
 
 
-./babrenk.tex:984: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2591,7 +2586,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 995--996
  []
 
 
-./babrenk.tex:1000: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2604,10 +2599,10 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./babrenk.tex:1020: Package pgfplots Error: Sorry, the input coordinate `osthol
-stein' has not been defined with 'symbolic y coords={osthosltein,sierksdorf,zwe
-ckverband,nachricht,betreff,danken,frau,the,sitzen}... Maybe it has been misspe
-lled? Or did you mean something like [normalized]ostholstein?.
+! Package pgfplots Error: Sorry, the input coordinate `ostholstein' has not bee
+n defined with 'symbolic y coords={osthosltein,sierksdorf,zweckverband,nachrich
+t,betreff,danken,frau,the,sitzen}... Maybe it has been misspelled? Or did you m
+ean something like [normalized]ostholstein?.
 
 See the pgfplots package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -2628,7 +2623,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1028--1030
  []
 
 
-./babrenk.tex:1034: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2674,7 +2669,7 @@ Overfull \hbox (7.42339pt too wide) in paragraph at lines 1295--1296
 
 [31]
 
-./babrenk.tex:1312: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2720,7 +2715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1452--1453
 
 [35]
 
-./babrenk.tex:1462: LaTeX Error: There's no line here to end.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -2751,7 +2746,7 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 LaTeX Warning: Tab has been converted to Blank Space.
 
 
-./babrenk.tex:1752: Undefined control sequence.
+! Undefined control sequence.
 \@enddocumenthook ...ted \else \printbibliography 
                                                   \fi \caption@for@list \cap...
 l.1752 \end{document}
@@ -2773,9 +2768,6 @@ Package rerunfilecheck Info: File `babrenk.out' has not changed.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1752.
 )
