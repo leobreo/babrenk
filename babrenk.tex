@@ -149,21 +149,6 @@
   % (English). Both keys are optional and both have the same effect of
   % adding an acknowledgements text after the abstracts and before the
   % table of contents.
-  \begin{comment}
-  Acknowledgements      = {
-    This is the place where you can thank people and institutions, do
-    not try to do this on the title page. The only exception is in
-    case you wrote your thesis while working or staying at a company or abroad. Then you
-    should use the \Latex{Weitere Unterstützung} key to provide a text
-    (in German) that acknowledges the company or foreign
-    institute. For instance, you could use texts like »Die Arbeit
-      ist im Rahmen einer Tätigkeit bei der Firma Muster GmbH
-      entstanden« or »Die Arbeit ist im Rahmen eines
-      Forschungsaufenthalts beim Institut für Dieses und Jenes an der
-      Universität Entenhausen entstanden«. Do not name and thank
-      individual persons from the company or foreign institute on the
-      title page, do that here. 
-  },\end{comment}
   % Bibliography style: Choose between
   % 
   % 'Alphabetische Bibliographie'
@@ -350,7 +335,7 @@
 \usepackage{algorithm2e}
 \usetikzlibrary{shapes,arrows}
 \usetikzlibrary{shapes.geometric, arrows}
-\usepackage{algorithm}
+%\usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{caption}
 \usepackage{float}
@@ -364,9 +349,9 @@
 %
 
 
+
 \chapter{Einleitung}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%EINLEITUNG
 % In a German thesis write: \chapter{Einleitung}
-
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
@@ -470,13 +455,13 @@ Dabei beschreibt $w$ als einzige nicht verborgene Variable eines von $\mid N \mi
 \begin{itemize}
 \item die Dokument-Topic-Verteilung $\theta_d$, die angibt, mit welcher Wahrscheinlichkeit das Dokument zu jedem Themen gehört und 
 \item die Topic-Word-Verteilung $\phi_k$, die die Wahrscheinlichkeit berechnet, dass ein Wort einem Thema angehört. 
-\end{itemize}\\
+\end{itemize}
 
 $M = LDA(D)$ beschreibt ein LDA Modell, das auf dem Korpus $D$ trainiert wurde. Das Modell und dessen Verteilungen kann durch die Parameter $\alpha$ und $\beta$ angepasst werden. $\alpha$ bestimmt die Intensität der Dokument-Themen-Verteilung, während $\beta$ die der Topic-Wort-Verteilung beeinflusst. Bei einem großen $\alpha$ ist die Verteilung der Topics in einem Dokument ähnlicher. Bei LDA werden zwei widersprüchliche Bedingungen verfolgt, die von den beiden Parametern beeinflusst werden können:
 \begin{enumerate}
 \item Es wird für alle Wort eines bestimmten Dokuments nach so wenig zugeordneten Themen wie möglich gestrebt
 \item Ein Thema soll über so wenig relevante Wörter wie möglich verfügen
-\end{enumerate}\\
+\end{enumerate}
 
 Die beiden Ziele stehen in einer Wechselbeziehung zueinander, da eine minimale Anzahl an vertretenen Topics in einem Dokument zu maximal vielen Wörtern in diesen Topics führt. Die minimale Anzahl an Topics wäre erreicht, wenn man alle Wörter eines Dokuments einem Topic zuweist. Dadurch verfügt das Topic jedoch über alle Wörter des Dokuments. $\alpha$ befindet sich in dem Bereicht $[0,1]$ mit sinnvollen Werten zwischen $[0.01, 0.1]$, während $\beta =0.01$ durchschnittlich die besten Ergebnisse liefert wie in Artikeln wie \cite{magnus} erwähnt. Große Werte führen zu einer Gleichverteilung, die wiederum eine Verschlechterung der Perplexität bedeutet. Somit bietet die Perplexität ein Mittel, um $\alpha$ und $\beta$ optimal für die individuelle Anwendung zu finden. \\
 
@@ -491,7 +476,7 @@ Bei der Erstellung eines Klassifikators gibt es zwei unterschiedliche Herangehen
 	\item Für jedes Wort $w$ and Stelle $i = 1,...,N$ im Dokument $d$: 
 	\begin{enumerate}
 		\item Wähle ein Thema $z_{d,i}$ als $Multinom(\theta_d)$
-		\item Wähle ein Wort $w_{d,i}$ als $Multinom(\phi_z_{d,i})$
+		\item Wähle ein Wort $w_{d,i}$ als $Multinom(\phi_{z_{d,i}})$
 	\end{enumerate}
 \end{enumerate}
 
@@ -512,7 +497,6 @@ P(w,z,\theta, \phi, \alpha, \beta) = \prod_{i=1}^{K} P(\phi_i, \beta) \cdot \pro
 \caption{Die totale Wahrscheinlichkeit eines LDA Modells $M$}
 \label{fig:equ1}
 \end{figure}
-\\
 
 
 Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung und entsprechenden Topics der gegebenen Dokumente für latente Variablen. Das heißt bekannt sind das Wort und die Dirichlet-Paramter $\alpha$ und $\beta$. Auf Basis dieser gegebenen Informationen wird dann die Wahrscheinlichkeit für deine Topic errechnet, der das Wort angehört. Dazu wird die Dokument-Topic-Verteilung gesucht, die von den Dirichlet-Verteilungen beeinflusst wird. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken, ist jedoch nur approximierbar und nicht exakt zu bestimmen: \\
@@ -525,7 +509,7 @@ P(\theta, z \mid w, \alpha, \beta) = \frac{P(\theta, z, w \mid \alpha, \beta)}{P
 \end{center}
 \caption{Die bedingte Wahrscheinlichkeit für die Topic und Dokument-Topic-Verteilung gegeben einem Wort und den Dirichlet-Verteilungen $\alpha$ und $\beta$}
 \label{fig:equ2}
-\end{figure}\\
+\end{figure}
 
 
 \subsection{Alpha und Beta}
@@ -621,7 +605,6 @@ Ein LDA Modell besteht aus zwei Verteilungen, die die zugrundeliegenden Daten se
 %\item \textbf{Zuordnung Abteilung zu Topic}\\
 \subsection{Zuordnung Abteilung zu Topic}
 Das LDA Modell erstellt aus den Daten 18 Topics. Diese Topics sollten im optimalen Fall sehr ähnlich zu den händisch klassifizierten Abteilungen sein, wenn die vordefinierten Abteilungen eine akkurate Repräsentation der Topics in den Daten darstelle. Ist dies nicht der Fall, kann man auf eine schlechte Klassifikation schließen. Dies kann durch eine schlechte Qualität der Daten als auch durch eine ineffiziente manuelle Einteilung der Topics bedingt sein. Die Fähigkeit, Topics auf Abteilungen zu mappen, gibt Aufschluss über die Qualität der Daten. Für die Zuordnung werden zwei Matrizen verwendet: \lstinline{gruppen_LABEL} und \lstinline{gruppen_LDA}. Die erste sortiert alle Dokumentindizes als Listenelemente in die jeweilige Zeile der Matrix, sodass der Index eines händisch in Abteilung 3 eingeordneten Dokumentes in \lstinline{gruppen_LABEL[4]} zu finden ist. Die Verzögerung ergibt sich durch den ersten Listenindex $0$. Die Matrix \lstinline{gruppen_LDA} beinhaltet alle Indizes der Dokumente, die vom Modell klassifiziert wurden, in gleicher Struktur. Dafür wird für jedes Dokument, das den Korpus ausmacht, eine dokumentseigene Dokument-Topic-Verteilung errechnet. Das Topic, für das das Dokument am wahrscheinlichsten ist, bestimmt, welcher Teilliste der Dokumentindex angehängt wird. Beide Matrizen verfügen nun über die Indizes der Dokumente in den jeweiligen Topics bzw. Abteilungen und können anhand der einzigartigen Indizes auf Überschneidungen geprüft werden. Die Anzahl der Überschneidungen werden in einer Matrix gespeichert, die jedes Element von \lstinline{gruppen_LDA} auf jedes Element von \lstinline{gruppen_LABEL} abbildet und deren Überschneidung zählt. Eine optimale Zuordnung von Topic auf Abteilung ist möglich, wenn jede Zeile ein Maximum in einer Spalte hat, die nicht auch das Maximum einer anderen Zeile enthält. Ist dies jedoch nicht der Fall, sind die Daten in der aktuellen Form nicht optimal für die Klassifizierung. Dabei ist neben der Anzahl der Überschneidungen auch die die der Dokumente in dem Topic bzw. der Abteilung insgesamt als Vergleich relevant.Der Unterschied zwischen den beiden ist bei einer guten Klassifizierung klein. 
-\end{enumerate}
 
 \chapter{Implementierung}%%%%%%%%%%%%%%%%%%%%%%IMPLEMENTIERUNG
 Dieser Abschnitt befasst sich mit der Implementierung des im Abschnitt 3 beschriebenen Konzepts. Dabei wird die Implementierung durch Python Code erklärt und die genaue Vorgehensweise dargestellt. Die Ergebnisse werden gezeigt, jedoch noch nicht analysiert. \\
@@ -664,9 +647,9 @@ OUTPUT:
 \end{lstlisting}
 \caption{So könnte ein Datum der ZVO aussehen} 
 \label{fig:data1}
-\end{figure}\\
+\end{figure}
 
-Um die Einträge in eine computer-lesbare Form zu verwandeln, muss ein Dictionary erstellt werden, das alle Wörter auf eine Anzahl ihrer Vorkommen abbildet. Dafür müssen die Wörter als alleinige Listeneinträge einlesbar sein, wie in Abbildung \ref{fig:data2}: \\
+Um die Einträge in eine computer-lesbare Form zu verwandeln, muss ein Dictionary erstellt werden, das alle Wörter auf eine Anzahl ihrer Vorkommen abbildet. Dafür müssen die Wörter als alleinige Listeneinträge einlesbar sein, wie in Abbildung \ref{fig:data2}: 
 
 \begin{figure}[h]
 \begin{lstlisting}
@@ -675,7 +658,7 @@ OUTPUT split:
 \end{lstlisting}
 \caption{Ein gesplittetes Datum vorbereitet für das Dictionary}
 \label{fig:data2}
-\end{figure}\\
+\end{figure}
 
 \section{Datenvorbereitung}
 Bevor die Topic-Modellierung auf den Daten durchgeführt werden kann, müssen die Daten einem Prozess unterzogen werden. Dieser beginnt mit der Datenakquise, also der Sammlung bestimmter relevanter Daten. Im Falle der ZVO bedeutet dies, dass es genügend Kundenanfragen gibt, die verarbeitet werden können. Wenn diese Daten bestehen, werden sie auf die relevanten Wörter reduziert, aus denen eine bedeutsame Inferenz von Informationen möglich ist, sodass unter anderem die sogenannten Stop-Words, also eine Menge von Wörtern, entfernt werden. Es gibt vordefinierte Sammlungen von Stop-Words und es können eigene definiert werden. Das Entfernen von Stop-Words verhindert, dass sich das Topic-Modell an den falschen Wörtern orientiert, die keine aussagekräftige semantische Information in sich tragen. Nachdem die Stop-Words entfernt wurden, ergeben die meisten Sätze keinen inhaltlichen Sinn mehr, wie in Abbildung \ref{fig:data1} zu erkennen. Dies ist jedoch nicht schlimm, da der nächste Schritt der Reinigung den Daten die Reihenfolge entzieht und das Bag of Words Modell erstellt. Dabei werden alle Wörter als eine Menge von unabhängigen Wörtern betrachtet, die sich nur durch ihre Vorkommensanzahl in dem Korpus unterscheiden. Dabei wird die Groß- und Kleinschreibung ebenfalls irrelevant, da es bei einer Menge von Wörtern ohne Reihenfolge auch keine Satzanfänge mehr gibt. Des weiteren besteht die Möglichkeit alle konjugierten bzw. deklinierten Formen eines Wortes zum Infinitiv bzw. Nominativ zusammenzufassen. Dies wird als Lemmatisierung bezeichnet. Wenn die Daten in der gewünschten Form vorliegen, beginnt der Schritt des Featureengineerings. Für einen Computer sind Wörter nicht so leicht zu verarbeiten, wie Zahlen, weshalb in diesem Schritt eine Quantisierung der Wörter und Überführung dieser in eine zahlenbasierte Form vorgenommen wird. Dabei sind die Features in Form der Spalten des Dataframes bereits passend gegliedert. Für die Darstellung der Dokumente als Menge an Zahlenwerten wird ein Dictionary erstellt, das die Wörter wie in Abbildung \ref{fig:data2} erhält und die Anzahl der Wörter ohne Duplikate in einer Liste auflistet. Diese Auflistung der Wörter zusammen mit ihrer Anzahl und laufenden Indexnummer kann als Input für ein LDA Modell verwendet werden. Die Worte werden intern als ID dargestellt, die für einen Menschen nicht zu verstehen sind. Aus diese Grund wird im Algorithmus der id2wordParameter eingeführt, der die Übersetzung zwischen Zahl und Datum darstellt. 
@@ -850,7 +833,7 @@ T17&1400\\
 \label{fig:count1}
 \end{center}
 \end{figure}
-\\
+
 Dasselbe ergibt sich für die Abteilungen und die Anzahl derer Dokumente. Dafür wird in dem von der ZVO bereitgestellten Datensatz die Zuordnung für jedes Dokument abgefragt. Dadurch kann das Dokument akkurat der Topic zugewiesen werden, wie es händisch getan wurde. Dies ist in Abbildung \ref{fig:count2} zu erkennen. \\ 
 
 \begin{figure}[H]
@@ -922,7 +905,7 @@ L17&ZSK-Widersprüche Abfall\\
 \caption{Die Zuordnung von Label zu Abteilung}
 \label{fig:labels}
 \end{center}
-\end{figure}\\
+\end{figure}
 
 
 Die Anzahl der Dokumente eines Topics kann nun mit der einer Abteilung verglichen werden, um die grundsätzliche Kompatibilität zwischen Topics und Abteilungen prüfen zu können. Dies gibt jedoch nur eine grobe Richtung an, da die Dokument selbst nicht geprüft werden. Das bedeutet, dass die verglichenen Anzahlen nicht prüfen, ob es sich sowohl in der Topic, als auch in der Abteilung auch wirklich um das gleiche Dokument handelt. Um die Dokumente mit in den Vergleich einzubeziehen und damit die Zuordnung von Topic auf Abteilung zu verbessern, wird eine weitere Methode betrachtet. Die Zuordnung der Topics zu Abteilungen kann approximiert werden, indem gezählt wird, in wie vielen Dokumenten sich die Topics und Abteilungen jeweils überschneiden. Genau wie bei der Gruppeneinteilung wird für diese Überschneidung jedes Dokument erneut auf dem Korpus geprüft, um dessen Topic-Word-Verteilung zu erstellen. Die Dokumente werden anhand ihrer einzigartigen Zeilen-ID adressiert. Die IDs werden der Topic zugeordnet, die die höchste Wahrscheinlichkeit in der Verteilung des Dokuments erreicht. Die Zuordnung findet in einer großen Liste statt, die über 18 Unterlisten verfügt, in die die IDs jeweils hinzugefügt werden. Die Überschneidungen werden in einer Matrix dargestellt, die für jedes Topic des Modells die Überschneidungen zu jeder Abteilung auflistet. Somit kann für jede Zeile die passende Zuordnung gefunden werden. Dabei stellt eine Zeile jeweils die Dokumente dar, die aufsummiert die Zahl einer Zeile in Abbildung \ref{fig:count1} ergeben. 
@@ -980,7 +963,7 @@ T17&20& 206& 128& 4& 7& 1& 25& 25& 120& \textbf{217}& 395& 0& 23& 58& 85& 157& 5
 \caption{Anzahl der Überschneidungen zwischen LDA Topics (vert.) und ZVO Labels (horiz.) mit den maximalen Werten pro Zeile in \textbf{fett} markiert.}
 \label{fig:matrixnormal}
 \end{center}
-\end{figure}\\
+\end{figure}
 
 
 %[[555, 977, 2150, 21, 66, 19, 211, 251, 910, 960, 902, 2, 210, 596, 302, 758, 318, 250], [512, 580, 650, 3, 36, 7, 139, 101, 370, 453, 570, 0, 66, 378, 91, 196, 123, 53], [508, 755, 263, 9, 67, 21, 254, 145, 282, 1498, 1207, 1, 119, 300, 479, 527, 177, 130], [108, 179, 98, 2, 15, 3, 33, 57, 236, 432, 218, 0, 34, 55, 153, 198, 74, 27], [493, 867, 442, 5, 63, 8, 134, 180, 451, 1111, 1033, 8, 73, 348, 446, 489, 191, 89], [91, 467, 98, 5, 25, 2, 60, 75, 162, 480, 309, 1, 55, 127, 169, 351, 113, 47], [1263, 3993, 1738, 28, 127, 48, 811, 587, 1384, 4139, 4730, 6, 573, 2096, 1620, 2080, 680, 495], [3376, 1298, 870, 17, 524, 16, 221, 338, 662, 1904, 1740, 9, 185, 381, 664, 891, 537, 133], [310, 585, 216, 10, 27, 5, 67, 114, 203, 771, 1013, 0, 81, 323, 264, 440, 205, 73], [58, 126, 47, 0, 3, 1, 17, 16, 131, 174, 400, 0, 15, 55, 63, 69, 59, 17], [286, 1610, 1733, 12, 51, 27, 284, 299, 858, 1567, 1331, 4, 239, 893, 674, 673, 304, 248], [194, 409, 377, 8, 27, 3, 88, 122, 180, 678, 470, 0, 80, 173, 167, 395, 142, 118], [486, 2355, 2495, 16, 80, 24, 564, 327, 1005, 2672, 1513, 3, 311, 1254, 886, 1377, 579, 327], [151, 393, 198, 5, 23, 4, 64, 83, 160, 414, 639, 1, 68, 192, 123, 275, 151, 68], [1008, 6084, 2681, 86, 153, 61, 990, 820, 2223, 5730, 3832, 8, 701, 2327, 1860, 3093, 993, 552], [270, 95, 36, 3, 10, 1, 29, 32, 46, 228, 284, 0, 19, 31, 61, 81, 23, 21], [81, 82, 25, 1, 3, 0, 18, 38, 27, 105, 90, 0, 14, 29, 37, 76, 24, 15], [20, 206, 128, 4, 7, 1, 25, 25, 120, 217, 395, 0, 23, 58, 85, 157, 55, 37]] MIT 133044 Dokumenten!!!!
@@ -996,7 +979,8 @@ Die Implementierung des LDA Modells wurde in Kapitel 4 vorgenommen. In diesem Ab
 
 %\begin{enumerate}
 %\item 
-\subsection{Gruppen und Wörter finden}\\
+\subsection{Gruppen und Wörter finden}
+
 Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Verteilung von Schlüsselwörtern beschrieben. Als Anwendungsziel in Bezug auf den ZVO sollen die Topics des Modells in Zukunft die Abteilungen darstellen. Betrachtet man dafür die Wörter der Topics, um die Topics semantisch den Abteilungen zuzuordnen, wird dies nicht gelingen. Das liegt daran, dass sich die dominaten Wörter in den Topics zu stark überschneiden. Zum Beispiel gehört \glqq ostholstein\grqq in allen Topics zu den häufigsten 5 Wörtern. In der folgenden Darstellung sind die häufigsten 5 Wörter aufgelistet und mit den 18 Topics auf Vorkommen geprüft: 
 
 \begin{figure}[H]
@@ -1017,7 +1001,7 @@ Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Vertei
     width=0.7\textwidth,,
     bar width=5.5mm,    symbolic y coords = {osthosltein,sierksdorf,zweckverband,nachricht,betreff,danken,frau,the,sitzen}, nodes near coords
   ]
-  \addplot coordinates { (18,ostholstein)(17,zweckverband)(18,sierksdorf)(14,nachricht)(10,betreff)(8,danken)(2,frau)(2,the)(1,sitzen)};
+  %\addplot coordinates { (18,ostholstein)(17,zweckverband)(18,sierksdorf)(14,nachricht)(10,betreff)(8,danken)(2,frau)(2,the)(1,sitzen)};
   \end{axis}
 \end{tikzpicture}
 \caption{Topicabdeckung der häufigsten 5 Wörter aller Topics}
@@ -1029,7 +1013,7 @@ In Abbildung \ref{fig:top5} sind die häufigsten 5 Wörter aller Topics auf der 
 \\
 
 %\item 
-\subsection{Zuordnung Abteilung zu Topic}\\
+\subsection{Zuordnung Abteilung zu Topic}
 %Die durchschnittliche Überschneidung zwischen Abteilung und Topic spiegelt wieder, wie stark die Abteilung mit einem oder mehreren Topics übereinstimmt. Ein hoher Durschnitt kann entweder eine sehr hohe Überschneidung der Abteilung mit einer Topic oder relativ hohe Überschneidungen mit mehreren Topics bedeuten. Für die Umsetzung betrachten wir die Abbildung \ref{fig:matrixnormal} aus Abschnitt 4, die eine Matrix mit allen Überschneidungen zwischen Topics und Abteilungen mit absoluten Werten aufzeichnet. Hierbei beinhalten die Werte nur Dokumente, die sowohl in der Topic, als auch in der Abteilung enthalten sind. Um eine möglichst effektive Zuteilung zu erlangen, wählen wir zuerst den naivsten Ansatz, aus jeder Zeile den maximalen Wert zu nehmen. Als Graphik ist das wie folgt darzustellen: 
 Wie in der Konzeption beschrieben ist der einfachste Ansatz, um die Topics als Abteilungen zu interpretieren, den Topics der Reihenfolge nach die Abteilungen zuzuordnen. Also würde Topic 0 Abteilung 0 zugeteilt bekommen. \\
 \begin{figure}[H]
@@ -1308,7 +1292,7 @@ maxmatrix = [2,2,9,9,9,9,10,0,10,10,1,9,9,10,9,10,9,9]
 \caption{Liste der zugeordneten Topics und Abteilungen bei maximaler Überschneidung pro Topic}
 \label{fig:maxlist}
 \end{center}
-\end{figure}\\
+\end{figure}
 
 
 Für diese Zuordnung prüfen wir nun die Anzahl der Dokumente in den jeweils gewählten Topics bzw. Abteilungen. Dabei ist die reine Schnittmenge nicht der alleinige Parameter. Dafür werden die Anteile aus Abbildung \ref{fig:count1} und Abbildung \ref{fig:count2} zum Vergleich herangezogen. Eine Zuordnung ist nur dann gut, wenn die Überschneidungsmenge möglichst nah an der Gesamtmenge der zugeordneten Dokumente in den Topics bzw. Abteilung ist. Eine vergleichsmäßig hohe Schnittmenge heißt nicht automatisch eine korrekte Zuteilung, wenn die Abteilung zum Beispiel manuell deutlich mehr Daten zugeordnet hat.\\
@@ -1458,7 +1442,7 @@ average_row = [2,0,5,8,11,15,10,4,10,10,2,17,2,16,3,0,7,10]
 \end{lstlisting}
 \caption{Zuordnung zwischen LDA und Label} 
 \end{center}
-\end{figure}\\
+\end{figure}
 
 Man erkennt eine leichte Verbesserung zu Abbildung \ref{fig:matrixnormal}, da in der Zuteilung mehr Abteilungen zugeordnet wurden. Insgesamt sind jedoch immernoch nur $12/18$ in der Liste vertreten. Wie bei der ersten Liste, bei der  $ 0,1,2,9,10 $ mehrfach zugeweisen wurden, sind hier $2$ und $10$ drei mal zugewiesen und $0$ zwei mal. Somit unterstreicht das Ergebnis die Problematik der Zuteilung der ZVO in Bezug auf diese Abteilungen. Die Daten sind somit nicht für die Nutzung in der Topic-Modellierung geeignet.
 
@@ -1474,7 +1458,7 @@ Bei dem zweiten Experiment führt eine sehr schwierige und unsichere Zuordnung d
 
 Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen zu extrahieren. Die Daten stellten in dieser Arbeit die Kundenanfragen der ZVO dar. Diese erhalten jährlich große Datenmengen an Kundenanfragen, die händisch von Mitarbeitern gelesen und klassifiziert werden. Aktuell wird an einem Klassifikator gearbeitet, der die Anfragen in Zukunft selbstständig klassifizieren soll. Dafür wurde in dieser Arbeit das Ziel verfolgt, die Qualität dieses Klassifikators vorherzusagen, indem die Qualität der Daten analysiert und die Gruppierung der Abteilungen dem ZVO untersucht wurden. Für diese Anwendung wurde Topic-Modellierung verwendet, da es erlaubt Daten nicht nur einer Klasse zuzuordnen, sondern mehreren. Dies stellt den Unterschied zwischen Topic-Modellierung und Clustering dar und bietet sich für die Anwendung auf den ZVO-Daten an. Als Methode der Topic-Modellierung wurde Latent Dirichlet Allocation (LDA) verwendet - eine der weltweit am weitesten verbreiteten Methoden. Diese wurde in der Bibliothek Gensim umgesetzt, die die Anwendung der Methode durch viele effizient vorimplementierte Algorithmen erleichterte. Die Daten durchliefen nach der Akquise einen Datenvorbereitungsprozess, in dem sie gereinigt wurden. Dies umfasste die Formatierung, Ausdünnung durch die Entfernung von Stop-Words, Lemmatisierung und Erstellung der Features. Auf Basis der vorverarbeiteten Daten konnte ein Topic-Modell generiert werden. Dieses hat 18 Topics mit Schlüsselwörtern erstellt, die zu unterschiedlichem Anteil in dem Korpus vorkommen. Um die Qualität der Daten zu analysieren, wurden die erhaltenen Topics und dessen Schlüsselwörter analysiert. Dabei wurde die Erkenntnis gewonnen, dass die häufigsten 5 Schlüsselwörter der Topics nur aus 9 verschiedenen Wörtern bestehen. In dem Korpus wurde demnach von dem LDA-Modell kein Muster gefunden, das die Topics semantisch eindeutig unterteilt, da sie sich in den Schlüsselwörtern sehr ähnlich waren. Als Folgerung heißt dies, dass die Daten eine zu schlechte Qualität aufweisen, um sie von einem Topic-Modellierungs-Algorithmus einteilen lassen zu können. In der Arbeit wurde noch ein weiteres Experiment durchgeführt, das die Erkenntnis bestärkte. Das Experiment bestand daraus, zu versuchen, die erhaltenen Topics vorgefertigten Abteilungen zuzuordnen. Dafür wurde eine Matrix aufgebaut, die alle Überschneidungen der Topics und Abteilungen aufzeichnet. Diese hat gezeigt, dass es Abteilungen unter den ZVO-Gruppierungen gibt, die deutlich mehr Daten beinhalten, als  andere. Diese Ungleichheit führt dazu, dass manche Abteilungen zu wenig Daten besitzen, um von einem Machine-Learning-Algorithmus ein eigenes eindeutiges Muster zu erkennen. Die ungleichmäßige Verteilung wurde in einer Darstellung deutlich, die die Anzahl der zugeordneten Dokumente darstellte. Zusätzlich stellte eine andere Darstellung die Überschneidungen den absoluten Anzahlen der Dokumente in den Topics und Abteilungen gegenüber. Die Erkenntnis aus diesem Graphen war, dass die Abteilungen, bei denen die Überschneidungen größer waren, auch sehr viel mehr Daten überhaupt besaßen. Die Quote der durchschnittlichen Überschneidung war somit immernoch sehr schlecht. Das Ergebnis des zweiten Experiments verstärkt somit die erste Haupterkenntnis, dass die Daten sich aufgrund von ungleicher Verteilung und zu ähnlichen Wörtern in händisch eingeteilten Abteilungen nicht für eine automatische Klassifikation durch Topic-Modellierung eigenen.
 
-
+\cite{lda}
 
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
@@ -1583,155 +1567,13 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
 
 \begin{bibtex-entries}
 
-@article{lda,
+
+  @article{lda,
   author =       {David M. Blei, Andrew Y. Ng, Michael I. Jordan},
   title =        {Latent Dirichlet Allocation},
   journal =    {Journal of Machine Learning Research},
   year =         {2003},
 }
-
-@article{ptm,
-  author =       {David M. Blei},
-  title =        {Probabilistic Topic Models},
-  journal =    {Communication of the ACM},
-  year =         {2012},
-}
-
-@article{plsa,
-  author =       {Thomas Hofmann},
-  title =        {Probabilistic Latent Semantic Analysis},
-  institution =  {EECS Department, Computer Science Division, University of California, Berkeley  \& sInternational Computer Science Institute, Berkeley, CA},
-  year =         {1975}
-}
-
-@Manual{towardsdata,
-  author =       {Susan Li},
-  title =        {Topic Modeling and Latent Dirichlet Allocation (LDA) in Python},
-  year =         {2018},
-  url =          {https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24}
-}
-
-@Manual{towardsdata,
-  author =       {Tyler Doll},
-  title =        {LDA Topic Modeling: An Explanation},
-  year =         {2018},
-  url =          {https://towardsdatascience.com/lda-topic-modeling-an-explanation-e184c90aadcd}
-}
-
-@Book{tmbook,
-  author =       {Chaitanya Chemudugunta},
-  title =        {Text Mining with Probabilistic Topic Models: Applications in Information Retrieval and Concept Modeling},
-  publisher =    {LAP Lambert Academic Publishing},
-  year =         2010,
-  doi =          {TBD},
-}
-
-@Manual{lda2,
-  title =        {Topic modeling using Latent Dirichlet Allocation(LDA) and Gibbs Sampling explained!},
-  author =       {Ankur Tomar},
-  url =          {https://medium.com/analytics-vidhya/topic-modeling-using-lda-and-gibbs-sampling-explained-49d49b3d1045},
-  year =         {2018},
-}
-
-@masterthesis{magnus,
-  title =        {Betrachtung eines statischen Topic-Modells zur Repräsentation wechselnder Dokumente},
-  author =       {Magnus Bender},
-  url =          {http://www.ctan.org/pkg/varioref},
-school = 	{University of Lübeck}
-year =      {2019}
-}
-
-@Manual{radim,
-  title =        {LDA Model},
-  author =       {Radim Řehůřek},
-  url =          {https://radimrehurek.com/gensim/auto_examples/tutorials/run_lda.html},
-  year =         {2009}
-}
-
-@Manual{radim2,
-  title =        {Parallelized Latent Dirichlet Allocation},
-  author =       {Radim Řehůřek},
-  url =          {https://radimrehurek.com/gensim/models/ldamulticore.html},
-  year =         {2009}
-}
-
-@techreport{q1
-title = {Maintaining Topic Models for Growing Corpora},
-author = {Felix Kuhr, Magnus Bender, Tanya Braun and Ralf Mo ̈ller},
-institution = {Universität zu Lübeck}, 
-year = {2020}}
-
-@techreport{q2
-title = {Topic modeling in large scale social network data},
-author = {Aman Ahuja, Wei Wei, Kathleen M. Carley},
-insitution = {Institute of Software Research, School of Computer Science, Pittsburgh},
-year = {2015}
-}
-
-@techreport{q3
-title = {LSA & LDA Topic Modeling Classification: Comparison study on E-books},
-author = {Shaymaa H. Mohammed, Salam Al-augby},
-institution = {Department of Computer Science, Faculty of Computer Science and Mathamatics, University of Kufa, Iraq},
-year = {2019}}
-
-@techreport{q4
-title = {An LDA-based community structure discovery approach for large-scale social networks},
-author = {H. Zhang, B. Qiu, C.L. Giles, H.C. Foley and J. Yen},
-institution = {IEEE},
-year ={2007}}
-
-@article{q5
-title = {Latent Dirichlet allocation (LDA) and topic modeling: models, applications, a survey},
-author = {Hamed Jelodar, Yongli Wang, Chi Yuan, Xia Feng, Xiahui Jiang, Yanchao Li and Liang Zhao},
-journal = {Springer},
-year ={2019}}
-
-@techreport{q6
-title = {LDA based topic modeling of journal abstracts},
-author = {P. Anupriya, S. Karpagavalli},
-institution = {IEEE},
-year ={2015}}
-
-@article{q7
-title = {Understanding Weekly COVID-19 Concerns through Dynamic Content-Specific LDA Topic Modeling},
-author = {Mohammadzaman Zamani, H. Andrew Schwartz, Johannes Eichstaedt, Sharath Chandra Guntuku, Adithya Virinchipuram Ganesan,Sean Clouston and Salvatore Giorgi},
-journal = {Proc Conf Empir Methods Nat Lang Process},
-year ={2020}}
-
-@techreport{q8
-title = {Topic Significance Ranking of LDA Generative Models},
-author = {Loulwah AlSumait, Daniel Barbara, James Gentle and Carlotta Domeniconi},
-institution = {Department of Computer Science, George Mason University, Fairfax VA 22030, USA},
-year ={2009}}
-
-@article{q9
-title = {Learning Topic Models — Provably and Efficiently},
-author= {Sanjeev Arora, Rong Ge, Yoni Halpern, David Mimno, Ankur Moitra, David Sontag, Yichen Wu, Michael Zhu},
-journal = {Communications of the ACM},
-year = {2018}}
-
-@techreport{q10
-title = {Topic Models (I)},
-author = {Runzhe Yang},
-institution = {Princeton University, Department of Computer Science},
-year = {2019}
-}
-
-@techreport{q11
-title = {Applications of Topic Models},
-author = {Jordan Boyd-Graber},
-institution = {Department of Computer Science, umiacs, Language Science University of Maryland},
-year = {2017}
-}
-
-@misc{statista,
-title = {Prognose zum Volumen der jährlich generierten digitalen Datenmenge weltweit in den Jahren 2018 und 2025},
-author = {F. Tenzer},
-url ={https://de.statista.com/statistik/daten/studie/267974/umfrage/prognose-zum-weltweit-generierten-datenvolumen/},
-year = {2020}
-}
-
-
 
 \end{bibtex-entries}
 
