@@ -363,7 +363,7 @@
 \lstMakeShortInline[style=code,style=inline,language={[LaTeX]tex},moretexcs={chapter}]|
 
 
-Die digitalisierte Welt generiert täglich riesige Mengen an neuen Informationen. Von E-Books, Blogs über Nachrichten-Websites und Magazinen bis hin zu mobilen Anwendungen auf dem Smartphone, immer mehr Menschen verlassen sich auf und richten ihr Leben nach dem Internet aus. Das Zeitalter des Big-Data ermöglicht es Nutzern unbegrenzt viele Daten zu generieren und zu sammeln. Die Kapazitäten, die ein Mensch aufbringen kann, um solche Massen an Daten zu organisieren und zu verstehen, sind schon lange übertroffen. Vor allem durch die steigende digitale Kommunikation und stetig sinkenden Speicherplatzkosten, erhöht sich die Menge an zu speichernden Einsen und Nullen. Laut Statista \cite{statista}  wurden 2018 33 Zettabyte an Daten generiert mit einer prognostizierten Steigerung bis 2025 um 530\% auf 175 Zettabyte. Dieser dramatische Anstieg zeigt die Dringlichkeit für effiziente Algorithmen und Methoden der Datenverarbeitung. Neben der reinen Handhabung solcher Daten steigt aber auch das Bewusstsein, aus diesen Daten Verständnis und Potentiale zu schaffen. Besonders Suchverfahren gewinnen an Bedeutung, wenn in großen, unübersichtlichen Datenmengen bestimmte Informationen gefragt sind. Für die Mehrheit bieten Firmen, wie Google, diese Anwendung an. Zwar kann durch die Keyword-basierten Suche das passende Dokument gefunden werden, jedoch schlägt die Suchmaschine fehl, wenn nach einer Menge von Dokumente mit einem übergreifenden Thema gefragt ist. Um mehrere Dokumente auf geteilte Themen zu untersuchen, wird die sogenannte Topic-Modellierung verwendet. Topic-Modellierung (dt. Themenmodellierung) beschreibt eine Gruppe von Verfahren, die es ermöglichen, große elektronische Datensammlungen automatisiert zu durchsuchen, zu organisieren und zu verstehen. Es können Muster innerhalb der Daten entdeckt und Topics extrahiert werden. Ein Topic stellt dabei eine Menge an Wörtern dar, häufig gemeinsam in einem Kontext vorkommen. Einem Topic über Hunde würden beispielsweise die Wörter Bellen, Fell und Halsband zu einer hohen Wahrscheinlichkeit angehören, da sie oft gemeinsam in dem übergeordneten Thema über Hunde gebraucht werden. Die Modellierung solcher Topics wird als Topic-Modellierung bezeichnet, da in einer Datenmenge nach mehreren solcher Topics gesucht wird. Diese können zu unterschiedlichen Anteilen in dem Dokument vertreten sein. Ein Dokument ist dabei ein Teil eines Korpus, also einer Menge mehrerer Dokumente. Dabei stellen Topic-Modelle statistische Modelle dar, die Verwendung in der Inferenz abstrakter Topics in unsortierten Datenmengen finden. Topic Modelling gehört zu dem Bereich des Natural Language Processing, also der Verarbeitung natürlicher Sprache. Es verbindet Computerlinguistik, Informatik und Künstliche Intelligenz, um die Potentiale der Sprachverarbeitung mit der heutigen Technik auszuschöpfen. In einer Welt von exponentiell wachsenden Datenmengen finden Methoden der Topic-Modellierung stetig eine breitere Anwendung. Bereits heute wird Topic-Modellierung in vielen Bereichen der Wirtschaft, Wissenschaft und Informationstechnologie verwendet. So findet die Topic-Modellierung unter anderem Anwendung bei Zusammenfassungen, Spam Filtern, Internet of Things (IOT), Healthcare, Blockchain, Chatbots, FAQs oder HR. Dies zeigt wie umfangreich das Anwendungsspektrum der Topic-Modellierung ist. Um semantische Folgerungen aus Datenmengen zu generieren, gibt es verschiedene Ansätze – in dieser Arbeit wird es um die generative Methode Latent Dirichlet Allocation(LDA) gehen. Dabei werden ähnliche Wörter, die in ähnlichen Kontexten vorkommen in Topics gruppiert. Die Grundlagen des LDA liegen bei der Verallgemeinerung des bereits $1999$ veröffentlichten Probabilistic Latent semantic Analysis (PLSA). Im Gegensatz zu anderen Machine Learning Methoden im Bereich der Datenverarbeitung, hat Topic-Modellierung die Besonderheit, dass ein Dokument nicht nur zu einem Topic zugeordnet werden kann, wie z.B. bei Clusteralgorithmen. Bei der Topic-Modellierung wird jedes Dokument durch eine Verteilung an Topics beschreiben, das bedeutet in jedem Dokument sind immer alle Topics zu finden - nur zu einem bestimmten Anteil. Genauso sind in einem Topic immer alle Worte zu einer bestimmten Wahrscheinlichkeit vorhanden. Bei einem Artikel, der zu $90\%$ über Sport und $10\%$ über Politik handelt, werden somit neun mal mehr Wörter bezüglich Sport zu finden sein, als über Politik. Topic-Modellierung wird den unüberwachten Lernmethoden des Data Minings zugeordnet, also der Extraktion von Muster und Trends in Datenmengen durch die Anwendung statistischer Algorithmen. Das bedeutet, dass die Topics ohne die Einwirkung von manuell erzeugten Labels gefunden werden. Im Lernprozess werden dann Verteilungen basierend auf den bislang vorgenommenen Zuordnungen iterativ angepasst und verbessert - jedoch alles ohne menschliches Zutun. 
+Die digitalisierte Welt generiert täglich riesige Mengen an neuen Informationen. Von E-Books, Blogs über Nachrichten-Websites und Magazinen bis hin zu mobilen Anwendungen auf dem Smartphone, immer mehr Menschen verlassen sich auf und richten ihr Leben nach dem Internet aus. Das Zeitalter des Big-Data ermöglicht es Nutzern unbegrenzt viele Daten zu generieren und zu sammeln. Die Kapazitäten, die ein Mensch aufbringen kann, um solche Massen an Daten zu organisieren und zu verstehen, sind schon lange übertroffen. Vor allem durch die steigende digitale Kommunikation und stetig sinkenden Speicherplatzkosten, erhöht sich die Menge an zu speichernden Einsen und Nullen. Laut Statista \cite{statista}  wurden 2018 33 Zettabyte an Daten generiert mit einer prognostizierten Steigerung bis 2025 um 530\% auf 175 Zettabyte. Dieser dramatische Anstieg zeigt die Dringlichkeit für effiziente Algorithmen und Methoden der Datenverarbeitung. Neben der reinen Handhabung solcher Daten steigt aber auch das Bewusstsein, aus diesen Daten Verständnis und Potentiale zu schaffen. Besonders Suchverfahren gewinnen an Bedeutung, wenn in großen, unübersichtlichen Datenmengen bestimmte Informationen gefragt sind. Für die Mehrheit bieten Firmen, wie Google, diese Anwendung an. Zwar kann durch die Keyword-basierten Suche das passende Dokument gefunden werden, jedoch schlägt die Suchmaschine fehl, wenn nach einer Menge von Dokumente mit einem übergreifenden Thema gefragt ist. Um mehrere Dokumente auf geteilte Themen zu untersuchen, wird die sogenannte Topic-Modellierung verwendet. Topic-Modellierung (dt. Themenmodellierung) beschreibt eine Gruppe von Verfahren, die es ermöglichen, große elektronische Datensammlungen automatisiert zu durchsuchen, zu organisieren und zu verstehen. Es können Muster innerhalb der Daten entdeckt und Topics extrahiert werden. Ein Topic stellt dabei eine Menge an Wörtern dar, häufig gemeinsam in einem Kontext vorkommen. Einem Topic über Hunde würden beispielsweise die Wörter Bellen, Fell und Halsband zu einer hohen Wahrscheinlichkeit angehören, da sie oft gemeinsam in dem übergeordneten Thema über Hunde gebraucht werden. Die Modellierung solcher Topics wird als Topic-Modellierung bezeichnet, da in einer Datenmenge nach mehreren solcher Topics gesucht wird. Diese können zu unterschiedlichen Anteilen in dem Dokument vertreten sein. Ein Dokument ist dabei ein Teil eines Korpus, also einer Menge mehrerer Dokumente. Dabei stellen Topic-Modelle statistische Modelle dar, die Verwendung in der Inferenz abstrakter Topics in unsortierten Datenmengen finden. Topic Modelling gehört zu dem Bereich des Natural Language Processing, also der Verarbeitung natürlicher Sprache. Es verbindet Computerlinguistik, Informatik und Künstliche Intelligenz, um die Potentiale der Sprachverarbeitung mit der heutigen Technik auszuschöpfen. In einer Welt von exponentiell wachsenden Datenmengen finden Methoden der Topic-Modellierung stetig eine breitere Anwendung. Bereits heute wird Topic-Modellierung in vielen Bereichen der Wirtschaft, Wissenschaft und Informationstechnologie verwendet. So findet die Topic-Modellierung unter anderem Anwendung bei Zusammenfassungen, Spam Filtern, Internet of Things (IOT), Healthcare, Blockchain, Chatbots, FAQs oder HR. So wird in \cite{a1} mit einem LDA-Modell untersucht, wie stark die Sorgen über das Corona Virus sind. Als weiteres Beispiel führt \cite{t1} eine Studie über eine Menge von E-Books durch, ebenfalls eine Quelle vieler zu verarbeitender Daten. Ein ähnliches Ziel wird in \cite{t3} verfolgt, in dem Abschnitte aus verschiedenen Zeitschriften untersucht und mithilfe einer Topic-Modellierung  analysiert werden. Dies zeigt wie umfangreich das Anwendungsspektrum der Topic-Modellierung ist. Weitere Anwendungsgebiete sind in \cite{tmbook} detailliert beschrieben. Um semantische Folgerungen aus Datenmengen zu generieren, gibt es verschiedene Ansätze – in dieser Arbeit wird es um die generative Methode Latent Dirichlet Allocation(LDA) gehen. Dabei werden ähnliche Wörter, die in ähnlichen Kontexten vorkommen in Topics gruppiert. Die Grundlagen des LDA liegen bei der Verallgemeinerung des bereits $1999$ veröffentlichten Probabilistic Latent semantic Analysis (PLSA). Dieses Verfahren ist in \cite{plsa} erklärt. Im Gegensatz zu anderen Machine Learning Methoden im Bereich der Datenverarbeitung, hat Topic-Modellierung die Besonderheit, dass ein Dokument nicht nur zu einem Topic zugeordnet werden kann, wie z.B. bei Clusteralgorithmen. Bei der Topic-Modellierung wird jedes Dokument durch eine Verteilung an Topics beschreiben, das bedeutet in jedem Dokument sind immer alle Topics zu finden - nur zu einem bestimmten Anteil. Genauso sind in einem Topic immer alle Worte zu einer bestimmten Wahrscheinlichkeit vorhanden. Bei einem Artikel, der zu $90\%$ über Sport und $10\%$ über Politik handelt, werden somit neun mal mehr Wörter bezüglich Sport zu finden sein, als über Politik. Topic-Modellierung wird den unüberwachten Lernmethoden des Data Minings zugeordnet, also der Extraktion von Muster und Trends in Datenmengen durch die Anwendung statistischer Algorithmen. Das bedeutet, dass die Topics ohne die Einwirkung von manuell erzeugten Labels gefunden werden. Im Lernprozess werden dann Verteilungen basierend auf den bislang vorgenommenen Zuordnungen iterativ angepasst und verbessert - jedoch alles ohne menschliches Zutun. 
 
 \section{Ziel}
 Diese Arbeit wird die Theorie der Topic-Modellierung anhand des Beispiels des Zweckverband Ostholstein (ZVO) in der Praxis implementieren und die bezüglichen Parameter im Sinne des ZVO bewerten. Der ZVO ist ein Unternehmen, das in Norddeutschland in der Energie-, Entwässerungs-, Internet- und Entsorgungsbranche tätig ist.  Es erhält jährlich ein große Menge an Kundenanfrage, die von Mitarbeitern gelesen und klassifiziert wird. Die klassifizierte Kundenanfrage wird dann an die zuständige Abteilung weitergeleitet. Dieser Vorgang ist sowohl zeitintensiv, als auch fehleranfällig und führt zu einer Ineffizienz in der Wertschöpfungskette. Der Prozess soll zukünftig automatisch durch einen Klassifikationsmechanismus funktionieren. \\
@@ -375,7 +375,7 @@ Diese Arbeit verfolgt zwei Ziele:
 
 Diese Arbeit beschäftigt sich mit der Vorhersage der Qualität des Klassifikators, indem die Qualität der manuell erstellten Kategorien und Kundenanfrage-Gruppen untersucht und mit den Ergebnissen verschiedenen Topic Modellierungen verglichen wird. Das Ergebnis eines Topic Models hängt stark von der Qualität der Daten ab, die sie als Input bekommt. Diese Daten durchlaufen eine Reinigungsphase, bevor sie klassifiziert werden, um sie in eine gut zu verarbeitende Form zu bringen. Der Prozess der Reinigung kann Einfluss auf das Ergebnis haben. Ziel dieser Arbeit ist es, Erkenntnisse über die Qualität des Klassifikators zu treffen, in Abhängigkeit zu den verwendeten Daten. Somit wird durch die Nutzung von LDA-Modellen die Qualität der Daten untersucht und Prognosen über einer höheren Qualität der Klassfikiation anhand der Daten getroffen. 
 
-\section{Sturktur dieser Arbeit}
+\section{Struktur dieser Arbeit}
 Der Bereich Data Science und Datenverarbeitung durchläuft aktuell eine starke Welle an Innovation und Veränderung. Deshalb wird in dieser Arbeit zuerst eine Einleitung die Motivation und das Prinzip der Topic-Modellierung beschreiben. Gefolgt wird die allgemeine Einleitung von der Motivation und Aufgabenstellung in Bezug auf das Anwendungsbeispiel des Zweckverbands Ostholstein (ZVO). Die Anwendung der Algorithmen wird im Laufe der Arbeit mit theoretischen Grundlagen erklärt, die eine klare Notation fordern: diese ist im Teil der Notationen gelistet. Das Prinzip der Topic-Modellierung kann mit unterschiedlichen Ansätzen implementiert werden. Beispiele sind: LDA, NNF und LSA. Da sich diese in ihrem Ansatz und in ihrer Umsetzung unterscheiden, werden im nächsten Abschnitt die bekanntesten dieser Modelle verglichen, indem ihre Vorgehens- und Funktionsweise untersucht werden. Die Methode, die in dieser Arbeit genauer beleuchtet wird, ist Latent Dirichlet Allocation. Der dritte Abschnitt wird von der Herkunft, dem Format und der Verarbeitung der Daten der ZVO handeln. Dabei wird der Anwendungsfall und die ZVO genauer erklärt und ein Einblick in die Daten, deren Reinigung und Verarbeitung gegeben. Darauf folgt das Konzept der Lösungsstrategie, um die Aussagekraft und Qualität der Daten für Topic-Modellierung erfolgreich zu untersuchen. Dafür wird der Ablauf des Algorithmus anschaulich dargestellt und die Prozesskette der Analyse im Detail aufgeschlüsselt. Im vierten Abschnitt findet die Implementierung des im dritten Abschnitt erklärten Konzepts statt. Für diese wird eine Methode der Topic-Modellierung ausgewählt und in einer vorher definierten und begründeten Programmierumgebung realisiert. Die Umsetzung wird anhand des gelisteten Algorithmus zeilenweise erklärt. Der Output ist in die Arbeit integriert, um dessen zentrale Rolle in der Datenanalyse zu unterstreichen und die Ergebnisse verständlich begründen zu können. Die detaillierte Analyse folgt im nächsten Abschnitt, der sich damit befasst, die Ergebnisse der Implementierung im Anwendungsfall der ZVO zu interpretieren. Dabei wird begründet, wie gut sich die Daten für eine Topic-Modellierung eignen und was die Ergebnisse über die Qualität der Daten aussagen. Die Arbeit wird abgeschlossen mit der Zusammenfassung und einem Ausblick für die ZVO in Bezug auf Topic-Modellierung. Die gewonnenen Ergebnisse der Datenqualität sollen der ZVO nach der Ergebnisgewinnung zu einer höheren Effizienz in der Datenverarbeitung verhelfen und Aufschluss über Handlungsbedarf und Optimierungspotential in den Datensätzen geben.
 
 
@@ -403,7 +403,7 @@ Das Feld des Information Retrieval bietet vielseitige Verfahren, um Topic-Modell
 Das Verfahren der (Tf-idf) beschreibt ein statistisches Maß, um die Wichtigkeit von Wörtern in einer Gruppe von Dokumenten zu beurteilen. Die Term-Frequency(Tf) erstellt eine Matrix, die die Anzahl der Wörter auf die Dokumente abbildet, in denen sie enthalten sind. Um zu vermeiden, dass Wörter, die wenig Aussagekraft für den Korpus haben, wie das Wort \glqq und\grqq, bestimmt die Inverse Document Frequency(idf) wie spezifisch ein Wort für einen gesamten Korpus ist. Das einzelne Dokument ist dafür demnach nicht mehr wichtig. Die Idee dabei ist, dass Wörter, die sehr selten vorkommen ein Dokument unter Umständen stärker beeinflussen können, als ein Wort, das so häufig vorkommt, dass es schon keine Aussagekraft oder semantische Relevanz mehr hat. Das Verfahren verwendet keine probabilistischen Elemente sondern ist eine rein statistische Möglichkeit herauszufinden, wie wichtig ein Wort eines Dokuments für das Gesamtthema des Dokuments ist. 
 
 \subsection{Latent Semantic Analysis}
-Viele Verfahren der Topic-Modellierung gehen auf das sogenannte Latent Semantic Analysis (LSA) zurück, das zuerst 1990 erwähnt wurde. LSA baut auf dem Prinzip der Tf-idf auf, indem es die Tf-Matrix nutzt und adaptiert. Bei dem Verfahren geht es um das Finden von sogenannten Hauptkomponenten in Dokumenten. Grob können Hauptkomponenten als allgemeine Überthemen verstanden werden. So wäre Politik die Hauptkomponente, die von Wörtern wie Politiker, Bundestag und Regierung beschrieben wird. Mathematisch gesehen verbindet man mit der Hauptkomponente die Hauptkomponentenanalyse, die als statistische Methode versucht, viele Variablen mithilfe von Eigenvektoren und Kovarianzen in einer vereinfachten Form mit einem möglichst geringen Informationsverlust darszustellen. Dabei ist das Ziel die Tf-Matrix möglichst verkleinert darzustellen, die die Anzahl der Vorkommen für jedes Wort pro Dokument abbildet. Sie wird in Matrizen aus Eigenvektoren und Eigenwerten aufgespalten, wodurch es möglich ist, die wichtigen Hauptkomponenten aus der meist sehr großen Tf-Matrix zu extrahieren. Diese Matrix wird als Produkt von drei Matrizen dargestellt, von denen die mittlere eine Diagonalmatrix darstellt. Die Werte auf der Diagonalen lassen daraus die Topics der Textmenge ablesen. LSA stellt sich als ein attraktives Verfahren heraus, da es Synonyme besser erkennen kann als LDA und wird heutzutage unter anderem intensiv in dem Bereich des Digital Marketings genutzt. 
+Viele Verfahren der Topic-Modellierung gehen auf das sogenannte Latent Semantic Analysis (LSA) zurück, das zuerst 1990 erwähnt wurde. LSA baut auf dem Prinzip der Tf-idf auf, indem es die Tf-Matrix nutzt und adaptiert. Bei dem Verfahren geht es um das Finden von sogenannten Hauptkomponenten in Dokumenten. Grob können Hauptkomponenten als allgemeine Überthemen verstanden werden. So wäre Politik die Hauptkomponente, die von Wörtern wie Politiker, Bundestag und Regierung beschrieben wird. Mathematisch gesehen verbindet man mit der Hauptkomponente die Hauptkomponentenanalyse, die als statistische Methode versucht, viele Variablen mithilfe von Eigenvektoren und Kovarianzen in einer vereinfachten Form mit einem möglichst geringen Informationsverlust darszustellen. Dabei ist das Ziel die Tf-Matrix möglichst verkleinert darzustellen, die die Anzahl der Vorkommen für jedes Wort pro Dokument abbildet. Sie wird in Matrizen aus Eigenvektoren und Eigenwerten aufgespalten, wodurch es möglich ist, die wichtigen Hauptkomponenten aus der meist sehr großen Tf-Matrix zu extrahieren. Diese Matrix wird als Produkt von drei Matrizen dargestellt, von denen die mittlere eine Diagonalmatrix darstellt. Die Werte auf der Diagonalen lassen daraus die Topics der Textmenge ablesen. LSA stellt sich als ein attraktives Verfahren heraus, da es Synonyme besser erkennen kann als LDA und wird heutzutage unter anderem intensiv in dem Bereich des Digital Marketings genutzt. Die Studie \cite{t1} beschreibt einen Vergleich zwischen LSA und LDA. 
 
 \subsection{Probabilistic Latent Semantic Analysis}
 Probabilistic Latent Semantic Analysis (PLSA) verfolgt den Ansatz, ein Wahrscheinlichkeitsmodell zu finden, das ein Dokument erzeugt, dass zu der Tf-Matrix passt. PLSA hat als erste Methode dem Konzept der Topic-Modellierung Wahrscheinlichkeiten hinzugefügt. Dabei sind das Dokument und Wort bekannt, das assoziierte Topic jedoch nicht. Der grundlegende Gedanke ist, dass ein Dokument generiert werden kann, indem zuerst das Dokument mit einer bestimmten Wahrscheinlichkeit gewählt wird, dann ein Topic und aus diesem Topic dann ein Wort - alles mit Wahrscheinlichkeiten beschrieben. Es lässt sich der Fall, dass Dokument $d$ über Topic $z$ handelt, mit einer Wahrscheinlichkeit von $P(z \mid d)$ beschreiben. Dazu berechnet $P(w \mid z)$, wie wahrscheinlich es ist, dass das Wort $w$ aus einem gegebenen Dokument $d$ zu Topic $z$ gehört. Somit führt PLSA die Gesamtwahrscheinlich ein, dass ein Wort in einem gegebenen Dokument zu finden ist: $P(D,W) = P(D) \sum_{Z}{P(Z\mid D)P(W\mid Z)}$. Die Gleichung verbindet die Wahrscheinlichkeit ein bestimmtes Dokument zu erhalten mit der eines Wortes in diesem bedingt durch die Topic-Verteilung in diesem Dokument. 
@@ -468,7 +468,7 @@ Die beiden Ziele stehen in einer Wechselbeziehung zueinander, da eine minimale A
 
 
 \subsection{Der generative Prozess} 
-Bei der Erstellung eines Klassifikators gibt es zwei unterschiedliche Herangehensweisen: den deskriptiven und den generativen Ansatz. Bei der deskriptiven, oder auch beschreibenden Statistik geht es um die sinnvolle und übersichtliche Darstellung empirischer Daten durch zum Beispiel Tabellen oder Kennzahlen. Betrachtet man zwei Variablen, ein bekanntes $X$ und eine gesuchte Variable $Y$, dann wird im deskriptiven Modell die bedingte Wahrscheinlichkeit $P(Y \mid X)$ betrachtet. Im Gegensatz dazu ist bei generativen Modellen die Wahrscheinlichkeit von $X$ und $Y$ gemeinsam relevant, also $P(X, Y)$ . Bei generativen Modellen besteht die Möglichkeit, Ausgabeinstanzen zu erstellen. Bei LDA handelt es sich um einen generativen Algorithmus. Das bedeutet nicht direkt, dass LDA bei der Ausführung aktiv neue Dokumente entwickelt, sondern stellt eine Erklärung dar, wie die Zusammenstellung der Topics und deren Wörter in einem spezifischen Fall entstanden sein könnten. Es könnten theoretisch im Fall einer neuen Dokumentzuordnung zu Abteilungen für jede Abteilung zufällig Dokumente generiert werden. Diese würden zufällig gewählte Wörter basierend auf der Topic-Verteilung aneinanderreihen und mit hoher Wahrscheinlichkeit keinen Sinn ergeben. Trotzdem könnten diese Dokumente mit den Dokumenten der Abteilungen verglichen und auf Ähnlichkeit geprüft werden. Dann könnten die Parameter solange angepasst werden, bis das Ergebnis akzeptabel ist. Der reguläre Weg ist jedoch andersherum: Wir suchen nicht das Dokument zu einer gegebenen Dokument-Topic-Verteilung und einer Topic-Word-Verteilung, sondern haben das Dokument bereits und suchen die Verteilungen. Es wird ein Modell gelernt, dass den gegebenen Korpus am wahrscheinlichsten nach folgender Vorgehensweise generiert haben könnte. Dabei sei $Dir(\alpha)$ eine Dirichletverteilung, was einen Parameter $\alpha$ bzw. $\beta$ übergeben bekommt und $Multinom(\theta_d)$ eine Multinomialverteilung mit dem Parameter $\theta$ bzw. $\phi$. Bei der Berechnung ergibt sich der Output durch die dann berechneten Wahrscheinlichkeitsverteilungen $\theta_d$ und $\phi_k$.
+Bei der Erstellung eines Klassifikators gibt es zwei unterschiedliche Herangehensweisen: den deskriptiven und den generativen Ansatz. Bei der deskriptiven, oder auch beschreibenden Statistik geht es um die sinnvolle und übersichtliche Darstellung empirischer Daten durch zum Beispiel Tabellen oder Kennzahlen. Betrachtet man zwei Variablen, ein bekanntes $X$ und eine gesuchte Variable $Y$, dann wird im deskriptiven Modell die bedingte Wahrscheinlichkeit $P(Y \mid X)$ betrachtet. Im Gegensatz dazu ist bei generativen Modellen die Wahrscheinlichkeit von $X$ und $Y$ gemeinsam relevant, also $P(X, Y)$ . Bei generativen Modellen besteht die Möglichkeit, Ausgabeinstanzen zu erstellen. Bei LDA handelt es sich um einen generativen Algorithmus. Das bedeutet nicht direkt, dass LDA bei der Ausführung aktiv neue Dokumente entwickelt, sondern stellt eine Erklärung dar, wie die Zusammenstellung der Topics und deren Wörter in einem spezifischen Fall entstanden sein könnten. Es könnten theoretisch im Fall einer neuen Dokumentzuordnung zu Abteilungen für jede Abteilung zufällig Dokumente generiert werden. Diese würden zufällig gewählte Wörter basierend auf der Topic-Verteilung aneinanderreihen und mit hoher Wahrscheinlichkeit keinen Sinn ergeben. Trotzdem könnten diese Dokumente mit den Dokumenten der Abteilungen verglichen und auf Ähnlichkeit geprüft werden. Dann könnten die Parameter solange angepasst werden, bis das Ergebnis akzeptabel ist. Der reguläre Weg ist jedoch andersherum: Wir suchen nicht das Dokument zu einer gegebenen Dokument-Topic-Verteilung und einer Topic-Word-Verteilung, sondern haben das Dokument bereits und suchen die Verteilungen. Den generativen Prozess von LDA beschreibt \cite{t5} im Detail. Es wird ein Modell gelernt, dass den gegebenen Korpus am wahrscheinlichsten nach folgender Vorgehensweise generiert haben könnte. Dabei sei $Dir(\alpha)$ eine Dirichletverteilung, was einen Parameter $\alpha$ bzw. $\beta$ übergeben bekommt und $Multinom(\theta_d)$ eine Multinomialverteilung mit dem Parameter $\theta$ bzw. $\phi$. Bei der Berechnung ergibt sich der Output durch die dann berechneten Wahrscheinlichkeitsverteilungen $\theta_d$ und $\phi_k$.
 
 \begin{enumerate}
 	\item Wähle ein $\theta_d$ als $Dir(\alpha)$
@@ -499,15 +499,15 @@ P(w,z,\theta, \phi, \alpha, \beta) = \prod_{i=1}^{K} P(\phi_i, \beta) \cdot \pro
 \end{figure}
 
 
-Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung und entsprechenden Topics der gegebenen Dokumente für latente Variablen. Das heißt bekannt sind das Wort und die Dirichlet-Paramter $\alpha$ und $\beta$. Auf Basis dieser gegebenen Informationen wird dann die Wahrscheinlichkeit für deine Topic errechnet, der das Wort angehört. Dazu wird die Dokument-Topic-Verteilung gesucht, die von den Dirichlet-Verteilungen beeinflusst wird. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken, ist jedoch nur approximierbar und nicht exakt zu bestimmen: \\
+Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung und entsprechenden Topics der gegebenen Dokumente für latente Variablen. Das heißt bekannt sind das Wort und die Dirichlet-Paramter $\alpha$ und $\beta$. Auf Basis dieser gegebenen Informationen wird dann die Wahrscheinlichkeit für deine Topic errechnet, der das Wort angehört. Dazu wird die Dokument-Topic-Verteilung gesucht, die von den Dirichlet-Verteilungen beeinflusst wird. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken, ist jedoch nur approximierbar und nicht exakt zu bestimmen. Dies kann jedoch durch Algorithmen wie zum Beispiel Gibbs Sampling, wie in \cite{lda2} erklärt. Auch in dem Paper \cite{magnus} wird Gibbs Sampling verwendet, um ein LDA-Modell zu trainieren. Zwar wird in der referenzierten Arbeit eine dynamisch wachsender Korpus angenommen, während in dieser Arbeit ein Korpus mit fester Größe betrachtet wird, das Prinzip bleibt jedoch gleich. \\
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{equation}
 P(\theta, z \mid w, \alpha, \beta) = \frac{P(\theta, z, w \mid \alpha, \beta)}{P(w \mid \alpha, \beta)}
 \end{equation}
 \end{center}
-\caption{Die bedingte Wahrscheinlichkeit für die Topic und Dokument-Topic-Verteilung gegeben einem Wort und den Dirichlet-Verteilungen $\alpha$ und $\beta$}
+\caption{Die bedingte Wahrscheinlichkeit für die Topic und Dokument-Topic-Verteilung gegeben einem Wort und den Dirichlet-Verteilungen $\alpha$ und $\beta$.}
 \label{fig:equ2}
 \end{figure}
 
@@ -536,7 +536,9 @@ Dabei kann 1. erreicht werden, wenn alle Worte eine Topic wären, was jedoch nic
 \label{fig:img2}
 \end{center}
 \end{figure}\\
-In der ersten Abbildung \ref{fig:img1} führt ein kleiner $\alpha = 0.01$ Wert zu einer sehr eindeutigen Dokument-Topic-Verteilung. Das erkennt man daran, dass es nur einen sehr großen blauen Kreis gibt. Jeder Kreis repräsentiert eine Topic und mit der Größe dessen Anteil am Dokument. Befinden sich zwei Kreise zum Teil auf der gleichen Position bedeutet das, dass sich die Wörter in den Topics zu einem gewissen Teil überschneiden. In Abbildung \ref{fig:img1} sind bei den meisten Topics nur die Zahlen und keine Kreise zu erkennen, da die Topics einen sehr kleinen Anteil an dem Dokument haben. Dies ist durch $\alpha$ bedingt. Bei der zweiten Abbildung \ref{fig:img2} hingegen haben wir ein $\alpha = 1$, was eine gleichmäßigere Verteilung zur Folge hat. So sieht man, dass es viele Kreise gibt, die sich zum Teil auch überlappen. Die Größe der Kreise unterscheidet sich nicht so stark voneinander, wie bei Abbildung \ref{fig:img1}, somit sind die Topics bezüglich ihren Anteils an dem Dokument ähnlicher zueinander. Der Trade-off zwischen den beiden Zielen ist der Grund für das Funktionieren von LDA, denn dadurch werden Gruppen mit semantisch eng miteinander verbundenen Wörtern, die oft miteinander vorkommen, gefunden. Nach dem gleichen Prinzip funktioniert die Dirichlet-Verteilung der Topic-Word-Verteilung $\beta$.  
+In der ersten Abbildung \ref{fig:img1} führt ein kleiner $\alpha = 0.01$ Wert zu einer sehr eindeutigen Dokument-Topic-Verteilung. Das erkennt man daran, dass es nur einen sehr großen blauen Kreis gibt. Jeder Kreis repräsentiert eine Topic und mit der Größe dessen Anteil am Dokument. Befinden sich zwei Kreise zum Teil auf der gleichen Position bedeutet das, dass sich die Wörter in den Topics zu einem gewissen Teil überschneiden. In Abbildung \ref{fig:img1} sind bei den meisten Topics nur die Zahlen und keine Kreise zu erkennen, da die Topics einen sehr kleinen Anteil an dem Dokument haben. Dies ist durch $\alpha$ bedingt. Bei der zweiten Abbildung \ref{fig:img2} hingegen haben wir ein $\alpha = 1$, was eine gleichmäßigere Verteilung zur Folge hat. So sieht man, dass es viele Kreise gibt, die sich zum Teil auch überlappen. Die Größe der Kreise unterscheidet sich nicht so stark voneinander, wie bei Abbildung \ref{fig:img1}, somit sind die Topics bezüglich ihren Anteils an dem Dokument ähnlicher zueinander. Der Trade-off zwischen den beiden Zielen ist der Grund für das Funktionieren von LDA, denn dadurch werden Gruppen mit semantisch eng miteinander verbundenen Wörtern, die oft miteinander vorkommen, gefunden. Nach dem gleichen Prinzip funktioniert die Dirichlet-Verteilung der Topic-Word-Verteilung $\beta$. \\
+
+Um LDA effizienter ausführen zu können, kann auf das Prinzip des Parallelized LDA zurückgegriffen werden. Dabei werden mehrere Kerne genutzt, um das Modell zu trainieren. Dieses verfahren wird in \cite{radim2} genauer erklärt.
 
 
 \chapter{Konzeption} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%KONZEPT
@@ -998,10 +1000,11 @@ Das LDA Modell hat 18 Gruppen aus den Daten generiert und diese mit einer Vertei
     ytick             = data,
     enlarge y limits  = 0.05,
     enlarge x limits  = 0.02,
-    width=0.7\textwidth,,
-    bar width=5.5mm,    symbolic y coords = {osthosltein,sierksdorf,zweckverband,nachricht,betreff,danken,frau,the,sitzen}, nodes near coords
+    width=0.7\textwidth,
+    bar width=5.5mm,    
+    symbolic y coords = {ostholstein,sierksdorf,zweckverband,nachricht,betreff,danken,frau,the,sitzen}, nodes near coords
   ]
-  %\addplot coordinates { (18,ostholstein)(17,zweckverband)(18,sierksdorf)(14,nachricht)(10,betreff)(8,danken)(2,frau)(2,the)(1,sitzen)};
+  \addplot coordinates { (18,ostholstein)(17,zweckverband)(18,sierksdorf)(14,nachricht)(10,betreff)(8,danken)(2,frau)(2,the)(1,sitzen)};
   \end{axis}
 \end{tikzpicture}
 \caption{Topicabdeckung der häufigsten 5 Wörter aller Topics}
@@ -1458,8 +1461,24 @@ Bei dem zweiten Experiment führt eine sehr schwierige und unsichere Zuordnung d
 
 Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen zu extrahieren. Die Daten stellten in dieser Arbeit die Kundenanfragen der ZVO dar. Diese erhalten jährlich große Datenmengen an Kundenanfragen, die händisch von Mitarbeitern gelesen und klassifiziert werden. Aktuell wird an einem Klassifikator gearbeitet, der die Anfragen in Zukunft selbstständig klassifizieren soll. Dafür wurde in dieser Arbeit das Ziel verfolgt, die Qualität dieses Klassifikators vorherzusagen, indem die Qualität der Daten analysiert und die Gruppierung der Abteilungen dem ZVO untersucht wurden. Für diese Anwendung wurde Topic-Modellierung verwendet, da es erlaubt Daten nicht nur einer Klasse zuzuordnen, sondern mehreren. Dies stellt den Unterschied zwischen Topic-Modellierung und Clustering dar und bietet sich für die Anwendung auf den ZVO-Daten an. Als Methode der Topic-Modellierung wurde Latent Dirichlet Allocation (LDA) verwendet - eine der weltweit am weitesten verbreiteten Methoden. Diese wurde in der Bibliothek Gensim umgesetzt, die die Anwendung der Methode durch viele effizient vorimplementierte Algorithmen erleichterte. Die Daten durchliefen nach der Akquise einen Datenvorbereitungsprozess, in dem sie gereinigt wurden. Dies umfasste die Formatierung, Ausdünnung durch die Entfernung von Stop-Words, Lemmatisierung und Erstellung der Features. Auf Basis der vorverarbeiteten Daten konnte ein Topic-Modell generiert werden. Dieses hat 18 Topics mit Schlüsselwörtern erstellt, die zu unterschiedlichem Anteil in dem Korpus vorkommen. Um die Qualität der Daten zu analysieren, wurden die erhaltenen Topics und dessen Schlüsselwörter analysiert. Dabei wurde die Erkenntnis gewonnen, dass die häufigsten 5 Schlüsselwörter der Topics nur aus 9 verschiedenen Wörtern bestehen. In dem Korpus wurde demnach von dem LDA-Modell kein Muster gefunden, das die Topics semantisch eindeutig unterteilt, da sie sich in den Schlüsselwörtern sehr ähnlich waren. Als Folgerung heißt dies, dass die Daten eine zu schlechte Qualität aufweisen, um sie von einem Topic-Modellierungs-Algorithmus einteilen lassen zu können. In der Arbeit wurde noch ein weiteres Experiment durchgeführt, das die Erkenntnis bestärkte. Das Experiment bestand daraus, zu versuchen, die erhaltenen Topics vorgefertigten Abteilungen zuzuordnen. Dafür wurde eine Matrix aufgebaut, die alle Überschneidungen der Topics und Abteilungen aufzeichnet. Diese hat gezeigt, dass es Abteilungen unter den ZVO-Gruppierungen gibt, die deutlich mehr Daten beinhalten, als  andere. Diese Ungleichheit führt dazu, dass manche Abteilungen zu wenig Daten besitzen, um von einem Machine-Learning-Algorithmus ein eigenes eindeutiges Muster zu erkennen. Die ungleichmäßige Verteilung wurde in einer Darstellung deutlich, die die Anzahl der zugeordneten Dokumente darstellte. Zusätzlich stellte eine andere Darstellung die Überschneidungen den absoluten Anzahlen der Dokumente in den Topics und Abteilungen gegenüber. Die Erkenntnis aus diesem Graphen war, dass die Abteilungen, bei denen die Überschneidungen größer waren, auch sehr viel mehr Daten überhaupt besaßen. Die Quote der durchschnittlichen Überschneidung war somit immernoch sehr schlecht. Das Ergebnis des zweiten Experiments verstärkt somit die erste Haupterkenntnis, dass die Daten sich aufgrund von ungleicher Verteilung und zu ähnlichen Wörtern in händisch eingeteilten Abteilungen nicht für eine automatische Klassifikation durch Topic-Modellierung eigenen.
 
-\cite{lda}
-
+\nocite{lda}
+\nocite{ptm}
+\nocite{plsa}
+\nocite{a0}
+\nocite{a1}
+\nocite{towardsdata}
+\nocite{towardsdat}
+\nocite{lda2}
+\nocite{radim}
+\nocite{radim2}
+\nocite{tmbook}
+\nocite{t0}
+\nocite{t1}
+\nocite{t2}
+\nocite{t3}
+\nocite{t3}
+\nocite{t5}
+\nocite{t6}
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!! Your action is needed here !!!
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1574,22 +1593,109 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   journal =    {Journal of Machine Learning Research},
   year =         {2003},
 }
-
+  @article{ptm,
+  author =       {David M. Blei},
+  title =        {Probabilistic Topic Models},
+  journal =    {Communication of the ACM},
+  year =         {2012},
+}
+  @article{plsa,
+  author =       {Thomas Hofmann},
+  title =        {Probabilistic Latent Semantic Analysis},
+  journal =    {EECS Department Computer Science Division},
+  year =         {1975},
+}
+  @article{a0,
+  author =       {Hamed Jelodar, Yongli Wang, Chi Yuan},
+  title =        {Latent Dirichlet allocation (LDA) and topic modeling: models, applications, a survey},
+  journal =    {Springer},
+  year =         {2019},
+}
+  @article{a1,
+  author =       {Mohammadzaman Zamani, H. Andrew Schwartz, Johannes Eichstaedt},
+  title =        {Understanding Weekly COVID-19 Concerns through Dynamic Content-Specific LDA Topic Modeling},
+  journal =    {Proc Conf Empir Methods Nat Lang Process},
+  year =         {2020},
+}
+  @manual{towardsdata,
+  address =       {https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24},
+  title =        {Topic Modeling and Latent Dirichlet Allocation(LDA) in Python},
+  year =    {2018},
+}
+  @manual{towardsdat,
+  address =       {https://towardsdatascience.com/lda-topic-modeling-an-explanation-e184c90aadcd},
+  title =        {LDA Topic Modeling An Explanation},
+  year =    {2018},
+}
+  @manual{lda2,
+  address =       {https://medium.com/analytics-vidhya/topic-modeling-using-lda-and-gibbs-sampling-explained-49d49b3d1045},
+  title =        {Topic modeling using Latent Dirichlet Allocation (LDA) and Gibbs Sampling explained},
+  year =    {2018},
+}
+  @manual{radim,
+  address =       {https://radimrehurek.com/gensim/models/ldamodel.html},
+  title =        {LDA Model},
+  year =    {2009},
+}
+  @manual{radim2,
+  address =       {https://radimrehurek.com/gensim/models/ldamulticore.htm},
+  title =        {Parallelized Latent Dirichlet Allocation},
+  year =    {2009},
+}
+  @book{tmbook,
+  author =       {Chaitanya Chemudugunta},
+  title =        {Text Mining with Probabilistic Topic Models: Applications in Information Retrieval and Concept Modeling},
+  publisher = {LAP Lambert Academic Publishing},
+  year =    {2010},
+}
+  @masterthesis{magnus,
+  author =       {Magnus Bender},
+  title =        {Betrachtung eines statistischen Topic-Modells zur Repräsentation wechselnder Dokumente},
+  School = {Universität zu Lübeck},
+  year =    {2019},
+}
+  @techreport{t0,
+  author =       {Aman Ahuja, Wei Wei, Kathleen M. Carley},
+  title =        {Topic modeling in large scale social network data},
+  institution = {Institute of Software Research, School of Computer Science, Pittsburgh},
+  year =    {2015},
+}
+  @techreport{t1,
+  author =       {Shaymaa H. Mohammed, Salam Al-augby},
+  title =        {LSA \& LDA Topic Modeling Classification: Comparison study on E-books},
+  institution = {Department of Computer Science, Faculty of Computer Science and Mathamatics, University of Kufa, Iraq},
+  year =    {2019},
+}
+  @techreport{t2,
+  author =       {H. Zhang, B. Qiu, C.L. Giles},
+  title =        {An LDA-based community structure discovery approach for large-scale social networks},
+  institution = {IEEE},
+  year =    {2007},
+}
+  @techreport{t3,
+  author =       {P. Anupriya, S. Karpagavalli},
+  title =        {LDA based topic modeling of journal abstracts},
+  institution = {IEEE},
+  year =    {2015},
+}
+  @techreport{t5,
+  author =       {Loulwah AlSumait, Daniel Barbara, James Gentle and Carlotta Domeniconi},
+  title =        {Topic Significance Ranking of LDA Generative Models},
+  institution = {Department of Computer Science, George Mason University},
+  year =    {2009},
+}
+  @techreport{t6,
+  author =       {Runzhe Yang},
+  title =        {Topic Models (I)},
+  institution = {Princeton University, Department of Computer Science},
+  year =    {2019},
+}
+  @misc{statista,
+  author =       {F. Tenzer},
+  title =        {Prognose zum Volumen der jährlich generierten digitalen Datenmenge weltweit in den Jahren 2018 und 2025},
+  year =    {2020},
+}
 \end{bibtex-entries}
-
-
-% If you need to have an appendix (I advise against it), insert it
-% here using, first, \appendix and then \chapter and then,
-% possibly, \section. 
-%
-% \appendix
-%
-% \chapter{Technical Appendix}
-%
-% \section{Experimental Parameters} % possibly
-%
-% Again, I advise against using an appendix.
-
 
 \end{document}
 

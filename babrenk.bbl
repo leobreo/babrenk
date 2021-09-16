@@ -16,5 +16,434 @@
   {}
 \endgroup
 
-\datalist[entry]{nyt/global//global/global}\enddatalist
+\datalist[entry]{nyt/global//global/global}
+  \entry{t0}{report}{}
+    \name{author}{1}{}{%
+      {{hash=AAKMCWW}{%
+         family={Aman\bibnamedelima Ahuja},
+         familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+         suffix={Wei\bibnamedelima Wei},
+         suffixi={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+         given={Kathleen M.\bibnamedelima Carley},
+         giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AAWWKMC1}
+    \strng{fullhash}{AAWWKMC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{year}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Topic modeling in large scale social network data}
+    \list{institution}{1}{%
+      {Institute of Software Research, School of Computer Science, Pittsburgh}%
+    }
+    \field{type}{techreport}
+    \field{year}{2015}
+  \endentry
+
+  \entry{magnus}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=BM}{%
+         family={Bender},
+         familyi={B\bibinitperiod},
+         given={Magnus},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BM1}
+    \strng{fullhash}{BM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Betrachtung eines statistischen Topic-Modells zur
+  Repräsentation wechselnder Dokumente}
+    \list{institution}{1}{%
+      {Universität zu Lübeck}%
+    }
+    \field{year}{2019}
+  \endentry
+
+  \entry{ptm}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BDM}{%
+         family={Blei},
+         familyi={B\bibinitperiod},
+         given={David\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BDM1}
+    \strng{fullhash}{BDM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Probabilistic Topic Models}
+    \field{journaltitle}{Communication of the ACM}
+    \field{year}{2012}
+  \endentry
+
+  \entry{tmbook}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CC}{%
+         family={Chemudugunta},
+         familyi={C\bibinitperiod},
+         given={Chaitanya},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {LAP Lambert Academic Publishing}%
+    }
+    \strng{namehash}{CC1}
+    \strng{fullhash}{CC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Text Mining with Probabilistic Topic Models: Applications in
+  Information Retrieval and Concept Modeling}
+    \field{year}{2010}
+  \endentry
+
+  \entry{lda}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DMBMIJAYN}{%
+         family={David M.\bibnamedelima Blei},
+         familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+         suffix={Andrew Y.\bibnamedelima Ng},
+         suffixi={A\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim
+  N\bibinitperiod},
+         given={Michael I.\bibnamedelima Jordan},
+         giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim
+  J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DMBAYNMIJ1}
+    \strng{fullhash}{DMBAYNMIJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{labeldatesource}{year}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Latent Dirichlet Allocation}
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2003}
+  \endentry
+
+  \entry{t2}{report}{}
+    \name{author}{1}{}{%
+      {{hash=HZCGBQ}{%
+         family={H.\bibnamedelima Zhang},
+         familyi={H\bibinitperiod\bibinitdelim Z\bibinitperiod},
+         suffix={B.\bibnamedelima Qiu},
+         suffixi={B\bibinitperiod\bibinitdelim Q\bibinitperiod},
+         given={C.L.\bibnamedelima Giles},
+         giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HZBQCG1}
+    \strng{fullhash}{HZBQCG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{An LDA-based community structure discovery approach for
+  large-scale social networks}
+    \list{institution}{1}{%
+      {IEEE}%
+    }
+    \field{type}{techreport}
+    \field{year}{2007}
+  \endentry
+
+  \entry{a0}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HJCYYW}{%
+         family={Hamed\bibnamedelima Jelodar},
+         familyi={H\bibinitperiod\bibinitdelim J\bibinitperiod},
+         suffix={Yongli\bibnamedelima Wang},
+         suffixi={Y\bibinitperiod\bibinitdelim W\bibinitperiod},
+         given={Chi\bibnamedelima Yuan},
+         giveni={C\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HJYWCY1}
+    \strng{fullhash}{HJYWCY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Latent Dirichlet allocation (LDA) and topic modeling: models,
+  applications, a survey}
+    \field{journaltitle}{Springer}
+    \field{year}{2019}
+  \endentry
+
+  \entry{plsa}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HT}{%
+         family={Hofmann},
+         familyi={H\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HT1}
+    \strng{fullhash}{HT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Probabilistic Latent Semantic Analysis}
+    \field{journaltitle}{EECS Department Computer Science Division}
+    \field{year}{1975}
+  \endentry
+
+  \entry{radim}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{LDA Model}
+    \list{location}{1}{%
+      {https://radimrehurek.com/gensim/models/ldamodel.html}%
+    }
+    \field{year}{2009}
+  \endentry
+
+  \entry{towardsdat}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{LDA Topic Modeling An Explanation}
+    \list{location}{1}{%
+  {https://towardsdatascience.com/lda-topic-modeling-an-explanation-e184c90aadcd}%
+    }
+    \field{year}{2018}
+  \endentry
+
+  \entry{t5}{report}{}
+    \name{author}{2}{}{%
+      {{hash=LAJGDB}{%
+         family={Loulwah\bibnamedelima AlSumait},
+         familyi={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+         suffix={Daniel\bibnamedelima Barbara},
+         suffixi={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={James\bibnamedelima Gentle},
+         giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=DC}{%
+         family={Domeniconi},
+         familyi={D\bibinitperiod},
+         given={Carlotta},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LADBJGDC1}
+    \strng{fullhash}{LADBJGDC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Topic Significance Ranking of LDA Generative Models}
+    \list{institution}{1}{%
+      {Department of Computer Science, George Mason University}%
+    }
+    \field{type}{techreport}
+    \field{year}{2009}
+  \endentry
+
+  \entry{a1}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MZJEHAS}{%
+         family={Mohammadzaman\bibnamedelima Zamani},
+         familyi={M\bibinitperiod\bibinitdelim Z\bibinitperiod},
+         suffix={H.\bibnamedelima Andrew\bibnamedelima Schwartz},
+         suffixi={H\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+         given={Johannes\bibnamedelima Eichstaedt},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MZHASJE1}
+    \strng{fullhash}{MZHASJE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Understanding Weekly COVID-19 Concerns through Dynamic
+  Content-Specific LDA Topic Modeling}
+    \field{journaltitle}{Proc Conf Empir Methods Nat Lang Process}
+    \field{year}{2020}
+  \endentry
+
+  \entry{t3}{report}{}
+    \name{author}{1}{}{%
+      {{hash=PASK}{%
+         family={P.\bibnamedelima Anupriya},
+         familyi={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+         given={S.\bibnamedelima Karpagavalli},
+         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PASK1}
+    \strng{fullhash}{PASK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{year}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{LDA based topic modeling of journal abstracts}
+    \list{institution}{1}{%
+      {IEEE}%
+    }
+    \field{type}{techreport}
+    \field{year}{2015}
+  \endentry
+
+  \entry{radim2}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{year}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Parallelized Latent Dirichlet Allocation}
+    \list{location}{1}{%
+      {https://radimrehurek.com/gensim/models/ldamulticore.htm}%
+    }
+    \field{year}{2009}
+  \endentry
+
+  \entry{t1}{report}{}
+    \name{author}{1}{}{%
+      {{hash=SHMSAa}{%
+         family={Shaymaa H.\bibnamedelima Mohammed},
+         familyi={S\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+         given={Salam Al-augby},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinithyphendelim
+  a\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SHMSAa1}
+    \strng{fullhash}{SHMSAa1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{LSA \& LDA Topic Modeling Classification: Comparison study on
+  E-books}
+    \list{institution}{2}{%
+      {Department of Computer Science, Faculty of Computer Science}%
+      {Mathamatics, University of Kufa, Iraq}%
+    }
+    \field{type}{techreport}
+    \field{year}{2019}
+  \endentry
+
+  \entry{statista}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=TF}{%
+         family={Tenzer},
+         familyi={T\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TF1}
+    \strng{fullhash}{TF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Prognose zum Volumen der jährlich generierten digitalen
+  Datenmenge weltweit in den Jahren 2018 und 2025}
+    \field{year}{2020}
+  \endentry
+
+  \entry{towardsdata}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Topic Modeling and Latent Dirichlet Allocation(LDA) in
+  Python}
+    \list{location}{1}{%
+  {https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24}%
+    }
+    \field{year}{2018}
+  \endentry
+
+  \entry{lda2}{manual}{}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Topic modeling using Latent Dirichlet Allocation (LDA) and
+  Gibbs Sampling explained}
+    \list{location}{1}{%
+  {https://medium.com/analytics-vidhya/topic-modeling-using-lda-and-gibbs-sampling-explained-49d49b3d1045}%
+    }
+    \field{year}{2018}
+  \endentry
+
+  \entry{t6}{report}{}
+    \name{author}{1}{}{%
+      {{hash=YR}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Runzhe},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YR1}
+    \strng{fullhash}{YR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{title}{Topic Models (I)}
+    \list{institution}{1}{%
+      {Princeton University, Department of Computer Science}%
+    }
+    \field{type}{techreport}
+    \field{year}{2019}
+  \endentry
+\enddatalist
 \endinput

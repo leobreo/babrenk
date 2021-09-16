@@ -18,47 +18,50 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: babrenk-blx.bib
 Database file #2: babrenk-bibtex-entries.bib
+Warning--entry type for "magnus" isn't style-file defined
+--line 68 of file babrenk-bibtex-entries.bib
 Biblatex version: 3.11
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 1 entry,
+You've used 20 entries,
             6304 wiz_defined-function locations,
-            1185 strings with 8755 characters,
-and the built_in function-call counts, 1325 in all, are:
-= -- 64
-> -- 58
-< -- 1
-+ -- 41
-- -- 24
-* -- 27
-:= -- 312
+            1264 strings with 11271 characters,
+and the built_in function-call counts, 113196 in all, are:
+= -- 8800
+> -- 1877
+< -- 1104
++ -- 1798
+- -- 380
+* -- 7217
+:= -- 8909
 add.period$ -- 0
-call.type$ -- 1
-change.case$ -- 0
+call.type$ -- 20
+change.case$ -- 866
 chr.to.int$ -- 34
-cite$ -- 0
-duplicate$ -- 11
-empty$ -- 91
-format.name$ -- 0
-if$ -- 289
+cite$ -- 38
+duplicate$ -- 9949
+empty$ -- 11320
+format.name$ -- 697
+if$ -- 25599
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 46
 missing$ -- 0
-newline$ -- 20
-num.names$ -- 0
-pop$ -- 43
+newline$ -- 433
+num.names$ -- 1296
+pop$ -- 6374
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 892
 quote$ -- 0
-skip$ -- 69
+skip$ -- 4522
 stack$ -- 0
-substring$ -- 127
-swap$ -- 1
-text.length$ -- 16
-text.prefix$ -- 0
+substring$ -- 15738
+swap$ -- 2956
+text.length$ -- 432
+text.prefix$ -- 19
 top$ -- 1
-type$ -- 22
+type$ -- 661
 warning$ -- 0
-while$ -- 52
+while$ -- 803
 width$ -- 0
-write$ -- 20
+write$ -- 414
+(There was 1 warning)
