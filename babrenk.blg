@@ -23,45 +23,45 @@ Warning--entry type for "magnus" isn't style-file defined
 Biblatex version: 3.11
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 20 entries,
+You've used 18 entries,
             6304 wiz_defined-function locations,
-            1264 strings with 11271 characters,
-and the built_in function-call counts, 113196 in all, are:
-= -- 8800
-> -- 1877
-< -- 1104
-+ -- 1798
-- -- 380
-* -- 7217
-:= -- 8909
+            1256 strings with 11073 characters,
+and the built_in function-call counts, 101258 in all, are:
+= -- 7904
+> -- 1664
+< -- 1001
++ -- 1597
+- -- 332
+* -- 6407
+:= -- 7907
 add.period$ -- 0
-call.type$ -- 20
-change.case$ -- 866
+call.type$ -- 18
+change.case$ -- 789
 chr.to.int$ -- 34
-cite$ -- 38
-duplicate$ -- 9949
-empty$ -- 11320
-format.name$ -- 697
-if$ -- 25599
+cite$ -- 34
+duplicate$ -- 8833
+empty$ -- 10146
+format.name$ -- 600
+if$ -- 22964
 int.to.chr$ -- 0
-int.to.str$ -- 46
+int.to.str$ -- 40
 missing$ -- 0
-newline$ -- 433
-num.names$ -- 1296
-pop$ -- 6374
+newline$ -- 381
+num.names$ -- 1153
+pop$ -- 5704
 preamble$ -- 1
-purify$ -- 892
+purify$ -- 811
 quote$ -- 0
-skip$ -- 4522
+skip$ -- 4064
 stack$ -- 0
-substring$ -- 15738
-swap$ -- 2956
-text.length$ -- 432
-text.prefix$ -- 19
+substring$ -- 14179
+swap$ -- 2635
+text.length$ -- 384
+text.prefix$ -- 17
 top$ -- 1
-type$ -- 661
+type$ -- 595
 warning$ -- 0
-while$ -- 803
+while$ -- 699
 width$ -- 0
-write$ -- 414
+write$ -- 364
 (There was 1 warning)

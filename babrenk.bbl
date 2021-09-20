@@ -144,34 +144,6 @@
     \field{year}{2003}
   \endentry
 
-  \entry{t2}{report}{}
-    \name{author}{1}{}{%
-      {{hash=HZCGBQ}{%
-         family={H.\bibnamedelima Zhang},
-         familyi={H\bibinitperiod\bibinitdelim Z\bibinitperiod},
-         suffix={B.\bibnamedelima Qiu},
-         suffixi={B\bibinitperiod\bibinitdelim Q\bibinitperiod},
-         given={C.L.\bibnamedelima Giles},
-         giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{HZBQCG1}
-    \strng{fullhash}{HZBQCG1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2007}
-    \field{labeldatesource}{year}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \field{title}{An LDA-based community structure discovery approach for
-  large-scale social networks}
-    \list{institution}{1}{%
-      {IEEE}%
-    }
-    \field{type}{techreport}
-    \field{year}{2007}
-  \endentry
-
   \entry{a0}{article}{}
     \name{author}{1}{}{%
       {{hash=HJCYYW}{%
@@ -419,31 +391,6 @@
   {https://medium.com/analytics-vidhya/topic-modeling-using-lda-and-gibbs-sampling-explained-49d49b3d1045}%
     }
     \field{year}{2018}
-  \endentry
-
-  \entry{t6}{report}{}
-    \name{author}{1}{}{%
-      {{hash=YR}{%
-         family={Yang},
-         familyi={Y\bibinitperiod},
-         given={Runzhe},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{YR1}
-    \strng{fullhash}{YR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2019}
-    \field{labeldatesource}{year}
-    \field{sortinit}{Y}
-    \field{sortinithash}{Y}
-    \field{title}{Topic Models (I)}
-    \list{institution}{1}{%
-      {Princeton University, Department of Computer Science}%
-    }
-    \field{type}{techreport}
-    \field{year}{2019}
   \endentry
 \enddatalist
 \endinput

@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  16 SEP 2021 19:28
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  20 SEP 2021 13:39
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.047 seconds
+luaotfload | main : initialization completed in 0.056 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -2338,6 +2338,9 @@ LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 437.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 437.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [8]
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
 
@@ -2367,12 +2370,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 502--503
  []
 
 [10]
-<lda_alpha001.png, id=210, 895.345pt x 580.1675pt>
+<lda_alpha001.png, id=218, 895.345pt x 580.1675pt>
 File: lda_alpha001.png Graphic file (type png)
 <use lda_alpha001.png>
 Package luatex.def Info: lda_alpha001.png  used on input line 527.
 (luatex.def)             Requested size: 282.03517pt x 182.75372pt.
-<lda_alpha1.png, id=211, 895.345pt x 562.1pt>
+<lda_alpha1.png, id=219, 895.345pt x 562.1pt>
 File: lda_alpha1.png Graphic file (type png)
 <use lda_alpha1.png>
 Package luatex.def Info: lda_alpha1.png  used on input line 534.
@@ -2385,9 +2388,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 523--540
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11<./lda_alpha001.png>] [12<./lda_alpha1.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12<./lda_alpha001.png>] [13<./lda_alpha1.png>]
 Kapitel 3.
-[13
+[14
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 580--581
@@ -2408,7 +2414,7 @@ Overfull \hbox (0.5025pt too wide) in paragraph at lines 605--606
 rteilung und die Topic-Word-Verteilung.
  []
 
-[14] [15] [16]
+[15] [16] [17]
 Kapitel 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 612--613
@@ -2420,14 +2426,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 614--615
 
  []
 
-[17
+[18
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 643--644
 
  []
 
-[18] [19]
+[19] [20]
 Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
@@ -2444,18 +2450,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 674--676
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-) [20]
-[21] [22]
+) [21]
+[22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 800--801
 
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 839--840
 
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 874--875
 
  []
@@ -2463,24 +2469,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 874--875
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25]
+[26]
 Overfull \hbox (30.6616pt too wide) in paragraph at lines 921--965
  [] 
  []
 
-[26]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 973--974
 
  []
 
-[27]
+[28]
 Kapitel 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 980--981
 
  []
 
-[28
+[29
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 1015--1017
@@ -2497,9 +2503,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1021--1072
 
  []
 
-[29]
+[30]
 
-LaTeX Warning: Reference `fig:countschart' on page 30 undefined on input line 10
+LaTeX Warning: Reference `fig:countschart' on page 31 undefined on input line 10
 74.
 
 
@@ -2507,19 +2513,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
 
  []
 
-[30
+[31
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
 
  []
 
-[31]
+[32]
 Overfull \hbox (7.42339pt too wide) in paragraph at lines 1282--1283
  [] 
  []
 
-[32] [33]
+[33] [34]
 Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
 
  []
@@ -2529,12 +2535,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
 
  []
 
-[34]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 1403--1404
 
  []
 
-[35
+[36
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
@@ -2551,42 +2557,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 1439--1440
 
  []
 
-[36]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 1454--1455
 
  []
 
-[37]
+[38]
 Kapitel 6.
-[38
+[39
 
-]
+] Excluding 'comment' comment.
 
 LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 
 
 \openout15 = babrenk-bibtex-entries.bib
 
-[39]
+[40]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
-[40
+[41
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1700--1700
+Underfull \hbox (badness 10000) in paragraph at lines 1697--1697
 \TU/TeXGyrePagella(0)/m/n/11 htt-ps://-me-di-um.com/analytics-vidhya/topic-mode
 ling-using-lda-and-gibbs-sampling-
  []
 
-[41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1700.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1700.
+[42]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1697.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1697.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1700.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1700.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1697.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1697.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 0232681E4E0201D28133BABF16EC24D5;2635.
 
@@ -2596,18 +2602,18 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1700.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1697.
 )
 
 Here is how much of LuaTeX's memory you used:
- 63360 strings out of 494291
- 156527,2373549 words of node,token memory allocated
- 703 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 22 attribute, 82 gl
-ue_spec, 13 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:7,2:12054,3:2231,4:412,5:1868,6:46,7:8006,8:75,9:4463,10:25,11
+ 63361 strings out of 494291
+ 156520,2373549 words of node,token memory allocated
+ 715 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 24 attribute, 82 gl
+ue_spec, 14 attribute_list, 2 write, 2 pdf_action nodes
+   avail lists: 1:7,2:12053,3:2231,4:412,5:1868,6:48,7:8012,8:75,9:4463,10:25,11
 :785
- 65354 multiletter control sequences out of 65536+600000
+ 65356 multiletter control sequences out of 65536+600000
  114 fonts using 29687855 bytes
  64i,20n,128p,5511b,3225s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/texgyrep
@@ -2621,10 +2627,10 @@ c.otf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/clearsans/ClearSa
 ns-Regular.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/clearsan
 s/ClearSans-Italic.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/
 clearsans/ClearSans-Bold.ttf>
-Output written on babrenk.pdf (45 pages, 508323 bytes).
+Output written on babrenk.pdf (46 pages, 509840 bytes).
 
-PDF statistics: 639 PDF objects out of 1000 (max. 8388607)
- 550 compressed objects within 6 object streams
- 254 named destinations out of 1000 (max. 131072)
+PDF statistics: 655 PDF objects out of 1000 (max. 8388607)
+ 565 compressed objects within 6 object streams
+ 253 named destinations out of 1000 (max. 131072)
  144 words of extra memory for PDF output out of 10000 (max. 100000000)
 
