@@ -373,7 +373,7 @@ Diese Arbeit verfolgt zwei Ziele:
 \item Analyse der vordefinierten Abteilungen durch Topiczuordnung
 \end{enumerate}
 
-Diese Arbeit beschäftigt sich mit der Vorhersage der Qualität des Klassifikators, indem die Qualität der manuell erstellten Kategorien und Kundenanfrage-Gruppen untersucht und mit den Ergebnissen verschiedenen Topic Modellierungen verglichen wird. Das Ergebnis eines Topic Models hängt stark von der Qualität der Daten ab, die sie als Input bekommt. Diese Daten durchlaufen eine Reinigungsphase, bevor sie klassifiziert werden, um sie in eine gut zu verarbeitende Form zu bringen. Der Prozess der Reinigung kann Einfluss auf das Ergebnis haben. Ziel dieser Arbeit ist es, Erkenntnisse über die Qualität des Klassifikators zu treffen, in Abhängigkeit zu den verwendeten Daten. Somit wird durch die Nutzung von LDA-Modellen die Qualität der Daten untersucht und Prognosen über einer höheren Qualität der Klassfikiation anhand der Daten getroffen. 
+Diese Arbeit beschäftigt sich mit der Vorhersage der Qualität des Klassifikators, indem die Qualität der manuell erstellten Kategorien und Kundenanfrage-Gruppen untersucht und mit den Ergebnissen verschiedenen Topic Modellierungen verglichen wird. Zum Beispiel ist die Größe der Korpora ein bedeutendes Element der Modellierung, womit sich \cite{rehurek_lrec} beschäftigt. Das Ergebnis eines Topic Models hängt ebenfalls stark von der Qualität der Daten ab, die sie als Input bekommt. Diese Daten durchlaufen eine Reinigungsphase, bevor sie klassifiziert werden, um sie in eine gut zu verarbeitende Form zu bringen. Der Prozess der Reinigung kann Einfluss auf das Ergebnis haben. Ziel dieser Arbeit ist es, Erkenntnisse über die Qualität des Klassifikators zu treffen, in Abhängigkeit zu den verwendeten Daten. Somit wird durch die Nutzung von LDA-Modellen die Qualität der Daten untersucht und Prognosen über einer höheren Qualität der Klassfikiation anhand der Daten getroffen. 
 
 \section{Struktur dieser Arbeit}
 Der Bereich Data Science und Datenverarbeitung durchläuft aktuell eine starke Welle an Innovation und Veränderung. Deshalb wird in dieser Arbeit zuerst eine Einleitung die Motivation und das Prinzip der Topic-Modellierung beschreiben. Gefolgt wird die allgemeine Einleitung von der Motivation und Aufgabenstellung in Bezug auf das Anwendungsbeispiel des Zweckverbands Ostholstein (ZVO). Die Anwendung der Algorithmen wird im Laufe der Arbeit mit theoretischen Grundlagen erklärt, die eine klare Notation fordern: diese ist im Teil der Notationen gelistet. Das Prinzip der Topic-Modellierung kann mit unterschiedlichen Ansätzen implementiert werden. Beispiele sind: LDA, NNF und LSA. Da sich diese in ihrem Ansatz und in ihrer Umsetzung unterscheiden, werden im nächsten Abschnitt die bekanntesten dieser Modelle verglichen, indem ihre Vorgehens- und Funktionsweise untersucht werden. Die Methode, die in dieser Arbeit genauer beleuchtet wird, ist Latent Dirichlet Allocation. Der dritte Abschnitt wird von der Herkunft, dem Format und der Verarbeitung der Daten der ZVO handeln. Dabei wird der Anwendungsfall und die ZVO genauer erklärt und ein Einblick in die Daten, deren Reinigung und Verarbeitung gegeben. Darauf folgt das Konzept der Lösungsstrategie, um die Aussagekraft und Qualität der Daten für Topic-Modellierung erfolgreich zu untersuchen. Dafür wird der Ablauf des Algorithmus anschaulich dargestellt und die Prozesskette der Analyse im Detail aufgeschlüsselt. Im vierten Abschnitt findet die Implementierung des im dritten Abschnitt erklärten Konzepts statt. Für diese wird eine Methode der Topic-Modellierung ausgewählt und in einer vorher definierten und begründeten Programmierumgebung realisiert. Die Umsetzung wird anhand des gelisteten Algorithmus zeilenweise erklärt. Der Output ist in die Arbeit integriert, um dessen zentrale Rolle in der Datenanalyse zu unterstreichen und die Ergebnisse verständlich begründen zu können. Die detaillierte Analyse folgt im nächsten Abschnitt, der sich damit befasst, die Ergebnisse der Implementierung im Anwendungsfall der ZVO zu interpretieren. Dabei wird begründet, wie gut sich die Daten für eine Topic-Modellierung eignen und was die Ergebnisse über die Qualität der Daten aussagen. Die Arbeit wird abgeschlossen mit der Zusammenfassung und einem Ausblick für die ZVO in Bezug auf Topic-Modellierung. Die gewonnenen Ergebnisse der Datenqualität sollen der ZVO nach der Ergebnisgewinnung zu einer höheren Effizienz in der Datenverarbeitung verhelfen und Aufschluss über Handlungsbedarf und Optimierungspotential in den Datensätzen geben.
@@ -463,7 +463,7 @@ $M = LDA(D)$ beschreibt ein LDA Modell, das auf dem Korpus $D$ trainiert wurde. 
 \item Ein Thema soll über so wenig relevante Wörter wie möglich verfügen
 \end{enumerate}
 
-Die beiden Ziele stehen in einer Wechselbeziehung zueinander, da eine minimale Anzahl an vertretenen Topics in einem Dokument zu maximal vielen Wörtern in diesen Topics führt. Die minimale Anzahl an Topics wäre erreicht, wenn man alle Wörter eines Dokuments einem Topic zuweist. Dadurch verfügt das Topic jedoch über alle Wörter des Dokuments. $\alpha$ befindet sich in dem Bereicht $[0,1]$ mit sinnvollen Werten zwischen $[0.01, 0.1]$, während $\beta =0.01$ durchschnittlich die besten Ergebnisse liefert wie in Artikeln wie \cite{magnus} erwähnt. Große Werte führen zu einer Gleichverteilung, die wiederum eine Verschlechterung der Perplexität bedeutet. Somit bietet die Perplexität ein Mittel, um $\alpha$ und $\beta$ optimal für die individuelle Anwendung zu finden. Mehr Details zu Topic-Modellierung sind in \cite{towardsdat} zu finden.\\
+Die beiden Ziele stehen in einer Wechselbeziehung zueinander, da eine minimale Anzahl an vertretenen Topics in einem Dokument zu maximal vielen Wörtern in diesen Topics führt. Die minimale Anzahl an Topics wäre erreicht, wenn man alle Wörter eines Dokuments einem Topic zuweist. Dadurch verfügt das Topic jedoch über alle Wörter des Dokuments. $\alpha$ befindet sich in dem Bereicht $[0,1]$ mit sinnvollen Werten zwischen $[0.01, 0.1]$, während $\beta =0.01$ durchschnittlich die besten Ergebnisse liefert wie in Artikeln wie \cite{magnus}. Große Werte führen zu einer Gleichverteilung, die wiederum eine Verschlechterung der Perplexität bedeutet. Somit bietet die Perplexität ein Mittel, um $\alpha$ und $\beta$ optimal für die individuelle Anwendung zu finden. Mehr Details zu Topic-Modellierung sind in \cite{towardsdat} zu finden.\\
 
 
 
@@ -499,7 +499,7 @@ P(w,z,\theta, \phi, \alpha, \beta) = \prod_{i=1}^{K} P(\phi_i, \beta) \cdot \pro
 \end{figure}
 
 
-Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung und entsprechenden Topics der gegebenen Dokumente für latente Variablen. Das heißt bekannt sind das Wort und die Dirichlet-Paramter $\alpha$ und $\beta$. Auf Basis dieser gegebenen Informationen wird dann die Wahrscheinlichkeit für deine Topic errechnet, der das Wort angehört. Dazu wird die Dokument-Topic-Verteilung gesucht, die von den Dirichlet-Verteilungen beeinflusst wird. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken, ist jedoch nur approximierbar und nicht exakt zu bestimmen. Dies kann jedoch durch Algorithmen wie zum Beispiel Gibbs Sampling, wie in \cite{lda2} erklärt. Auch in dem Paper \cite{magnus} wird Gibbs Sampling verwendet, um ein LDA-Modell zu trainieren. Zwar wird in der referenzierten Arbeit eine dynamisch wachsender Korpus angenommen, während in dieser Arbeit ein Korpus mit fester Größe betrachtet wird, das Prinzip bleibt jedoch gleich. \\
+Die Schwierigkeit des Algorithmus besteht in der Berechnung der $\theta$-Verteilung und entsprechenden Topics der gegebenen Dokumente für latente Variablen. Das heißt bekannt sind das Wort und die Dirichlet-Paramter $\alpha$ und $\beta$. Auf Basis dieser gegebenen Informationen wird dann die Wahrscheinlichkeit für deine Topic errechnet, der das Wort angehört. Dazu wird die Dokument-Topic-Verteilung gesucht, die von den Dirichlet-Verteilungen beeinflusst wird. Dies lässt sich durch folgende Wahrscheinlichkeitsverteilung ausdrücken, ist jedoch nur approximierbar und nicht exakt zu bestimmen. Dies kann jedoch durch Algorithmen wie zum Beispiel Gibbs Sampling, wie in \cite{lda2} erklärt. Auch in dem Paper \cite{magnus} wird Gibbs Sampling verwendet, um ein LDA-Modell zu trainieren. Zwar wird in der referenzierten Arbeit eine dynamisch wachsender Korpus angenommen, während in dieser Arbeit ein Korpus mit fester Größe betrachtet wird, das Prinzip bleibt jedoch gleich. Ebenfalls mit dynamisch wachsenden Korpora beschäftigt sich die Veröffentlichung \cite{KuhBeBrMo20b}, das Aufschluss über die Funktionsweise von LDA gibt.\\
 
 \begin{figure}[H]
 \begin{center}
@@ -1601,28 +1601,53 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   title =        {Probabilistic Topic Models},
   journal =    {Communication of the ACM},
   year =         {2012},
-  pages={77-84},
+  pages={77--84},
 }
   @article{plsa,
   author =       {Thomas Hofmann},
   title =        {Probabilistic Latent Semantic Analysis},
   journal =    {EECS Department Computer Science Division},
   year =         {1975},
-  pages= {289-294},
+  pages= {289--294},
 }
   @article{a0,
   author =       {Hamed Jelodar and Yongli Wang and Chi Yuan},
   title =        {Latent Dirichlet allocation (LDA) and topic modeling: models, applications, a survey},
   journal =    {Springer},
   year =         {2019},
-  pages = {2-32},
+  pages = {2--32},
 }
   @article{a1,
   author =       {Mohammadzaman Zamani and H. Andrew Schwartz and Johannes Eichstaedt},
   title =        {Understanding Weekly COVID-19 Concerns through Dynamic Content-Specific LDA Topic Modeling},
   journal =    {Proc Conf Empir Methods Nat Lang Process},
   year =         {2020},
-  pages ={1-6},
+  pages ={1--6},
+}
+@INPROCEEDINGS{KuhBeBrMo20b,
+author={Felix Kuhr and Magnus Bender and Tanya Braun and Ralf M\"oller},
+title={{Maintaining Topic Models for Growing Corpora}},
+booktitle={Proceedings of the 14th IEEE International Conference on Semantic Computing (ICSC-20)},
+year={2020},
+pages     = {451--458},
+publisher = {IEEE},
+doi={https://doi.org/10.1109/ICSC.2020.00017},
+ISSN={},
+keywords={Topic Models;Machine Learning;Text Mining}
+}
+@inproceedings{rehurek_lrec,
+      title = {{Software Framework for Topic Modelling with Large Corpora}},
+      author = {Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka},
+      booktitle = {{Proceedings of the LREC 2010 Workshop on New
+           Challenges for NLP Frameworks}},
+      pages = {45--50},
+      year = 2010,
+      month = May,
+      day = 22,
+      publisher = {ELRA},
+      address = {Valletta, Malta},
+      note={\url{http://is.muni.cz/publication/884893/en}},
+      language={English}
 }
   @manual{towardsdata,
   address =       {https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24},
@@ -1630,6 +1655,7 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   year =    {2018},
   author = {Susan Li},
   organization = {Towards Data Science Inc.},
+  urldate= {2021-09-20},
 }
   @manual{towardsdat,
   address =       {https://towardsdatascience.com/lda-topic-modeling-an-explanation-e184c90aadcd},
@@ -1637,6 +1663,7 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   year =    {2018},
   author= {Tyler Doll},
   organization= {Towards Data Science Inc.},
+ urldate= {2021-09-21},
 }
   @manual{lda2,
   address =       {https://medium.com/analytics-vidhya/topic-modeling-using-lda-and-gibbs-sampling-explained-49d49b3d1045},
@@ -1644,6 +1671,7 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   year =    {2018},
   author= {Ankur Tomar},
   organization= {Analytics Vidhya},
+   urldate= {2021-09-21},
 }
   @manual{radim,
   address =       {https://radimrehurek.com/gensim/models/ldamodel.html},
@@ -1651,6 +1679,7 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   year =    {2009},
   author= {Radim Rehurek},
   organization= {Gensim},
+   urldate= {2021-09-21},
 }
   @manual{radim2,
   address =       {https://radimrehurek.com/gensim/models/ldamulticore.htm},
@@ -1658,6 +1687,7 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   year =    {2009},
   author= {Radim Rehurek},
   organization= {Gensim},
+ urldate= {2021-09-21},
 }
   @book{tmbook,
   author =       {Chaitanya Chemudugunta},
@@ -1670,6 +1700,7 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   title =        {Betrachtung eines statistischen Topic-Modells zur Repräsentation wechselnder Dokumente},
   School = {Universität zu Lübeck},
   year =    {2019},
+  note= {Bachelorarbeit},
 }
   @techreport{t0,
   author =       {Aman Ahuja and Wei Wei and Kathleen Carley},
@@ -1687,6 +1718,7 @@ Topic-Modellierung wird vielseitig eingesetzt, um aus großen Datenmengen Themen
   author =       {P. Anupriya and S. Karpagavalli},
   title =        {LDA based topic modeling of journal abstracts},
   institution = {IEEE},
+  note= {International Conference on Advanced Computing and Communication Systems},
   year =    {2015},
 }
   @techreport{t5,

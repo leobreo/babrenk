@@ -120,6 +120,8 @@
     \field{labeldatesource}{year}
     \field{sortinit}{A}
     \field{sortinithash}{A}
+    \field{note}{International Conference on Advanced Computing and
+  Communication Systems}
     \field{title}{LDA based topic modeling of journal abstracts}
     \list{institution}{1}{%
       {IEEE}%
@@ -145,6 +147,7 @@
     \field{labeldatesource}{year}
     \field{sortinit}{B}
     \field{sortinithash}{B}
+    \field{note}{Bachelorarbeit}
     \field{title}{Betrachtung eines statistischen Topic-Modells zur
   Repräsentation wechselnder Dokumente}
     \list{institution}{1}{%
@@ -261,6 +264,9 @@
   {https://towardsdatascience.com/lda-topic-modeling-an-explanation-e184c90aadcd}%
     }
     \field{year}{2018}
+    \field{urlday}{21}
+    \field{urlmonth}{09}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{plsa}{article}{}
@@ -322,6 +328,55 @@
     \field{year}{2019}
   \endentry
 
+  \entry{KuhBeBrMo20b}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=KF}{%
+         family={Kuhr},
+         familyi={K\bibinitperiod},
+         given={Felix},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bender},
+         familyi={B\bibinitperiod},
+         given={Magnus},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BT}{%
+         family={Braun},
+         familyi={B\bibinitperiod},
+         given={Tanya},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=MR}{%
+         family={M\"oller},
+         familyi={M\bibinitperiod},
+         given={Ralf},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \keyw{Topic Models;Machine Learning;Text Mining}
+    \strng{namehash}{KF+1}
+    \strng{fullhash}{KFBMBTMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{Proceedings of the 14th IEEE International Conference on
+  Semantic Computing (ICSC-20)}
+    \verb{doi}
+    \verb https://doi.org/10.1109/ICSC.2020.00017
+    \endverb
+    \field{pages}{451\bibrangedash 458}
+    \field{title}{{Maintaining Topic Models for Growing Corpora}}
+    \field{year}{2020}
+  \endentry
+
   \entry{towardsdata}{manual}{}
     \name{author}{1}{}{%
       {{hash=LS}{%
@@ -348,6 +403,9 @@
   {https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24}%
     }
     \field{year}{2018}
+    \field{urlday}{20}
+    \field{urlmonth}{09}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{t1}{report}{}
@@ -409,6 +467,9 @@
       {https://radimrehurek.com/gensim/models/ldamodel.html}%
     }
     \field{year}{2009}
+    \field{urlday}{21}
+    \field{urlmonth}{09}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{radim2}{manual}{}
@@ -437,6 +498,50 @@
       {https://radimrehurek.com/gensim/models/ldamulticore.htm}%
     }
     \field{year}{2009}
+    \field{urlday}{21}
+    \field{urlmonth}{09}
+    \field{urlyear}{2021}
+  \endentry
+
+  \entry{rehurek_lrec}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=RR}{%
+         family={{\v R}eh{\r u}{\v r}ek},
+         familyi={{\v R}\bibinitperiod},
+         given={Radim},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Sojka},
+         familyi={S\bibinitperiod},
+         given={Petr},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{publisher}{1}{%
+      {ELRA}%
+    }
+    \strng{namehash}{RRSP1}
+    \strng{fullhash}{RRSP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{year}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{booktitle}{{Proceedings of the LREC 2010 Workshop on New Challenges
+  for NLP Frameworks}}
+    \field{note}{\url{http://is.muni.cz/publication/884893/en}}
+    \field{pages}{45\bibrangedash 50}
+    \field{title}{{Software Framework for Topic Modelling with Large Corpora}}
+    \list{location}{1}{%
+      {Valletta, Malta}%
+    }
+    \field{month}{05}
+    \field{year}{2010}
   \endentry
 
   \entry{statista}{misc}{}
@@ -487,6 +592,9 @@
   {https://medium.com/analytics-vidhya/topic-modeling-using-lda-and-gibbs-sampling-explained-49d49b3d1045}%
     }
     \field{year}{2018}
+    \field{urlday}{21}
+    \field{urlmonth}{09}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{a1}{article}{}
