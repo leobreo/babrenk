@@ -31,7 +31,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Grundlagen der Latent Dirichlet Allocation }{8}{section.2.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Der generative Prozess}{9}{section*.7}% 
+\contentsline {subsection}{Der generative Prozess}{10}{section*.7}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{Alpha und Beta}{11}{section*.10}% 
 \defcounter {refsection}{0}\relax 
