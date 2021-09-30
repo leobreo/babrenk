@@ -363,7 +363,11 @@
 \lstMakeShortInline[style=code,style=inline,language={[LaTeX]tex},moretexcs={chapter}]|
 
 
-Die digitalisierte Welt generiert täglich riesige Mengen an neuen Informationen. Von E-Books, Blogs über Nachrichten-Websites und Magazinen bis hin zu mobilen Anwendungen auf dem Smartphone, immer mehr Menschen verlassen sich auf und richten ihr Leben nach dem Internet aus. Das Zeitalter des Big-Data ermöglicht es Nutzern unbegrenzt viele Daten zu generieren und zu sammeln. Die Kapazitäten, die ein Mensch aufbringen kann, um solche Massen an Daten zu organisieren und zu verstehen, sind schon lange übertroffen. Vor allem durch die steigende digitale Kommunikation und stetig sinkenden Speicherplatzkosten, erhöht sich die Menge an zu speichernden Einsen und Nullen. Laut Statista \cite{statista}  wurden 2018 33 Zettabyte an Daten generiert mit einer prognostizierten Steigerung bis 2025 um 530\% auf 175 Zettabyte. Dieser dramatische Anstieg zeigt die Dringlichkeit für effiziente Algorithmen und Methoden der Datenverarbeitung. Neben der reinen Handhabung solcher Daten steigt aber auch das Bewusstsein, aus diesen Daten Verständnis und Potentiale zu schaffen. Besonders Suchverfahren gewinnen an Bedeutung, wenn in großen, unübersichtlichen Datenmengen bestimmte Informationen gefragt sind. Für die Mehrheit bieten Firmen wie Google diese Anwendung an. Zwar kann durch die keyword-basierten Suche das passende Dokument gefunden werden, jedoch schlägt die Suchmaschine fehl, wenn nach einer Menge von Dokumenten mit einem übergreifenden Thema gefragt ist. Um mehrere Dokumente auf geteilte Themen zu untersuchen, wird die sogenannte Topic-Modellierung verwendet. Topic-Modellierung (dt. Themenmodellierung) beschreibt eine Gruppe von Verfahren, die es ermöglichen, große elektronische Datensammlungen automatisiert zu durchsuchen, zu organisieren und zu verstehen. Es können Muster innerhalb der Daten erkannt und Topics extrahiert werden. Ein Topic stellt dabei eine Menge an Wörtern dar, die häufig gemeinsam in einem Kontext vorkommen. Einem Topic über Hunde würden beispielsweise die Wörter Bellen, Fell und Halsband zu einer hohen Wahrscheinlichkeit angehören, da sie oft gemeinsam in dem übergeordneten Thema über Hunde gebraucht werden. Die Modellierung solcher Topics wird als Topic-Modellierung bezeichnet, da in einer Datenmenge nach mehreren solcher Topics gesucht wird. Diese können zu unterschiedlichen Anteilen in dem Dokument vertreten sein. Ein Dokument ist dabei ein Teil eines Korpus, also einer Menge mehrerer Dokumente. Dabei stellen Topic-Modelle statistische Modelle dar, die Verwendung in der Inferenz abstrakter Topics in unsortierten Datenmengen finden. Topic-Modellierung gehört zu dem Bereich des Natural Language Processing, also der Verarbeitung natürlicher Sprache. Es verbindet Computerlinguistik, Informatik und Künstliche Intelligenz, um die Potentiale der Sprachverarbeitung mit der heutigen Technik auszuschöpfen. In einer Welt von exponentiell wachsenden Datenmengen finden Methoden der Topic-Modellierung stetig eine breitere Anwendung. Bereits heute wird Topic-Modellierung in vielen Bereichen der Wirtschaft, Wissenschaft und Informationstechnologie verwendet. So findet die Topic-Modellierung unter anderem Anwendung bei Zusammenfassungen, Spam Filtern, Internet of Things (IoT), Healthcare, Blockchain, Chatbots, FAQs oder HR. So wird in \cite{a1} mit einem LDA-Modell untersucht, wie stark die Sorgen über das Corona Virus sind. Als weiteres Beispiel führt \cite{t1} eine Studie über eine Menge von E-Books durch, ebenfalls eine Quelle vieler zu verarbeitender Daten. Ein ähnliches Ziel wird in \cite{t3} verfolgt, in dem Abschnitte aus verschiedenen Zeitschriften untersucht und mithilfe einer Topic-Modellierung  analysiert werden. Dies zeigt wie umfangreich das Anwendungsspektrum der Topic-Modellierung ist. Weitere Anwendungsgebiete sind in \cite{tmbook} detailliert beschrieben. Um semantische Folgerungen aus Datenmengen zu generieren, gibt es verschiedene Ansätze – in dieser Arbeit wird es um die generative Methode Latent Dirichlet Allocation(LDA) gehen. Dabei werden ähnliche Wörter, die in ähnlichen Kontexten vorkommen, in Topics gruppiert. Die Grundlagen der LDA liegen bei der Verallgemeinerung des bereits $1999$ veröffentlichten Probabilistic Latent Semantic Analysis (PLSA). Dieses Verfahren ist in \cite{plsa} erklärt. Im Gegensatz zu anderen Machine Learning Methoden im Bereich der Datenverarbeitung, hat Topic-Modellierung die Besonderheit, dass ein Dokument nicht nur zu einem Topic zugeordnet werden kann, wie z.B. bei Clusteralgorithmen. Bei der Topic-Modellierung wird jedes Dokument durch eine Verteilung an Topics beschrieben. Das bedeutet in jedem Dokument sind immer alle Topics zu finden - nur zu einem bestimmten Anteil. Genauso sind in einem Topic immer alle Wörter zu einer bestimmten Wahrscheinlichkeit vorhanden. Bei einem Artikel, der zu $90\%$ von Sport und $10\%$ von Politik handelt, werden somit neun mal mehr Wörter bezüglich Sport zu finden sein, als über Politik. Topic-Modellierung wird den unüberwachten Lernmethoden des Data Minings zugeordnet, also der Extraktion von Mustern und Trends in Datenmengen durch die Anwendung statistischer Algorithmen. Das bedeutet, dass die Topics ohne die Einwirkung von manuell erzeugten Labels gefunden werden. Im Lernprozess werden dann Verteilungen basierend auf den bislang vorgenommenen Zuordnungen iterativ angepasst und verbessert - jedoch alles ohne menschliches Zutun. 
+Die digitalisierte Welt generiert täglich riesige Mengen an neuen Informationen. Von E-Books, Blogs über Nachrichten-Websites und Magazinen bis hin zu mobilen Anwendungen auf dem Smartphone, immer mehr Menschen verlassen sich auf und richten ihr Leben nach dem Internet aus. Das Zeitalter des Big-Data ermöglicht es Nutzern unbegrenzt viele Daten zu generieren und zu sammeln. Die Kapazitäten, die ein Mensch aufbringen kann, um solche Massen an Daten zu organisieren und zu verstehen, sind schon lange übertroffen. Vor allem durch die steigende digitale Kommunikation und stetig sinkenden Speicherplatzkosten, erhöht sich die Menge an zu speichernden Einsen und Nullen. Laut Statista \cite{statista}  wurden 2018 33 Zettabyte an Daten generiert mit einer prognostizierten Steigerung bis 2025 um 530\% auf 175 Zettabyte. Dieser dramatische Anstieg zeigt die Dringlichkeit für effiziente Algorithmen und Methoden der Datenverarbeitung. Neben der reinen Handhabung solcher Daten steigt aber auch das Bewusstsein, aus diesen Daten Verständnis und Potentiale zu schaffen. Besonders Suchverfahren gewinnen an Bedeutung, wenn in großen, unübersichtlichen Datenmengen bestimmte Informationen gefragt sind. Für die Mehrheit bieten Firmen wie Google diese Anwendung an. Zwar kann durch die keyword-basierten Suche das passende Dokument gefunden werden, jedoch schlägt die Suchmaschine fehl, wenn nach einer Menge von Dokumenten mit einem übergreifenden Thema gefragt ist. Um mehrere Dokumente auf geteilte Themen zu untersuchen, wird die sogenannte Topic-Modellierung verwendet.\\
+
+Topic-Modellierung (dt. Themenmodellierung) beschreibt eine Gruppe von Verfahren, die es ermöglichen, große elektronische Datensammlungen automatisiert zu durchsuchen, zu organisieren und zu verstehen. Es können Muster innerhalb der Daten erkannt und Topics extrahiert werden. Ein Topic stellt dabei eine Menge an Wörtern dar, die häufig gemeinsam in einem Kontext vorkommen. Einem Topic über Hunde würden beispielsweise die Wörter Bellen, Fell und Halsband zu einer hohen Wahrscheinlichkeit angehören, da sie oft gemeinsam in dem übergeordneten Thema über Hunde gebraucht werden. Die Modellierung solcher Topics wird als Topic-Modellierung bezeichnet, da in einer Datenmenge nach mehreren solcher Topics gesucht wird. Diese können zu unterschiedlichen Anteilen in dem Dokument vertreten sein. Ein Dokument ist dabei ein Teil eines Korpus, also einer Menge mehrerer Dokumente. Dabei stellen Topic-Modelle statistische Modelle dar, die Verwendung in der Inferenz abstrakter Topics in unsortierten Datenmengen finden. Topic-Modellierung gehört zu dem Bereich des Natural Language Processing, also der Verarbeitung natürlicher Sprache. Es verbindet Computerlinguistik, Informatik und Künstliche Intelligenz, um die Potentiale der Sprachverarbeitung mit der heutigen Technik auszuschöpfen. In einer Welt von exponentiell wachsenden Datenmengen finden Methoden der Topic-Modellierung stetig eine breitere Anwendung. Bereits heute wird Topic-Modellierung in vielen Bereichen der Wirtschaft, Wissenschaft und Informationstechnologie verwendet. So findet die Topic-Modellierung unter anderem Anwendung bei Zusammenfassungen, Spam Filtern, Internet of Things (IoT), Healthcare, Blockchain, Chatbots, FAQs oder HR. So wird in \cite{a1} mit einem LDA-Modell untersucht, wie stark die Sorgen über das Corona Virus sind. Als weiteres Beispiel führt \cite{t1} eine Studie über eine Menge von E-Books durch, ebenfalls eine Quelle vieler zu verarbeitender Daten. Ein ähnliches Ziel wird in \cite{t3} verfolgt, in dem Abschnitte aus verschiedenen Zeitschriften untersucht und mithilfe einer Topic-Modellierung  analysiert werden. Dies zeigt wie umfangreich das Anwendungsspektrum der Topic-Modellierung ist. Weitere Anwendungsgebiete sind in \cite{tmbook} detailliert beschrieben.\\
+
+Um semantische Folgerungen aus Datenmengen zu generieren, gibt es verschiedene Ansätze – in dieser Arbeit wird es um die generative Methode Latent Dirichlet Allocation(LDA) gehen. Dabei werden ähnliche Wörter, die in ähnlichen Kontexten vorkommen, in Topics gruppiert. Die Grundlagen der LDA liegen bei der Verallgemeinerung des bereits $1999$ veröffentlichten Probabilistic Latent Semantic Analysis (PLSA). Dieses Verfahren ist in \cite{plsa} erklärt. Im Gegensatz zu anderen Machine Learning Methoden im Bereich der Datenverarbeitung, hat Topic-Modellierung die Besonderheit, dass ein Dokument nicht nur zu einem Topic zugeordnet werden kann, wie z.B. bei Clusteralgorithmen. Bei der Topic-Modellierung wird jedes Dokument durch eine Verteilung an Topics beschrieben. Das bedeutet in jedem Dokument sind immer alle Topics zu finden - nur zu einem bestimmten Anteil. Genauso sind in einem Topic immer alle Wörter zu einer bestimmten Wahrscheinlichkeit vorhanden. Bei einem Artikel, der zu $90\%$ von Sport und $10\%$ von Politik handelt, werden somit neun mal mehr Wörter bezüglich Sport zu finden sein, als über Politik. Topic-Modellierung wird den unüberwachten Lernmethoden des Data Minings zugeordnet, also der Extraktion von Mustern und Trends in Datenmengen durch die Anwendung statistischer Algorithmen. Das bedeutet, dass die Topics ohne die Einwirkung von manuell erzeugten Labels gefunden werden. Im Lernprozess werden dann Verteilungen basierend auf den bislang vorgenommenen Zuordnungen iterativ angepasst und verbessert - jedoch alles ohne menschliches Zutun. 
 
 \section{Ziel}
 Diese Arbeit wird die Theorie der Topic-Modellierung anhand des Beispiels des Zweckverband Ostholstein (ZVO) in der Praxis implementieren und die bezüglichen Parameter im Sinne des ZVO bewerten. Der ZVO ist ein Unternehmensverbund, der in Norddeutschland in der Energie-, Entwässerungs-, Internet- und Entsorgungsbranche tätig ist.  Er erhält jährlich eine große Menge an Kundenanfragen, die von Mitarbeitern gelesen und klassifiziert wird. Die klassifizierte Kundenanfrage wird dann an die zuständige Abteilung weitergeleitet. Dieser Vorgang ist sowohl zeitintensiv, als auch fehleranfällig und führt zu einer Ineffizienz in der Wertschöpfungskette. Der Prozess soll zukünftig automatisch durch einen Klassifikationsmechanismus funktionieren. \\
@@ -397,7 +401,7 @@ Für das Verständnis von Topic-Modellierung ist es wichtig die Begriffe zu kenn
 
 \section{Techniken der Topic-Modellierung}
 
-Das Feld des Information Retrievals bietet vielseitige Verfahren, um Topic-Modellierung zu betreiben. Bei vielen geht es um eine Dimensionsreduktion des Datensatzes, die Aufschluss und Erkenntnis über die Datenmenge geben soll, indem diese in eine weniger komplexe Darstellungsform umgewandelt wird. In dieser Arbeit wird die Latent Dirichlet Allocation(LDA) verwendet, die als Bindeglied zwischen statistischen und probabilistischen Methoden agiert. LDA wurde durch die Optimierung und Vermischung verschiedener vorangegangener Verfahren entwickelt. Die wichtigsten Verfahren in der Entwicklung von LDA sind im Folgenden aufgelistet und erklärt: 
+Das Feld des Information Retrievals bietet vielseitige Verfahren, um Topic-Modellierung zu betreiben. Bei vielen geht es um eine Dimensionsreduktion des Datensatzes, die Aufschluss und Erkenntnis über die Datenmenge geben soll, indem diese in eine weniger komplexe Darstellungsform umgewandelt wird. In dieser Arbeit wird die Latent Dirichlet Allocation(LDA) verwendet, die als Bindeglied zwischen statistischen und probabilistischen Methoden agiert. LDA wurde durch die Optimierung und Vermischung verschiedener vorangegangener Verfahren entwickelt. Die wichtigsten Verfahren in der Entwicklung von Techniken der Topic-Modellierung sind im Folgenden aufgelistet und erklärt: 
 
 \subsection{Term Frequency - Inverse Document Frequency(Tf-idf)}
 Das Verfahren der Tf-idf beschreibt ein statistisches Maß, um die Wichtigkeit von Wörtern in einer Gruppe von Dokumenten zu beurteilen. Die Term-Frequency(Tf) erstellt eine Matrix, die die Anzahl der Wörter auf die Dokumente abbildet, in denen sie enthalten sind. Um zu vermeiden, dass Wörter, die wenig Aussagekraft für den Korpus haben, wie das Wort \glqq und\grqq, das Ergebnis verzerren, bestimmt die Inverse Document Frequency(idf) wie spezifisch ein Wort für einen gesamten Korpus ist. Das einzelne Dokument ist dafür demnach nicht mehr wichtig. Die Idee dabei ist, dass Wörter, die sehr selten vorkommen ein Dokument unter Umständen stärker beeinflussen können, als ein Wort, das so häufig vorkommt, dass es schon keine Aussagekraft oder semantische Relevanz mehr hat. Das Verfahren verwendet keine probabilistischen Elemente sondern ist eine rein statistische Möglichkeit herauszufinden, wie wichtig ein Wort eines Dokuments für das Gesamtthema des Dokuments ist. 
@@ -418,7 +422,7 @@ Die Wahrscheinlichkeit, dass ein bestimmtes Dokument generiert wird, ist das Pro
 
 
 \section{Grundlagen der Latent Dirichlet Allocation }
-Latent Dirichlet Allocation(LDA) ist ein grundlegendes und bekanntes Verfahren aus der maschinellen Verarbeitung natürlichen Sprachen. Genauere Informationen dazu können in \cite{a0} gefunden werden. Die Wichtigkeit von LDA wird auf der Komplexität der damals bestehenden Techniken der Textverarbeitung begründet. So waren Clusteralgorithmen zu starr in ihrem Anwendungsumfeld, während Dimensionsreduktionen, wie die Hauptkomponentenanalyse von LSA, Ergebnisse lieferte, die sehr schwer zu interpretieren waren. Das Prinzip der Topic-Modellierung basiert auf einer Menge an Dokumenten, die den Korpus darstellen. Dabei werden bei LDA alle Dokumente als Menge von Wörtern angenommen. Diese sind als sogenannter Bag of Words modelliert. Das bedeutet, dass die Wörter als Menge ohne Reihenfolge interpretiert werden und nur die Häufigkeit der Begriffe in dieser Menge relevant ist. LDA ist ein generatives Modell, das durch unterschiedliche Einflussgrößen, wie in Abbildung \ref{fig:ldagraphic} dargestellt, Dokumente erstellen kann. \\
+Latent Dirichlet Allocation(LDA) ist ein grundlegendes und bekanntes Verfahren aus der maschinellen Verarbeitung natürlicher Sprachen. Genauere Informationen dazu können in \cite{a0} gefunden werden. Die Wichtigkeit von LDA wird auf der Komplexität der damals bestehenden Techniken der Textverarbeitung begründet. So waren Clusteralgorithmen zu starr in ihrem Anwendungsumfeld, während Dimensionsreduktionen, wie die Hauptkomponentenanalyse von LSA, Ergebnisse lieferte, die sehr schwer zu interpretieren waren. In dieser Arbeit wird LDA zur Verarbeitung der Daten verwendet, da es sich in der Vergangenheit als effektiv bewiesen hat und für die Aufgabenstellung dieser Arbeit gut geeignet ist. Das Prinzip der Topic-Modellierung basiert auf einer Menge an Dokumenten, die den Korpus darstellen. Dabei werden bei LDA alle Dokumente als Menge von Wörtern angenommen. Diese sind als sogenannter Bag of Words modelliert. Das bedeutet, dass die Wörter als Menge ohne Reihenfolge interpretiert werden und nur die Häufigkeit der Begriffe in dieser Menge relevant ist. LDA ist ein generatives Modell, das durch unterschiedliche Einflussgrößen, wie in Abbildung \ref{fig:ldagraphic} dargestellt, Dokumente erstellen kann. \\
 
 Bezüglich der Namensgebung, steht \glqq Latent \grqq für alles, was im Vorhinein unbekannt ist. Im Fall LDA handelt es sich um jene Themen, welche in einem Dokument zu einem bestimmten Teil vertreten sind. \glqq Dirichlet\grqq beschreibt eine Verteilung von Verteilungen. Dies ist vergleichbar mit einem Würfel, bei dem regulierbar ist, wie gleichmäßig die Zahlen gewürfelt werden. Dabei ist der Würfel eine Verteilung und die Aufteilung der Gleichmäßigkeit auch. Bei der Topic-Modellierung bedeutet Dirichlet eine Verteilung von Topics in Dokumenten und eine Verteilung von Wörtern in Topics. Die Dirichlet-Verteilungen sind die ausschlaggebende Veränderung im Vergleich zu PLSA. Durch sie kann die Stärke der Ausprägung der Topics in der Dokument-Topic-Verteilung und der Wörter in der Topic-Word-Verteilung bestimmt werden. Die \glqq Allocation \grqq weist mithilfe der errechneten Dirichlet-Verteilungen Topics Wörter und Dokumenten Topics zu. Eine Besonderheit bei der Topic-Modellierung mit LDA ist, dass die Anzahl der gesuchten Themen $K$ vorgegeben werden muss. Oft ist diese vorher jedoch nicht bekannt und muss über Hilfsverfahren, wie der Perplexitätsberechnung ermittelt werden. Dabei wird gemessen, wie geeignet das Modell für die Verarbeitung der gegebenen Daten ist. Die Funktionsweise von LDA ist über folgende graphische Abbildung beschrieben: \\
 
@@ -916,7 +920,7 @@ Die Anzahl der Dokumente eines Topics kann nun mit der einer Abteilung vergliche
 
 %comp bei 10000: [[536, 91, 67, 1, 12, 1, 12, 6, 23, 145, 69, 0, 22, 12, 38, 87, 24, 6], [15, 22, 11, 0, 2, 0, 0, 1, 7, 32, 77, 0, 6, 3, 5, 16, 3, 1], [6, 50, 81, 1, 3, 1, 31, 6, 28, 61, 30, 0, 18, 15, 22, 33, 4, 16], [14, 69, 58, 3, 3, 0, 19, 11, 37, 104, 63, 0, 18, 20, 21, 51, 33, 5], [7, 81, 104, 1, 3, 0, 7, 9, 56, 112, 97, 1, 11, 28, 36, 42, 15, 12], [0, 4, 3, 1, 0, 0, 1, 0, 2, 5, 3, 0, 1, 1, 0, 1, 0, 0], [2, 7, 24, 0, 0, 0, 2, 0, 7, 25, 23, 0, 2, 5, 2, 13, 8, 1], [19, 331, 90, 3, 16, 3, 49, 22, 111, 206, 200, 2, 29, 49, 61, 127, 36, 44], [3, 20, 33, 0, 1, 0, 2, 1, 11, 41, 78, 0, 3, 5, 7, 15, 8, 1], [4, 21, 17, 0, 2, 0, 1, 2, 26, 18, 33, 0, 3, 9, 5, 4, 2, 0], [13, 137, 115, 0, 6, 0, 25, 16, 53, 183, 136, 3, 6, 34, 75, 57, 39, 9], [27, 429, 221, 8, 34, 4, 129, 34, 291, 312, 271, 2, 48, 137, 75, 149, 50, 106], [0, 12, 8, 0, 1, 0, 3, 2, 5, 24, 13, 0, 2, 1, 3, 10, 5, 1], [12, 89, 73, 0, 9, 1, 9, 18, 25, 106, 124, 0, 4, 14, 29, 69, 52, 5], [10, 174, 110, 4, 11, 1, 15, 5, 42, 226, 137, 1, 19, 38, 39, 181, 21, 27], [8, 67, 70, 1, 4, 0, 11, 4, 21, 85, 115, 0, 8, 16, 20, 47, 21, 14], [19, 33, 44, 0, 5, 0, 4, 4, 18, 56, 63, 0, 6, 9, 16, 18, 7, 3], [39, 47, 52, 0, 5, 1, 15, 10, 203, 74, 71, 1, 12, 13, 16, 33, 17, 6]]
 
-\begin{figure}[H]
+\begin{table}[H]
 \begin{center}
 \tiny
 \renewcommand{\arraystretch}{2}
@@ -926,48 +930,48 @@ Die Anzahl der Dokumente eines Topics kann nun mit der einer Abteilung vergliche
 &L0&L1&L2&L3&L4&L5&L6&L7&L8&L9&L10&L11&L12&L13&L14&L15&L16&L17\\
 \hline
 \hline
-T0&555& 977& \textbf{2150}& 21& 66& 19& 211& 251& 910& 960& 902& 2& 210& 596& 302& 758& 318& 250\\
+T0&555& 977& \underline{\textbf{2150}}& 21& 66& 19& 211& 251& 910& 960& 902& 2& 210& 596& 302& 758& 318& 250\\
 \hline 
-T1&512& 580& \textbf{650}& 3& 36& 7& 139& 101& 370& 453& 570& 0& 66& 378& 91& 196& 123& 53\\
+T1&512& 580& \underline{\textbf{650}}& 3& 36& 7& 139& 101& 370& 453& 570& 0& 66& 378& 91& 196& 123& 53\\
 \hline 
-T2&508& 755& 263& 9& 67& 21& 254& 145& 282& \textbf{1498}& 1207& 1& 119& 300& 479& 527& 177& 130\\
+T2&508& 755& 263& 9& 67& 21& 254& 145& 282& \underline{\textbf{1498}}& 1207& 1& 119& 300& 479& 527& 177& 130\\
 \hline 
-T3&108& 179& 98& 2& 15& 3& 33& 57& 236& \textbf{432}& 218& 0& 34& 55& 153& 198& 74& 27\\
+T3&108& 179& 98& 2& 15& 3& 33& 57& 236& \underline{\textbf{432}}& 218& 0& 34& 55& 153& 198& 74& 27\\
 \hline 
-T4&493& 867& 442& 5& 63& 8& 134& 180& 451& \textbf{1111}& 1033& 8& 73& 348& 446& 489& 191& 89\\
+T4&493& 867& 442& 5& 63& 8& 134& 180& 451& \underline{\textbf{1111}}& 1033& 8& 73& 348& 446& 489& 191& 89\\
 \hline 
-T5&91& 467& 98& 5& 25& 2& 60& 75& 162& \textbf{480}& 309& 1& 55& 127& 169& 351& 113& 47\\
+T5&91& 467& 98& 5& 25& 2& 60& 75& 162& \underline{\textbf{480}}& 309& 1& 55& 127& 169& 351& 113& 47\\
 \hline 
-T6&1263& 3993& 1738& 28& 127& 48& 811& 587& 1384& 4139& \textbf{4730}& 6& 573& 2096& 1620& 2080& 680& 495\\
+T6&1263& 3993& 1738& 28& 127& 48& 811& 587& 1384& 4139& \underline{\textbf{4730}}& 6& 573& 2096& 1620& 2080& 680& 495\\
 \hline 
-T7&\textbf{3376}& 1298& 870& 17& 524& 16& 221& 338& 662& 1904& 1740& 9& 185& 381& 664& 891& 537& 133\\
+T7&\underline{\textbf{3376}}& 1298& 870& 17& 524& 16& 221& 338& 662& 1904& 1740& 9& 185& 381& 664& 891& 537& 133\\
 \hline 
-T8&310& 585& 216& 10& 27& 5& 67& 114& 203& 771 & \textbf{1013}& 0& 81& 323& 264& 440& 205& 73\\
+T8&310& 585& 216& 10& 27& 5& 67& 114& 203& 771 & \underline{\textbf{1013}}& 0& 81& 323& 264& 440& 205& 73\\
 \hline 
-T9&58& 126& 47& 0& 3& 1& 17& 16& 131& 174& \textbf{400}& 0& 15& 55& 63& 69& 59& 17\\
+T9&58& 126& 47& 0& 3& 1& 17& 16& 131& 174& \underline{\textbf{400}}& 0& 15& 55& 63& 69& 59& 17\\
 \hline 
-T10&286& \textbf{1610}& 1733& 12& 51& 27& 284& 299& 858& 1567& 1331& 4& 239& 893& 674& 673& 304& 248\\
+T10&286& \underline{\textbf{1610}}& 1733& 12& 51& 27& 284& 299& 858& 1567& 1331& 4& 239& 893& 674& 673& 304& 248\\
 \hline 
-T11&194& 409& 377& 8& 27& 3& 88& 122& 180& \textbf{678}& 470& 0& 80& 173& 167& 395& 142& 118\\
+T11&194& 409& 377& 8& 27& 3& 88& 122& 180& \underline{\textbf{678}}& 470& 0& 80& 173& 167& 395& 142& 118\\
 \hline 
-T12&486& 2355& 2495& 16& 80& 24& 564& 327& 1005& \textbf{2672}& 1513& 3& 311& 1254& 886& 1377& 579& 327\\
+T12&486& 2355& 2495& 16& 80& 24& 564& 327& 1005& \underline{\textbf{2672}}& 1513& 3& 311& 1254& 886& 1377& 579& 327\\
 \hline 
-T13&151& 393& 198& 5& 23& 4& 64& 83& 160& 414& \textbf{639}& 1& 68& 192& 123& 275& 151& 68\\
+T13&151& 393& 198& 5& 23& 4& 64& 83& 160& 414& \underline{\textbf{639}}& 1& 68& 192& 123& 275& 151& 68\\
 \hline 
-T14&1008& 6084& 2681& 86& 153& 61& 990& 820& 2223& \textbf{5730}& 3832& 8& 701& 2327& 1860& 3093& 993& 552\\
+T14&1008& 6084& 2681& 86& 153& 61& 990& 820& 2223& \underline{\textbf{5730}}& 3832& 8& 701& 2327& 1860& 3093& 993& 552\\
 \hline 
-T15&270& 95& 36& 3& 10& 1& 29& 32& 46& 228& \textbf{284}& 0& 19& 31& 61& 81& 23& 21\\
+T15&270& 95& 36& 3& 10& 1& 29& 32& 46& 228& \underline{\textbf{284}}& 0& 19& 31& 61& 81& 23& 21\\
 \hline 
-T16&81& 82& 25& 1& 3& 0& 18& 38& 27& \textbf{105}& 90& 0& 14& 29& 37& 76& 24& 15\\
+T16&81& 82& 25& 1& 3& 0& 18& 38& 27& \underline{\textbf{105}}& 90& 0& 14& 29& 37& 76& 24& 15\\
 \hline
-T17&20& 206& 128& 4& 7& 1& 25& 25& 120& \textbf{217}& 395& 0& 23& 58& 85& 157& 55& 37\\
+T17&20& 206& 128& 4& 7& 1& 25& 25& 120& \underline{\textbf{217}}& 395& 0& 23& 58& 85& 157& 55& 37\\
 \hline
 \hline
 \end{tabular}
-\caption{Anzahl der Überschneidungen zwischen LDA Topics (vert.) und ZVO Labels (horiz.) mit den maximalen Werten pro Zeile in \textbf{fett} markiert}
-\label{fig:matrixnormal}
+\caption{Anzahl der Überschneidungen zwischen LDA Topics (vert.) und ZVO Labels (horiz.) mit den maximalen Werten pro Zeile in \underline{\textbf{fett}} markiert}
+\label{tbl:matrixnormal}
 \end{center}
-\end{figure}
+\end{table}
 
 
 %[[555, 977, 2150, 21, 66, 19, 211, 251, 910, 960, 902, 2, 210, 596, 302, 758, 318, 250], [512, 580, 650, 3, 36, 7, 139, 101, 370, 453, 570, 0, 66, 378, 91, 196, 123, 53], [508, 755, 263, 9, 67, 21, 254, 145, 282, 1498, 1207, 1, 119, 300, 479, 527, 177, 130], [108, 179, 98, 2, 15, 3, 33, 57, 236, 432, 218, 0, 34, 55, 153, 198, 74, 27], [493, 867, 442, 5, 63, 8, 134, 180, 451, 1111, 1033, 8, 73, 348, 446, 489, 191, 89], [91, 467, 98, 5, 25, 2, 60, 75, 162, 480, 309, 1, 55, 127, 169, 351, 113, 47], [1263, 3993, 1738, 28, 127, 48, 811, 587, 1384, 4139, 4730, 6, 573, 2096, 1620, 2080, 680, 495], [3376, 1298, 870, 17, 524, 16, 221, 338, 662, 1904, 1740, 9, 185, 381, 664, 891, 537, 133], [310, 585, 216, 10, 27, 5, 67, 114, 203, 771, 1013, 0, 81, 323, 264, 440, 205, 73], [58, 126, 47, 0, 3, 1, 17, 16, 131, 174, 400, 0, 15, 55, 63, 69, 59, 17], [286, 1610, 1733, 12, 51, 27, 284, 299, 858, 1567, 1331, 4, 239, 893, 674, 673, 304, 248], [194, 409, 377, 8, 27, 3, 88, 122, 180, 678, 470, 0, 80, 173, 167, 395, 142, 118], [486, 2355, 2495, 16, 80, 24, 564, 327, 1005, 2672, 1513, 3, 311, 1254, 886, 1377, 579, 327], [151, 393, 198, 5, 23, 4, 64, 83, 160, 414, 639, 1, 68, 192, 123, 275, 151, 68], [1008, 6084, 2681, 86, 153, 61, 990, 820, 2223, 5730, 3832, 8, 701, 2327, 1860, 3093, 993, 552], [270, 95, 36, 3, 10, 1, 29, 32, 46, 228, 284, 0, 19, 31, 61, 81, 23, 21], [81, 82, 25, 1, 3, 0, 18, 38, 27, 105, 90, 0, 14, 29, 37, 76, 24, 15], [20, 206, 128, 4, 7, 1, 25, 25, 120, 217, 395, 0, 23, 58, 85, 157, 55, 37]] MIT 133044 Dokumenten!!!!
@@ -1148,7 +1152,7 @@ Abteilung & Counts Label & Anteil$[\%]$\\
 
 Nun wird durch die quantitativere Darstellung deutlich, dass sich nicht alle Topics eindeutig einer Abteilung zuordnen lassen. Dafür sind die Anzahlen in Abbildung \ref{fig:count3} und Abbildung \ref{fig:count4} zu unterschiedlich. Das Ergebnis zeigt, dass die Topic-Verteilung bei LDA das 14. Thema stärker erkennt, als der ZVO die Abteilung mit den meisten zugeordneten Dokumenten. Diese unterscheiden sich durch $5923$ Dokumente. Dies ist auch zu erkennen, wenn man sich die prozentualen Anteile von den Topics und Abteilungen anschaut. Das größte Topic unterscheidet sich von der größten Abteilung in über $6\%$. Die Betrachtung der unterschiedlichen Anteile dient somit nicht gut als Zuordnungsmethode, kann jedoch Aufschluss darüber geben, dass die Daten von dem ZVO gleichmäßiger zugeteilt wurden, als sie von dem Topic-Modell erkannt werden. Dies bedeutet, dass die Wörter in den Dokumenten in ihrer Bedeutung und syntaktischen Umgebung zu ähnlich sind, als dass sie sich optimal in die von dem ZVO vorgegebenen Abteilungen einteilen lassen. Dies könnte auch an bestimmten Wörtern liegen, die in vielen Abteilungen vorkommen, wie zum Beispiel \glqq ostholstein\grqq oder \glqq zweckverband\grqq. Die Wörter können dafür sorgen, dass Dokumente in das gleiche Topic sortiert werden, die sich eigentlich durch andere Wörter semantisch stärker voneinander unterscheiden und manuell anderen Abteilungen untergeordnet wurden.\\ 
 
-Die reine Anzahl der Dokumente ist nicht aussagekräftig genug, um eine Qualität der Zuordnung umfassend zu untersuchen. Dafür werden die Überschneidungen zwischen Topic und Abteilung betrachtet. Für die Zuordnung der Topics auf Abteilungen wurde in Abschnitt 4 in Abbildung \ref{fig:matrixnormal} eine Matrix erstellt, die alle Überschneidungen gezählt hat. Diese wurden dann für alle Topics und Abteilungen in der Matrix als absolute Werte aufgetragen. Abbildung \ref{fig:matrixgraph} stellt die Ergebnisse der Matrix in einem Graphen dar, auf dem die X-Achse die Labels, also Abteilungen, aufträgt und die Y-Achse für die Anzahl der überschneidenden Dokumente steht. Wie viele Dokumente sich in jedem Topic und Abteilung überschneiden, ist durch die 18 Graphen dargestellt, die jeweils den Wert in einer Funktion aufgetragen haben. Aus Abbildung \ref{fig:matrixgraph} ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. 
+Die reine Anzahl der Dokumente ist nicht aussagekräftig genug, um eine Qualität der Zuordnung umfassend zu untersuchen. Dafür werden die Überschneidungen zwischen Topic und Abteilung betrachtet. Für die Zuordnung der Topics auf Abteilungen wurde in Abschnitt 4 in Tabelle \ref{tbl:matrixnormal} eine Matrix erstellt, die alle Überschneidungen gezählt hat. Diese wurden dann für alle Topics und Abteilungen in der Matrix als absolute Werte aufgetragen. Abbildung \ref{fig:matrixgraph} stellt die Ergebnisse der Matrix in einem Graphen dar, auf dem die X-Achse die Labels, also Abteilungen, aufträgt und die Y-Achse für die Anzahl der überschneidenden Dokumente steht. Wie viele Dokumente sich in jedem Topic und Abteilung überschneiden, ist durch die 18 Graphen dargestellt, die jeweils den Wert in einer Funktion aufgetragen haben. Aus Abbildung \ref{fig:matrixgraph} ist ein globaler Trend zu erkennen, der bei den Abteilungen $1,2$ und $9,10$ sehr viele Überschneidungen aufweist. 
 
 \begin{figure}[H]
 \begin{center}
@@ -1282,7 +1286,7 @@ width=15cm,height=15cm,
     
 \end{axis}
 \end{tikzpicture}
-\caption{Alternative Darstellung der Matrix \ref{fig:matrixnormal}}
+\caption{Alternative Darstellung der Matrix \ref{tbl:matrixnormal}}
 \label{fig:matrixgraph}
 \end{center}
 \end{figure}
@@ -1406,7 +1410,7 @@ Die Abbildung \ref{fig:comp} stellt die Überschneidungen mit der Menge der Doku
 
 Die Zuteilung anhand der maximalen absoluten Überschneidungen ist dazu nicht injektiv. Für die Verarbeitung der Daten ist die injektive Zuordnung jedoch fundamental wichtig, aber schwierig zu erreichen. Für die Beurteilung der Matrix führen wir einen weiteren Parameter ein: die durchschnittliche Überschneidung. Dadurch kann die Kompatibilität der Abteilungen im Bezug auf das Matching mit Topics besser analysiert werden. Vor allem bei Abteilungen, die eine sehr unausgeglichene Überschneidungsmenge haben, da sie deutlich mehr Dokumente als andere enthalten, bietet der Durchschnitt eine alternative Sichtweise. Für die durchschnittliche Überschneidung wird zuerst die Summe aller Dokumente einer Abteilung errechnet, indem alle Werte einer Spalte addiert werden. Daraufhin entsteht eine neue Matrix, in der jeder Wert jeweils durch die Summe seiner Spalte dividiert wird. Dabei wird die Anzahl an Dokumenten in jeder Abteilung irrelevant für das Endergebnis. Somit beschreibt jeder Wert, wie groß der Anteil der aus dieser Topic überschneidenden Dokumente bezogen auf die gesamte Abteilung ist in $\%$: \\
 
-\begin{figure}[H]
+\begin{table}[H]
 \begin{center}
 \tiny
 \renewcommand{\arraystretch}{2}
@@ -1415,28 +1419,28 @@ Die Zuteilung anhand der maximalen absoluten Überschneidungen ist dazu nicht in
 \hline
 &L0&L1&L2&L3&L4&L5&L6&L7&L8&L9&L10&L11&L12&L13&L14&L15&L16&L17\\
 \hline
-T0&5.7&4.6&15.1&8.9&5.1&7.6&5.3&6.9&9.7&4.1&4.4&4.7&7.3&6.2&3.7&6.3&6.7&9.3\\\hline
-T1&5.2&2.8&4.6&1.3&2.78&2.8&3.5&2.8&3.9&1.9&2.8&0&2.3&3.9&1.1&1.6&2.6&2\\\hline
-T2&5.2&3.6&1.9&3.8&5.1&8.4&6.3&4&3&6.4&5.8&2.3&4.2&3.1&5.9&4.4&3.7&4.8\\\hline
-T3&1.1&0.9&0.7&0.9&1.2&1.2&0.8&1.6&2.5&1.8&1.1&0&1.1&0.6&1.9&1.6&1.6&1\\\hline
-T4&5.1&4.1&3.1&2.1&4.8&3.2&3.3&5&4.8&4.7&5&18.6&2.5&3.6&5.5&4&4&3.3\\\hline
-T5&0.9&2.2&0.7&2.1&1.9&0.8&1.5&2.1&1.7&2&1.5&2.3&1.9&1.3&2.08&2.9&2.4&1.7\\\hline
-T6&12.9&19&12.2&11.9&9.7&19.1&20.2&16.3&14.7&17.6&22.9&14&20&21.8&19.9&17.2&14.3&18.3\\\hline
-T7&34.6&6.2&6.1&7.2&40.1&6.4&5.5&9.4&7&8.1&8.4&20.9&6.5&4&8.2&7.4&11.3&4.9\\\hline
-T8&3.2&2.8&1.5&4.3&2.1&2&1.67&3.16&2.2&3.3&4.9&0&2.8&3.4&3.2&3.6&4.3&2.7\\\hline
-T9&0.6&0.6&0.3&0&0.2&0.4&0.4&0.4&1.4&0.7&1.9&0&0.5&0.6&0.8&0.6&1.2&0.6\\\hline
-T10&2.9&7.6&12.2&5.1&3.9&10.8&7.1&8.3&9.1&6.7&6.4&9.3&8.3&9.3&8.3&5.6&6.4&9.2\\\hline
-T11&2&1.9&2.7&3.4&2.1&1.2&2.2&3.4&1.9&2.3&2.3&0&2.8&1.8&2.1&3.3&3&4.4\\\hline
-T12&5&11.2&17.5&6.8&6.1&9.6&14.1&9.1&10.7&11.4&7.3&7&10.9&13&10.9&11.4&12.2&12.1\\\hline
-T13&1.6&1.9&1.4&2.1&1.8&1.6&1.6&2.3&1.7&1.8&3.1&2.3&2.4&2&1.5&2.3&3.2&2.5\\\hline
-T14&10.3&28.9&18.8&36.6&11.7&24.3&24.7&22.7&23.6&24.4&18.5&18.6&24.5&24.2&22.8&25.5&20.9&20.4\\\hline
-T15&2.8&0.5&0.3&1.3&0.8&0.4&0.7&0.9&0.5&1&1.4&0&0.7&0.3&0.8&0.7&0.5&0.8\\\hline
-T16&0.8&0.4&0.2&0.4&0.2&0&0.5&1.1&0.3&0.5&0.4&0&0.5&0.3&0.5&0.6&0.5&0.6\\\hline
-T17&0.2&1&0.9&1.7&0.5&0.4&0.6&0.7&1.3&0.9&1.9&0&0.8&0.6&1&1.3&1.2&1.4\\\hline \hline
+T0&5.7&4.6&\underline{\textbf{15.1}}&8.9&5.1&7.6&5.3&6.9&9.7&4.1&4.4&4.7&7.3&6.2&3.7&6.3&6.7&9.3\\\hline
+T1&\underline{\textbf{5.2}}&2.8&4.6&1.3&2.78&2.8&3.5&2.8&3.9&1.9&2.8&0&2.3&3.9&1.1&1.6&2.6&2\\\hline
+T2&5.2&3.6&1.9&3.8&5.1&\underline{\textbf{8.4}}&6.3&4&3&6.4&5.8&2.3&4.2&3.1&5.9&4.4&3.7&4.8\\\hline
+T3&1.1&0.9&0.7&0.9&1.2&1.2&0.8&1.6&\underline{\textbf{2.5}}&1.8&1.1&0&1.1&0.6&1.9&1.6&1.6&1\\\hline
+T4&5.1&4.1&3.1&2.1&4.8&3.2&3.3&5&4.8&4.7&5&\underline{\textbf{18.6}}&2.5&3.6&5.5&4&4&3.3\\\hline
+T5&0.9&2.2&0.7&2.1&1.9&0.8&1.5&2.1&1.7&2&1.5&2.3&1.9&1.3&2.08&\underline{\textbf{2.9}}&2.4&1.7\\\hline
+T6&12.9&19&12.2&11.9&9.7&19.1&20.2&16.3&14.7&17.6&\underline{\textbf{22.9}}&14&20&21.8&19.9&17.2&14.3&18.3\\\hline
+T7&34.6&6.2&6.1&7.2&\underline{\textbf{40.1}}&6.4&5.5&9.4&7&8.1&8.4&20.9&6.5&4&8.2&7.4&11.3&4.9\\\hline
+T8&3.2&2.8&1.5&4.3&2.1&2&1.67&3.16&2.2&3.3&\underline{\textbf{4.9}}&0&2.8&3.4&3.2&3.6&4.3&2.7\\\hline
+T9&0.6&0.6&0.3&0&0.2&0.4&0.4&0.4&1.4&0.7&\underline{\textbf{1.9}}&0&0.5&0.6&0.8&0.6&1.2&0.6\\\hline
+T10&2.9&7.6&12.2&5.1&3.9&\underline{\textbf{10.8}}&7.1&8.3&9.1&6.7&6.4&9.3&8.3&9.3&8.3&5.6&6.4&9.2\\\hline
+T11&2&1.9&2.7&3.4&2.1&1.2&2.2&3.4&1.9&2.3&2.3&0&2.8&1.8&2.1&3.3&3&\underline{\textbf{4.4}}\\\hline
+T12&5&11.2&\underline{\textbf{17.5}}&6.8&6.1&9.6&14.1&9.1&10.7&11.4&7.3&7&10.9&13&10.9&11.4&12.2&12.1\\\hline
+T13&1.6&1.9&1.4&2.1&1.8&1.6&1.6&2.3&1.7&1.8&3.1&2.3&2.4&2&1.5&2.3&\underline{\textbf{3.2}}&2.5\\\hline
+T14&10.3&28.9&18.8&\underline{\textbf{36.6}}&11.7&24.3&24.7&22.7&23.6&24.4&18.5&18.6&24.5&24.2&22.8&25.5&20.9&20.4\\\hline
+T15&\underline{\textbf{2.8}}&0.5&0.3&1.3&0.8&0.4&0.7&0.9&0.5&1&1.4&0&0.7&0.3&0.8&0.7&0.5&0.8\\\hline
+T16&0.8&0.4&0.2&0.4&0.2&0&0.5&\underline{\textbf{1.1}}&0.3&0.5&0.4&0&0.5&0.3&0.5&0.6&0.5&0.6\\\hline
+T17&0.2&1&0.9&1.7&0.5&0.4&0.6&0.7&1.3&0.9&\underline{\textbf{1.9}}&0&0.8&0.6&1&1.3&1.2&1.4\\\hline \hline
 \end{tabular}
 \caption{Durchschnittliche Überschneidungen aller Topics mit Labels}
 \end{center}
-\end{figure}
+\end{table}
 
 Wählt man aus jeder Zeile das maximale Element aus und notiert die assoziierten Abteilungen in einer Liste, dann ergibt sich das folgende Ergebnis. Der Unterschied bei der Darstellung ist nun, dass die Zahlen pro Zeile nicht mehr als absolutes Maß betrachtet werden, sonder als relative Häufigkeit in der jeweiligen Abteilung. Somit macht es keinen Unterschied, dass die Abteilungen verschieden viele Dokumente von dem ZVO zugeordnet bekommen haben. \\
 
@@ -1449,7 +1453,7 @@ average_row = [2,0,5,8,11,15,10,4,10,10,2,17,2,16,3,0,7,10]
 \end{center}
 \end{figure}
 
-Man erkennt eine leichte Verbesserung zu Abbildung \ref{fig:matrixnormal}, da in der Zuteilung mehr Abteilungen zugeordnet wurden. Insgesamt sind jedoch immernoch nur $12/18$ in der Liste vertreten. Wie bei der ersten Liste, bei der  $ 0,1,2,9,10 $ mehrfach zugeweisen wurden, sind hier $2$ und $10$ drei mal zugewiesen und $0$ zwei mal. Somit unterstreicht das Ergebnis die Problematik der Zuteilung des ZVO in Bezug auf diese Abteilungen. Die Daten sind somit nicht für die Nutzung in der Topic-Modellierung geeignet.\\
+Man erkennt eine leichte Verbesserung zu Tabelle \ref{tbl:matrixnormal}, da in der Zuteilung mehr Abteilungen zugeordnet wurden. Insgesamt sind jedoch immernoch nur $12/18$ in der Liste vertreten. Wie bei der ersten Liste, bei der  $ 0,1,2,9,10 $ mehrfach zugeweisen wurden, sind hier $2$ und $10$ drei mal zugewiesen und $0$ zwei mal. Somit unterstreicht das Ergebnis die Problematik der Zuteilung des ZVO in Bezug auf diese Abteilungen. Die Daten sind somit nicht für die Nutzung in der Topic-Modellierung geeignet.\\
 
 %\end{enumerate}
 

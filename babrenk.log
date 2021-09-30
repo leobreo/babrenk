@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  29 SEP 2021 21:40
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  1 OCT 2021 00:25
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.048 seconds
+luaotfload | main : initialization completed in 0.049 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -2102,9 +2102,9 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
-(./babrenk.aux)
-\openout1 = babrenk.aux
+No file babrenk.aux.
 
+\openout1 = babrenk.aux
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 344.
 LaTeX Font Info:    ... okay on input line 344.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 344.
@@ -2125,7 +2125,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 344.
 LaTeX Font Info:    ... okay on input line 344.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 344.
 LaTeX Font Info:    ... okay on input line 344.
- ABD: EveryShipout initializing macros
+ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count460
@@ -2204,8 +2204,6 @@ LaTeX Info: Redefining \Ref on input line 515.
 LaTeX Info: Redefining \ref on input line 344.
 LaTeX Info: Redefining \pageref on input line 344.
 LaTeX Info: Redefining \nameref on input line 344.
-
-(./babrenk.out) (./babrenk.out)
 \@outlinefile=\write6
 
 \openout6 = babrenk.out
@@ -2222,7 +2220,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 \openout4 = babrenk-blx.bib
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'babrenk.bbl' found.
- (./babrenk.bbl)
+
+(./babrenk.bbl)
 Package biblatex Info: Reference section=0 on input line 344.
 Package biblatex Info: Reference segment=0 on input line 344.
 
@@ -2235,7 +2234,7 @@ ur preamble.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<uzl-thesis-logo-itcs.pdf, id=71, 426.79149pt x 113.8112pt>
+<uzl-thesis-logo-itcs.pdf, id=7, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
 Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 344.
@@ -2250,7 +2249,7 @@ LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/it' will be
 (Font)              scaled to size 13.29996pt on input line 344.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/it' will be
 (Font)              scaled to size 13.29996pt on input line 344.
-<uzl-thesis-logo-slogan.pdf, id=72, 142.26349pt x 11.38112pt>
+<uzl-thesis-logo-slogan.pdf, id=8, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
 Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 344.
@@ -2268,12 +2267,10 @@ LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/n' will be
 ]
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
 (Font)              scaled to size 18.99994pt on input line 344.
- (./babrenk.toc)
 \tf@toc=\write7
 
 \openout7 = babrenk.toc
-
-[4
+ [4
 
 
 ]
@@ -2282,13 +2279,23 @@ LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
 (Font)              scaled to size 56.99982pt on input line 353.
 Package Listings Info: Made | a short reference for \lstinline on input line 363
 .
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
+
+ []
+
 [1
 
 
 ] [2] [3] [4]
 Kapitel 2.
 
-Overfull \hbox (7.51405pt too wide) in paragraph at lines 384--385
+Overfull \hbox (7.51405pt too wide) in paragraph at lines 388--389
 \TU/TeXGyrePagella(0)/m/n/11 Modellierung wird schon seit vie-len Jah-ren ver-w
 en-det und hat vie-le Ver-än-de-run-gen durch-
  []
@@ -2297,75 +2304,105 @@ en-det und hat vie-le Ver-än-de-run-gen durch-
 
 ]
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
-(Font)              scaled to size 11.39996pt on input line 402.
+(Font)              scaled to size 11.39996pt on input line 406.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+
+LaTeX Warning: Reference `fig:ldagraphic' on page 7 undefined on input line 425.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 423--424
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 437.
+(Font)              scaled to size 10.00107pt on input line 441.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 437.
+(Font)              scaled to size 7.00075pt on input line 441.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 437.
+(Font)              scaled to size 5.00053pt on input line 441.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 437.
+(Font)              scaled to size 9.99893pt on input line 441.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 437.
+(Font)              scaled to size 6.99925pt on input line 441.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 437.
+(Font)              scaled to size 4.99947pt on input line 441.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
 [9]
-Overfull \hbox (6.38312pt too wide) in paragraph at lines 486--487
+Overfull \hbox (6.38312pt too wide) in paragraph at lines 490--491
 []\TU/TeXGyrePagella(0)/m/n/11 der Wahr-schein-lich-keit der Dokument-Topic-Ver
 teilung $\TU/TeXGyrePagellaMath(1)/m/n/11 𝜃$ \TU/TeXGyrePagella(0)/m/n/11 zu
 -sam-men mit der Dirichlet-
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
+
+LaTeX Warning: Reference `fig:equ2' on page 11 undefined on input line 506.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 506--507
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
 
  []
 
-<lda_alpha001.png, id=219, 895.345pt x 580.1675pt>
+<lda_alpha001.png, id=142, 895.345pt x 580.1675pt>
 File: lda_alpha001.png Graphic file (type png)
 <use lda_alpha001.png>
-Package luatex.def Info: lda_alpha001.png  used on input line 527.
+Package luatex.def Info: lda_alpha001.png  used on input line 531.
 (luatex.def)             Requested size: 282.03517pt x 182.75372pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<lda_alpha1.png, id=220, 895.345pt x 562.1pt>
+<lda_alpha1.png, id=143, 895.345pt x 562.1pt>
 File: lda_alpha1.png Graphic file (type png)
 <use lda_alpha1.png>
-Package luatex.def Info: lda_alpha1.png  used on input line 535.
+Package luatex.def Info: lda_alpha1.png  used on input line 539.
 (luatex.def)             Requested size: 282.03517pt x 177.06244pt.
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 541--542
+
+LaTeX Warning: Reference `fig:img1' on page 12 undefined on input line 545.
+
+
+LaTeX Warning: Reference `fig:img1' on page 12 undefined on input line 545.
+
+
+LaTeX Warning: Reference `fig:img2' on page 12 undefined on input line 545.
+
+
+LaTeX Warning: Reference `fig:img1' on page 12 undefined on input line 545.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
 
  []
 
 [12<./lda_alpha001.png><./lda_alpha1.png>] [13]
 Kapitel 3.
+
+LaTeX Warning: Reference `fig:flowchart' on page 14 undefined on input line 555.
+
+
 [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+
+LaTeX Warning: Reference `fig:code1' on page 15 undefined on input line 586.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
  []
 
@@ -2373,12 +2410,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 582--583
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 
  []
 
 
-Overfull \hbox (0.5025pt too wide) in paragraph at lines 607--608
+Overfull \hbox (0.5025pt too wide) in paragraph at lines 611--612
 \TU/TeXGyrePagella(0)/m/n/11 tisch dar-stell-bar ma-chen: die Dokument-Topic-Ve
 rteilung und die Topic-Word-Verteilung.
  []
@@ -2386,150 +2423,272 @@ rteilung und die Topic-Word-Verteilung.
 [15] [16] [17]
 Kapitel 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--615
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
 
  []
 
 [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 645--646
+
+LaTeX Warning: Reference `fig:data1' on page 19 undefined on input line 649.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--650
 
  []
+
+
+LaTeX Warning: Reference `fig:data2' on page 19 undefined on input line 660.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: Reference `fig:data1' on page 19 undefined on input line 672.
+
+
+LaTeX Warning: Reference `fig:data2' on page 19 undefined on input line 672.
+
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 671--672
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 676--678
+
+LaTeX Warning: Reference `fig:codeinput' on page 21 undefined on input line 680.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 676--678
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
 
  []
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) [21]
+
+LaTeX Warning: Reference `fig:codeinput' on page 22 undefined on input line 714.
+
+
+
+LaTeX Warning: Reference `fig:codeoutput' on page 22 undefined on input line 714
+.
+
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
-put line 714.
+put line 718.
 
-
-Package Listings Warning: Text dropped after begin of listing on input line 714.
+Package Listings Warning: Text dropped after begin of listing on input line 718.
 
 
 [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 802--803
+Underfull \hbox (badness 10000) in paragraph at lines 806--807
 
  []
+
+
+LaTeX Warning: Reference `fig:count1' on page 24 undefined on input line 810.
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+
+LaTeX Warning: Reference `fig:count2' on page 25 undefined on input line 845.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
 
  []
 
-[25] [26]
-Overfull \hbox (30.6616pt too wide) in paragraph at lines 923--967
+[25]
+
+LaTeX Warning: Reference `fig:count2' on page 26 undefined on input line 882.
+
+
+LaTeX Warning: Reference `fig:labels' on page 26 undefined on input line 882.
+
+[26]
+
+LaTeX Warning: Reference `fig:count1' on page 27 undefined on input line 919.
+
+
+Overfull \hbox (30.6616pt too wide) in paragraph at lines 927--971
  [] 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 975--976
+Underfull \hbox (badness 10000) in paragraph at lines 979--980
 
  []
 
 [28]
 Kapitel 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 982--983
+Underfull \hbox (badness 10000) in paragraph at lines 986--987
 
  []
 
 [29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1019
+
+LaTeX Warning: Reference `fig:top5' on page 30 undefined on input line 1021.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1023
 
  []
 
 
-Overfull \hbox (5.39339pt too wide) in paragraph at lines 1070--1071
+Overfull \hbox (5.39339pt too wide) in paragraph at lines 1074--1075
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1074
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1078
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
+
+LaTeX Warning: Reference `fig:countchart' on page 31 undefined on input line 108
+0.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1081
 
  []
+
+
+LaTeX Warning: Reference `fig:countchart' on page 31 undefined on input line 108
+2.
+
+
+LaTeX Warning: Reference `fig:count1' on page 31 undefined on input line 1082.
+
+
+LaTeX Warning: Reference `fig:count2' on page 31 undefined on input line 1082.
 
 [31
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
+
+LaTeX Warning: Reference `fig:count3' on page 32 undefined on input line 1153.
+
+
+LaTeX Warning: Reference `fig:count4' on page 32 undefined on input line 1153.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1154
 
  []
 
 [32]
-Overfull \hbox (7.42339pt too wide) in paragraph at lines 1284--1285
+
+LaTeX Warning: Reference `tbl:matrixnormal' on page 33 undefined on input line 1
+155.
+
+
+LaTeX Warning: Reference `fig:matrixgraph' on page 33 undefined on input line 11
+55.
+
+
+LaTeX Warning: Reference `fig:matrixgraph' on page 33 undefined on input line 11
+55.
+
+
+Overfull \hbox (7.42339pt too wide) in paragraph at lines 1288--1289
  [] 
  []
 
-[33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1303--1304
+
+LaTeX Warning: Reference `tbl:matrixnormal' on page 33 undefined on input line 1
+289.
+
+
+LaTeX Warning: Reference `tbl:matrixnormal' on page 33 undefined on input line 1
+289.
+
+[33]
+
+LaTeX Warning: Reference `fig:maxlist' on page 34 undefined on input line 1294.
+
+[34]
+
+LaTeX Warning: Reference `fig:count1' on page 35 undefined on input line 1307.
+
+
+LaTeX Warning: Reference `fig:count2' on page 35 undefined on input line 1307.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
+LaTeX Warning: Reference `fig:count2' on page 35 undefined on input line 1310.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1311
 
  []
+
+
+LaTeX Warning: Reference `fig:maxlist' on page 35 undefined on input line 1405.
+
+
+LaTeX Warning: Reference `fig:maxlist' on page 35 undefined on input line 1405.
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1405--1406
+
+LaTeX Warning: Reference `fig:comp' on page 36 undefined on input line 1409.
+
+
+LaTeX Warning: Reference `fig:maxlist' on page 36 undefined on input line 1409.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1409--1410
 
  []
 
 [36
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1407--1408
+Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
 
  []
 
 
-Overfull \hbox (32.99965pt too wide) in paragraph at lines 1413--1437
+Overfull \hbox (32.99965pt too wide) in paragraph at lines 1417--1441
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1452--1453
+
+LaTeX Warning: Reference `tbl:matrixnormal' on page 38 undefined on input line 1
+456.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
+Underfull \hbox (badness 10000) in paragraph at lines 1460--1461
 
  []
 
@@ -2553,36 +2712,54 @@ Package biblatex Warning: Name format 'last-first' deprecated.
 [41
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1745--1745
+Underfull \hbox (badness 10000) in paragraph at lines 1749--1749
 \TU/TeXGyrePagella(0)/m/it/11 ex-p-lai-ned\TU/TeXGyrePagella(0)/m/n/11 . Ana-ly
 -tics Vid-hya. htt-ps://-me-di-um.com/analytics-vidhya/topic-modeling-
  []
 
 [42]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1745.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1745.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1749.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1749.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1745.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1745.
-Package rerunfilecheck Info: File `babrenk.out' has not changed.
-(rerunfilecheck)             Checksum: 829963D013A0EB6732EBB80B3CFD014B;2627.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1749.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1749.
+
+
+Package rerunfilecheck Warning: File `babrenk.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `babrenk.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  829963D013A0EB6732EBB80B3CFD014B;2627.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                babrenk
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1745.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1749.
 )
 
 Here is how much of LuaTeX's memory you used:
- 63378 strings out of 494291
- 195661,2373549 words of node,token memory allocated
+ 63303 strings out of 494291
+ 195660,2373549 words of node,token memory allocated
  703 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 22 attribute, 82 gl
 ue_spec, 13 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:7,2:12059,3:2231,4:500,5:2272,6:60,7:8351,8:73,9:5444,10:25,11
-:786
- 65370 multiletter control sequences out of 65536+600000
- 116 fonts using 30067811 bytes
- 64i,20n,128p,5516b,3225s stack positions out of 5000i,500n,10000p,200000b,100000s
+   avail lists: 1:7,2:12059,3:2226,4:500,5:2272,6:60,7:8339,8:72,9:5444,10:25,11
+:633
+ 65315 multiletter control sequences out of 65536+600000
+ 116 fonts using 30067727 bytes
+ 64i,20n,128p,3966b,3225s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmmonoprop10-regula
 r.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/te
 xgyrepagella-math.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/
@@ -2595,10 +2772,10 @@ live/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf><
 learSans-Regular.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/cl
 earsans/ClearSans-Italic.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/
 intel/clearsans/ClearSans-Bold.ttf>
-Output written on babrenk.pdf (46 pages, 515673 bytes).
+Output written on babrenk.pdf (46 pages, 512499 bytes).
 
-PDF statistics: 666 PDF objects out of 1000 (max. 8388607)
- 573 compressed objects within 6 object streams
+PDF statistics: 539 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
  254 named destinations out of 1000 (max. 131072)
- 144 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
