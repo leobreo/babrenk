@@ -269,6 +269,24 @@
     \field{urlyear}{2021}
   \endentry
 
+  \entry{zvo}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=GJ}{%
+         family={Groppe},
+         familyi={G\bibinitperiod},
+         given={Jinghua},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GJ1}
+    \strng{fullhash}{GJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{KI in der Kundenkommunikation}
+  \endentry
+
   \entry{plsa}{article}{}
     \name{author}{1}{}{%
       {{hash=HT}{%
@@ -536,7 +554,7 @@
   for NLP Frameworks}}
     \field{note}{\url{http://is.muni.cz/publication/884893/en}}
     \field{pages}{45\bibrangedash 50}
-    \field{title}{{Software Framework for Topic Modelling with Large Corpora}}
+    \field{title}{{Software Framework for Topic Modeling with Large Corpora}}
     \list{location}{1}{%
       {Valletta, Malta}%
     }
