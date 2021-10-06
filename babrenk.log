@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  3 OCT 2021 21:06
+This is LuaTeX, Version 1.10.0 (TeX Live 2019)  (format=lualatex 2019.5.16)  6 OCT 2021 12:04
  restricted system commands enabled.
  file:line:error style messages enabled.
 **babrenk.tex
@@ -49,7 +49,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.069 seconds
+luaotfload | main : initialization completed in 0.052 seconds
 (./uzl-thesis.cls
 Document Class: uzl-thesis 2019/11/21 University of Luebeck Thesis Class
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -1318,7 +1318,7 @@ Package biblatex Warning: 'firstinits' option is deprecated.
 (biblatex)                Please use 'giveninits' instead.
 
 )
-Package biblatex Info: Redefining '\cite' on input line 166.
+Package biblatex Info: Redefining '\cite' on input line 168.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2019/03/04 v0.8o Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -1402,7 +1402,7 @@ lig;+smcp;"
 (fontspec)             <->"TeXGyrePagella/BI:mode=node;script=latn;language=DFLT
 ;+tlig;+smcp;"
 
-LaTeX Info: Redefining \rmfamily on input line 274.
+LaTeX Info: Redefining \rmfamily on input line 276.
 
 Package fontspec Info: Font family 'TeXGyrePagella(1)' created for font 'TeX
 (fontspec)             Gyre Pagella' with options [Renderer=Basic].
@@ -1436,14 +1436,14 @@ mcp;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TeXGyrePagella(1)/m/n on input line 2
-74.
+76.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/TeXGyrePagella(1)/m/it on input line
- 274.
+ 276.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/TeXGyrePagella(1)/bx/n on input line
- 274.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 274.
+ 276.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 276.
 
 Package fontspec Info: Could not resolve font "TeXGyrePagellaMath/B" (it
 (fontspec)             probably doesn't exist).
@@ -1493,15 +1493,15 @@ x_copy_fontdimens:
 (fontspec)             \__um_luatex_copy_fontdimens: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 274.
+(Font)              `operators' in the math version `normal' on input line 276.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TeXGyrePagellaMath(1)/m/n on input li
-ne 274.
+ne 276.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 274.
+(Font)              `operators' in the math version `bold' on input line 276.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TeXGyrePagellaMath(1)/bx/n on input 
-line 274.
+line 276.
 
 Package fontspec Info: TeXGyrePagellaMath scale = 1.0001.
 
@@ -1563,15 +1563,15 @@ ath;language=DFLT;+ssty=1;"
 (fontspec)             21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 274.
+(Font)              `symbols' in the math version `normal' on input line 276.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/TeXGyrePagellaMath(2)/m/n on input l
-ine 274.
+ine 276.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 274.
+(Font)              `symbols' in the math version `bold' on input line 276.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/TeXGyrePagellaMath(2)/bx/n on input 
-line 274.
+line 276.
 
 Package fontspec Info: TeXGyrePagellaMath scale = 0.9999.
 
@@ -1622,33 +1622,33 @@ ath;language=DFLT;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 27
-4.
+6.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/TeXGyrePagellaMath(3)/m/n on input l
-ine 274.
+ine 276.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 274.
+(Font)              `largesymbols' in the math version `bold' on input line 276.
 
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/TeXGyrePagellaMath(3)/bx/n on input 
-line 274.
+line 276.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 11.00117pt on input line 274.
+(Font)              scaled to size 11.00117pt on input line 276.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 8.14085pt on input line 274.
+(Font)              scaled to size 8.14085pt on input line 276.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 6.05064pt on input line 274.
+(Font)              scaled to size 6.05064pt on input line 276.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 10.99883pt on input line 274.
+(Font)              scaled to size 10.99883pt on input line 276.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 8.13913pt on input line 274.
+(Font)              scaled to size 8.13913pt on input line 276.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 6.04935pt on input line 274.
-LaTeX Font Info:    Try loading font information for U+msa on input line 274.
+(Font)              scaled to size 6.04935pt on input line 276.
+LaTeX Font Info:    Try loading font information for U+msa on input line 276.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 274.
+LaTeX Font Info:    Try loading font information for U+msb on input line 276.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1689,7 +1689,7 @@ LT;+tlig;"
 FLT;+tlig;"
 (fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 
-LaTeX Info: Redefining \sffamily on input line 274.
+LaTeX Info: Redefining \sffamily on input line 276.
 luaotfload | aux : font no 61 (nil) does not define feature smcp for script latn
  with language dflt
 luaotfload | aux : no font with id 61
@@ -1727,9 +1727,9 @@ FLT;"
 (fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/ClearSans(1)/m/n on input line 274.
+(Font)                  OT1/cmss/m/n --> TU/ClearSans(1)/m/n on input line 276.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/ClearSans(1)/bx/n on input line 274
+(Font)                  OT1/cmss/bx/n --> TU/ClearSans(1)/bx/n on input line 276
 .
 
 Package fontspec Info: Could not resolve font "LatinModernMono/BI" (it
@@ -1772,7 +1772,7 @@ nguage=DFLT;"
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-LaTeX Info: Redefining \ttfamily on input line 274.
+LaTeX Info: Redefining \ttfamily on input line 276.
 
 Package fontspec Info: Could not resolve font "LatinModernMono/BI" (it
 (fontspec)             probably doesn't exist).
@@ -1805,10 +1805,10 @@ nguage=DFLT;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/LatinModernMono(1)/m/n on input line
- 274.
+ 276.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/LatinModernMono(1)/bx/n on input lin
-e 274.
+e 276.
 
 Package fontspec Info: Could not resolve font "LatinModernMonoProp/BI" (it
 (fontspec)             probably doesn't exist).
@@ -2105,26 +2105,26 @@ File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 (./babrenk.aux)
 \openout1 = babrenk.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 346.
+LaTeX Font Info:    ... okay on input line 346.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2191,7 +2191,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box93
-Package hyperref Info: Link coloring OFF on input line 344.
+Package hyperref Info: Link coloring OFF on input line 346.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -2201,15 +2201,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count466
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 344.
-LaTeX Info: Redefining \pageref on input line 344.
-LaTeX Info: Redefining \nameref on input line 344.
+LaTeX Info: Redefining \ref on input line 346.
+LaTeX Info: Redefining \pageref on input line 346.
+LaTeX Info: Redefining \nameref on input line 346.
 
 (./babrenk.out) (./babrenk.out)
 \@outlinefile=\write6
 
 \openout6 = babrenk.out
-LaTeX Info: Redefining \Ref on input line 344.
+LaTeX Info: Redefining \Ref on input line 346.
 \c@lstlisting=\count467
 Package biblatex Info: LuaTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
@@ -2223,14 +2223,14 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'babrenk.bbl' found.
  (./babrenk.bbl)
-Package biblatex Info: Reference section=0 on input line 344.
-Package biblatex Info: Reference segment=0 on input line 344.
+Package biblatex Info: Reference section=0 on input line 346.
+Package biblatex Info: Reference segment=0 on input line 346.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 ck labels; missing features). Consider writing \pgfplotsset{compat=1.16} into yo
 ur preamble.
- on input line 344.
+ on input line 346.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -2238,57 +2238,58 @@ Package caption Info: End \AtBeginDocument code.
 <uzl-thesis-logo-itcs.pdf, id=71, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
-Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 344.
+Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 346.
 (luatex.def)             Requested size: 426.79045pt x 113.81091pt.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/n' will be
-(Font)              scaled to size 10.44997pt on input line 344.
+(Font)              scaled to size 10.44997pt on input line 346.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
-(Font)              scaled to size 10.44997pt on input line 344.
+(Font)              scaled to size 10.44997pt on input line 346.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
-(Font)              scaled to size 13.29996pt on input line 344.
+(Font)              scaled to size 13.29996pt on input line 346.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/it' will be
-(Font)              scaled to size 13.29996pt on input line 344.
+(Font)              scaled to size 13.29996pt on input line 346.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/it' will be
-(Font)              scaled to size 13.29996pt on input line 344.
+(Font)              scaled to size 13.29996pt on input line 346.
 <uzl-thesis-logo-slogan.pdf, id=72, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
-Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 344.
+Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 346.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./uzl-the
 sis-logo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 344.
+(Font)              scaled to size 9.49997pt on input line 346.
  [2
 
 ] [3
 
-]
+] [4]
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
-(Font)              scaled to size 18.99994pt on input line 344.
+(Font)              scaled to size 18.99994pt on input line 346.
  (./babrenk.toc)
 \tf@toc=\write7
 
 \openout7 = babrenk.toc
+ [5
 
-[4
 
+] [6
 
 ]
 Kapitel 1.
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
-(Font)              scaled to size 56.99982pt on input line 353.
-Package Listings Info: Made | a short reference for \lstinline on input line 363
+(Font)              scaled to size 56.99982pt on input line 355.
+Package Listings Info: Made | a short reference for \lstinline on input line 365
 .
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
@@ -2298,7 +2299,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--369
 ] [2] [3] [4]
 Kapitel 2.
 
-Overfull \hbox (7.51405pt too wide) in paragraph at lines 388--389
+Overfull \hbox (7.51405pt too wide) in paragraph at lines 390--391
 \TU/TeXGyrePagella(0)/m/n/11 Modellierung wird schon seit vie-len Jah-ren ver-w
 en-det und hat vie-le Ver-än-de-run-gen durch-
  []
@@ -2307,81 +2308,81 @@ en-det und hat vie-le Ver-än-de-run-gen durch-
 
 ]
 LaTeX Font Info:    Font shape `TU/ClearSans(0)/bx/n' will be
-(Font)              scaled to size 11.39996pt on input line 406.
+(Font)              scaled to size 11.39996pt on input line 408.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
-
- []
-
-[7]
 Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
+
+ []
+
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 441.
+(Font)              scaled to size 10.00107pt on input line 443.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 441.
+(Font)              scaled to size 7.00075pt on input line 443.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 441.
+(Font)              scaled to size 5.00053pt on input line 443.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 441.
+(Font)              scaled to size 9.99893pt on input line 443.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 441.
+(Font)              scaled to size 6.99925pt on input line 443.
 LaTeX Font Info:    Font shape `TU/TeXGyrePagellaMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 441.
+(Font)              scaled to size 4.99947pt on input line 443.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 
  []
 
 [9]
-Overfull \hbox (6.38312pt too wide) in paragraph at lines 490--491
+Overfull \hbox (6.38312pt too wide) in paragraph at lines 492--493
 []\TU/TeXGyrePagella(0)/m/n/11 der Wahr-schein-lich-keit der Dokument-Topic-Ver
 teilung $\TU/TeXGyrePagellaMath(1)/m/n/11 𝜃$ \TU/TeXGyrePagella(0)/m/n/11 zu
 -sam-men mit der Dirichlet-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
 
  []
 
-<lda_alpha001.png, id=224, 895.345pt x 580.1675pt>
+<lda_alpha001.png, id=232, 895.345pt x 580.1675pt>
 File: lda_alpha001.png Graphic file (type png)
 <use lda_alpha001.png>
-Package luatex.def Info: lda_alpha001.png  used on input line 531.
+Package luatex.def Info: lda_alpha001.png  used on input line 533.
 (luatex.def)             Requested size: 282.03517pt x 182.75372pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<lda_alpha1.png, id=225, 895.345pt x 562.1pt>
+<lda_alpha1.png, id=233, 895.345pt x 562.1pt>
 File: lda_alpha1.png Graphic file (type png)
 <use lda_alpha1.png>
-Package luatex.def Info: lda_alpha1.png  used on input line 539.
+Package luatex.def Info: lda_alpha1.png  used on input line 541.
 (luatex.def)             Requested size: 282.03517pt x 177.06244pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 547--548
 
  []
 
-[11<./lda_alpha1.png>] [12<./lda_alpha001.png>]
+[12<./lda_alpha001.png><./lda_alpha1.png>] [13]
 Kapitel 3.
 
-Overfull \hbox (1.05435pt too wide) in paragraph at lines 555--556
+Overfull \hbox (1.05435pt too wide) in paragraph at lines 557--558
 \TU/TeXGyrePagella(0)/m/n/11 ziert wer-den. Da-für wird im Rah-men des M4KK Pr
 o-jekts ein Kundenanfrage-Klassifikator
  []
 
-[13
+[14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 588--589
 
  []
 
@@ -2389,175 +2390,175 @@ Underfull \hbox (badness 10000) in paragraph at lines 586--587
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+Underfull \hbox (badness 10000) in paragraph at lines 608--609
 
  []
 
 
-Overfull \hbox (0.5025pt too wide) in paragraph at lines 611--612
+Overfull \hbox (0.5025pt too wide) in paragraph at lines 613--614
 \TU/TeXGyrePagella(0)/m/n/11 tisch dar-stell-bar ma-chen: die Dokument-Topic-Ve
 rteilung und die Topic-Word-Verteilung.
  []
 
-[14] [15] [16]
+[15] [16] [17]
 Kapitel 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 618--619
-
- []
-
-
-Overfull \hbox (8.14311pt too wide) in paragraph at lines 620--621
-[]\TU/TeXGyrePagella(0)/m/n/11 Zur Un-ter-su-chung der Qua-li-tät der ZVO-Date
-n wird in die-ser Ar-beit die LDA-Methode
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 620--621
 
  []
 
-[17
+
+Overfull \hbox (8.14311pt too wide) in paragraph at lines 622--623
+[]\TU/TeXGyrePagella(0)/m/n/11 Zur Un-ter-su-chung der Qua-li-tät der ZVO-Date
+n wird in die-ser Ar-beit die LDA-Methode
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
+
+ []
+
+[18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 649--650
+Underfull \hbox (badness 10000) in paragraph at lines 651--652
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 675--676
-
- []
-
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 680--682
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 682--684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--682
+Underfull \hbox (badness 10000) in paragraph at lines 682--684
 
  []
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-) [20]
+) [21]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
-put line 717.
+put line 719.
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 717.
+Package Listings Warning: Text dropped after begin of listing on input line 719.
 
 
-[21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 805--806
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 844--845
+[22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
 
  []
 
-[24] [25]
-Overfull \hbox (30.6616pt too wide) in paragraph at lines 926--970
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 846--847
+
+ []
+
+[25] [26]
+Overfull \hbox (30.6616pt too wide) in paragraph at lines 928--972
  [] 
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 978--979
-
  []
 
 [27]
+Underfull \hbox (badness 10000) in paragraph at lines 980--981
+
+ []
+
+[28]
 Kapitel 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 985--986
+Underfull \hbox (badness 10000) in paragraph at lines 987--988
 
  []
 
-[28
+[29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1022
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1024
 
  []
 
 
-Overfull \hbox (5.39339pt too wide) in paragraph at lines 1073--1074
+Overfull \hbox (5.39339pt too wide) in paragraph at lines 1075--1076
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1079
 
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 1079--1080
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
 
  []
 
-[30
+[31
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1152--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1155
 
  []
 
-[31]
-Overfull \hbox (7.42339pt too wide) in paragraph at lines 1287--1288
+[32]
+Overfull \hbox (7.42339pt too wide) in paragraph at lines 1289--1290
  [] 
  []
 
-[32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
+[33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 1308--1309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1309--1310
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
 
  []
 
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1408--1409
-
- []
-
-[35
-Missing character: There is no ; (U+003B) in font nullfont!
-]
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 1410--1411
 
  []
 
+[36
+Missing character: There is no ; (U+003B) in font nullfont!
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1412--1413
 
-Overfull \hbox (32.99965pt too wide) in paragraph at lines 1416--1440
+ []
+
+
+Overfull \hbox (32.99965pt too wide) in paragraph at lines 1418--1442
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1445
-
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1459--1460
+Underfull \hbox (badness 10000) in paragraph at lines 1446--1447
 
  []
 
 [37]
+Underfull \hbox (badness 10000) in paragraph at lines 1457--1458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1461--1462
+
+ []
+
+[38]
 Kapitel 6.
-[38
+[39
 
 ] Excluding 'comment' comment.
 
@@ -2566,26 +2567,26 @@ LaTeX Warning: Overwriting file `./babrenk-bibtex-entries.bib'.
 
 \openout15 = babrenk-bibtex-entries.bib
 
-[39]
+[40]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
 (biblatex)                Using 'family-given' now.
 
-[40
+[41
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1751--1751
+Underfull \hbox (badness 10000) in paragraph at lines 1753--1753
 \TU/TeXGyrePagella(0)/m/it/11 ex-p-lai-ned\TU/TeXGyrePagella(0)/m/n/11 . Ana-ly
 -tics Vid-hya. htt-ps://-me-di-um.com/analytics-vidhya/topic-modeling-
  []
 
-[41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1751.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1751.
+[42]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1753.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1753.
  (./babrenk.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1751.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1751.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1753.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1753.
 Package rerunfilecheck Info: File `babrenk.out' has not changed.
 (rerunfilecheck)             Checksum: 829963D013A0EB6732EBB80B3CFD014B;2627.
 
@@ -2599,19 +2600,19 @@ Package biblatex Warning: Please rerun LaTeX.
 Package logreq Info: Writing requests to 'babrenk.run.xml'.
 
 \openout1 = babrenk.run.xml
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1751.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1753.
 )
 
 Here is how much of LuaTeX's memory you used:
- 63382 strings out of 494291
+ 63385 strings out of 494291
  195655,2373549 words of node,token memory allocated
  703 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 22 attribute, 82 gl
 ue_spec, 13 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:9,2:12059,3:2231,4:500,5:2272,6:60,7:8394,8:78,9:5444,10:25,11
+   avail lists: 1:8,2:12059,3:2231,4:500,5:2272,6:60,7:8395,8:77,9:5444,10:26,11
 :638
  65375 multiletter control sequences out of 65536+600000
- 116 fonts using 30067895 bytes
+ 116 fonts using 30067811 bytes
  64i,20n,128p,3998b,3225s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/local/texlive/2019/texmf-dist/fonts/opentype/public/lm/lmmonoprop10-regula
 r.otf></usr/local/texlive/2019/texmf-dist/fonts/opentype/public/tex-gyre-math/te
@@ -2625,10 +2626,10 @@ live/2019/texmf-dist/fonts/opentype/public/tex-gyre/texgyrepagella-regular.otf><
 learSans-Regular.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/intel/cl
 earsans/ClearSans-Italic.ttf></usr/local/texlive/2019/texmf-dist/fonts/truetype/
 intel/clearsans/ClearSans-Bold.ttf>
-Output written on babrenk.pdf (45 pages, 516306 bytes).
+Output written on babrenk.pdf (48 pages, 518796 bytes).
 
-PDF statistics: 662 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
- 253 named destinations out of 1000 (max. 131072)
+PDF statistics: 675 PDF objects out of 1000 (max. 8388607)
+ 580 compressed objects within 6 object streams
+ 256 named destinations out of 1000 (max. 131072)
  144 words of extra memory for PDF output out of 10000 (max. 100000000)
 
